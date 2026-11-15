@@ -11,17 +11,25 @@ HANDOFFS = {"ocean_fcl": 2, "ocean_lcl": 4, "air": 2, "rail_sea_fcl": 3}
 
 
 def _fta_rows(ctx: Ctx, lane: dict, pref: str) -> list[dict]:
+    """Tariff treatment per line: MFN vs ACFTA vs RCEP, the chosen scheme and whether the preference pays
+    for its paperwork (annual duty saving on goods value vs. certificate handling per shipment)."""
     rows = []
+    shipments = 12 * int(lane["shipments_per_month"])
+    doc_fee = float(ctx.ref.get("rates.fta.form_e_per_shipment"))
+    margin = float(ctx.ref.get("compliance.fta.worth_it_margin_usd_per_year"))
     for ln in lane["lines"]:
         opts = duties.fta_options_my(ctx.ref, ln["hs"], ln["origin"], ln.get("supplier_rvc_pct"), ln.get("cth_met"))
         chosen = duties.choose_tariff(opts, pref)
         mfn = opts[0]["rate"]
         best = min(o["rate"] for o in opts if o["rate"] is not None)
         annual_value = lane["annual_units"] * ln["value_per_unit"]
+        saving = (mfn - chosen["rate"]) * annual_value
+        doc_cost = shipments * doc_fee / len(lane["lines"]) if chosen["scheme"] != "MFN" else 0.0
         rows.append({"sku": ln["sku"], "hs": ln["hs"], "rvc": ln.get("supplier_rvc_pct"), "options": opts,
                      "chosen": chosen, "mfn_rate": mfn,
                      "saving_if_qualified": (mfn - best) * annual_value,
-                     "annual_goods_value": annual_value})
+                     "annual_goods_value": annual_value, "annual_saving": saving, "doc_cost": doc_cost,
+                     "net_saving": saving - doc_cost, "worth_it": (saving - doc_cost) > margin})
     return rows
 
 
@@ -67,7 +75,7 @@ def build_lane(ctx: Ctx, lane: dict, rfq: dict, lane_flag_list: list[dict], fta_
     per_ship = [U * m / 12.0 / S for m in prof]
     shipments = 12 * S
     unit = lane.get("unit", "unit")
-    n_risk = sum(1 for f in lane_flag_list if f["severity"] in ("medium", "high"))
+    n_risk = compliance.hold_flag_count(ref, lane_flag_list)
     options, excluded = [], []
     any_pref = any(r["chosen"]["scheme"] != "MFN" for r in fta_rows)
 

@@ -58,7 +58,7 @@ lanes:
     regimes: [ata_carnet, temp_export_repair]
     moves_per_year: 10
     stay_days: 0
-    target_transit_days: 32
+    target_transit_days: 35
     transit_metric: round_trip
     new_parts_share: 0.12
     warranty_share: 0.50
@@ -73,7 +73,7 @@ lanes:
     regimes: [ata_carnet, tis]
     moves_per_year: 24
     stay_days: 0
-    target_transit_days: 26
+    target_transit_days: 30
     transit_metric: round_trip
     item: {description_en: "Dry vacuum pump modules", description_zh: "干式真空泵模块", hs: "8414.10", value: 30000.0, gross_kg: 160, cbm: 0.8, strategic_screening: true}
     road_km: 720

@@ -10,6 +10,15 @@ from .common import Ctx, add_totals, option_label, run_transit
 HANDOFFS = {"air": 4, "ocean_fcl20": 4, "ocean_lcl": 8, "road": 2}
 
 
+def _km(end: dict, kind: str) -> float:
+    """Site-to-terminal distance of a lane end (stored as pickup_km_* at the origin, delivery_km_* at the
+    destination; a return leg reuses them in the other direction)."""
+    for key in (f"pickup_km_{kind}", f"delivery_km_{kind}"):
+        if key in end:
+            return float(end[key])
+    raise KeyError(f"no {kind} distance for {end.get('city')}")
+
+
 def lane_flags(ctx: Ctx, lane: dict, regimes: dict) -> list[dict]:
     ref = ctx.ref
     item = lane["item"]
@@ -33,21 +42,21 @@ def _leg_costs(ctx: Ctx, calc: Calc, tag: str, mode: str, frm: dict, to: dict, i
         vol = float(ref.get("rates.air.volumetric_kg_per_cbm"))
         chg = max(item["gross_kg"], item["cbm"] * vol, float(ref.get("rates.air.min_chargeable_kg")))
         KG = calc.input(f"{tag}_CHG_KG", chg, f"Chargeable kg per move ({en_dir})", f"每次计费重量（{zh_dir}）", "kg")
-        km_p = frm["pickup_km_airport"]
-        km_d = to["delivery_km_airport"]
+        km_p = _km(frm, "airport")
+        km_d = _km(to, "airport")
     elif mode == "ocean_lcl":
         wm = max(item["cbm"], item["gross_kg"] / 1000.0, float(ref.get("rates.ocean_lcl.min_wm")))
         WM = calc.input(f"{tag}_WM", wm, f"W/M per move ({en_dir})", f"每次计费吨（{zh_dir}）", "W/M")
-        km_p, km_d = frm["pickup_km_port"], to["delivery_km_port"]
+        km_p, km_d = _km(frm, "port"), _km(to, "port")
     elif mode == "ocean_fcl20":
-        km_p, km_d = frm["pickup_km_port"], to["delivery_km_port"]
+        km_p, km_d = _km(frm, "port"), _km(to, "port")
     elif mode == "road":
         km_p = km_d = 0.0
     else:
         raise ValueError(mode)
     lines = []
     if mode == "road":
-        lines.append(ctx.line(calc, f"{tag}_ROAD", mul(MOVES, ctx.rate("rates.truck.cross_border_sg_my_ftl", "Cross-border truck Penang-Singapore (full truck)", "槟城—新加坡跨境整车")),
+        lines.append(ctx.line(calc, f"{tag}_ROAD", mul(MOVES, ctx.rate("rates.truck.cross_border_sg_my_van", "Cross-border dedicated air-ride van Penang-Singapore", "槟城—新加坡跨境专用气垫厢式车")),
                               f"Cross-border truck, air-ride ({en_dir})", f"跨境气垫车运输（{zh_dir}）", "main_carriage"))
     else:
         KMP = calc.input(f"{tag}_KM_P", km_p, f"Pickup km ({en_dir})", f"提货公里数（{zh_dir}）", "km")
@@ -104,16 +113,16 @@ def _transit_dir(ctx: Ctx, mode: str, frm: dict, to: dict, n_risk: int, road_km:
     ref = ctx.ref
     f3, t3 = ISO3[frm["country"]], ISO3[to["country"]]
     if mode == "air":
-        legs = L.truck("pickup", ref, frm["pickup_km_airport"]) + L.air_main(ref, frm["airport"], to["airport"], t3)
-        legs += [L.customs_hold(ref, n_risk)] + L.truck("delivery", ref, to["delivery_km_airport"])
+        legs = L.truck("pickup", ref, _km(frm, "airport")) + L.air_main(ref, frm["airport"], to["airport"], t3)
+        legs += [L.customs_hold(ref, n_risk)] + L.truck("delivery", ref, _km(to, "airport"))
     elif mode in ("ocean_lcl", "ocean_fcl20"):
-        legs = L.truck("pickup", ref, frm["pickup_km_port"])
+        legs = L.truck("pickup", ref, _km(frm, "port"))
         if mode == "ocean_lcl":
             legs.append(L.tri("LCL consolidation", ref, "transit.sea.lcl_consolidation_days"))
         legs += L.ocean_main(ref, f3, frm["port"], t3, to["port"])
         if mode == "ocean_lcl":
             legs.append(L.tri("LCL deconsolidation", ref, "transit.sea.lcl_deconsolidation_days"))
-        legs += [L.customs_hold(ref, n_risk)] + L.truck("delivery", ref, to["delivery_km_port"])
+        legs += [L.customs_hold(ref, n_risk)] + L.truck("delivery", ref, _km(to, "port"))
     elif mode == "road":
         legs = L.truck("cross-border truck", ref, road_km or 0.0)
         legs += [L.tri("Woodlands/Tuas border clearance", ref, "transit.truck.cross_border_sg_my_days"),
@@ -128,7 +137,7 @@ def build_lane(ctx: Ctx, lane: dict, rfq: dict, lane_flag_list: list[dict], regi
     item = lane["item"]
     o, d = lane["origin"], lane["destination"]
     moves = float(lane["moves_per_year"])
-    n_risk = sum(1 for f in lane_flag_list if f["severity"] in ("medium", "high"))
+    n_risk = compliance.hold_flag_count(ref, lane_flag_list)
     options, excluded = [], []
     for rg in lane["regimes"]:
         info = regimes.get(rg)
@@ -184,6 +193,12 @@ def build_lane(ctx: Ctx, lane: dict, rfq: dict, lane_flag_list: list[dict], regi
                 agent = ctx.rate("rates.temporary_admission.tis_agent_fee_per_permit", "Declaring-agent fee per TIS permit", "TIS 每份许可证报关代理费")
                 ctx.line(calc, "TIS_PERMITS", mul(MOVES, C(2.0), add(permit, agent)), "TIS inward and outward permits",
                          "TIS 进出许可证", None, group="temporary_admission")
+                if o["country"] != "SG":
+                    ctx.line(calc, "ORIGIN_TEMP_EXPORT", mul(MOVES, ctx.rate("rates.temporary_admission.origin_temp_export_fee",
+                                                                            "Origin-country temporary export / goods-returned formalities",
+                                                                            "起运国临时出口/退运货物手续")),
+                             f"Temporary export and re-import formalities in {o['country']} (regime not verified)",
+                             f"{o['country']} 临时出口及复进口手续（制度未核实）", None, group="temporary_admission")
             elif rg == "temp_export_repair":
                 permit = ctx.rate("rates.handling.permit_fee", "Customs permit fee", "海关许可证费")
                 agent = ctx.rate("rates.temporary_admission.tis_agent_fee_per_permit", "Declaring-agent fee per TIS permit", "TIS 每份许可证报关代理费")
@@ -225,6 +240,12 @@ def build_lane(ctx: Ctx, lane: dict, rfq: dict, lane_flag_list: list[dict], regi
                                                          "TIS 许可证须由新加坡申报人通过 TradeNet 申报，并在进口前提交担保。",
                                                          "Appoint the declaring agent and lodge the guarantee two weeks before the move.",
                                                          "提前两周指定报关代理并提交担保。", ["SG-TIS-SECURITY"])]
+            if rg == "tis" and o["country"] != "SG":
+                opt_flags = opt_flags + [compliance.flag("TIS-ORIGIN-SIDE", "medium",
+                                                         f"TIS covers only the Singapore side; the return into {o['country']} needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+                                                         f"TIS 仅覆盖新加坡一侧；货物返回 {o['country']} 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。",
+                                                         f"Confirm the {o['country']} export and re-import treatment with the owner's broker before the first move.",
+                                                         f"首次运输前与货主报关行确认 {o['country']} 的出口及复进口处理方式。", [], verified=False)]
             if rg == "ata_carnet":
                 opt_flags = opt_flags + [compliance.flag("ATA-GENERAL-LIST", "low",
                                                          "The carnet's general list must match the goods exactly; partial shipments and changes need care at each border.",

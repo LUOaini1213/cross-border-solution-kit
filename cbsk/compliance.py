@@ -150,7 +150,11 @@ def temporary_flags(ref: Reference, lane: dict, regimes: dict) -> list[dict]:
     return out
 
 
+PARCEL_MODES = ["air_parcel", "sea_air", "rail", "road"]
+
+
 def parcel_regime_flags(ref: Reference, dest: str, annual_lvg_sales_myr: float | None = None) -> list[dict]:
+    """Destination low-value regimes; they apply to parcel channels, not to bulk import."""
     out = []
     if dest == "MY":
         thr = float(ref.get("regimes.MY.lvg_registration_threshold_myr"))
@@ -160,35 +164,41 @@ def parcel_regime_flags(ref: Reference, dest: str, annual_lvg_sales_myr: float |
                             f"马来西亚低价值货物年销售额约 {annual_lvg_sales_myr:,.0f} 林吉特，超过 {thr:,.0f} 林吉特注册门槛：卖家须注册、在结账时收取 10% 销售税，并在包裹和运单上标注 LVG 注册号。",
                             "Register before go-live; pass the LVG number in the pre-alert data so import sales tax is not charged twice.",
                             "上线前完成注册；在预报数据中传送 LVG 注册号，避免进口环节重复征收销售税。",
-                            ["MY-LVG", "MY-LVG-NO-DOUBLE"]))
+                            ["MY-LVG", "MY-LVG-NO-DOUBLE"], modes=PARCEL_MODES))
     if dest == "ID":
         out.append(flag("ID-CONSIGNMENT-RATES", "info",
                         "Indonesian consignments above FOB USD 3 pay 7.5% duty, or 25% for apparel and bags (plus 5% income tax), plus VAT at an effective 11%.",
                         "印尼 FOB 3 美元以上的快件征收 7.5% 关税，服装、箱包为 25%（另征 5% 所得税），并征收实际税负 11% 的增值税。",
-                        statements=["ID-CN-BAND", "ID-VAT-EFFECTIVE"]))
+                        statements=["ID-CN-BAND", "ID-VAT-EFFECTIVE"], modes=PARCEL_MODES))
     if dest == "TH":
         out.append(flag("TH-NO-DEMINIMIS", "medium",
                         "Since 1 January 2026 Thailand exempts from duty only items worth up to 1 baht, so every parcel is dutiable and VAT applies; the duty rates used here are placeholders (not verified).",
                         "自 2026 年 1 月 1 日起泰国仅对价值不超过 1 泰铢的物品免征关税，因此每个包裹均须缴纳关税和增值税；本文所用关税税率为占位值（未经核实）。",
                         "Confirm the tariff lines and rates with a Thai broker before launch.", "上线前与泰国报关行确认税号和税率。",
-                        ["TH-DUTY-1BAHT", "TH-VAT", "TH-MFN"], verified=False))
+                        ["TH-DUTY-1BAHT", "TH-VAT", "TH-MFN"], verified=False, modes=PARCEL_MODES))
     if dest == "PH":
         out.append(flag("PH-DEMINIMIS", "low",
                         "Parcels at or below PHP 10,000 FOB/FCA pay no duties and taxes in the Philippines (CMTA s.423); whether the threshold has been CPI-adjusted was not verified.",
                         "菲律宾对 FOB/FCA 不超过 10,000 比索的包裹免征关税和税费（CMTA 第 423 条）；该门槛是否已按 CPI 调整未经核实。",
                         "Re-check the current Bureau of Customs administrative order before relying on the threshold.",
-                        "依赖该门槛前请复核菲律宾海关现行行政令。", ["PH-DEMINIMIS", "PH-CAO"]))
+                        "依赖该门槛前请复核菲律宾海关现行行政令。", ["PH-DEMINIMIS", "PH-CAO"], modes=PARCEL_MODES))
     return out
 
 
 def risk_score(ref: Reference, flags: list[dict], p50: float, p90: float, handoffs: int, unverified_service: bool) -> dict:
     pts = ref.get("compliance.risk_points")
     flag_pts = sum(pts[f["severity"]] for f in flags)
-    var_pts = pts["variability_per_unit_ratio"] * max(0.0, p90 / p50 - 1.0) if p50 > 0 else 0.0
+    var_pts = min(float(pts["variability_cap"]), float(pts["variability_per_day"]) * max(0.0, p90 - p50))
     hand_pts = pts["per_handoff"] * handoffs
     svc_pts = pts["unverified_service"] if unverified_service else 0
     total = min(100.0, flag_pts + var_pts + hand_pts + svc_pts)
     return {"score": total, "flags": flag_pts, "variability": var_pts, "handoffs": hand_pts, "service": svc_pts}
+
+
+def hold_flag_count(ref: Reference, flags: list[dict]) -> int:
+    """Number of medium/high flags that make a customs hold more likely (drives the transit model)."""
+    relevant = set(ref.get("compliance.hold_relevant_flags"))
+    return sum(1 for f in flags if f["id"] in relevant and f["severity"] in ("medium", "high"))
 
 
 def flags_for_option(flags: list[dict], mode: str, option_kind: str) -> list[dict]:

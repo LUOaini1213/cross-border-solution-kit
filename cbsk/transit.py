@@ -105,6 +105,7 @@ def simulate(legs: list[dict], seed: int, n: int) -> np.ndarray:
 
 
 def metrics(samples: np.ndarray, target_days: float) -> dict:
+    step = max(1.0, round(0.2 * target_days))
     return {
         "mean": float(np.mean(samples)),
         "p50": float(np.percentile(samples, 50)),
@@ -112,4 +113,5 @@ def metrics(samples: np.ndarray, target_days: float) -> dict:
         "p95": float(np.percentile(samples, 95)),
         "on_time_probability": float(np.mean(samples <= target_days)),
         "target_days": float(target_days),
+        "on_time_at": {f"{t:g}": float(np.mean(samples <= t)) for t in (target_days - step, target_days, target_days + step)},
     }

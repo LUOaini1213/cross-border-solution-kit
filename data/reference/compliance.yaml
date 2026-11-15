@@ -7,9 +7,14 @@ risk_points:  # ASSUMPTION: heuristic weights for the risk score (0-100)
   medium: 10
   high: 20
   block: 100
-  variability_per_unit_ratio: 12   # points per unit of (P90/P50 - 1)
+  variability_per_day: 1.0         # points per day of spread (P90 - P50), capped below
+  variability_cap: 30
   per_handoff: 2                   # per mode change / hub transfer
   unverified_service: 15
+
+# Flags that raise the probability of a customs hold / inspection in the transit model (ASSUMPTION).
+hold_relevant_flags: [MY-KIT-CLASSIFICATION, MY-AP-VEHICLE, MY-AP-STEEL, SG-STRATEGIC-SCREEN, THIRD-COUNTRY-INVOICE,
+                      LI-BATTERY-DG, RADIO-TYPE-APPROVAL, ID-BULK-LICENSING, TH-NO-DEMINIMIS]
 
 hs_controls:
   - id: MY-AP-VEHICLE

@@ -29,7 +29,7 @@ lanes:
     origin: {city: Ningbo, country: CN, port: CNNGB, airport: PVG, pickup_km_port: 40, pickup_km_airport: 220}
     destination: {city: Shah Alam, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
     modes: [ocean_fcl, ocean_lcl, air]
-    target_transit_days: 24
+    target_transit_days: 38
     kit: true
     unit: kit
     annual_units: 6000
@@ -41,7 +41,7 @@ lanes:
     lines:
       - {sku: BODY, description_en: "Body panels and closures", description_zh: "车身覆盖件及开闭件", hs: "8708.29.9500", origin: CN, value_per_unit: 2100.0, supplier_rvc_pct: 58}
       - {sku: SEAT, description_en: "Seat sets", description_zh: "座椅总成", hs: "9401.20.1000", origin: CN, value_per_unit: 650.0, supplier_rvc_pct: 62}
-      - {sku: HARN, description_en: "Wiring harness sets", description_zh: "线束总成", hs: "8544.30.1200", origin: CN, value_per_unit: 380.0, supplier_rvc_pct: 47}
+      - {sku: HARN, description_en: "Wiring harness sets", description_zh: "线束总成", hs: "8544.30.1200", origin: CN, value_per_unit: 380.0, supplier_rvc_pct: 38, cth_met: false}
       - {sku: BRKE, description_en: "Brake modules", description_zh: "制动模块", hs: "8708.30.2900", origin: CN, value_per_unit: 290.0, supplier_rvc_pct: 52}
   - id: A2
     name_en: "Chongqing powertrain and chassis parts to Shah Alam plant (invoiced by a Singapore trading entity)"
@@ -49,7 +49,7 @@ lanes:
     origin: {city: Chongqing, country: CN, port: CNQZH, airport: CKG, pickup_km_port: 30, pickup_km_airport: 35}
     destination: {city: Shah Alam, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
     modes: [rail_sea_fcl, air, rail]
-    target_transit_days: 24
+    target_transit_days: 38
     kit: true
     unit: kit
     annual_units: 6000

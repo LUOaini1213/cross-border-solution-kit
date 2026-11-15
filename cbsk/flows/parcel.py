@@ -95,7 +95,7 @@ def build_lane(ctx: Ctx, lane: dict, rfq: dict, lane_flag_list: list[dict]) -> d
     chg_kg = sum(counts[b["category"]] * max(b["kg"], b["cbm"] * vol) for b in basket)
     cube = float(ref.get("rates.local_fulfilment.carton_cube_factor"))
     cbm_year = sum(counts[b["category"]] * b["cbm"] for b in basket) * cube
-    n_risk = sum(1 for f in lane_flag_list if f["severity"] in ("medium", "high"))
+    n_risk = compliance.hold_flag_count(ref, lane_flag_list)
     options, excluded = [], []
     target = float(lane["target_transit_days"])
 

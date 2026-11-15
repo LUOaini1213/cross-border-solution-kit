@@ -66,7 +66,7 @@ truck:   # per vehicle (FEU-capable truck) or per light-truck shipment
   light_base: 80
   light_per_km: 0.90
   air_ride_multiplier: 1.6
-  cross_border_sg_my_ftl: 1250   # Penang <-> Singapore full truck, incl. border handling
+  cross_border_sg_my_van: 650    # Penang <-> Singapore dedicated air-ride van, one way, incl. border handling
   cross_border_sg_my_per_kg: 0.14  # consolidated parcels Singapore -> Klang Valley
 rail:
   chongqing_qinzhou_feu: 650     # rail leg of the rail-sea option (pre-carriage to Qinzhou port)
@@ -111,6 +111,7 @@ temporary_admission:
   guarantee_min_months: 3
   tis_agent_fee_per_permit: 80
   temp_import_repair_abroad_fee: 150   # destination-side temporary-import handling for repair (regime not verified)
+  origin_temp_export_fee: 150     # origin-side temporary export / goods-returned formalities when TIS covers only Singapore
 economics:
   carrying_cost_pa: {value: 0.20, unit: share of goods value per year, label: ASSUMPTION,
                      note: "capital, obsolescence and risk; used for pipeline and safety stock"}

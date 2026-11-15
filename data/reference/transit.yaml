@@ -8,7 +8,7 @@ lpi_year: {value: "2024", label: ASSUMPTION, note: "latest LPI 2.0 year in the e
 truck:
   km_per_day: {value: 450, label: ASSUMPTION, note: "about 10 driving hours at 45 km/h"}
   handling_days: {value: [0.3, 0.5, 1.0], kind: triangular, label: ASSUMPTION, note: "loading + gate-in/out"}
-  cross_border_sg_my_days: {value: [0.5, 1.0, 2.0], kind: triangular, label: ASSUMPTION, note: "Woodlands/Tuas clearance incl. queue"}
+  cross_border_sg_my_days: {value: [0.3, 0.7, 1.5], kind: triangular, label: ASSUMPTION, note: "Woodlands/Tuas clearance incl. queue"}
 sea:
   speed_knots: {value: 16.0, label: ASSUMPTION}
   port_call_days_per_1000nm: {value: 0.5, label: ASSUMPTION, note: "allowance for intermediate calls"}
@@ -38,11 +38,11 @@ customs_hold:
   delay_days: {value: [1.0, 3.0, 8.0], kind: triangular, label: ASSUMPTION}
 parcel:
   last_mile_days:
-    MY: {value: [1.0, 2.0, 4.0], kind: triangular, label: ASSUMPTION}
-    ID: {value: [1.0, 3.0, 6.0], kind: triangular, label: ASSUMPTION}
-    TH: {value: [1.0, 2.0, 4.0], kind: triangular, label: ASSUMPTION}
-    PH: {value: [1.0, 3.0, 7.0], kind: triangular, label: ASSUMPTION}
-  first_mile_days: {value: [0.5, 1.0, 2.0], kind: triangular, label: ASSUMPTION, note: "pickup + origin hub sort"}
-  local_dispatch_days: {value: [0.3, 0.7, 1.5], kind: triangular, label: ASSUMPTION, note: "pick/pack from local stock"}
+    MY: {value: [0.5, 1.5, 3.0], kind: triangular, label: ASSUMPTION}
+    ID: {value: [1.0, 2.0, 5.0], kind: triangular, label: ASSUMPTION, note: "archipelago; Greater Jakarta deliveries"}
+    TH: {value: [0.5, 1.5, 3.0], kind: triangular, label: ASSUMPTION}
+    PH: {value: [1.0, 2.0, 5.0], kind: triangular, label: ASSUMPTION}
+  first_mile_days: {value: [0.3, 0.5, 1.5], kind: triangular, label: ASSUMPTION, note: "pickup + origin hub sort"}
+  local_dispatch_days: {value: [0.3, 0.5, 1.0], kind: triangular, label: ASSUMPTION, note: "pick/pack from local stock"}
 temporary:
   repair_turnaround_days: {value: [10.0, 15.0, 25.0], kind: triangular, label: ASSUMPTION, note: "repair shop time, door to door excluded"}
