@@ -1,0 +1,3 @@
+# Optional: renders proposal PDFs (Markdown -> HTML with pandoc, HTML -> PDF with Chromium).
+# pandoc itself is an external binary (tested with pandoc 3.8).
+playwright==1.62.0

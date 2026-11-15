@@ -1,0 +1,14 @@
+[project]
+name = "cross-border-solution-kit"
+version = "0.1.0"
+description = "Cross-border logistics solution design and quotation kit with three worked industry templates (personal portfolio project)"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+markers = [
+    "golden: compares a full pipeline re-run with the committed results (regression test)",
+]

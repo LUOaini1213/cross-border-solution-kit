@@ -1,0 +1,3 @@
+# Only for scripts/fetch_*.py (network). Not needed to rebuild outputs or run tests.
+# searoute's sdist needs a UTF-8 locale on Windows: set PYTHONUTF8=1 before installing.
+searoute==1.6.0
