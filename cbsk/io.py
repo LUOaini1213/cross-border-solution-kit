@@ -3,6 +3,7 @@ Windows and Linux."""
 from __future__ import annotations
 
 import csv
+import datetime as dt
 import json
 import math
 from pathlib import Path
@@ -38,7 +39,9 @@ def write_text(path: Path, text: str) -> None:
 
 
 def clean_floats(obj: Any, ndigits: int = 6) -> Any:
-    """Round floats for stable JSON (results are compared with a tolerance anyway)."""
+    """Round floats for stable JSON (results are compared with a tolerance anyway); dates become ISO strings."""
+    if isinstance(obj, (dt.date, dt.datetime)):
+        return obj.isoformat()
     if isinstance(obj, float):
         if math.isnan(obj) or math.isinf(obj):
             raise ValueError("non-finite float in results")

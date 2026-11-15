@@ -6,7 +6,7 @@ UNIT_ZH = {"kit": "套", "move": "次往返", "parcel": "个包裹", "unit": "�
 
 
 def _pct(x: float) -> str:
-    return f"{x * 100:.0f}%"
+    return f"{x * 100:.1f}%"
 
 
 def _usd(x: float) -> str:
@@ -56,8 +56,11 @@ def rationale(lane: dict, options: list[dict], rec: dict, target_p: float, unit:
         if o["id"] in rec["front"]:
             cost_en = f"{abs(dc) * 100:.0f}% {'more' if dc > 0 else 'less'} per {unit}"
             cost_zh = f"每{uzh}成本{'高' if dc > 0 else '低'} {abs(dc) * 100:.0f}%"
-            time_en = f"P90 {om['p90']:.1f} days ({'+' if dt >= 0 else '-'}{abs(dt):.1f})"
-            time_zh = f"P90 {om['p90']:.1f} 天（{'多' if dt >= 0 else '少'} {abs(dt):.1f} 天）"
+            if abs(dt) < 0.05:
+                time_en, time_zh = f"same P90 ({om['p90']:.1f} days)", f"P90 相同（{om['p90']:.1f} 天）"
+            else:
+                time_en = f"P90 {om['p90']:.1f} days ({'+' if dt >= 0 else '-'}{abs(dt):.1f})"
+                time_zh = f"P90 {om['p90']:.1f} 天（{'多' if dt >= 0 else '少'} {abs(dt):.1f} 天）"
             miss = om["on_time_probability"] < target_p
             tail_en = f"; on time {_pct(om['on_time_probability'])}" + (" (below target)" if miss else "")
             tail_zh = f"；准时率 {_pct(om['on_time_probability'])}" + ("（未达目标）" if miss else "")

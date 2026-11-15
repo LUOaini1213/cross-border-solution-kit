@@ -87,11 +87,27 @@ def run_template(name: str) -> tuple[dict, dict]:
                              | {s for f in template_flags for s in f["statements"]}
                              | {p.statement for p in ref.used.values() if p.statement}
                              | {s for r in rb.rates.values() if r.get("statement") for s in str(r["statement"]).split(",")})
+    extra_tables: dict = {}
+    if flow == "b2c_parcel":
+        from . import duties
+        ship = float(rfq["service"].get("shipping_charged_per_parcel", 0.0))
+        rows = []
+        for dest in ("MY", "ID", "TH", "PH"):
+            for b in rfq["basket"]:
+                pt = duties.parcel_taxes(ref, dest, "air_courier", b["hs"], b["retail_usd"], ship,
+                                         bool(rfq["service"].get("seller_registered_my_lvg", False)))
+                bt = duties.bulk_import_taxes(ref, dest, b["hs"], b["cost_usd"], b["retail_usd"])
+                rows.append({"destination": dest, "category": b["category"], "category_zh": b.get("description_zh", b["category"]),
+                             "hs": b["hs"], "retail": b["retail_usd"],
+                             "parcel": pt.as_dict(), "bulk": bt.as_dict()})
+        extra_tables["regime_table"] = rows
     results = {
         "template": name,
+        "extra_tables": extra_tables,
         "rfq": {k: rfq[k] for k in ("rfq_id", "title_en", "title_zh", "customer", "customer_profile_en", "customer_profile_zh",
                                      "issue_date", "quote_validity_days", "currency", "seed", "flow_type", "incoterm",
-                                     "incoterm_named_place", "quoting_party_role", "priorities", "service")},
+                                     "incoterm_named_place", "incoterm_named_place_zh", "quoting_party_role", "priorities",
+                                     "service") if k in rfq},
         "template_flags": template_flags,
         "lanes": lanes_out,
         "summary": summary,

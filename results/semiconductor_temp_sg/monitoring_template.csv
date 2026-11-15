@@ -1,0 +1,25 @@
+lane,kpi,kpi_zh,target,better,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec,trigger
+B1,Moves arriving within 12 days (share),12 天内到达的运输占比,0.95,higher,,,,,,,,,,,,,Any miss on an event move: root-cause review before the next event
+B1,P90 days (metric of the RFQ),P90 天数（按询价口径）,4.8,lower,,,,,,,,,,,,,Above target: check permits and hold reasons
+B1,Temporary admissions discharged within the period (share),期限内完成核销的临时进出口占比,1.0,higher,,,,,,,,,,,,,Any open item 30 days before expiry: file extension or re-export
+B1,GST or duty claims from non-discharge (count),因未核销产生的 GST/关税追缴（次数）,0.0,lower,,,,,,,,,,,,,Any claim: review the tracking process
+B1,"Cost per move (USD, quote basis)",每次往返成本（美元，报价口径）,17141.25,lower,,,,,,,,,,,,,Above target by 10%: re-tender
+B1,Strategic-goods permits in place before export (share of moves needing one),出口前已取得战略物资许可证的比例,1.0,higher,,,,,,,,,,,,,"Any miss: stop shipment, escalate"
+B2,Moves arriving within 7 days (share),7 天内到达的运输占比,0.95,higher,,,,,,,,,,,,,Any miss on an event move: root-cause review before the next event
+B2,P90 days (metric of the RFQ),P90 天数（按询价口径）,5.3,lower,,,,,,,,,,,,,Above target: check permits and hold reasons
+B2,Temporary admissions discharged within the period (share),期限内完成核销的临时进出口占比,1.0,higher,,,,,,,,,,,,,Any open item 30 days before expiry: file extension or re-export
+B2,GST or duty claims from non-discharge (count),因未核销产生的 GST/关税追缴（次数）,0.0,lower,,,,,,,,,,,,,Any claim: review the tracking process
+B2,"Cost per move (USD, quote basis)",每次往返成本（美元，报价口径）,6539.5,lower,,,,,,,,,,,,,Above target by 10%: re-tender
+B2,Strategic-goods permits in place before export (share of moves needing one),出口前已取得战略物资许可证的比例,1.0,higher,,,,,,,,,,,,,"Any miss: stop shipment, escalate"
+B3,Moves arriving within 35 days (share),35 天内到达的运输占比,0.95,higher,,,,,,,,,,,,,Any miss on an event move: root-cause review before the next event
+B3,P90 days (metric of the RFQ),P90 天数（按询价口径）,31.4,lower,,,,,,,,,,,,,Above target: check permits and hold reasons
+B3,Temporary admissions discharged within the period (share),期限内完成核销的临时进出口占比,1.0,higher,,,,,,,,,,,,,Any open item 30 days before expiry: file extension or re-export
+B3,GST or duty claims from non-discharge (count),因未核销产生的 GST/关税追缴（次数）,0.0,lower,,,,,,,,,,,,,Any claim: review the tracking process
+B3,"Cost per move (USD, quote basis)",每次往返成本（美元，报价口径）,3687.8,lower,,,,,,,,,,,,,Above target by 10%: re-tender
+B3,Strategic-goods permits in place before export (share of moves needing one),出口前已取得战略物资许可证的比例,1.0,higher,,,,,,,,,,,,,"Any miss: stop shipment, escalate"
+B4,Moves arriving within 30 days (share),30 天内到达的运输占比,0.95,higher,,,,,,,,,,,,,Any miss on an event move: root-cause review before the next event
+B4,P90 days (metric of the RFQ),P90 天数（按询价口径）,28.1,lower,,,,,,,,,,,,,Above target: check permits and hold reasons
+B4,Temporary admissions discharged within the period (share),期限内完成核销的临时进出口占比,1.0,higher,,,,,,,,,,,,,Any open item 30 days before expiry: file extension or re-export
+B4,GST or duty claims from non-discharge (count),因未核销产生的 GST/关税追缴（次数）,0.0,lower,,,,,,,,,,,,,Any claim: review the tracking process
+B4,"Cost per move (USD, quote basis)",每次往返成本（美元，报价口径）,3312.3,lower,,,,,,,,,,,,,Above target by 10%: re-tender
+B4,Strategic-goods permits in place before export (share of moves needing one),出口前已取得战略物资许可证的比例,1.0,higher,,,,,,,,,,,,,"Any miss: stop shipment, escalate"

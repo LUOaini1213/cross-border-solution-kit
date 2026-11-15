@@ -1,0 +1,5690 @@
+{
+  "assumptions": [
+    {
+      "desc_en": "Destination airport handling per kg",
+      "desc_zh": "目的机场操作费每公斤",
+      "id": "rates.air.handling_destination_per_kg",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.15
+    },
+    {
+      "desc_en": "Origin airport handling per kg",
+      "desc_zh": "起运机场操作费每公斤",
+      "id": "rates.air.handling_origin_per_kg",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.12
+    },
+    {
+      "desc_en": "Air freight CKG-KUL per kg",
+      "desc_zh": "空运费 CKG-KUL 每公斤",
+      "id": "rates.air.per_kg.CKG-KUL",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 3.1
+    },
+    {
+      "desc_en": "Air freight PVG-KUL per kg",
+      "desc_zh": "空运费 PVG-KUL 每公斤",
+      "id": "rates.air.per_kg.PVG-KUL",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2.6
+    },
+    {
+      "desc_en": "Inventory carrying cost per year",
+      "desc_zh": "库存资金占用年费率",
+      "id": "rates.economics.carrying_cost_pa",
+      "label": "ASSUMPTION",
+      "sources": [],
+      "statement": null,
+      "unit": "share of goods value per year",
+      "value": 0.2
+    },
+    {
+      "desc_en": "Form E certificate per shipment",
+      "desc_zh": "Form E 原产地证每票",
+      "id": "rates.fta.form_e_per_shipment",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 40.0
+    },
+    {
+      "desc_en": "Export declaration (CN)",
+      "desc_zh": "出口报关（CN）",
+      "id": "rates.handling.export_declaration.CN",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 45.0
+    },
+    {
+      "desc_en": "Import declaration (MY)",
+      "desc_zh": "进口报关（MY）",
+      "id": "rates.handling.import_declaration.MY",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 70.0
+    },
+    {
+      "desc_en": "Destination THC per 40ft (MY)",
+      "desc_zh": "目的港码头操作费每 40 尺（MY）",
+      "id": "rates.handling.thc_destination_feu.MY",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 170.0
+    },
+    {
+      "desc_en": "Origin THC per 40ft (CN)",
+      "desc_zh": "起运港码头操作费每 40 尺（CN）",
+      "id": "rates.handling.thc_origin_feu.CN",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 140.0
+    },
+    {
+      "desc_en": "Insured value factor (CIF x 110%)",
+      "desc_zh": "投保加成（CIF × 110%）",
+      "id": "rates.insurance.insured_value_factor",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1.1
+    },
+    {
+      "desc_en": "Insurance minimum per shipment",
+      "desc_zh": "每票最低保险费",
+      "id": "rates.insurance.min_per_shipment",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 25.0
+    },
+    {
+      "desc_en": "Cargo insurance rate",
+      "desc_zh": "货运保险费率",
+      "id": "rates.insurance.rate",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.0012
+    },
+    {
+      "desc_en": "Ocean freight CNNGB-MYPKG per 40ft",
+      "desc_zh": "海运费 CNNGB-MYPKG 每 40 尺",
+      "id": "rates.ocean_fcl_feu.CNNGB-MYPKG",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1500.0
+    },
+    {
+      "desc_en": "Ocean freight CNQZH-MYPKG per 40ft",
+      "desc_zh": "海运费 CNQZH-MYPKG 每 40 尺",
+      "id": "rates.ocean_fcl_feu.CNQZH-MYPKG",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1450.0
+    },
+    {
+      "desc_en": "Destination CFS per W/M",
+      "desc_zh": "目的港集拼站费每计费吨",
+      "id": "rates.ocean_lcl.cfs_destination_per_wm",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 20.0
+    },
+    {
+      "desc_en": "Origin CFS per W/M",
+      "desc_zh": "起运港集拼站费每计费吨",
+      "id": "rates.ocean_lcl.cfs_origin_per_wm",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 16.0
+    },
+    {
+      "desc_en": "LCL ocean freight per W/M (China-SE Asia)",
+      "desc_zh": "拼箱海运费每计费吨（中国—东南亚）",
+      "id": "rates.ocean_lcl.freight_per_wm.CN-SEA",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 42.0
+    },
+    {
+      "desc_en": "Rail Chongqing-Qinzhou per 40ft",
+      "desc_zh": "重庆—钦州铁路每 40 尺",
+      "id": "rates.rail.chongqing_qinzhou_feu",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 650.0
+    },
+    {
+      "desc_en": "Truck per 40ft move: fixed part",
+      "desc_zh": "40 尺拖车：固定部分",
+      "id": "rates.truck.feu_base",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 150.0
+    },
+    {
+      "desc_en": "Truck per 40ft move: per km",
+      "desc_zh": "40 尺拖车：每公里",
+      "id": "rates.truck.feu_per_km",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2.2
+    },
+    {
+      "desc_en": "Light truck per shipment: fixed part",
+      "desc_zh": "轻型货车每票：固定部分",
+      "id": "rates.truck.light_base",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 80.0
+    },
+    {
+      "desc_en": "Light truck per shipment: per km",
+      "desc_zh": "轻型货车每票：每公里",
+      "id": "rates.truck.light_per_km",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.9
+    },
+    {
+      "desc_en": "Kitting / sequencing per kit",
+      "desc_zh": "配套/排序每套",
+      "id": "rates.vas.kitting_per_kit",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 9.0
+    },
+    {
+      "desc_en": "Returnable rack management per 40ft",
+      "desc_zh": "循环料架管理每 40 尺",
+      "id": "rates.vas.returnable_rack_per_feu",
+      "label": "ILLUSTRATIVE",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 60.0
+    },
+    {
+      "desc_en": "Schedule C sales-tax exemption applied (1 = yes)",
+      "desc_zh": "适用附表 C 销售税豁免（1 = 是）",
+      "id": "rfq.registered_manufacturer_schedule_c",
+      "label": "SYNTHETIC",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1.0
+    },
+    {
+      "desc_en": "Import duty 8544.30.1200 (MFN)",
+      "desc_zh": "进口关税 8544.30.1200（MFN）",
+      "id": "tariff.MY.8544.30.1200.mfn_import",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.3
+    },
+    {
+      "desc_en": "Sales tax 8544.30.1200 (SST column)",
+      "desc_zh": "销售税 8544.30.1200（SST 栏）",
+      "id": "tariff.MY.8544.30.1200.sst",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "desc_en": "Import duty 8708.29.9500 (ACFTA)",
+      "desc_zh": "进口关税 8708.29.9500（ACFTA）",
+      "id": "tariff.MY.8708.29.9500.acfta_current",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "desc_en": "Sales tax 8708.29.9500 (SST column)",
+      "desc_zh": "销售税 8708.29.9500（SST 栏）",
+      "id": "tariff.MY.8708.29.9500.sst",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "desc_en": "Import duty 8708.30.2900 (ACFTA)",
+      "desc_zh": "进口关税 8708.30.2900（ACFTA）",
+      "id": "tariff.MY.8708.30.2900.acfta_current",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "desc_en": "Sales tax 8708.30.2900 (SST column)",
+      "desc_zh": "销售税 8708.30.2900（SST 栏）",
+      "id": "tariff.MY.8708.30.2900.sst",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "desc_en": "Import duty 8708.40.2600 (ACFTA)",
+      "desc_zh": "进口关税 8708.40.2600（ACFTA）",
+      "id": "tariff.MY.8708.40.2600.acfta_current",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "desc_en": "Sales tax 8708.40.2600 (SST column)",
+      "desc_zh": "销售税 8708.40.2600（SST 栏）",
+      "id": "tariff.MY.8708.40.2600.sst",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "desc_en": "Import duty 8708.80.1600 (ACFTA)",
+      "desc_zh": "进口关税 8708.80.1600（ACFTA）",
+      "id": "tariff.MY.8708.80.1600.acfta_current",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "desc_en": "Sales tax 8708.80.1600 (SST column)",
+      "desc_zh": "销售税 8708.80.1600（SST 栏）",
+      "id": "tariff.MY.8708.80.1600.sst",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "desc_en": "Import duty 9401.20.1000 (ACFTA)",
+      "desc_zh": "进口关税 9401.20.1000（ACFTA）",
+      "id": "tariff.MY.9401.20.1000.acfta_current",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "desc_en": "Sales tax 9401.20.1000 (SST column)",
+      "desc_zh": "销售税 9401.20.1000（SST 栏）",
+      "id": "tariff.MY.9401.20.1000.sst",
+      "label": "REAL",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    }
+  ],
+  "extra_tables": {},
+  "lanes": [
+    {
+      "destination": {
+        "airport": "KUL",
+        "city": "Shah Alam",
+        "city_zh": "莎阿南",
+        "country": "MY",
+        "delivery_km_airport": 55,
+        "delivery_km_port": 35,
+        "port": "MYPKG"
+      },
+      "excluded": [],
+      "extra": {
+        "fta": [
+          {
+            "annual_goods_value": 12600000.0,
+            "annual_saving": 3150000.0,
+            "chosen": {
+              "available": true,
+              "rate": 0.0,
+              "reason": "supplier RVC >= 40% (general rule)",
+              "scheme": "ACFTA",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "MY-TARIFF-LINES"
+              ]
+            },
+            "doc_cost": 480.0,
+            "hs": "8708.29.9500",
+            "mfn_rate": 0.25,
+            "net_saving": 3149520.0,
+            "options": [
+              {
+                "available": true,
+                "rate": 0.25,
+                "reason": "general rate",
+                "scheme": "MFN",
+                "statements": [
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.0,
+                "reason": "supplier RVC >= 40% (general rule)",
+                "scheme": "ACFTA",
+                "statements": [
+                  "FTA-ACFTA-ORIGIN",
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.227,
+                "reason": "PSR CTH or RVC40: met",
+                "scheme": "RCEP",
+                "statements": [
+                  "FTA-RCEP-PSR",
+                  "FTA-RCEP-POO",
+                  "MY-TARIFF-LINES"
+                ]
+              }
+            ],
+            "rvc": 58,
+            "saving_if_qualified": 3150000.0,
+            "sku": "BODY",
+            "worth_it": true
+          },
+          {
+            "annual_goods_value": 3900000.0,
+            "annual_saving": 1170000.0,
+            "chosen": {
+              "available": true,
+              "rate": 0.0,
+              "reason": "supplier RVC >= 40% (general rule)",
+              "scheme": "ACFTA",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "MY-TARIFF-LINES"
+              ]
+            },
+            "doc_cost": 480.0,
+            "hs": "9401.20.1000",
+            "mfn_rate": 0.3,
+            "net_saving": 1169520.0,
+            "options": [
+              {
+                "available": true,
+                "rate": 0.3,
+                "reason": "general rate",
+                "scheme": "MFN",
+                "statements": [
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.0,
+                "reason": "supplier RVC >= 40% (general rule)",
+                "scheme": "ACFTA",
+                "statements": [
+                  "FTA-ACFTA-ORIGIN",
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.237,
+                "reason": "PSR not checked for this heading; RVC40 assumed sufficient",
+                "scheme": "RCEP",
+                "statements": [
+                  "FTA-RCEP-PSR",
+                  "FTA-RCEP-POO",
+                  "MY-TARIFF-LINES"
+                ]
+              }
+            ],
+            "rvc": 62,
+            "saving_if_qualified": 1170000.0,
+            "sku": "SEAT",
+            "worth_it": true
+          },
+          {
+            "annual_goods_value": 2280000.0,
+            "annual_saving": 0.0,
+            "chosen": {
+              "available": true,
+              "rate": 0.3,
+              "reason": "general rate",
+              "scheme": "MFN",
+              "statements": [
+                "MY-TARIFF-LINES"
+              ]
+            },
+            "doc_cost": 0.0,
+            "hs": "8544.30.1200",
+            "mfn_rate": 0.3,
+            "net_saving": 0.0,
+            "options": [
+              {
+                "available": true,
+                "rate": 0.3,
+                "reason": "general rate",
+                "scheme": "MFN",
+                "statements": [
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": false,
+                "rate": 0.0,
+                "reason": "supplier RVC below 40%: general rule not met (product-specific rule not checked)",
+                "scheme": "ACFTA",
+                "statements": [
+                  "FTA-ACFTA-ORIGIN",
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": false,
+                "rate": 0.3,
+                "reason": "PSR CTH or RVC40: neither RVC40 nor CTH confirmed",
+                "scheme": "RCEP",
+                "statements": [
+                  "FTA-RCEP-PSR",
+                  "FTA-RCEP-POO",
+                  "MY-TARIFF-LINES"
+                ]
+              }
+            ],
+            "rvc": 38,
+            "saving_if_qualified": 684000.0,
+            "sku": "HARN",
+            "worth_it": false
+          },
+          {
+            "annual_goods_value": 1740000.0,
+            "annual_saving": 522000.0,
+            "chosen": {
+              "available": true,
+              "rate": 0.0,
+              "reason": "supplier RVC >= 40% (general rule)",
+              "scheme": "ACFTA",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "MY-TARIFF-LINES"
+              ]
+            },
+            "doc_cost": 480.0,
+            "hs": "8708.30.2900",
+            "mfn_rate": 0.3,
+            "net_saving": 521520.0,
+            "options": [
+              {
+                "available": true,
+                "rate": 0.3,
+                "reason": "general rate",
+                "scheme": "MFN",
+                "statements": [
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.0,
+                "reason": "supplier RVC >= 40% (general rule)",
+                "scheme": "ACFTA",
+                "statements": [
+                  "FTA-ACFTA-ORIGIN",
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.273,
+                "reason": "PSR CTH or RVC40: met",
+                "scheme": "RCEP",
+                "statements": [
+                  "FTA-RCEP-PSR",
+                  "FTA-RCEP-POO",
+                  "MY-TARIFF-LINES"
+                ]
+              }
+            ],
+            "rvc": 52,
+            "saving_if_qualified": 522000.0,
+            "sku": "BRKE",
+            "worth_it": true
+          }
+        ]
+      },
+      "id": "A1",
+      "lane_flags": [
+        {
+          "en": "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8544.30.1200, 8708.29.9500, 8708.30.2900, 9401.20.1000)",
+          "id": "MY-KIT-CLASSIFICATION",
+          "mitigation_en": "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container.",
+          "mitigation_zh": "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "MY-CKD-CLASSIFICATION",
+            "MY-AP-VEHICLES"
+          ],
+          "verified": false,
+          "zh": "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8544.30.1200、8708.29.9500、8708.30.2900、9401.20.1000）"
+        },
+        {
+          "en": "ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification.",
+          "id": "FTA-ACFTA-FORM-E",
+          "mitigation_en": "Collect cost breakdowns from suppliers; check Form E data against the invoice before departure.",
+          "mitigation_zh": "向供应商收集成本构成；离港前核对 Form E 与发票信息一致。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "FTA-ACFTA-ORIGIN",
+            "FTA-ACFTA-FORM-E",
+            "FTA-ACFTA-DIRECT"
+          ],
+          "verified": true,
+          "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
+        },
+        {
+          "en": "HARN (8544.30.1200): supplier RVC 38% does not meet the 40% general rule and CTH is not met, so MFN 30% applies. Annual duty at stake: USD 684,000.",
+          "id": "FTA-ORIGIN-NOT-MET",
+          "mitigation_en": "Work with the supplier to document regional content (e.g. ASEAN or Chinese terminals and copper) before claiming; re-run the origin check.",
+          "mitigation_zh": "与供应商合作提升并记录区域价值成分（如采购中国或东盟产端子、铜材）后再申请优惠，并重新核算原产地。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "FTA-ACFTA-ORIGIN",
+            "FTA-RCEP-PSR"
+          ],
+          "verified": true,
+          "zh": "HARN（8544.30.1200）：供应商区域价值成分 38%，未达 40% 一般规则且不满足品目改变，适用最惠国税率 30%；每年涉及关税约 684,000 美元。"
+        },
+        {
+          "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
+          "id": "MY-SCHEDULE-C",
+          "mitigation_en": "Confirm the Schedule C approval and its validity for each HS line before go-live.",
+          "mitigation_zh": "上线前确认附表 C 批文及其对各税号的有效性。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "MY-ST-SCHEDULE-C",
+            "MY-ST-IMPORT-BASE"
+          ],
+          "verified": true,
+          "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+        },
+        {
+          "en": "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",
+          "id": "MY-EV-INCENTIVE",
+          "mitigation_en": "",
+          "mitigation_zh": "",
+          "modes": null,
+          "options": null,
+          "severity": "info",
+          "statements": [
+            "MY-EV-CKD"
+          ],
+          "verified": true,
+          "zh": "本项目为燃油 SUV，不适用电动车零部件进口关税豁免（至 2027 年 12 月 31 日）；如推出电动车型需另行确认资格。"
+        }
+      ],
+      "name_en": "Ningbo body and interior kits to Shah Alam plant",
+      "name_zh": "宁波车身及内饰散件至莎阿南工厂",
+      "options": [
+        {
+          "costs": [
+            {
+              "code": "A1.ocean_fcl.UNITS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "kits per year",
+              "label_zh": "年kit量",
+              "note": "",
+              "payer": null,
+              "unit": "kit",
+              "value": 6000.0
+            },
+            {
+              "code": "A1.ocean_fcl.SHIPMENTS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Shipments per year",
+              "label_zh": "年发运票数",
+              "note": "",
+              "payer": null,
+              "unit": "shipment",
+              "value": 48.0
+            },
+            {
+              "code": "A1.ocean_fcl.FEU",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "40ft HC containers per year",
+              "label_zh": "年 40 尺高柜数",
+              "note": "",
+              "payer": null,
+              "unit": "FEU",
+              "value": 276.0
+            },
+            {
+              "code": "A1.ocean_fcl.KM_PICKUP",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Pickup distance to port/rail terminal",
+              "label_zh": "提货至港口/铁路站距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 40.0
+            },
+            {
+              "code": "A1.ocean_fcl.KM_DELIVERY",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Delivery distance from port",
+              "label_zh": "港口至工厂距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 35.0
+            },
+            {
+              "code": "A1.ocean_fcl.PICKUP",
+              "element": "pre_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Pickup at supplier (truck)",
+              "label_zh": "供应商处提货（拖车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 65688.0
+            },
+            {
+              "code": "A1.ocean_fcl.THC_O",
+              "element": "origin_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Origin terminal handling",
+              "label_zh": "起运港码头操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 38640.0
+            },
+            {
+              "code": "A1.ocean_fcl.EXPORT_DECL",
+              "element": "export_clearance",
+              "group": "logistics",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Export declaration",
+              "label_zh": "出口报关",
+              "note": "",
+              "payer": "seller",
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A1.ocean_fcl.MAIN",
+              "element": "main_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Ocean freight",
+              "label_zh": "海运费",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 414000.0
+            },
+            {
+              "code": "A1.ocean_fcl.THC_D",
+              "element": "destination_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Destination terminal handling",
+              "label_zh": "目的港码头操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 46920.0
+            },
+            {
+              "code": "A1.ocean_fcl.IMPORT_DECL",
+              "element": "import_clearance",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Import declaration",
+              "label_zh": "进口报关",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 3360.0
+            },
+            {
+              "code": "A1.ocean_fcl.DELIVERY",
+              "element": "on_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Delivery to plant (truck)",
+              "label_zh": "送货至工厂（拖车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 62652.0
+            },
+            {
+              "code": "A1.ocean_fcl.VAS_RACKS",
+              "element": null,
+              "group": "vas",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Returnable rack management",
+              "label_zh": "循环料架管理",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 16560.0
+            },
+            {
+              "code": "A1.ocean_fcl.GOODS_BODY",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value BODY (FCA price)",
+              "label_zh": "货值 BODY（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 12600000.0
+            },
+            {
+              "code": "A1.ocean_fcl.GOODS_SEAT",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value SEAT (FCA price)",
+              "label_zh": "货值 SEAT（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 3900000.0
+            },
+            {
+              "code": "A1.ocean_fcl.GOODS_HARN",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value HARN (FCA price)",
+              "label_zh": "货值 HARN（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2280000.0
+            },
+            {
+              "code": "A1.ocean_fcl.GOODS_BRKE",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value BRKE (FCA price)",
+              "label_zh": "货值 BRKE（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 1740000.0
+            },
+            {
+              "code": "A1.ocean_fcl.GOODS_TOTAL",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Goods value total",
+              "label_zh": "货值合计",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 20520000.0
+            },
+            {
+              "code": "A1.ocean_fcl.INSURANCE",
+              "element": "insurance",
+              "group": "insurance",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Cargo insurance (110% of CIF)",
+              "label_zh": "货运保险（CIF 的 110%）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 27770.59296
+            },
+            {
+              "code": "A1.ocean_fcl.VAS_KITTING",
+              "element": null,
+              "group": "vas",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Kitting and line-side sequencing",
+              "label_zh": "配套及工位排序",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 54000.0
+            },
+            {
+              "code": "A1.ocean_fcl.FTA_DOCS",
+              "element": "import_clearance",
+              "group": "fta_docs",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Certificate of origin (Form E) handling",
+              "label_zh": "原产地证（Form E）办理",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 1920.0
+            },
+            {
+              "code": "A1.ocean_fcl.CV_BODY",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value BODY (CIF)",
+              "label_zh": "完税价格 BODY（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 12935323.697432
+            },
+            {
+              "code": "A1.ocean_fcl.DUTY_BODY",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty BODY (ACFTA)",
+              "label_zh": "进口关税 BODY（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.SALES_TAX_BODY",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import BODY",
+              "label_zh": "进口销售税 BODY",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.CV_SEAT",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value SEAT (CIF)",
+              "label_zh": "完税价格 SEAT（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 4003790.668253
+            },
+            {
+              "code": "A1.ocean_fcl.DUTY_SEAT",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty SEAT (ACFTA)",
+              "label_zh": "进口关税 SEAT（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.SALES_TAX_SEAT",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import SEAT",
+              "label_zh": "进口销售税 SEAT",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.CV_HARN",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value HARN (CIF)",
+              "label_zh": "完税价格 HARN（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2340677.62144
+            },
+            {
+              "code": "A1.ocean_fcl.DUTY_HARN",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty HARN (MFN)",
+              "label_zh": "进口关税 HARN（MFN）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 702203.286432
+            },
+            {
+              "code": "A1.ocean_fcl.SALES_TAX_HARN",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import HARN",
+              "label_zh": "进口销售税 HARN",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.CV_BRKE",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value BRKE (CIF)",
+              "label_zh": "完税价格 BRKE（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 1786306.605836
+            },
+            {
+              "code": "A1.ocean_fcl.DUTY_BRKE",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty BRKE (ACFTA)",
+              "label_zh": "进口关税 BRKE（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.SALES_TAX_BRKE",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import BRKE",
+              "label_zh": "进口销售税 BRKE",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.MEAN_TRANSIT_DAYS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Mean door-to-door days (simulated)",
+              "label_zh": "平均门到门天数（模拟）",
+              "note": "",
+              "payer": null,
+              "unit": "days",
+              "value": 25.272794
+            },
+            {
+              "code": "A1.ocean_fcl.CARRYING",
+              "element": null,
+              "group": "economic",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Pipeline inventory carrying cost",
+              "label_zh": "在途库存资金占用成本",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 284163.140829
+            },
+            {
+              "code": "A1.ocean_fcl.TOTAL_QUOTE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total quotation (logistics, VAS, insurance, permits)",
+              "label_zh": "报价合计（物流、增值服务、保险、许可）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 731510.59296
+            },
+            {
+              "code": "A1.ocean_fcl.TOTAL_SELLER_SIDE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Costs on the seller's side under the Incoterm (excluded)",
+              "label_zh": "按贸易术语由卖方承担的费用（不计入）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A1.ocean_fcl.TOTAL_DUTY",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Duties (estimated)",
+              "label_zh": "关税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 702203.286432
+            },
+            {
+              "code": "A1.ocean_fcl.TOTAL_TAX",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import / consumption taxes (estimated)",
+              "label_zh": "进口环节税及消费税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_fcl.TOTAL_ECONOMIC",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Inventory carrying cost (economic, not invoiced)",
+              "label_zh": "在途/安全库存资金占用成本（经济成本，不开票）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 284163.140829
+            },
+            {
+              "code": "A1.ocean_fcl.TOTAL_LANDED",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total landed cost (decision basis)",
+              "label_zh": "总落地成本（决策口径）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 1717877.020221
+            },
+            {
+              "code": "A1.ocean_fcl.PER_UNIT",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Landed cost per kit",
+              "label_zh": "每kit落地成本",
+              "note": "",
+              "payer": null,
+              "unit": "USD/kit",
+              "value": 286.312837
+            }
+          ],
+          "dominated_by": [],
+          "flags": [
+            {
+              "en": "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8544.30.1200, 8708.29.9500, 8708.30.2900, 9401.20.1000)",
+              "id": "MY-KIT-CLASSIFICATION",
+              "mitigation_en": "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container.",
+              "mitigation_zh": "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-CKD-CLASSIFICATION",
+                "MY-AP-VEHICLES"
+              ],
+              "verified": false,
+              "zh": "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8544.30.1200、8708.29.9500、8708.30.2900、9401.20.1000）"
+            },
+            {
+              "en": "ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification.",
+              "id": "FTA-ACFTA-FORM-E",
+              "mitigation_en": "Collect cost breakdowns from suppliers; check Form E data against the invoice before departure.",
+              "mitigation_zh": "向供应商收集成本构成；离港前核对 Form E 与发票信息一致。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-ACFTA-FORM-E",
+                "FTA-ACFTA-DIRECT"
+              ],
+              "verified": true,
+              "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
+            },
+            {
+              "en": "HARN (8544.30.1200): supplier RVC 38% does not meet the 40% general rule and CTH is not met, so MFN 30% applies. Annual duty at stake: USD 684,000.",
+              "id": "FTA-ORIGIN-NOT-MET",
+              "mitigation_en": "Work with the supplier to document regional content (e.g. ASEAN or Chinese terminals and copper) before claiming; re-run the origin check.",
+              "mitigation_zh": "与供应商合作提升并记录区域价值成分（如采购中国或东盟产端子、铜材）后再申请优惠，并重新核算原产地。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-RCEP-PSR"
+              ],
+              "verified": true,
+              "zh": "HARN（8544.30.1200）：供应商区域价值成分 38%，未达 40% 一般规则且不满足品目改变，适用最惠国税率 30%；每年涉及关税约 684,000 美元。"
+            },
+            {
+              "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
+              "id": "MY-SCHEDULE-C",
+              "mitigation_en": "Confirm the Schedule C approval and its validity for each HS line before go-live.",
+              "mitigation_zh": "上线前确认附表 C 批文及其对各税号的有效性。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-ST-SCHEDULE-C",
+                "MY-ST-IMPORT-BASE"
+              ],
+              "verified": true,
+              "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+            },
+            {
+              "en": "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",
+              "id": "MY-EV-INCENTIVE",
+              "mitigation_en": "",
+              "mitigation_zh": "",
+              "modes": null,
+              "options": null,
+              "severity": "info",
+              "statements": [
+                "MY-EV-CKD"
+              ],
+              "verified": true,
+              "zh": "本项目为燃油 SUV，不适用电动车零部件进口关税豁免（至 2027 年 12 月 31 日）；如推出电动车型需另行确认资格。"
+            }
+          ],
+          "handoffs": 2,
+          "id": "A1-ocean_fcl",
+          "label_en": "Ocean FCL (40ft HC)",
+          "label_zh": "海运整箱（40 尺高柜）",
+          "legs": [
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "pickup: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.088889,
+              "kind": "fixed",
+              "name": "pickup: driving 40 km",
+              "source": "transit.truck.km_per_day"
+            },
+            {
+              "kind": "lognormal_q",
+              "median": 3.7,
+              "name": "origin port dwell (CHN, LPI)",
+              "q1": 2.3,
+              "q3": 5.8,
+              "source": "lpi.CHN.ct_export"
+            },
+            {
+              "high": 7.0,
+              "kind": "uniform",
+              "low": 0.0,
+              "name": "wait for weekly sailing",
+              "source": "transit.sea.headway_days"
+            },
+            {
+              "cv": 0.1,
+              "kind": "lognormal_cv",
+              "mean": 7.385433,
+              "name": "sailing CNNGB-MYPKG (2379 nm)",
+              "source": "geo.sea.CNNGB-MYPKG"
+            },
+            {
+              "delay": {
+                "kind": "gamma",
+                "mean": 4.8,
+                "name": "transshipment time",
+                "shape": 2.0
+              },
+              "kind": "bernoulli",
+              "name": "transshipment (LPI MYS: 0.5 per shipment, 4.8 d)",
+              "p": 0.5,
+              "source": "lpi.MYS.transshipment"
+            },
+            {
+              "kind": "lognormal_q",
+              "median": 3.5,
+              "name": "destination port + customs dwell (MYS, LPI)",
+              "q1": 1.8,
+              "q3": 6.7,
+              "source": "lpi.MYS.ct_import"
+            },
+            {
+              "delay": {
+                "high": 8.0,
+                "kind": "triangular",
+                "low": 1.0,
+                "mode": 3.0,
+                "name": "hold delay"
+              },
+              "kind": "bernoulli",
+              "name": "customs hold / inspection (p=0.07)",
+              "p": 0.07,
+              "source": "transit.customs_hold"
+            },
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "delivery: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.077778,
+              "kind": "fixed",
+              "name": "delivery: driving 35 km",
+              "source": "transit.truck.km_per_day"
+            }
+          ],
+          "metrics": {
+            "cost_per_unit": 286.312837,
+            "mean": 25.272794,
+            "on_time_probability": 0.93075,
+            "p50": 23.590462,
+            "p90": 35.220416,
+            "risk": 55.629954
+          },
+          "mode": "ocean_fcl",
+          "pareto": true,
+          "quantities": {
+            "avg_fill": 0.87495,
+            "feu_per_shipment_by_month": [
+              4,
+              5,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6
+            ],
+            "feu_per_year": 276,
+            "shipments_per_year": 48,
+            "units_per_year": 6000.0
+          },
+          "regime": null,
+          "risk": {
+            "flags": 40,
+            "handoffs": 4,
+            "score": 55.629954,
+            "service": 0,
+            "variability": 11.629954
+          },
+          "totals": {
+            "duty": 702203.286432,
+            "economic": 284163.140829,
+            "landed": 1717877.020221,
+            "per_unit": 286.312837,
+            "quote": 731510.59296,
+            "seller_side": 2160.0,
+            "tax": 0.0
+          },
+          "transit": {
+            "mean": 25.272794,
+            "on_time_at": {
+              "30": 0.78545,
+              "38": 0.93075,
+              "46": 0.97215
+            },
+            "on_time_probability": 0.93075,
+            "p50": 23.590462,
+            "p90": 35.220416,
+            "p95": 40.779495,
+            "seed": 620409234,
+            "target_days": 38.0
+          }
+        },
+        {
+          "costs": [
+            {
+              "code": "A1.ocean_lcl.UNITS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "kits per year",
+              "label_zh": "年kit量",
+              "note": "",
+              "payer": null,
+              "unit": "kit",
+              "value": 6000.0
+            },
+            {
+              "code": "A1.ocean_lcl.SHIPMENTS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Shipments per year",
+              "label_zh": "年发运票数",
+              "note": "",
+              "payer": null,
+              "unit": "shipment",
+              "value": 48.0
+            },
+            {
+              "code": "A1.ocean_lcl.WM",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Freight tonnes (W/M) per year",
+              "label_zh": "年计费吨（W/M）",
+              "note": "",
+              "payer": null,
+              "unit": "W/M",
+              "value": 15600.0
+            },
+            {
+              "code": "A1.ocean_lcl.KM_PICKUP",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Pickup distance to CFS",
+              "label_zh": "提货至集拼站距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 40.0
+            },
+            {
+              "code": "A1.ocean_lcl.KM_DELIVERY",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Delivery distance from CFS",
+              "label_zh": "集拼站至工厂距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 35.0
+            },
+            {
+              "code": "A1.ocean_lcl.PICKUP",
+              "element": "pre_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Pickup at supplier (truck)",
+              "label_zh": "供应商处提货（货车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 5568.0
+            },
+            {
+              "code": "A1.ocean_lcl.CFS_O",
+              "element": "origin_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Origin CFS handling",
+              "label_zh": "起运港集拼站操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 249600.0
+            },
+            {
+              "code": "A1.ocean_lcl.EXPORT_DECL",
+              "element": "export_clearance",
+              "group": "logistics",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Export declaration",
+              "label_zh": "出口报关",
+              "note": "",
+              "payer": "seller",
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A1.ocean_lcl.MAIN",
+              "element": "main_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "LCL ocean freight",
+              "label_zh": "拼箱海运费",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 655200.0
+            },
+            {
+              "code": "A1.ocean_lcl.CFS_D",
+              "element": "destination_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Destination CFS handling",
+              "label_zh": "目的港集拼站操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 312000.0
+            },
+            {
+              "code": "A1.ocean_lcl.IMPORT_DECL",
+              "element": "import_clearance",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Import declaration",
+              "label_zh": "进口报关",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 3360.0
+            },
+            {
+              "code": "A1.ocean_lcl.DELIVERY",
+              "element": "on_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Delivery to plant (truck)",
+              "label_zh": "送货至工厂（货车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 5352.0
+            },
+            {
+              "code": "A1.ocean_lcl.GOODS_BODY",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value BODY (FCA price)",
+              "label_zh": "货值 BODY（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 12600000.0
+            },
+            {
+              "code": "A1.ocean_lcl.GOODS_SEAT",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value SEAT (FCA price)",
+              "label_zh": "货值 SEAT（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 3900000.0
+            },
+            {
+              "code": "A1.ocean_lcl.GOODS_HARN",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value HARN (FCA price)",
+              "label_zh": "货值 HARN（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2280000.0
+            },
+            {
+              "code": "A1.ocean_lcl.GOODS_BRKE",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value BRKE (FCA price)",
+              "label_zh": "货值 BRKE（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 1740000.0
+            },
+            {
+              "code": "A1.ocean_lcl.GOODS_TOTAL",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Goods value total",
+              "label_zh": "货值合计",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 20520000.0
+            },
+            {
+              "code": "A1.ocean_lcl.INSURANCE",
+              "element": "insurance",
+              "group": "insurance",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Cargo insurance (110% of CIF)",
+              "label_zh": "货运保险（CIF 的 110%）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 28288.08576
+            },
+            {
+              "code": "A1.ocean_lcl.VAS_KITTING",
+              "element": null,
+              "group": "vas",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Kitting and line-side sequencing",
+              "label_zh": "配套及工位排序",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 54000.0
+            },
+            {
+              "code": "A1.ocean_lcl.FTA_DOCS",
+              "element": "import_clearance",
+              "group": "fta_docs",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Certificate of origin (Form E) handling",
+              "label_zh": "原产地证（Form E）办理",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 1920.0
+            },
+            {
+              "code": "A1.ocean_lcl.CV_BODY",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value BODY (CIF)",
+              "label_zh": "完税价格 BODY（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 13176367.771958
+            },
+            {
+              "code": "A1.ocean_lcl.DUTY_BODY",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty BODY (ACFTA)",
+              "label_zh": "进口关税 BODY（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.SALES_TAX_BODY",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import BODY",
+              "label_zh": "进口销售税 BODY",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.CV_SEAT",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value SEAT (CIF)",
+              "label_zh": "完税价格 SEAT（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 4078399.548463
+            },
+            {
+              "code": "A1.ocean_lcl.DUTY_SEAT",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty SEAT (ACFTA)",
+              "label_zh": "进口关税 SEAT（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.SALES_TAX_SEAT",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import SEAT",
+              "label_zh": "进口销售税 SEAT",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.CV_HARN",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value HARN (CIF)",
+              "label_zh": "完税价格 HARN（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2384295.12064
+            },
+            {
+              "code": "A1.ocean_lcl.DUTY_HARN",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty HARN (MFN)",
+              "label_zh": "进口关税 HARN（MFN）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 715288.536192
+            },
+            {
+              "code": "A1.ocean_lcl.SALES_TAX_HARN",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import HARN",
+              "label_zh": "进口销售税 HARN",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.CV_BRKE",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value BRKE (CIF)",
+              "label_zh": "完税价格 BRKE（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 1819593.644699
+            },
+            {
+              "code": "A1.ocean_lcl.DUTY_BRKE",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty BRKE (ACFTA)",
+              "label_zh": "进口关税 BRKE（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.SALES_TAX_BRKE",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import BRKE",
+              "label_zh": "进口销售税 BRKE",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.MEAN_TRANSIT_DAYS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Mean door-to-door days (simulated)",
+              "label_zh": "平均门到门天数（模拟）",
+              "note": "",
+              "payer": null,
+              "unit": "days",
+              "value": 30.4502
+            },
+            {
+              "code": "A1.ocean_lcl.CARRYING",
+              "element": null,
+              "group": "economic",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Pipeline inventory carrying cost",
+              "label_zh": "在途库存资金占用成本",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 342377.04491
+            },
+            {
+              "code": "A1.ocean_lcl.TOTAL_QUOTE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total quotation (logistics, VAS, insurance, permits)",
+              "label_zh": "报价合计（物流、增值服务、保险、许可）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 1315288.08576
+            },
+            {
+              "code": "A1.ocean_lcl.TOTAL_SELLER_SIDE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Costs on the seller's side under the Incoterm (excluded)",
+              "label_zh": "按贸易术语由卖方承担的费用（不计入）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A1.ocean_lcl.TOTAL_DUTY",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Duties (estimated)",
+              "label_zh": "关税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 715288.536192
+            },
+            {
+              "code": "A1.ocean_lcl.TOTAL_TAX",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import / consumption taxes (estimated)",
+              "label_zh": "进口环节税及消费税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.ocean_lcl.TOTAL_ECONOMIC",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Inventory carrying cost (economic, not invoiced)",
+              "label_zh": "在途/安全库存资金占用成本（经济成本，不开票）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 342377.04491
+            },
+            {
+              "code": "A1.ocean_lcl.TOTAL_LANDED",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total landed cost (decision basis)",
+              "label_zh": "总落地成本（决策口径）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2372953.666862
+            },
+            {
+              "code": "A1.ocean_lcl.PER_UNIT",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Landed cost per kit",
+              "label_zh": "每kit落地成本",
+              "note": "",
+              "payer": null,
+              "unit": "USD/kit",
+              "value": 395.492278
+            }
+          ],
+          "dominated_by": [
+            "A1-ocean_fcl"
+          ],
+          "flags": [
+            {
+              "en": "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8544.30.1200, 8708.29.9500, 8708.30.2900, 9401.20.1000)",
+              "id": "MY-KIT-CLASSIFICATION",
+              "mitigation_en": "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container.",
+              "mitigation_zh": "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-CKD-CLASSIFICATION",
+                "MY-AP-VEHICLES"
+              ],
+              "verified": false,
+              "zh": "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8544.30.1200、8708.29.9500、8708.30.2900、9401.20.1000）"
+            },
+            {
+              "en": "ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification.",
+              "id": "FTA-ACFTA-FORM-E",
+              "mitigation_en": "Collect cost breakdowns from suppliers; check Form E data against the invoice before departure.",
+              "mitigation_zh": "向供应商收集成本构成；离港前核对 Form E 与发票信息一致。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-ACFTA-FORM-E",
+                "FTA-ACFTA-DIRECT"
+              ],
+              "verified": true,
+              "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
+            },
+            {
+              "en": "HARN (8544.30.1200): supplier RVC 38% does not meet the 40% general rule and CTH is not met, so MFN 30% applies. Annual duty at stake: USD 684,000.",
+              "id": "FTA-ORIGIN-NOT-MET",
+              "mitigation_en": "Work with the supplier to document regional content (e.g. ASEAN or Chinese terminals and copper) before claiming; re-run the origin check.",
+              "mitigation_zh": "与供应商合作提升并记录区域价值成分（如采购中国或东盟产端子、铜材）后再申请优惠，并重新核算原产地。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-RCEP-PSR"
+              ],
+              "verified": true,
+              "zh": "HARN（8544.30.1200）：供应商区域价值成分 38%，未达 40% 一般规则且不满足品目改变，适用最惠国税率 30%；每年涉及关税约 684,000 美元。"
+            },
+            {
+              "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
+              "id": "MY-SCHEDULE-C",
+              "mitigation_en": "Confirm the Schedule C approval and its validity for each HS line before go-live.",
+              "mitigation_zh": "上线前确认附表 C 批文及其对各税号的有效性。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-ST-SCHEDULE-C",
+                "MY-ST-IMPORT-BASE"
+              ],
+              "verified": true,
+              "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+            },
+            {
+              "en": "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",
+              "id": "MY-EV-INCENTIVE",
+              "mitigation_en": "",
+              "mitigation_zh": "",
+              "modes": null,
+              "options": null,
+              "severity": "info",
+              "statements": [
+                "MY-EV-CKD"
+              ],
+              "verified": true,
+              "zh": "本项目为燃油 SUV，不适用电动车零部件进口关税豁免（至 2027 年 12 月 31 日）；如推出电动车型需另行确认资格。"
+            },
+            {
+              "en": "LCL adds two CFS handlings per shipment, raising damage and shortage risk for kit parts.",
+              "id": "LCL-HANDLING",
+              "mitigation_en": "Use crates sized for mixed loading; count at destination CFS.",
+              "mitigation_zh": "采用适合混装的木箱；目的港集拼站点数。",
+              "modes": null,
+              "options": null,
+              "severity": "low",
+              "statements": [],
+              "verified": true,
+              "zh": "拼箱每票增加两次集拼站作业，散件破损及短少风险上升。"
+            }
+          ],
+          "handoffs": 4,
+          "id": "A1-ocean_lcl",
+          "label_en": "Ocean LCL",
+          "label_zh": "海运拼箱",
+          "legs": [
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "pickup: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.088889,
+              "kind": "fixed",
+              "name": "pickup: driving 40 km",
+              "source": "transit.truck.km_per_day"
+            },
+            {
+              "high": 5.0,
+              "kind": "triangular",
+              "low": 1.0,
+              "mode": 2.5,
+              "name": "LCL consolidation at origin CFS",
+              "source": "transit.sea.lcl_consolidation_days"
+            },
+            {
+              "kind": "lognormal_q",
+              "median": 3.7,
+              "name": "origin port dwell (CHN, LPI)",
+              "q1": 2.3,
+              "q3": 5.8,
+              "source": "lpi.CHN.ct_export"
+            },
+            {
+              "high": 7.0,
+              "kind": "uniform",
+              "low": 0.0,
+              "name": "wait for weekly sailing",
+              "source": "transit.sea.headway_days"
+            },
+            {
+              "cv": 0.1,
+              "kind": "lognormal_cv",
+              "mean": 7.385433,
+              "name": "sailing CNNGB-MYPKG (2379 nm)",
+              "source": "geo.sea.CNNGB-MYPKG"
+            },
+            {
+              "delay": {
+                "kind": "gamma",
+                "mean": 4.8,
+                "name": "transshipment time",
+                "shape": 2.0
+              },
+              "kind": "bernoulli",
+              "name": "transshipment (LPI MYS: 0.5 per shipment, 4.8 d)",
+              "p": 0.5,
+              "source": "lpi.MYS.transshipment"
+            },
+            {
+              "kind": "lognormal_q",
+              "median": 3.5,
+              "name": "destination port + customs dwell (MYS, LPI)",
+              "q1": 1.8,
+              "q3": 6.7,
+              "source": "lpi.MYS.ct_import"
+            },
+            {
+              "high": 4.0,
+              "kind": "triangular",
+              "low": 1.0,
+              "mode": 2.0,
+              "name": "LCL deconsolidation at destination CFS",
+              "source": "transit.sea.lcl_deconsolidation_days"
+            },
+            {
+              "delay": {
+                "high": 8.0,
+                "kind": "triangular",
+                "low": 1.0,
+                "mode": 3.0,
+                "name": "hold delay"
+              },
+              "kind": "bernoulli",
+              "name": "customs hold / inspection (p=0.07)",
+              "p": 0.07,
+              "source": "transit.customs_hold"
+            },
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "delivery: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.077778,
+              "kind": "fixed",
+              "name": "delivery: driving 35 km",
+              "source": "transit.truck.km_per_day"
+            }
+          ],
+          "metrics": {
+            "cost_per_unit": 395.492278,
+            "mean": 30.4502,
+            "on_time_probability": 0.8528,
+            "p50": 28.73833,
+            "p90": 40.716673,
+            "risk": 63.978343
+          },
+          "mode": "ocean_lcl",
+          "pareto": false,
+          "quantities": {
+            "shipments_per_year": 48,
+            "units_per_year": 6000.0,
+            "wm_per_year": 15600.0
+          },
+          "regime": null,
+          "risk": {
+            "flags": 44,
+            "handoffs": 8,
+            "score": 63.978343,
+            "service": 0,
+            "variability": 11.978343
+          },
+          "totals": {
+            "duty": 715288.536192,
+            "economic": 342377.04491,
+            "landed": 2372953.666862,
+            "per_unit": 395.492278,
+            "quote": 1315288.08576,
+            "seller_side": 2160.0,
+            "tax": 0.0
+          },
+          "transit": {
+            "mean": 30.4502,
+            "on_time_at": {
+              "30": 0.57185,
+              "38": 0.8528,
+              "46": 0.9495
+            },
+            "on_time_probability": 0.8528,
+            "p50": 28.73833,
+            "p90": 40.716673,
+            "p95": 46.067074,
+            "seed": 695022660,
+            "target_days": 38.0
+          }
+        },
+        {
+          "costs": [
+            {
+              "code": "A1.air.UNITS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "kits per year",
+              "label_zh": "年kit量",
+              "note": "",
+              "payer": null,
+              "unit": "kit",
+              "value": 6000.0
+            },
+            {
+              "code": "A1.air.SHIPMENTS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Shipments per year",
+              "label_zh": "年发运票数",
+              "note": "",
+              "payer": null,
+              "unit": "shipment",
+              "value": 48.0
+            },
+            {
+              "code": "A1.air.CHG_KG",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Chargeable kg per year",
+              "label_zh": "年计费重量（公斤）",
+              "note": "",
+              "payer": null,
+              "unit": "kg",
+              "value": 3120000.0
+            },
+            {
+              "code": "A1.air.KM_PICKUP",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Pickup distance to airport",
+              "label_zh": "提货至机场距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 220.0
+            },
+            {
+              "code": "A1.air.KM_DELIVERY",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Delivery distance from airport",
+              "label_zh": "机场至工厂距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 55.0
+            },
+            {
+              "code": "A1.air.PICKUP",
+              "element": "pre_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Pickup at supplier (truck to airport)",
+              "label_zh": "供应商处提货（送机场）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 13344.0
+            },
+            {
+              "code": "A1.air.HANDLING_O",
+              "element": "origin_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Origin airport handling",
+              "label_zh": "起运机场操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 374400.0
+            },
+            {
+              "code": "A1.air.EXPORT_DECL",
+              "element": "export_clearance",
+              "group": "logistics",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Export declaration",
+              "label_zh": "出口报关",
+              "note": "",
+              "payer": "seller",
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A1.air.MAIN",
+              "element": "main_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Air freight",
+              "label_zh": "空运费",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 8112000.0
+            },
+            {
+              "code": "A1.air.HANDLING_D",
+              "element": "destination_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Destination airport handling",
+              "label_zh": "目的机场操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 468000.0
+            },
+            {
+              "code": "A1.air.IMPORT_DECL",
+              "element": "import_clearance",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Import declaration",
+              "label_zh": "进口报关",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 3360.0
+            },
+            {
+              "code": "A1.air.DELIVERY",
+              "element": "on_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Delivery to plant (truck)",
+              "label_zh": "送货至工厂（货车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 6216.0
+            },
+            {
+              "code": "A1.air.GOODS_BODY",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value BODY (FCA price)",
+              "label_zh": "货值 BODY（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 12600000.0
+            },
+            {
+              "code": "A1.air.GOODS_SEAT",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value SEAT (FCA price)",
+              "label_zh": "货值 SEAT（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 3900000.0
+            },
+            {
+              "code": "A1.air.GOODS_HARN",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value HARN (FCA price)",
+              "label_zh": "货值 HARN（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2280000.0
+            },
+            {
+              "code": "A1.air.GOODS_BRKE",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value BRKE (FCA price)",
+              "label_zh": "货值 BRKE（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 1740000.0
+            },
+            {
+              "code": "A1.air.GOODS_TOTAL",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Goods value total",
+              "label_zh": "货值合计",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 20520000.0
+            },
+            {
+              "code": "A1.air.INSURANCE",
+              "element": "insurance",
+              "group": "insurance",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Cargo insurance (110% of CIF)",
+              "label_zh": "货运保险（CIF 的 110%）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 38306.06208
+            },
+            {
+              "code": "A1.air.VAS_KITTING",
+              "element": null,
+              "group": "vas",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Kitting and line-side sequencing",
+              "label_zh": "配套及工位排序",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 54000.0
+            },
+            {
+              "code": "A1.air.FTA_DOCS",
+              "element": "import_clearance",
+              "group": "fta_docs",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Certificate of origin (Form E) handling",
+              "label_zh": "原产地证（Form E）办理",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 1920.0
+            },
+            {
+              "code": "A1.air.CV_BODY",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value BODY (CIF)",
+              "label_zh": "完税价格 BODY（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 17842662.318821
+            },
+            {
+              "code": "A1.air.DUTY_BODY",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty BODY (ACFTA)",
+              "label_zh": "进口关税 BODY（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.SALES_TAX_BODY",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import BODY",
+              "label_zh": "进口销售税 BODY",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.CV_SEAT",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value SEAT (CIF)",
+              "label_zh": "完税价格 SEAT（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 5522728.812968
+            },
+            {
+              "code": "A1.air.DUTY_SEAT",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty SEAT (ACFTA)",
+              "label_zh": "进口关税 SEAT（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.SALES_TAX_SEAT",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import SEAT",
+              "label_zh": "进口销售税 SEAT",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.CV_HARN",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value HARN (CIF)",
+              "label_zh": "完税价格 HARN（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 3228672.22912
+            },
+            {
+              "code": "A1.air.DUTY_HARN",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty HARN (MFN)",
+              "label_zh": "进口关税 HARN（MFN）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 968601.668736
+            },
+            {
+              "code": "A1.air.SALES_TAX_HARN",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import HARN",
+              "label_zh": "进口销售税 HARN",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.CV_BRKE",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value BRKE (CIF)",
+              "label_zh": "完税价格 BRKE（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2463986.701171
+            },
+            {
+              "code": "A1.air.DUTY_BRKE",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty BRKE (ACFTA)",
+              "label_zh": "进口关税 BRKE（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.SALES_TAX_BRKE",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import BRKE",
+              "label_zh": "进口销售税 BRKE",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.MEAN_TRANSIT_DAYS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Mean door-to-door days (simulated)",
+              "label_zh": "平均门到门天数（模拟）",
+              "note": "",
+              "payer": null,
+              "unit": "days",
+              "value": 4.901107
+            },
+            {
+              "code": "A1.air.CARRYING",
+              "element": null,
+              "group": "economic",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Pipeline inventory carrying cost",
+              "label_zh": "在途库存资金占用成本",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 55107.240509
+            },
+            {
+              "code": "A1.air.TOTAL_QUOTE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total quotation (logistics, VAS, insurance, permits)",
+              "label_zh": "报价合计（物流、增值服务、保险、许可）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 9071546.06208
+            },
+            {
+              "code": "A1.air.TOTAL_SELLER_SIDE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Costs on the seller's side under the Incoterm (excluded)",
+              "label_zh": "按贸易术语由卖方承担的费用（不计入）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A1.air.TOTAL_DUTY",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Duties (estimated)",
+              "label_zh": "关税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 968601.668736
+            },
+            {
+              "code": "A1.air.TOTAL_TAX",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import / consumption taxes (estimated)",
+              "label_zh": "进口环节税及消费税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A1.air.TOTAL_ECONOMIC",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Inventory carrying cost (economic, not invoiced)",
+              "label_zh": "在途/安全库存资金占用成本（经济成本，不开票）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 55107.240509
+            },
+            {
+              "code": "A1.air.TOTAL_LANDED",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total landed cost (decision basis)",
+              "label_zh": "总落地成本（决策口径）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 10095254.971325
+            },
+            {
+              "code": "A1.air.PER_UNIT",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Landed cost per kit",
+              "label_zh": "每kit落地成本",
+              "note": "",
+              "payer": null,
+              "unit": "USD/kit",
+              "value": 1682.542495
+            }
+          ],
+          "dominated_by": [],
+          "flags": [
+            {
+              "en": "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8544.30.1200, 8708.29.9500, 8708.30.2900, 9401.20.1000)",
+              "id": "MY-KIT-CLASSIFICATION",
+              "mitigation_en": "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container.",
+              "mitigation_zh": "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-CKD-CLASSIFICATION",
+                "MY-AP-VEHICLES"
+              ],
+              "verified": false,
+              "zh": "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8544.30.1200、8708.29.9500、8708.30.2900、9401.20.1000）"
+            },
+            {
+              "en": "ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification.",
+              "id": "FTA-ACFTA-FORM-E",
+              "mitigation_en": "Collect cost breakdowns from suppliers; check Form E data against the invoice before departure.",
+              "mitigation_zh": "向供应商收集成本构成；离港前核对 Form E 与发票信息一致。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-ACFTA-FORM-E",
+                "FTA-ACFTA-DIRECT"
+              ],
+              "verified": true,
+              "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
+            },
+            {
+              "en": "HARN (8544.30.1200): supplier RVC 38% does not meet the 40% general rule and CTH is not met, so MFN 30% applies. Annual duty at stake: USD 684,000.",
+              "id": "FTA-ORIGIN-NOT-MET",
+              "mitigation_en": "Work with the supplier to document regional content (e.g. ASEAN or Chinese terminals and copper) before claiming; re-run the origin check.",
+              "mitigation_zh": "与供应商合作提升并记录区域价值成分（如采购中国或东盟产端子、铜材）后再申请优惠，并重新核算原产地。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-RCEP-PSR"
+              ],
+              "verified": true,
+              "zh": "HARN（8544.30.1200）：供应商区域价值成分 38%，未达 40% 一般规则且不满足品目改变，适用最惠国税率 30%；每年涉及关税约 684,000 美元。"
+            },
+            {
+              "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
+              "id": "MY-SCHEDULE-C",
+              "mitigation_en": "Confirm the Schedule C approval and its validity for each HS line before go-live.",
+              "mitigation_zh": "上线前确认附表 C 批文及其对各税号的有效性。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-ST-SCHEDULE-C",
+                "MY-ST-IMPORT-BASE"
+              ],
+              "verified": true,
+              "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+            },
+            {
+              "en": "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",
+              "id": "MY-EV-INCENTIVE",
+              "mitigation_en": "",
+              "mitigation_zh": "",
+              "modes": null,
+              "options": null,
+              "severity": "info",
+              "statements": [
+                "MY-EV-CKD"
+              ],
+              "verified": true,
+              "zh": "本项目为燃油 SUV，不适用电动车零部件进口关税豁免（至 2027 年 12 月 31 日）；如推出电动车型需另行确认资格。"
+            }
+          ],
+          "handoffs": 2,
+          "id": "A1-air",
+          "label_en": "Air freight",
+          "label_zh": "空运",
+          "legs": [
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "pickup: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.488889,
+              "kind": "fixed",
+              "name": "pickup: driving 220 km",
+              "source": "transit.truck.km_per_day"
+            },
+            {
+              "high": 2.0,
+              "kind": "triangular",
+              "low": 0.5,
+              "mode": 1.0,
+              "name": "origin airport handling + export clearance",
+              "source": "transit.air.origin_handling_days"
+            },
+            {
+              "high": 1.0,
+              "kind": "uniform",
+              "low": 0.0,
+              "name": "wait for flight",
+              "source": "transit.air.headway_days"
+            },
+            {
+              "days": 0.242567,
+              "kind": "fixed",
+              "name": "flight PVG-KUL (3797 km great circle)",
+              "source": "geo.air.PVG-KUL"
+            },
+            {
+              "kind": "lognormal_mm",
+              "mean": 0.9,
+              "median": 0.4,
+              "name": "destination airport + customs dwell (MYS, LPI)",
+              "source": "lpi.MYS.air_import"
+            },
+            {
+              "delay": {
+                "high": 8.0,
+                "kind": "triangular",
+                "low": 1.0,
+                "mode": 3.0,
+                "name": "hold delay"
+              },
+              "kind": "bernoulli",
+              "name": "customs hold / inspection (p=0.07)",
+              "p": 0.07,
+              "source": "transit.customs_hold"
+            },
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "delivery: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.122222,
+              "kind": "fixed",
+              "name": "delivery: driving 55 km",
+              "source": "transit.truck.km_per_day"
+            }
+          ],
+          "metrics": {
+            "cost_per_unit": 1682.542495,
+            "mean": 4.901107,
+            "on_time_probability": 0.9996,
+            "p50": 4.32704,
+            "p90": 6.976967,
+            "risk": 46.649927
+          },
+          "mode": "air",
+          "pareto": true,
+          "quantities": {
+            "chargeable_kg_per_year": 3120000.0,
+            "shipments_per_year": 48,
+            "units_per_year": 6000.0
+          },
+          "regime": null,
+          "risk": {
+            "flags": 40,
+            "handoffs": 4,
+            "score": 46.649927,
+            "service": 0,
+            "variability": 2.649927
+          },
+          "totals": {
+            "duty": 968601.668736,
+            "economic": 55107.240509,
+            "landed": 10095254.971325,
+            "per_unit": 1682.542495,
+            "quote": 9071546.06208,
+            "seller_side": 2160.0,
+            "tax": 0.0
+          },
+          "transit": {
+            "mean": 4.901107,
+            "on_time_at": {
+              "30": 0.99925,
+              "38": 0.9996,
+              "46": 0.9999
+            },
+            "on_time_probability": 0.9996,
+            "p50": 4.32704,
+            "p90": 6.976967,
+            "p95": 8.789434,
+            "seed": 2880893864,
+            "target_days": 38.0
+          }
+        }
+      ],
+      "origin": {
+        "airport": "PVG",
+        "city": "Ningbo",
+        "city_zh": "宁波",
+        "country": "CN",
+        "pickup_km_airport": 220,
+        "pickup_km_port": 40,
+        "port": "CNNGB"
+      },
+      "rationale": {
+        "en": [
+          "Recommended: Ocean FCL (40ft HC) at USD 286 per kit landed, P90 35.2 days, 93.1% on time against the 38-day target, risk score 56/100.",
+          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "Sensitivity: with a 30-day target the same option would be on time 78.5% of the time.",
+          "Ocean LCL is dominated by Ocean FCL (40ft HC) (no better on cost, P90 or risk).",
+          "Alternative on the Pareto front: Air freight - 488% more per kit, P90 7.0 days (-28.2), risk 47; on time 100.0%.",
+          "Conditions to manage: [MY-KIT-CLASSIFICATION] Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8544.30.1200, 8708.29.9500, 8708.30.2900, 9401.20.1000) [FTA-ACFTA-FORM-E] ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification. [FTA-ORIGIN-NOT-MET] HARN (8544.30.1200): supplier RVC 38% does not meet the 40% general rule and CTH is not met, so MFN 30% applies. Annual duty at stake: USD 684,000. [MY-SCHEDULE-C] Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty."
+        ],
+        "zh": [
+          "推荐方案：海运整箱（40 尺高柜）。每套落地成本 286 美元，P90 时效 35.2 天，38 天内送达概率 93.1%，风险评分 56/100。",
+          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "敏感性：若时效目标收紧至 30 天，该方案准时率为 78.5%。",
+          "海运拼箱在成本、P90 时效和风险上均不优于海运整箱（40 尺高柜），属被占优方案。",
+          "帕累托前沿上的备选：空运——每套成本高 488%，P90 7.0 天（少 28.2 天），风险 47；准时率 100.0%。",
+          "需重点管控：【MY-KIT-CLASSIFICATION】散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8544.30.1200、8708.29.9500、8708.30.2900、9401.20.1000） 【FTA-ACFTA-FORM-E】申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。 【FTA-ORIGIN-NOT-MET】HARN（8544.30.1200）：供应商区域价值成分 38%，未达 40% 一般规则且不满足品目改变，适用最惠国税率 30%；每年涉及关税约 684,000 美元。 【MY-SCHEDULE-C】进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+        ]
+      },
+      "recommendation": {
+        "chosen": "A1-ocean_fcl",
+        "feasible": [
+          "A1-ocean_fcl",
+          "A1-air"
+        ],
+        "front": [
+          "A1-air",
+          "A1-ocean_fcl"
+        ],
+        "scores": {
+          "A1-air": 3.438294,
+          "A1-ocean_fcl": 2.246133
+        },
+        "status": "meets_target"
+      },
+      "target_transit_days": 38,
+      "unit": "kit"
+    },
+    {
+      "destination": {
+        "airport": "KUL",
+        "city": "Shah Alam",
+        "city_zh": "莎阿南",
+        "country": "MY",
+        "delivery_km_airport": 55,
+        "delivery_km_port": 35,
+        "port": "MYPKG"
+      },
+      "excluded": [
+        {
+          "mode": "rail",
+          "reason_en": "No verified scheduled cross-border rail service for this lane: First run 2024; no current official timetable found. Re-enable by setting status: verified once a scheduled departure is confirmed.",
+          "reason_zh": "该线路无经核实的定期跨境铁路班列，暂不纳入方案。",
+          "statements": [
+            "SVC-ASEAN-EXPRESS"
+          ]
+        }
+      ],
+      "extra": {
+        "fta": [
+          {
+            "annual_goods_value": 6900000.0,
+            "annual_saving": 1725000.0,
+            "chosen": {
+              "available": true,
+              "rate": 0.0,
+              "reason": "supplier RVC >= 40% (general rule)",
+              "scheme": "ACFTA",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "MY-TARIFF-LINES"
+              ]
+            },
+            "doc_cost": 960.0,
+            "hs": "8708.40.2600",
+            "mfn_rate": 0.25,
+            "net_saving": 1724040.0,
+            "options": [
+              {
+                "available": true,
+                "rate": 0.25,
+                "reason": "general rate",
+                "scheme": "MFN",
+                "statements": [
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.0,
+                "reason": "supplier RVC >= 40% (general rule)",
+                "scheme": "ACFTA",
+                "statements": [
+                  "FTA-ACFTA-ORIGIN",
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.227,
+                "reason": "PSR CTH or RVC40: met",
+                "scheme": "RCEP",
+                "statements": [
+                  "FTA-RCEP-PSR",
+                  "FTA-RCEP-POO",
+                  "MY-TARIFF-LINES"
+                ]
+              }
+            ],
+            "rvc": 64,
+            "saving_if_qualified": 1725000.0,
+            "sku": "GBOX",
+            "worth_it": true
+          },
+          {
+            "annual_goods_value": 2520000.0,
+            "annual_saving": 756000.0,
+            "chosen": {
+              "available": true,
+              "rate": 0.0,
+              "reason": "supplier RVC >= 40% (general rule)",
+              "scheme": "ACFTA",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "MY-TARIFF-LINES"
+              ]
+            },
+            "doc_cost": 960.0,
+            "hs": "8708.80.1600",
+            "mfn_rate": 0.3,
+            "net_saving": 755040.0,
+            "options": [
+              {
+                "available": true,
+                "rate": 0.3,
+                "reason": "general rate",
+                "scheme": "MFN",
+                "statements": [
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.0,
+                "reason": "supplier RVC >= 40% (general rule)",
+                "scheme": "ACFTA",
+                "statements": [
+                  "FTA-ACFTA-ORIGIN",
+                  "MY-TARIFF-LINES"
+                ]
+              },
+              {
+                "available": true,
+                "rate": 0.273,
+                "reason": "PSR CTH or RVC40: met",
+                "scheme": "RCEP",
+                "statements": [
+                  "FTA-RCEP-PSR",
+                  "FTA-RCEP-POO",
+                  "MY-TARIFF-LINES"
+                ]
+              }
+            ],
+            "rvc": 49,
+            "saving_if_qualified": 756000.0,
+            "sku": "SUSP",
+            "worth_it": true
+          }
+        ]
+      },
+      "id": "A2",
+      "lane_flags": [
+        {
+          "en": "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8708.40.2600, 8708.80.1600)",
+          "id": "MY-KIT-CLASSIFICATION",
+          "mitigation_en": "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container.",
+          "mitigation_zh": "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "MY-CKD-CLASSIFICATION",
+            "MY-AP-VEHICLES"
+          ],
+          "verified": false,
+          "zh": "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8708.40.2600、8708.80.1600）"
+        },
+        {
+          "en": "ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification.",
+          "id": "FTA-ACFTA-FORM-E",
+          "mitigation_en": "Collect cost breakdowns from suppliers; check Form E data against the invoice before departure.",
+          "mitigation_zh": "向供应商收集成本构成；离港前核对 Form E 与发票信息一致。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "FTA-ACFTA-ORIGIN",
+            "FTA-ACFTA-FORM-E",
+            "FTA-ACFTA-DIRECT"
+          ],
+          "verified": true,
+          "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
+        },
+        {
+          "en": "Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
+          "id": "THIRD-COUNTRY-INVOICE",
+          "mitigation_en": "Align the three documents (supplier invoice, third-party invoice, Form E) before departure; keep the contract chain on file.",
+          "mitigation_zh": "离港前核对供应商发票、第三方发票与 Form E 三者一致；留存完整合同链。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "FTA-ACFTA-3PI",
+            "FTA-RCEP-3PI",
+            "MY-VALUATION-CIF"
+          ],
+          "verified": true,
+          "zh": "货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
+        },
+        {
+          "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
+          "id": "MY-SCHEDULE-C",
+          "mitigation_en": "Confirm the Schedule C approval and its validity for each HS line before go-live.",
+          "mitigation_zh": "上线前确认附表 C 批文及其对各税号的有效性。",
+          "modes": null,
+          "options": null,
+          "severity": "medium",
+          "statements": [
+            "MY-ST-SCHEDULE-C",
+            "MY-ST-IMPORT-BASE"
+          ],
+          "verified": true,
+          "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+        },
+        {
+          "en": "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",
+          "id": "MY-EV-INCENTIVE",
+          "mitigation_en": "",
+          "mitigation_zh": "",
+          "modes": null,
+          "options": null,
+          "severity": "info",
+          "statements": [
+            "MY-EV-CKD"
+          ],
+          "verified": true,
+          "zh": "本项目为燃油 SUV，不适用电动车零部件进口关税豁免（至 2027 年 12 月 31 日）；如推出电动车型需另行确认资格。"
+        }
+      ],
+      "name_en": "Chongqing powertrain and chassis parts to Shah Alam plant (invoiced by a Singapore trading entity)",
+      "name_zh": "重庆动力总成及底盘件至莎阿南工厂（由新加坡贸易主体开票）",
+      "options": [
+        {
+          "costs": [
+            {
+              "code": "A2.rail_sea_fcl.UNITS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "kits per year",
+              "label_zh": "年kit量",
+              "note": "",
+              "payer": null,
+              "unit": "kit",
+              "value": 6000.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.SHIPMENTS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Shipments per year",
+              "label_zh": "年发运票数",
+              "note": "",
+              "payer": null,
+              "unit": "shipment",
+              "value": 48.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.FEU",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "40ft HC containers per year",
+              "label_zh": "年 40 尺高柜数",
+              "note": "",
+              "payer": null,
+              "unit": "FEU",
+              "value": 96.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.KM_PICKUP",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Pickup distance to port/rail terminal",
+              "label_zh": "提货至港口/铁路站距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 30.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.KM_DELIVERY",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Delivery distance from port",
+              "label_zh": "港口至工厂距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 35.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.PICKUP",
+              "element": "pre_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Pickup at supplier (truck)",
+              "label_zh": "供应商处提货（拖车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 20736.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.RAIL",
+              "element": "pre_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Rail to Qinzhou port",
+              "label_zh": "铁路至钦州港",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 62400.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.THC_O",
+              "element": "origin_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Origin terminal handling",
+              "label_zh": "起运港码头操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 13440.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.EXPORT_DECL",
+              "element": "export_clearance",
+              "group": "logistics",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Export declaration",
+              "label_zh": "出口报关",
+              "note": "",
+              "payer": "seller",
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.MAIN",
+              "element": "main_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Ocean freight",
+              "label_zh": "海运费",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 139200.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.THC_D",
+              "element": "destination_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Destination terminal handling",
+              "label_zh": "目的港码头操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 16320.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.IMPORT_DECL",
+              "element": "import_clearance",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Import declaration",
+              "label_zh": "进口报关",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 3360.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.DELIVERY",
+              "element": "on_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Delivery to plant (truck)",
+              "label_zh": "送货至工厂（拖车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 21792.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.VAS_RACKS",
+              "element": null,
+              "group": "vas",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Returnable rack management",
+              "label_zh": "循环料架管理",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 5760.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.GOODS_GBOX",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value GBOX (FCA price)",
+              "label_zh": "货值 GBOX（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 6900000.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.GOODS_SUSP",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value SUSP (FCA price)",
+              "label_zh": "货值 SUSP（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2520000.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.GOODS_TOTAL",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Goods value total",
+              "label_zh": "货值合计",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 9420000.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.INSURANCE",
+              "element": "insurance",
+              "group": "insurance",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Cargo insurance (110% of CIF)",
+              "label_zh": "货运保险（CIF 的 110%）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 12745.62432
+            },
+            {
+              "code": "A2.rail_sea_fcl.VAS_KITTING",
+              "element": null,
+              "group": "vas",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Kitting and line-side sequencing",
+              "label_zh": "配套及工位排序",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 54000.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.FTA_DOCS",
+              "element": "import_clearance",
+              "group": "fta_docs",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Certificate of origin (Form E) handling",
+              "label_zh": "原产地证（Form E）办理",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 1920.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.CV_GBOX",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value GBOX (CIF)",
+              "label_zh": "完税价格 GBOX（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 7082038.132464
+            },
+            {
+              "code": "A2.rail_sea_fcl.DUTY_GBOX",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty GBOX (ACFTA)",
+              "label_zh": "进口关税 GBOX（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.SALES_TAX_GBOX",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import GBOX",
+              "label_zh": "进口销售税 GBOX",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.CV_SUSP",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value SUSP (CIF)",
+              "label_zh": "完税价格 SUSP（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2586483.491856
+            },
+            {
+              "code": "A2.rail_sea_fcl.DUTY_SUSP",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty SUSP (ACFTA)",
+              "label_zh": "进口关税 SUSP（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.SALES_TAX_SUSP",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import SUSP",
+              "label_zh": "进口销售税 SUSP",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.MEAN_TRANSIT_DAYS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Mean door-to-door days (simulated)",
+              "label_zh": "平均门到门天数（模拟）",
+              "note": "",
+              "payer": null,
+              "unit": "days",
+              "value": 25.832515
+            },
+            {
+              "code": "A2.rail_sea_fcl.CARRYING",
+              "element": null,
+              "group": "economic",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Pipeline inventory carrying cost",
+              "label_zh": "在途库存资金占用成本",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 133338.241118
+            },
+            {
+              "code": "A2.rail_sea_fcl.TOTAL_QUOTE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total quotation (logistics, VAS, insurance, permits)",
+              "label_zh": "报价合计（物流、增值服务、保险、许可）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 351673.62432
+            },
+            {
+              "code": "A2.rail_sea_fcl.TOTAL_SELLER_SIDE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Costs on the seller's side under the Incoterm (excluded)",
+              "label_zh": "按贸易术语由卖方承担的费用（不计入）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.TOTAL_DUTY",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Duties (estimated)",
+              "label_zh": "关税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.TOTAL_TAX",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import / consumption taxes (estimated)",
+              "label_zh": "进口环节税及消费税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.rail_sea_fcl.TOTAL_ECONOMIC",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Inventory carrying cost (economic, not invoiced)",
+              "label_zh": "在途/安全库存资金占用成本（经济成本，不开票）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 133338.241118
+            },
+            {
+              "code": "A2.rail_sea_fcl.TOTAL_LANDED",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total landed cost (decision basis)",
+              "label_zh": "总落地成本（决策口径）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 485011.865438
+            },
+            {
+              "code": "A2.rail_sea_fcl.PER_UNIT",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Landed cost per kit",
+              "label_zh": "每kit落地成本",
+              "note": "",
+              "payer": null,
+              "unit": "USD/kit",
+              "value": 80.835311
+            }
+          ],
+          "dominated_by": [],
+          "flags": [
+            {
+              "en": "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8708.40.2600, 8708.80.1600)",
+              "id": "MY-KIT-CLASSIFICATION",
+              "mitigation_en": "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container.",
+              "mitigation_zh": "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-CKD-CLASSIFICATION",
+                "MY-AP-VEHICLES"
+              ],
+              "verified": false,
+              "zh": "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8708.40.2600、8708.80.1600）"
+            },
+            {
+              "en": "ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification.",
+              "id": "FTA-ACFTA-FORM-E",
+              "mitigation_en": "Collect cost breakdowns from suppliers; check Form E data against the invoice before departure.",
+              "mitigation_zh": "向供应商收集成本构成；离港前核对 Form E 与发票信息一致。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-ACFTA-FORM-E",
+                "FTA-ACFTA-DIRECT"
+              ],
+              "verified": true,
+              "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
+            },
+            {
+              "en": "Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
+              "id": "THIRD-COUNTRY-INVOICE",
+              "mitigation_en": "Align the three documents (supplier invoice, third-party invoice, Form E) before departure; keep the contract chain on file.",
+              "mitigation_zh": "离港前核对供应商发票、第三方发票与 Form E 三者一致；留存完整合同链。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-3PI",
+                "FTA-RCEP-3PI",
+                "MY-VALUATION-CIF"
+              ],
+              "verified": true,
+              "zh": "货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
+            },
+            {
+              "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
+              "id": "MY-SCHEDULE-C",
+              "mitigation_en": "Confirm the Schedule C approval and its validity for each HS line before go-live.",
+              "mitigation_zh": "上线前确认附表 C 批文及其对各税号的有效性。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-ST-SCHEDULE-C",
+                "MY-ST-IMPORT-BASE"
+              ],
+              "verified": true,
+              "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+            },
+            {
+              "en": "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",
+              "id": "MY-EV-INCENTIVE",
+              "mitigation_en": "",
+              "mitigation_zh": "",
+              "modes": null,
+              "options": null,
+              "severity": "info",
+              "statements": [
+                "MY-EV-CKD"
+              ],
+              "verified": true,
+              "zh": "本项目为燃油 SUV，不适用电动车零部件进口关税豁免（至 2027 年 12 月 31 日）；如推出电动车型需另行确认资格。"
+            },
+            {
+              "en": "Rail-sea chain: domestic rail leg to Qinzhou is evidenced only by state-affiliated media; train frequency is an assumption.",
+              "id": "RAIL-SEA-FREQUENCY",
+              "mitigation_en": "Confirm the rail-sea schedule and cut-off before committing volume.",
+              "mitigation_zh": "承诺货量前确认铁海联运班期与截关时间。",
+              "modes": null,
+              "options": null,
+              "severity": "low",
+              "statements": [
+                "SVC-ILSTC"
+              ],
+              "verified": false,
+              "zh": "铁海联运：重庆至钦州铁路段仅有官方背景媒体报道，班列频率为假设。"
+            }
+          ],
+          "handoffs": 3,
+          "id": "A2-rail_sea_fcl",
+          "label_en": "Rail-sea via Qinzhou (FCL)",
+          "label_zh": "经钦州铁海联运（整箱）",
+          "legs": [
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "pickup: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.066667,
+              "kind": "fixed",
+              "name": "pickup: driving 30 km",
+              "source": "transit.truck.km_per_day"
+            },
+            {
+              "high": 3.5,
+              "kind": "triangular",
+              "low": 1.5,
+              "mode": 2.0,
+              "name": "rail Chongqing-Qinzhou",
+              "source": "transit.rail.qinzhou_rail_days"
+            },
+            {
+              "high": 1.0,
+              "kind": "uniform",
+              "low": 0.0,
+              "name": "wait for rail-sea train",
+              "source": "transit.rail.qinzhou_headway_days"
+            },
+            {
+              "kind": "lognormal_q",
+              "median": 3.7,
+              "name": "origin port dwell (CHN, LPI)",
+              "q1": 2.3,
+              "q3": 5.8,
+              "source": "lpi.CHN.ct_export"
+            },
+            {
+              "high": 7.0,
+              "kind": "uniform",
+              "low": 0.0,
+              "name": "wait for weekly sailing",
+              "source": "transit.sea.headway_days"
+            },
+            {
+              "cv": 0.1,
+              "kind": "lognormal_cv",
+              "mean": 5.036821,
+              "name": "sailing CNQZH-MYPKG (1623 nm)",
+              "source": "geo.sea.CNQZH-MYPKG"
+            },
+            {
+              "delay": {
+                "kind": "gamma",
+                "mean": 4.8,
+                "name": "transshipment time",
+                "shape": 2.0
+              },
+              "kind": "bernoulli",
+              "name": "transshipment (LPI MYS: 0.5 per shipment, 4.8 d)",
+              "p": 0.5,
+              "source": "lpi.MYS.transshipment"
+            },
+            {
+              "kind": "lognormal_q",
+              "median": 3.5,
+              "name": "destination port + customs dwell (MYS, LPI)",
+              "q1": 1.8,
+              "q3": 6.7,
+              "source": "lpi.MYS.ct_import"
+            },
+            {
+              "delay": {
+                "high": 8.0,
+                "kind": "triangular",
+                "low": 1.0,
+                "mode": 3.0,
+                "name": "hold delay"
+              },
+              "kind": "bernoulli",
+              "name": "customs hold / inspection (p=0.11)",
+              "p": 0.11,
+              "source": "transit.customs_hold"
+            },
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "delivery: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.077778,
+              "kind": "fixed",
+              "name": "delivery: driving 35 km",
+              "source": "transit.truck.km_per_day"
+            }
+          ],
+          "metrics": {
+            "cost_per_unit": 80.835311,
+            "mean": 25.832515,
+            "on_time_probability": 0.9241,
+            "p50": 24.100605,
+            "p90": 36.046261,
+            "risk": 61.945656
+          },
+          "mode": "rail_sea_fcl",
+          "pareto": true,
+          "quantities": {
+            "avg_fill": 0.725619,
+            "feu_per_shipment_by_month": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "feu_per_year": 96,
+            "shipments_per_year": 48,
+            "units_per_year": 6000.0
+          },
+          "regime": null,
+          "risk": {
+            "flags": 44,
+            "handoffs": 6,
+            "score": 61.945656,
+            "service": 0,
+            "variability": 11.945656
+          },
+          "totals": {
+            "duty": 0.0,
+            "economic": 133338.241118,
+            "landed": 485011.865438,
+            "per_unit": 80.835311,
+            "quote": 351673.62432,
+            "seller_side": 2160.0,
+            "tax": 0.0
+          },
+          "transit": {
+            "mean": 25.832515,
+            "on_time_at": {
+              "30": 0.7676,
+              "38": 0.9241,
+              "46": 0.9713
+            },
+            "on_time_probability": 0.9241,
+            "p50": 24.100605,
+            "p90": 36.046261,
+            "p95": 41.1891,
+            "seed": 1457343695,
+            "target_days": 38.0
+          }
+        },
+        {
+          "costs": [
+            {
+              "code": "A2.air.UNITS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "kits per year",
+              "label_zh": "年kit量",
+              "note": "",
+              "payer": null,
+              "unit": "kit",
+              "value": 6000.0
+            },
+            {
+              "code": "A2.air.SHIPMENTS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Shipments per year",
+              "label_zh": "年发运票数",
+              "note": "",
+              "payer": null,
+              "unit": "shipment",
+              "value": 48.0
+            },
+            {
+              "code": "A2.air.CHG_KG",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Chargeable kg per year",
+              "label_zh": "年计费重量（公斤）",
+              "note": "",
+              "payer": null,
+              "unit": "kg",
+              "value": 1380000.0
+            },
+            {
+              "code": "A2.air.KM_PICKUP",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Pickup distance to airport",
+              "label_zh": "提货至机场距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 35.0
+            },
+            {
+              "code": "A2.air.KM_DELIVERY",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Delivery distance from airport",
+              "label_zh": "机场至工厂距离",
+              "note": "",
+              "payer": null,
+              "unit": "km",
+              "value": 55.0
+            },
+            {
+              "code": "A2.air.PICKUP",
+              "element": "pre_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Pickup at supplier (truck to airport)",
+              "label_zh": "供应商处提货（送机场）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 5352.0
+            },
+            {
+              "code": "A2.air.HANDLING_O",
+              "element": "origin_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Origin airport handling",
+              "label_zh": "起运机场操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 165600.0
+            },
+            {
+              "code": "A2.air.EXPORT_DECL",
+              "element": "export_clearance",
+              "group": "logistics",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Export declaration",
+              "label_zh": "出口报关",
+              "note": "",
+              "payer": "seller",
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A2.air.MAIN",
+              "element": "main_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Air freight",
+              "label_zh": "空运费",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 4278000.0
+            },
+            {
+              "code": "A2.air.HANDLING_D",
+              "element": "destination_terminal_handling",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Destination airport handling",
+              "label_zh": "目的机场操作",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 207000.0
+            },
+            {
+              "code": "A2.air.IMPORT_DECL",
+              "element": "import_clearance",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Import declaration",
+              "label_zh": "进口报关",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 3360.0
+            },
+            {
+              "code": "A2.air.DELIVERY",
+              "element": "on_carriage",
+              "group": "logistics",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Delivery to plant (truck)",
+              "label_zh": "送货至工厂（货车）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 6216.0
+            },
+            {
+              "code": "A2.air.GOODS_GBOX",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value GBOX (FCA price)",
+              "label_zh": "货值 GBOX（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 6900000.0
+            },
+            {
+              "code": "A2.air.GOODS_SUSP",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Goods value SUSP (FCA price)",
+              "label_zh": "货值 SUSP（FCA 价）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2520000.0
+            },
+            {
+              "code": "A2.air.GOODS_TOTAL",
+              "element": null,
+              "group": "goods",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Goods value total",
+              "label_zh": "货值合计",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 9420000.0
+            },
+            {
+              "code": "A2.air.INSURANCE",
+              "element": "insurance",
+              "group": "insurance",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Cargo insurance (110% of CIF)",
+              "label_zh": "货运保险（CIF 的 110%）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 18307.01664
+            },
+            {
+              "code": "A2.air.VAS_KITTING",
+              "element": null,
+              "group": "vas",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Kitting and line-side sequencing",
+              "label_zh": "配套及工位排序",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 54000.0
+            },
+            {
+              "code": "A2.air.FTA_DOCS",
+              "element": "import_clearance",
+              "group": "fta_docs",
+              "in_quote": true,
+              "kind": "calc",
+              "label_en": "Certificate of origin (Form E) handling",
+              "label_zh": "原产地证（Form E）办理",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 1920.0
+            },
+            {
+              "code": "A2.air.CV_GBOX",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value GBOX (CIF)",
+              "label_zh": "完税价格 GBOX（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 10172196.094991
+            },
+            {
+              "code": "A2.air.DUTY_GBOX",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty GBOX (ACFTA)",
+              "label_zh": "进口关税 GBOX（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.air.SALES_TAX_GBOX",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import GBOX",
+              "label_zh": "进口销售税 GBOX",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.air.CV_SUSP",
+              "element": null,
+              "group": "info",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Customs value SUSP (CIF)",
+              "label_zh": "完税价格 SUSP（CIF）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 3715062.921649
+            },
+            {
+              "code": "A2.air.DUTY_SUSP",
+              "element": "duties_taxes",
+              "group": "duty",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import duty SUSP (ACFTA)",
+              "label_zh": "进口关税 SUSP（ACFTA）",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.air.SALES_TAX_SUSP",
+              "element": "duties_taxes",
+              "group": "tax",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Sales tax on import SUSP",
+              "label_zh": "进口销售税 SUSP",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.air.MEAN_TRANSIT_DAYS",
+              "element": null,
+              "group": "quantity",
+              "in_quote": false,
+              "kind": "input",
+              "label_en": "Mean door-to-door days (simulated)",
+              "label_zh": "平均门到门天数（模拟）",
+              "note": "",
+              "payer": null,
+              "unit": "days",
+              "value": 4.591682
+            },
+            {
+              "code": "A2.air.CARRYING",
+              "element": null,
+              "group": "economic",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Pipeline inventory carrying cost",
+              "label_zh": "在途库存资金占用成本",
+              "note": "",
+              "payer": "buyer",
+              "unit": "USD",
+              "value": 23700.629654
+            },
+            {
+              "code": "A2.air.TOTAL_QUOTE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total quotation (logistics, VAS, insurance, permits)",
+              "label_zh": "报价合计（物流、增值服务、保险、许可）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 4739755.01664
+            },
+            {
+              "code": "A2.air.TOTAL_SELLER_SIDE",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Costs on the seller's side under the Incoterm (excluded)",
+              "label_zh": "按贸易术语由卖方承担的费用（不计入）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 2160.0
+            },
+            {
+              "code": "A2.air.TOTAL_DUTY",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Duties (estimated)",
+              "label_zh": "关税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.air.TOTAL_TAX",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Import / consumption taxes (estimated)",
+              "label_zh": "进口环节税及消费税（估算）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 0.0
+            },
+            {
+              "code": "A2.air.TOTAL_ECONOMIC",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Inventory carrying cost (economic, not invoiced)",
+              "label_zh": "在途/安全库存资金占用成本（经济成本，不开票）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 23700.629654
+            },
+            {
+              "code": "A2.air.TOTAL_LANDED",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Total landed cost (decision basis)",
+              "label_zh": "总落地成本（决策口径）",
+              "note": "",
+              "payer": null,
+              "unit": "USD",
+              "value": 4763455.646294
+            },
+            {
+              "code": "A2.air.PER_UNIT",
+              "element": null,
+              "group": "total",
+              "in_quote": false,
+              "kind": "calc",
+              "label_en": "Landed cost per kit",
+              "label_zh": "每kit落地成本",
+              "note": "",
+              "payer": null,
+              "unit": "USD/kit",
+              "value": 793.909274
+            }
+          ],
+          "dominated_by": [],
+          "flags": [
+            {
+              "en": "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8708.40.2600, 8708.80.1600)",
+              "id": "MY-KIT-CLASSIFICATION",
+              "mitigation_en": "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container.",
+              "mitigation_zh": "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-CKD-CLASSIFICATION",
+                "MY-AP-VEHICLES"
+              ],
+              "verified": false,
+              "zh": "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8708.40.2600、8708.80.1600）"
+            },
+            {
+              "en": "ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification.",
+              "id": "FTA-ACFTA-FORM-E",
+              "mitigation_en": "Collect cost breakdowns from suppliers; check Form E data against the invoice before departure.",
+              "mitigation_zh": "向供应商收集成本构成；离港前核对 Form E 与发票信息一致。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-ORIGIN",
+                "FTA-ACFTA-FORM-E",
+                "FTA-ACFTA-DIRECT"
+              ],
+              "verified": true,
+              "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
+            },
+            {
+              "en": "Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
+              "id": "THIRD-COUNTRY-INVOICE",
+              "mitigation_en": "Align the three documents (supplier invoice, third-party invoice, Form E) before departure; keep the contract chain on file.",
+              "mitigation_zh": "离港前核对供应商发票、第三方发票与 Form E 三者一致；留存完整合同链。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "FTA-ACFTA-3PI",
+                "FTA-RCEP-3PI",
+                "MY-VALUATION-CIF"
+              ],
+              "verified": true,
+              "zh": "货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
+            },
+            {
+              "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
+              "id": "MY-SCHEDULE-C",
+              "mitigation_en": "Confirm the Schedule C approval and its validity for each HS line before go-live.",
+              "mitigation_zh": "上线前确认附表 C 批文及其对各税号的有效性。",
+              "modes": null,
+              "options": null,
+              "severity": "medium",
+              "statements": [
+                "MY-ST-SCHEDULE-C",
+                "MY-ST-IMPORT-BASE"
+              ],
+              "verified": true,
+              "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+            },
+            {
+              "en": "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",
+              "id": "MY-EV-INCENTIVE",
+              "mitigation_en": "",
+              "mitigation_zh": "",
+              "modes": null,
+              "options": null,
+              "severity": "info",
+              "statements": [
+                "MY-EV-CKD"
+              ],
+              "verified": true,
+              "zh": "本项目为燃油 SUV，不适用电动车零部件进口关税豁免（至 2027 年 12 月 31 日）；如推出电动车型需另行确认资格。"
+            }
+          ],
+          "handoffs": 2,
+          "id": "A2-air",
+          "label_en": "Air freight",
+          "label_zh": "空运",
+          "legs": [
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "pickup: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.077778,
+              "kind": "fixed",
+              "name": "pickup: driving 35 km",
+              "source": "transit.truck.km_per_day"
+            },
+            {
+              "high": 2.0,
+              "kind": "triangular",
+              "low": 0.5,
+              "mode": 1.0,
+              "name": "origin airport handling + export clearance",
+              "source": "transit.air.origin_handling_days"
+            },
+            {
+              "high": 1.0,
+              "kind": "uniform",
+              "low": 0.0,
+              "name": "wait for flight",
+              "source": "transit.air.headway_days"
+            },
+            {
+              "days": 0.194452,
+              "kind": "fixed",
+              "name": "flight CKG-KUL (3044 km great circle)",
+              "source": "geo.air.CKG-KUL"
+            },
+            {
+              "kind": "lognormal_mm",
+              "mean": 0.9,
+              "median": 0.4,
+              "name": "destination airport + customs dwell (MYS, LPI)",
+              "source": "lpi.MYS.air_import"
+            },
+            {
+              "delay": {
+                "high": 8.0,
+                "kind": "triangular",
+                "low": 1.0,
+                "mode": 3.0,
+                "name": "hold delay"
+              },
+              "kind": "bernoulli",
+              "name": "customs hold / inspection (p=0.11)",
+              "p": 0.11,
+              "source": "transit.customs_hold"
+            },
+            {
+              "high": 1.0,
+              "kind": "triangular",
+              "low": 0.3,
+              "mode": 0.5,
+              "name": "delivery: handling",
+              "source": "transit.truck.handling_days"
+            },
+            {
+              "days": 0.122222,
+              "kind": "fixed",
+              "name": "delivery: driving 55 km",
+              "source": "transit.truck.km_per_day"
+            }
+          ],
+          "metrics": {
+            "cost_per_unit": 793.909274,
+            "mean": 4.591682,
+            "on_time_probability": 0.99985,
+            "p50": 3.918488,
+            "p90": 7.281466,
+            "risk": 47.362978
+          },
+          "mode": "air",
+          "pareto": true,
+          "quantities": {
+            "chargeable_kg_per_year": 1380000.0,
+            "shipments_per_year": 48,
+            "units_per_year": 6000.0
+          },
+          "regime": null,
+          "risk": {
+            "flags": 40,
+            "handoffs": 4,
+            "score": 47.362978,
+            "service": 0,
+            "variability": 3.362978
+          },
+          "totals": {
+            "duty": 0.0,
+            "economic": 23700.629654,
+            "landed": 4763455.646294,
+            "per_unit": 793.909274,
+            "quote": 4739755.01664,
+            "seller_side": 2160.0,
+            "tax": 0.0
+          },
+          "transit": {
+            "mean": 4.591682,
+            "on_time_at": {
+              "30": 0.99965,
+              "38": 0.99985,
+              "46": 0.9999
+            },
+            "on_time_probability": 0.99985,
+            "p50": 3.918488,
+            "p90": 7.281466,
+            "p95": 8.906604,
+            "seed": 3960899960,
+            "target_days": 38.0
+          }
+        }
+      ],
+      "origin": {
+        "airport": "CKG",
+        "city": "Chongqing",
+        "city_zh": "重庆",
+        "country": "CN",
+        "pickup_km_airport": 35,
+        "pickup_km_port": 30,
+        "port": "CNQZH"
+      },
+      "rationale": {
+        "en": [
+          "Recommended: Rail-sea via Qinzhou (FCL) at USD 80.84 per kit landed, P90 36.0 days, 92.4% on time against the 38-day target, risk score 62/100.",
+          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "Sensitivity: with a 30-day target the same option would be on time 76.8% of the time.",
+          "Alternative on the Pareto front: Air freight - 882% more per kit, P90 7.3 days (-28.8), risk 47; on time 100.0%.",
+          "Not offered: rail - No verified scheduled cross-border rail service for this lane: First run 2024; no current official timetable found. Re-enable by setting status: verified once a scheduled departure is confirmed..",
+          "Conditions to manage: [MY-KIT-CLASSIFICATION] Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8708.40.2600, 8708.80.1600) [FTA-ACFTA-FORM-E] ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification. [THIRD-COUNTRY-INVOICE] Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified). [MY-SCHEDULE-C] Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty."
+        ],
+        "zh": [
+          "推荐方案：经钦州铁海联运（整箱）。每套落地成本 80.84 美元，P90 时效 36.0 天，38 天内送达概率 92.4%，风险评分 62/100。",
+          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "敏感性：若时效目标收紧至 30 天，该方案准时率为 76.8%。",
+          "帕累托前沿上的备选：空运——每套成本高 882%，P90 7.3 天（少 28.8 天），风险 47；准时率 100.0%。",
+          "未纳入：rail——该线路无经核实的定期跨境铁路班列，暂不纳入方案。。",
+          "需重点管控：【MY-KIT-CLASSIFICATION】散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8708.40.2600、8708.80.1600） 【FTA-ACFTA-FORM-E】申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。 【THIRD-COUNTRY-INVOICE】货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。 【MY-SCHEDULE-C】进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+        ]
+      },
+      "recommendation": {
+        "chosen": "A2-rail_sea_fcl",
+        "feasible": [
+          "A2-rail_sea_fcl",
+          "A2-air"
+        ],
+        "front": [
+          "A2-air",
+          "A2-rail_sea_fcl"
+        ],
+        "scores": {
+          "A2-air": 5.410659,
+          "A2-rail_sea_fcl": 2.235967
+        },
+        "status": "meets_target"
+      },
+      "target_transit_days": 38,
+      "unit": "kit"
+    }
+  ],
+  "monte_carlo_draws": 20000,
+  "provenance": [
+    {
+      "id": "compliance.fta.worth_it_margin_usd_per_year",
+      "label": "ASSUMPTION",
+      "note": "net saving needed to justify origin management overhead",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1000
+    },
+    {
+      "id": "geo.air.CKG-KUL",
+      "label": "REAL",
+      "note": "computed from OurAirports coordinates",
+      "sources": [
+        "ourairports"
+      ],
+      "statement": null,
+      "unit": "km (great circle)",
+      "value": 3043.6
+    },
+    {
+      "id": "geo.air.PVG-KUL",
+      "label": "REAL",
+      "note": "computed from OurAirports coordinates",
+      "sources": [
+        "ourairports"
+      ],
+      "statement": null,
+      "unit": "km (great circle)",
+      "value": 3796.7
+    },
+    {
+      "id": "geo.sea.CNNGB-MYPKG",
+      "label": "REAL",
+      "note": "shortest sea route computed with searoute",
+      "sources": [
+        "searoute"
+      ],
+      "statement": null,
+      "unit": "nautical miles",
+      "value": 2379.2
+    },
+    {
+      "id": "geo.sea.CNQZH-MYPKG",
+      "label": "REAL",
+      "note": "shortest sea route computed with searoute",
+      "sources": [
+        "searoute"
+      ],
+      "statement": null,
+      "unit": "nautical miles",
+      "value": 1622.6
+    },
+    {
+      "id": "lpi.CHN.2024.ct_export_median",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 3.7
+    },
+    {
+      "id": "lpi.CHN.2024.ct_export_q1",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 2.3
+    },
+    {
+      "id": "lpi.CHN.2024.ct_export_q3",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 5.8
+    },
+    {
+      "id": "lpi.MYS.2024.air_import_mean",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 0.9
+    },
+    {
+      "id": "lpi.MYS.2024.air_import_median",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 0.4
+    },
+    {
+      "id": "lpi.MYS.2024.ct_import_median",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 3.5
+    },
+    {
+      "id": "lpi.MYS.2024.ct_import_q1",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 1.8
+    },
+    {
+      "id": "lpi.MYS.2024.ct_import_q3",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 6.7
+    },
+    {
+      "id": "lpi.MYS.2024.transshipment_days_mean",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 4.8
+    },
+    {
+      "id": "lpi.MYS.2024.transshipments_mean",
+      "label": "REAL",
+      "note": "World Bank LPI 2.0",
+      "sources": [
+        "wb_lpi20"
+      ],
+      "statement": null,
+      "unit": "days",
+      "value": 0.5
+    },
+    {
+      "id": "rates.air.handling_destination_per_kg",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.15
+    },
+    {
+      "id": "rates.air.handling_origin_per_kg",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.12
+    },
+    {
+      "id": "rates.air.min_chargeable_kg",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 45
+    },
+    {
+      "id": "rates.air.per_kg.CKG-KUL",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 3.1
+    },
+    {
+      "id": "rates.air.per_kg.PVG-KUL",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2.6
+    },
+    {
+      "id": "rates.air.volumetric_kg_per_cbm",
+      "label": "ASSUMPTION",
+      "note": "6,000 cm3/kg divisor, common air cargo convention",
+      "sources": [],
+      "statement": null,
+      "unit": "kg per m3",
+      "value": 167
+    },
+    {
+      "id": "rates.container.feu_payload_kg",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "kg",
+      "value": 26000
+    },
+    {
+      "id": "rates.container.feu_usable_cbm",
+      "label": "ASSUMPTION",
+      "note": "nominal internal volume",
+      "sources": [],
+      "statement": null,
+      "unit": "m3 internal (40ft high cube)",
+      "value": 76.0
+    },
+    {
+      "id": "rates.container.fill_factor",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "share of internal volume usable for cased cargo",
+      "value": 0.85
+    },
+    {
+      "id": "rates.economics.carrying_cost_pa",
+      "label": "ASSUMPTION",
+      "note": "capital, obsolescence and risk; used for pipeline and safety stock",
+      "sources": [],
+      "statement": null,
+      "unit": "share of goods value per year",
+      "value": 0.2
+    },
+    {
+      "id": "rates.fta.form_e_per_shipment",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 40
+    },
+    {
+      "id": "rates.handling.export_declaration.CN",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 45
+    },
+    {
+      "id": "rates.handling.import_declaration.MY",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 70
+    },
+    {
+      "id": "rates.handling.thc_destination_feu.MY",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 170
+    },
+    {
+      "id": "rates.handling.thc_origin_feu.CN",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 140
+    },
+    {
+      "id": "rates.insurance.insured_value_factor",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1.1
+    },
+    {
+      "id": "rates.insurance.min_per_shipment",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 25
+    },
+    {
+      "id": "rates.insurance.rate",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.0012
+    },
+    {
+      "id": "rates.ocean_fcl_feu.CNNGB-MYPKG",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1500
+    },
+    {
+      "id": "rates.ocean_fcl_feu.CNQZH-MYPKG",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1450
+    },
+    {
+      "id": "rates.ocean_lcl.cfs_destination_per_wm",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 20
+    },
+    {
+      "id": "rates.ocean_lcl.cfs_origin_per_wm",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 16
+    },
+    {
+      "id": "rates.ocean_lcl.freight_per_wm.CN-SEA",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 42
+    },
+    {
+      "id": "rates.ocean_lcl.min_wm",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1.0
+    },
+    {
+      "id": "rates.rail.chongqing_qinzhou_feu",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 650
+    },
+    {
+      "id": "rates.truck.feu_base",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 150
+    },
+    {
+      "id": "rates.truck.feu_per_km",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2.2
+    },
+    {
+      "id": "rates.truck.light_base",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 80
+    },
+    {
+      "id": "rates.truck.light_per_km",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.9
+    },
+    {
+      "id": "rates.vas.kitting_per_kit",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 9.0
+    },
+    {
+      "id": "rates.vas.returnable_rack_per_feu",
+      "label": "ILLUSTRATIVE",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 60
+    },
+    {
+      "id": "tariff.MY.8544.30.1200.acfta_current",
+      "label": "REAL",
+      "note": "- - - - Of a kind used for vehicles of heading 87.02, 87.03, 87.04 or 87.11",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "id": "tariff.MY.8544.30.1200.mfn_import",
+      "label": "REAL",
+      "note": "- - - - Of a kind used for vehicles of heading 87.02, 87.03, 87.04 or 87.11",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.3
+    },
+    {
+      "id": "tariff.MY.8544.30.1200.rcep_current",
+      "label": "REAL",
+      "note": "- - - - Of a kind used for vehicles of heading 87.02, 87.03, 87.04 or 87.11",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.3
+    },
+    {
+      "id": "tariff.MY.8544.30.1200.sst",
+      "label": "REAL",
+      "note": "- - - - Of a kind used for vehicles of heading 87.02, 87.03, 87.04 or 87.11",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "id": "tariff.MY.8708.29.9500.acfta_current",
+      "label": "REAL",
+      "note": "- - - - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "id": "tariff.MY.8708.29.9500.mfn_import",
+      "label": "REAL",
+      "note": "- - - - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.25
+    },
+    {
+      "id": "tariff.MY.8708.29.9500.rcep_current",
+      "label": "REAL",
+      "note": "- - - - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.227
+    },
+    {
+      "id": "tariff.MY.8708.29.9500.sst",
+      "label": "REAL",
+      "note": "- - - - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "id": "tariff.MY.8708.30.2900.acfta_current",
+      "label": "REAL",
+      "note": "- - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "id": "tariff.MY.8708.30.2900.mfn_import",
+      "label": "REAL",
+      "note": "- - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.3
+    },
+    {
+      "id": "tariff.MY.8708.30.2900.rcep_current",
+      "label": "REAL",
+      "note": "- - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.273
+    },
+    {
+      "id": "tariff.MY.8708.30.2900.sst",
+      "label": "REAL",
+      "note": "- - - Other",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "id": "tariff.MY.8708.40.2600.acfta_current",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "id": "tariff.MY.8708.40.2600.mfn_import",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.25
+    },
+    {
+      "id": "tariff.MY.8708.40.2600.rcep_current",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.227
+    },
+    {
+      "id": "tariff.MY.8708.40.2600.sst",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "id": "tariff.MY.8708.80.1600.acfta_current",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "id": "tariff.MY.8708.80.1600.mfn_import",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.3
+    },
+    {
+      "id": "tariff.MY.8708.80.1600.rcep_current",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.273
+    },
+    {
+      "id": "tariff.MY.8708.80.1600.sst",
+      "label": "REAL",
+      "note": "- - - For vehicles of heading 87.03",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "id": "tariff.MY.9401.20.1000.acfta_current",
+      "label": "REAL",
+      "note": "- - Of a kind used for vehicles of heading 87.02, 87.03 or 87.04",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.0
+    },
+    {
+      "id": "tariff.MY.9401.20.1000.mfn_import",
+      "label": "REAL",
+      "note": "- - Of a kind used for vehicles of heading 87.02, 87.03 or 87.04",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.3
+    },
+    {
+      "id": "tariff.MY.9401.20.1000.rcep_current",
+      "label": "REAL",
+      "note": "- - Of a kind used for vehicles of heading 87.02, 87.03 or 87.04",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.237
+    },
+    {
+      "id": "tariff.MY.9401.20.1000.sst",
+      "label": "REAL",
+      "note": "- - Of a kind used for vehicles of heading 87.02, 87.03 or 87.04",
+      "sources": [
+        "my_jkdm_ezhs"
+      ],
+      "statement": "MY-TARIFF-LINES",
+      "unit": "fraction",
+      "value": 0.1
+    },
+    {
+      "id": "transit.air.block_kmh",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 750.0
+    },
+    {
+      "id": "transit.air.headway_days",
+      "label": "ASSUMPTION",
+      "note": "daily departures",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1.0
+    },
+    {
+      "id": "transit.air.origin_handling_days",
+      "label": "ASSUMPTION",
+      "note": "acceptance, screening, export clearance",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        0.5,
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "id": "transit.air.route_factor",
+      "label": "ASSUMPTION",
+      "note": "flown distance / great circle",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1.15
+    },
+    {
+      "id": "transit.customs_hold.base_probability",
+      "label": "ASSUMPTION",
+      "note": "inspection / query with complete documents",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.03
+    },
+    {
+      "id": "transit.customs_hold.delay_days",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        1.0,
+        3.0,
+        8.0
+      ]
+    },
+    {
+      "id": "transit.customs_hold.extra_probability_per_risk_flag",
+      "label": "ASSUMPTION",
+      "note": "per medium/high compliance flag on the lane",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.04
+    },
+    {
+      "id": "transit.lpi_year",
+      "label": "ASSUMPTION",
+      "note": "latest LPI 2.0 year in the extract",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": "2024"
+    },
+    {
+      "id": "transit.monte_carlo.draws",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 20000
+    },
+    {
+      "id": "transit.rail.qinzhou_headway_days",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1.0
+    },
+    {
+      "id": "transit.rail.qinzhou_rail_days",
+      "label": "ASSUMPTION",
+      "note": "Chongqing-Qinzhou rail-sea leg incl. port transfer",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        1.5,
+        2.0,
+        3.5
+      ]
+    },
+    {
+      "id": "transit.sea.headway_days",
+      "label": "ASSUMPTION",
+      "note": "weekly service; cargo-ready time independent of sailing day",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7.0
+    },
+    {
+      "id": "transit.sea.lcl_consolidation_days",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        1.0,
+        2.5,
+        5.0
+      ]
+    },
+    {
+      "id": "transit.sea.lcl_deconsolidation_days",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    {
+      "id": "transit.sea.port_call_days_per_1000nm",
+      "label": "ASSUMPTION",
+      "note": "allowance for intermediate calls",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.5
+    },
+    {
+      "id": "transit.sea.sailing_cv",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.1
+    },
+    {
+      "id": "transit.sea.speed_knots",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 16.0
+    },
+    {
+      "id": "transit.sea.transshipment_shape_k",
+      "label": "ASSUMPTION",
+      "note": "",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2.0
+    },
+    {
+      "id": "transit.truck.handling_days",
+      "label": "ASSUMPTION",
+      "note": "loading + gate-in/out",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        0.3,
+        0.5,
+        1.0
+      ]
+    },
+    {
+      "id": "transit.truck.km_per_day",
+      "label": "ASSUMPTION",
+      "note": "about 10 driving hours at 45 km/h",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 450
+    }
+  ],
+  "rfq": {
+    "currency": "USD",
+    "customer": "Customer A (fictional)",
+    "customer_profile_en": "A vehicle assembler in the Klang Valley, Malaysia, building a compact SUV (internal-combustion) from knock-down kits sourced from two Chinese supplier clusters.",
+    "customer_profile_zh": "位于马来西亚巴生谷的整车组装厂，以来自中国两个供应商集群的散件（KD）组装一款紧凑型燃油 SUV。",
+    "flow_type": "b2b_import",
+    "incoterm": "FCA",
+    "incoterm_named_place": "Supplier's warehouse (seller's premises), China",
+    "incoterm_named_place_zh": "中国供应商仓库（卖方场所）",
+    "issue_date": "2026-11-15",
+    "priorities": {
+      "cost": 0.5,
+      "risk": 0.2,
+      "time": 0.3
+    },
+    "quote_validity_days": 30,
+    "quoting_party_role": "buyer",
+    "rfq_id": "RFQ-AUTO-2026-001",
+    "seed": 20261115,
+    "service": {
+      "fta_preference": "auto",
+      "importer_of_record": "customer",
+      "insurance": true,
+      "on_time_target_probability": 0.9,
+      "registered_manufacturer_schedule_c": true,
+      "vas": [
+        "kitting",
+        "returnable_racks"
+      ]
+    },
+    "title_en": "KD kits China to Malaysia for local vehicle assembly",
+    "title_zh": "中国至马来西亚汽车散件（KD）入厂物流方案"
+  },
+  "statements_used": [
+    "FTA-ACFTA-3PI",
+    "FTA-ACFTA-DIRECT",
+    "FTA-ACFTA-FORM-E",
+    "FTA-ACFTA-ORIGIN",
+    "FTA-RCEP-3PI",
+    "FTA-RCEP-PSR",
+    "INCO-RULES",
+    "MY-AP-VEHICLES",
+    "MY-CKD-CLASSIFICATION",
+    "MY-EV-CKD",
+    "MY-ST-IMPORT-BASE",
+    "MY-ST-SCHEDULE-C",
+    "MY-TARIFF-LINES",
+    "MY-VALUATION-CIF",
+    "SVC-ILSTC"
+  ],
+  "summary": [
+    {
+      "annual_duty": 702203.286432,
+      "annual_landed": 1717877.020221,
+      "annual_quote": 731510.59296,
+      "annual_tax": 0.0,
+      "cost_per_unit": 286.312837,
+      "label_en": "Ocean FCL (40ft HC)",
+      "label_zh": "海运整箱（40 尺高柜）",
+      "lane": "A1",
+      "on_time_probability": 0.93075,
+      "option": "A1-ocean_fcl",
+      "p50": 23.590462,
+      "p90": 35.220416,
+      "risk": 55.629954,
+      "status": "meets_target",
+      "unit": "kit"
+    },
+    {
+      "annual_duty": 0.0,
+      "annual_landed": 485011.865438,
+      "annual_quote": 351673.62432,
+      "annual_tax": 0.0,
+      "cost_per_unit": 80.835311,
+      "label_en": "Rail-sea via Qinzhou (FCL)",
+      "label_zh": "经钦州铁海联运（整箱）",
+      "lane": "A2",
+      "on_time_probability": 0.9241,
+      "option": "A2-rail_sea_fcl",
+      "p50": 24.100605,
+      "p90": 36.046261,
+      "risk": 61.945656,
+      "status": "meets_target",
+      "unit": "kit"
+    }
+  ],
+  "template": "automotive_ckd_cn_my",
+  "template_flags": [
+    {
+      "en": "Under FCA the seller clears goods for export and loads them at its premises; export clearance is excluded from the buyer's quotation.",
+      "id": "INCO-FCA-EXPORT",
+      "mitigation_en": "",
+      "mitigation_zh": "",
+      "modes": null,
+      "options": null,
+      "severity": "info",
+      "statements": [
+        "INCO-RULES"
+      ],
+      "verified": true,
+      "zh": "FCA 下由卖方办理出口清关并在其场所装货，出口报关费不计入买方报价。"
+    }
+  ]
+}

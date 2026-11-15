@@ -13,6 +13,7 @@ seed: 20261117
 flow_type: b2c_parcel
 incoterm: DDP
 incoterm_named_place: "Consumer's address"
+incoterm_named_place_zh: "消费者收货地址"
 quoting_party_role: seller
 priorities: {cost: 0.5, time: 0.3, risk: 0.2}
 service:
@@ -31,40 +32,40 @@ lanes:
   - id: C1
     name_en: "Shenzhen to Klang Valley, Malaysia"
     name_zh: "深圳至马来西亚巴生谷"
-    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
-    destination: {city: Klang Valley, country: MY, port: MYPKG, airport: KUL}
+    origin: {city: Shenzhen, city_zh: 深圳, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Klang Valley, city_zh: 巴生谷, country: MY, port: MYPKG, airport: KUL}
     parcels_per_month: 9000
     modes: [air_parcel, ocean_bulk_local]
     target_transit_days: 7
   - id: C2
     name_en: "Shenzhen to Greater Jakarta, Indonesia"
     name_zh: "深圳至印尼大雅加达"
-    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
-    destination: {city: Greater Jakarta, country: ID, port: IDTPP, airport: CGK}
+    origin: {city: Shenzhen, city_zh: 深圳, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Greater Jakarta, city_zh: 大雅加达, country: ID, port: IDTPP, airport: CGK}
     parcels_per_month: 12000
     modes: [air_parcel, sea_air, ocean_bulk_local]
     target_transit_days: 7
   - id: C3
     name_en: "Shenzhen to Bangkok, Thailand"
     name_zh: "深圳至泰国曼谷"
-    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
-    destination: {city: Bangkok, country: TH, port: THLCH, airport: BKK}
+    origin: {city: Shenzhen, city_zh: 深圳, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Bangkok, city_zh: 曼谷, country: TH, port: THLCH, airport: BKK}
     parcels_per_month: 7000
     modes: [air_parcel, rail, ocean_bulk_local]
     target_transit_days: 7
   - id: C4
     name_en: "Shenzhen to Metro Manila, Philippines"
     name_zh: "深圳至菲律宾马尼拉大都会"
-    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
-    destination: {city: Metro Manila, country: PH, port: PHMNL, airport: MNL}
+    origin: {city: Shenzhen, city_zh: 深圳, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Metro Manila, city_zh: 马尼拉大都会, country: PH, port: PHMNL, airport: MNL}
     parcels_per_month: 8000
     modes: [air_parcel, sea_air, ocean_bulk_local]
     target_transit_days: 7
   - id: C5
     name_en: "Singapore stock point to Klang Valley, Malaysia"
     name_zh: "新加坡备货点至马来西亚巴生谷"
-    origin: {city: Singapore, country: SG, port: SGSIN, airport: SIN}
-    destination: {city: Klang Valley, country: MY, port: MYPKG, airport: KUL}
+    origin: {city: Singapore, city_zh: 新加坡, country: SG, port: SGSIN, airport: SIN}
+    destination: {city: Klang Valley, city_zh: 巴生谷, country: MY, port: MYPKG, airport: KUL}
     parcels_per_month: 3000
     modes: [road, air_parcel]
     target_transit_days: 5
@@ -72,8 +73,8 @@ lanes:
   - id: C6
     name_en: "Singapore stock point to Greater Jakarta, Indonesia"
     name_zh: "新加坡备货点至印尼大雅加达"
-    origin: {city: Singapore, country: SG, port: SGSIN, airport: SIN}
-    destination: {city: Greater Jakarta, country: ID, port: IDTPP, airport: CGK}
+    origin: {city: Singapore, city_zh: 新加坡, country: SG, port: SGSIN, airport: SIN}
+    destination: {city: Greater Jakarta, city_zh: 大雅加达, country: ID, port: IDTPP, airport: CGK}
     parcels_per_month: 2500
     modes: [air_parcel, ocean_bulk_local]
     target_transit_days: 5

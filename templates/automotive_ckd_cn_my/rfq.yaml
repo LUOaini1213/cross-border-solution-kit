@@ -13,6 +13,7 @@ seed: 20261115
 flow_type: b2b_import
 incoterm: FCA
 incoterm_named_place: "Supplier's warehouse (seller's premises), China"
+incoterm_named_place_zh: "中国供应商仓库（卖方场所）"
 quoting_party_role: buyer
 priorities: {cost: 0.5, time: 0.3, risk: 0.2}
 service:
@@ -26,8 +27,8 @@ lanes:
   - id: A1
     name_en: "Ningbo body and interior kits to Shah Alam plant"
     name_zh: "宁波车身及内饰散件至莎阿南工厂"
-    origin: {city: Ningbo, country: CN, port: CNNGB, airport: PVG, pickup_km_port: 40, pickup_km_airport: 220}
-    destination: {city: Shah Alam, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
+    origin: {city: Ningbo, city_zh: 宁波, country: CN, port: CNNGB, airport: PVG, pickup_km_port: 40, pickup_km_airport: 220}
+    destination: {city: Shah Alam, city_zh: 莎阿南, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
     modes: [ocean_fcl, ocean_lcl, air]
     target_transit_days: 38
     kit: true
@@ -46,8 +47,8 @@ lanes:
   - id: A2
     name_en: "Chongqing powertrain and chassis parts to Shah Alam plant (invoiced by a Singapore trading entity)"
     name_zh: "重庆动力总成及底盘件至莎阿南工厂（由新加坡贸易主体开票）"
-    origin: {city: Chongqing, country: CN, port: CNQZH, airport: CKG, pickup_km_port: 30, pickup_km_airport: 35}
-    destination: {city: Shah Alam, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
+    origin: {city: Chongqing, city_zh: 重庆, country: CN, port: CNQZH, airport: CKG, pickup_km_port: 30, pickup_km_airport: 35}
+    destination: {city: Shah Alam, city_zh: 莎阿南, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
     modes: [rail_sea_fcl, air, rail]
     target_transit_days: 38
     kit: true

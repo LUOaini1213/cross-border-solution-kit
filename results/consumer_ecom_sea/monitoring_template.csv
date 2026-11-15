@@ -1,0 +1,37 @@
+lane,kpi,kpi_zh,target,better,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec,trigger
+C1,Parcels delivered within 7 days (share),7 天内妥投包裹占比,0.9,higher,,,,,,,,,,,,,Two weeks below target: rebalance stock or carriers
+C1,P90 delivery days,P90 妥投天数,3.0,lower,,,,,,,,,,,,,Above target: check clearance holds and last mile
+C1,Cost to serve per parcel incl. duties and taxes (USD),每包裹履约成本（含关税与税费，美元）,4.13,lower,,,,,,,,,,,,,"Above target by 5%: review weights, rates and tax mix"
+C1,Customs hold rate (share of parcels),海关查验扣留率,0.03,lower,,,,,,,,,,,,,Above target: audit HS codes and declared values
+C1,Duties and taxes per parcel (USD),每包裹关税与税费（美元）,0.93,lower,,,,,,,,,,,,,Deviation above 5%: check rates and thresholds
+C1,Damage or loss rate (share),破损或丢失率,0.005,lower,,,,,,,,,,,,,Above target: review packaging
+C2,Parcels delivered within 7 days (share),7 天内妥投包裹占比,0.9,higher,,,,,,,,,,,,,Two weeks below target: rebalance stock or carriers
+C2,P90 delivery days,P90 妥投天数,4.5,lower,,,,,,,,,,,,,Above target: check clearance holds and last mile
+C2,Cost to serve per parcel incl. duties and taxes (USD),每包裹履约成本（含关税与税费，美元）,7.14,lower,,,,,,,,,,,,,"Above target by 5%: review weights, rates and tax mix"
+C2,Customs hold rate (share of parcels),海关查验扣留率,0.03,lower,,,,,,,,,,,,,Above target: audit HS codes and declared values
+C2,Duties and taxes per parcel (USD),每包裹关税与税费（美元）,4.17,lower,,,,,,,,,,,,,Deviation above 5%: check rates and thresholds
+C2,Damage or loss rate (share),破损或丢失率,0.005,lower,,,,,,,,,,,,,Above target: review packaging
+C3,Parcels delivered within 7 days (share),7 天内妥投包裹占比,0.9,higher,,,,,,,,,,,,,Two weeks below target: rebalance stock or carriers
+C3,P90 delivery days,P90 妥投天数,3.0,lower,,,,,,,,,,,,,Above target: check clearance holds and last mile
+C3,Cost to serve per parcel incl. duties and taxes (USD),每包裹履约成本（含关税与税费，美元）,7.08,lower,,,,,,,,,,,,,"Above target by 5%: review weights, rates and tax mix"
+C3,Customs hold rate (share of parcels),海关查验扣留率,0.03,lower,,,,,,,,,,,,,Above target: audit HS codes and declared values
+C3,Duties and taxes per parcel (USD),每包裹关税与税费（美元）,3.94,lower,,,,,,,,,,,,,Deviation above 5%: check rates and thresholds
+C3,Damage or loss rate (share),破损或丢失率,0.005,lower,,,,,,,,,,,,,Above target: review packaging
+C4,Parcels delivered within 7 days (share),7 天内妥投包裹占比,0.9,higher,,,,,,,,,,,,,Two weeks below target: rebalance stock or carriers
+C4,P90 delivery days,P90 妥投天数,4.5,lower,,,,,,,,,,,,,Above target: check clearance holds and last mile
+C4,Cost to serve per parcel incl. duties and taxes (USD),每包裹履约成本（含关税与税费，美元）,8.15,lower,,,,,,,,,,,,,"Above target by 5%: review weights, rates and tax mix"
+C4,Customs hold rate (share of parcels),海关查验扣留率,0.03,lower,,,,,,,,,,,,,Above target: audit HS codes and declared values
+C4,Duties and taxes per parcel (USD),每包裹关税与税费（美元）,4.63,lower,,,,,,,,,,,,,Deviation above 5%: check rates and thresholds
+C4,Damage or loss rate (share),破损或丢失率,0.005,lower,,,,,,,,,,,,,Above target: review packaging
+C5,Parcels delivered within 5 days (share),5 天内妥投包裹占比,0.9,higher,,,,,,,,,,,,,Two weeks below target: rebalance stock or carriers
+C5,P90 delivery days,P90 妥投天数,6.7,lower,,,,,,,,,,,,,Above target: check clearance holds and last mile
+C5,Cost to serve per parcel incl. duties and taxes (USD),每包裹履约成本（含关税与税费，美元）,6.14,lower,,,,,,,,,,,,,"Above target by 5%: review weights, rates and tax mix"
+C5,Customs hold rate (share of parcels),海关查验扣留率,0.03,lower,,,,,,,,,,,,,Above target: audit HS codes and declared values
+C5,Duties and taxes per parcel (USD),每包裹关税与税费（美元）,2.95,lower,,,,,,,,,,,,,Deviation above 5%: check rates and thresholds
+C5,Damage or loss rate (share),破损或丢失率,0.005,lower,,,,,,,,,,,,,Above target: review packaging
+C6,Parcels delivered within 5 days (share),5 天内妥投包裹占比,0.9,higher,,,,,,,,,,,,,Two weeks below target: rebalance stock or carriers
+C6,P90 delivery days,P90 妥投天数,4.5,lower,,,,,,,,,,,,,Above target: check clearance holds and last mile
+C6,Cost to serve per parcel incl. duties and taxes (USD),每包裹履约成本（含关税与税费，美元）,7.53,lower,,,,,,,,,,,,,"Above target by 5%: review weights, rates and tax mix"
+C6,Customs hold rate (share of parcels),海关查验扣留率,0.03,lower,,,,,,,,,,,,,Above target: audit HS codes and declared values
+C6,Duties and taxes per parcel (USD),每包裹关税与税费（美元）,4.18,lower,,,,,,,,,,,,,Deviation above 5%: check rates and thresholds
+C6,Damage or loss rate (share),破损或丢失率,0.005,lower,,,,,,,,,,,,,Above target: review packaging

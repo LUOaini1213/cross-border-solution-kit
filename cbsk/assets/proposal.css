@@ -1,0 +1,16 @@
+<style>
+@page { size: A4; margin: 16mm 14mm 16mm 14mm; }
+body { font-family: "Segoe UI", "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", Arial, sans-serif;
+       font-size: 9.5pt; line-height: 1.45; color: #1d2733; max-width: none; margin: 0; padding: 0; }
+h1 { font-size: 17pt; color: #12355b; border-bottom: 2px solid #12355b; padding-bottom: 4px; margin-top: 0; }
+h2 { font-size: 13pt; color: #12355b; margin-top: 18px; border-bottom: 1px solid #c9d6e3; padding-bottom: 2px; }
+h3 { font-size: 11pt; color: #23466e; margin-top: 12px; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0 10px 0; font-size: 8.3pt; page-break-inside: auto; }
+th, td { border: 1px solid #c9d6e3; padding: 3px 5px; vertical-align: top; text-align: left; }
+th { background: #e8eef5; }
+tr { page-break-inside: avoid; }
+blockquote { margin: 8px 0; padding: 6px 10px; background: #f4f7fa; border-left: 3px solid #9fb3c8; color: #33475b; }
+code { font-size: 8.5pt; }
+.pagebreak { page-break-before: always; }
+header#title-block-header { display: none; }
+</style>

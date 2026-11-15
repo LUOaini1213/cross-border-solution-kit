@@ -13,6 +13,7 @@ seed: 20261116
 flow_type: temporary
 incoterm: null
 incoterm_named_place: "not applicable: no sale, the owner's goods move and return"
+incoterm_named_place_zh: "不涉及销售，货主自有货物往返"
 quoting_party_role: owner
 priorities: {cost: 0.35, time: 0.35, risk: 0.30}
 service:
@@ -26,8 +27,8 @@ lanes:
     name_en: "Exhibition demonstration tool, Osaka to a Singapore exhibition and back"
     name_zh: "展会演示机台：大阪—新加坡展会—返回大阪"
     purpose: exhibition
-    origin: {city: Osaka, country: JP, port: JPOSA, airport: KIX, pickup_km_port: 25, pickup_km_airport: 45}
-    destination: {city: Singapore, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 20, delivery_km_airport: 25}
+    origin: {city: Osaka, city_zh: 大阪, country: JP, port: JPOSA, airport: KIX, pickup_km_port: 25, pickup_km_airport: 45}
+    destination: {city: Singapore, city_zh: 新加坡, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 20, delivery_km_airport: 25}
     modes: [air, ocean_fcl20]
     regimes: [ata_carnet, tis]
     moves_per_year: 1
@@ -39,8 +40,8 @@ lanes:
     name_en: "Field-service metrology kit, San Jose to a Singapore fab for an installation and back"
     name_zh: "现场服务计量工具包：圣何塞—新加坡晶圆厂安装项目—返回"
     purpose: professional_equipment
-    origin: {city: San Jose, country: US, port: USOAK, airport: SFO, pickup_km_port: 70, pickup_km_airport: 60}
-    destination: {city: Singapore, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 30, delivery_km_airport: 30}
+    origin: {city: San Jose, city_zh: 圣何塞, country: US, port: USOAK, airport: SFO, pickup_km_port: 70, pickup_km_airport: 60}
+    destination: {city: Singapore, city_zh: 新加坡, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 30, delivery_km_airport: 30}
     modes: [air, ocean_lcl]
     regimes: [ata_carnet, tis]
     moves_per_year: 4
@@ -52,8 +53,8 @@ lanes:
     name_en: "Failed RF generator, Singapore fab to the OEM repair centre in Osaka and back"
     name_zh: "故障射频电源：新加坡晶圆厂—大阪原厂维修中心—返回"
     purpose: repair_abroad
-    origin: {city: Singapore, country: SG, port: SGSIN, airport: SIN, pickup_km_port: 30, pickup_km_airport: 30}
-    destination: {city: Osaka, country: JP, port: JPOSA, airport: KIX, delivery_km_port: 30, delivery_km_airport: 50}
+    origin: {city: Singapore, city_zh: 新加坡, country: SG, port: SGSIN, airport: SIN, pickup_km_port: 30, pickup_km_airport: 30}
+    destination: {city: Osaka, city_zh: 大阪, country: JP, port: JPOSA, airport: KIX, delivery_km_port: 30, delivery_km_airport: 50}
     modes: [air, ocean_lcl]
     regimes: [ata_carnet, temp_export_repair]
     moves_per_year: 10
@@ -67,8 +68,8 @@ lanes:
     name_en: "Customer spares, Penang to the Singapore repair hub and back"
     name_zh: "客户备件：槟城—新加坡维修中心—返回"
     purpose: repair_in_sg
-    origin: {city: Penang, country: MY, port: MYPEN, airport: PEN, pickup_km_port: 15, pickup_km_airport: 20}
-    destination: {city: Singapore, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 25, delivery_km_airport: 25}
+    origin: {city: Penang, city_zh: 槟城, country: MY, port: MYPEN, airport: PEN, pickup_km_port: 15, pickup_km_airport: 20}
+    destination: {city: Singapore, city_zh: 新加坡, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 25, delivery_km_airport: 25}
     modes: [road, air]
     regimes: [ata_carnet, tis]
     moves_per_year: 24
