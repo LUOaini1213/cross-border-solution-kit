@@ -1,0 +1,532 @@
+# Regulatory and tax statements used by the kit. Each one names its source(s) and a short phrase that
+# scripts/check_regulatory_sources.py looks for (whitespace- and case-normalised) in the fetched text.
+# status: verified      - confirmed on the official source on the access date
+#         corrected     - the project brief assumed something different; the official source says otherwise
+#         not_verified  - could not be confirmed on an official source; the kit uses a labelled placeholder
+# method: html | pdf (phrase search), ezhs (re-run scripts/fetch_my_tariff.py and compare),
+#         image (text layer unreadable; checked by reading the rendered page), manual (secondary or blocked).
+statements:
+  # ============================ SINGAPORE ============================
+  SG-ATA-SCOPE:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "Singapore accepts a foreign ATA Carnet only for goods displayed or used at exhibitions, fairs or similar events, professional equipment, or scientific equipment used for testing, experiments or demonstrations."
+    zh: "新加坡仅在以下三类用途下接受外国签发的 ATA 单证册：展览会、交易会或类似活动中展示或使用的货物；专业设备；用于测试、实验或演示的科学设备。"
+    status: verified
+    sources: [sg_customs_ata_foreign]
+    check: {method: html, source: sg_customs_ata_foreign, phrase: "scientific equipment used for testing, experiments or demonstrations"}
+  SG-ATA-NO-SAMPLES:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "Commercial samples are not among the purposes for which Singapore Customs accepts a foreign ATA Carnet. The SICC lists commercial samples as covered for carnets it issues for use abroad, subject to the destination's acceptance."
+    zh: "新加坡海关接受外国 ATA 单证册的用途中不包括商业样品；SICC 签发、用于出境的单证册可覆盖商业样品，但以目的国是否接受为准。"
+    status: corrected
+    sources: [sg_customs_ata_foreign, sicc_ata]
+    note: "The project brief listed commercial samples among ATA purposes in general; for imports into Singapore the official list has three purposes and no commercial samples."
+    check: {method: html, source: sicc_ata, phrase: "Commercial samples and advertising film"}
+  SG-ATA-SAME-CONDITION:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "Goods under an ATA Carnet must be re-exported in the same condition; GST and/or duty become payable if they are sold, transferred, changed in condition or not re-exported in time. Repair or processing is not an accepted ATA purpose, so repair moves use the TIS or a temporary export permit instead."
+    zh: "ATA 单证册项下货物须以原状复出口；如被出售、转让、状态改变或未按期复出口，须缴纳消费税（GST）和/或关税。维修或加工不属于 ATA 单证册的适用用途，维修类运输应改用临时进口计划（TIS）或临时出口许可。"
+    status: verified
+    sources: [sg_customs_ata_foreign, icc_ata]
+    check: {method: html, source: sg_customs_ata_foreign, phrase: "Re-export the goods in the same condition"}
+  SG-ATA-CONSUMABLES:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "ATA Carnets cannot be used for consumables such as food, alcoholic beverages or tobacco products."
+    zh: "ATA 单证册不适用于食品、酒类、烟草等消耗品。"
+    status: verified
+    sources: [sg_customs_ata_carnet]
+    check: {method: html, source: sg_customs_ata_carnet, phrase: "ATA Carnets cannot be used for consumables"}
+  SG-ATA-PERIOD:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "Goods imported under a foreign ATA Carnet must be re-exported by the earlier of six months from import or one day before the carnet's validity date."
+    zh: "外国 ATA 单证册项下进口的货物，须在进口之日起六个月内或单证册有效期届满前一日（以较早者为准）复出口。"
+    status: verified
+    sources: [sg_customs_ata_foreign]
+    check: {method: html, source: sg_customs_ata_foreign, phrase: "six months from the date of import"}
+  SG-ATA-ISSUER:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "In Singapore, local ATA Carnets are obtained from the Singapore International Chamber of Commerce (SICC), Singapore's National Guaranteeing and Issuing Association."
+    zh: "在新加坡，本地 ATA 单证册由新加坡国际商会（SICC）签发，SICC 是新加坡的 ATA 担保与签发机构。"
+    status: corrected
+    sources: [sg_customs_ata_local, icc_ata, sicc_nga_2024]
+    note: "The project brief named the Singapore Business Federation as the issuer. Singapore Customs (page updated 31 Jul 2026), the ICC directory and SICC itself name SICC; no carnet role for SBF was found."
+    check: {method: html, source: sg_customs_ata_local, phrase: "Singapore International Chamber of Commerce (SICC)"}
+  SG-ATA-SICC-FEES:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "SICC carnet application fee: S$280 for members, S$480 for non-members, plus S$30/S$60 per additional country; fees are subject to GST."
+    zh: "SICC 单证册申请费：会员 280 新元、非会员 480 新元，每增加一个国家另收 30/60 新元；费用另计 GST。"
+    status: verified
+    sources: [sicc_ata]
+    check: {method: html, source: sicc_ata, phrase: "These fees are subject to GST at the prevailing rate"}
+  SG-ATA-XO:
+    jurisdiction: SG
+    topic: export control
+    en: "Strategic goods exported from Singapore under a local ATA Carnet still need a Strategic Goods (Control) permit (XO permit) before export."
+    zh: "以新加坡本地 ATA 单证册出口的战略物资，出口前仍须取得战略物资管制许可证（XO 许可证）。"
+    status: verified
+    sources: [sg_customs_ata_local]
+    check: {method: html, source: sg_customs_ata_local, phrase: "Strategic goods require a Strategic Goods (Control) permit"}
+  SG-TIS-PURPOSES:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "The Temporary Import Scheme covers, among others: all goods including spare parts (except dutiable goods) for repair, modification or treatment; professional equipment used by a person established outside Singapore; goods for exhibitions; and scientific and technical goods (case by case) for demonstration, tests or experiments."
+    zh: "临时进口计划（TIS）的适用用途包括：所有货物（含备件，不含应税货物）的维修、改装或处理；由新加坡境外主体使用的专业设备；展会用货物；以及经个案审核、用于演示、测试或实验的科技类货物。"
+    status: verified
+    sources: [sg_customs_tis_import_purposes]
+    check: {method: html, source: sg_customs_tis_import_purposes, phrase: "For repair, modification, or treatment purposes"}
+  SG-TIS-6M:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "Under the TIS, goods can be temporarily imported for approved purposes for up to 6 months with GST and duty suspended."
+    zh: "在 TIS 下，符合规定用途的货物可临时进口最长 6 个月，期间暂缓征收 GST 和关税。"
+    status: verified
+    sources: [sg_customs_tis_overview]
+    check: {method: html, source: sg_customs_tis_overview, phrase: "for up to 6 months, with GST and duty suspended"}
+  SG-TIS-SECURITY:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "TIS users lodge security (banker's guarantee, finance company guarantee or insurance bond). For non-dutiable, non-selected goods it is 30% of the potential GST for a GST-registered entity and 50% otherwise (50%/100% for selected goods); TradeFIRST banding can reduce or waive it."
+    zh: "使用 TIS 须提交担保（银行保函、财务公司保函或保险保证）。非应税、非特定货物的担保额：已注册 GST 的企业为潜在 GST 的 30%，未注册为 50%（特定货物为 50%/100%）；TradeFIRST 评级可降低或豁免担保。"
+    status: verified
+    sources: [sg_customs_tis_overview, sg_customs_tis_additional_import, sg_customs_security_amount]
+    check: {method: html, source: sg_customs_security_amount, phrase: "of potential GST"}
+  SG-TIS-PAYMENT:
+    jurisdiction: SG
+    topic: temporary admission
+    en: "If TIS goods are sold, disposed of, transferred or not re-exported in time, a Customs In-Payment permit must be taken within 3 working days."
+    zh: "TIS 货物如被出售、处置、转让或未按期复出口，须在 3 个工作日内申报海关缴税许可证（In-Payment permit）。"
+    status: verified
+    sources: [sg_customs_tis_additional_import]
+    check: {method: html, source: sg_customs_tis_additional_import, phrase: "within 3 working days of the sale, disposal, transfer or end of the temporary import period"}
+  SG-TEMPEXP-REPAIR:
+    jurisdiction: SG
+    topic: temporary export
+    en: "Goods sent abroad for repair need a Customs OUT (TCI) permit before export and an In-Non-Payment (TCI) permit on re-import within 3 months (extension possible for repair). GST relief covers only the original parts: GST is payable on new parts unless the repair was free under warranty; a repairer's certificate and the parts invoice are required."
+    zh: "出境维修的货物须在出口前申报 OUT (TCI) 许可证，并在 3 个月内（维修可申请延期）以 In-Non-Payment (TCI) 许可证复进口。GST 减免仅适用于原有部件；新换部件须缴纳 GST，保修期内免费维修除外；须提供维修方证明及部件发票。"
+    status: verified
+    sources: [sg_customs_reimport, sg_customs_tis_export_procedures]
+    check: {method: html, source: sg_customs_reimport, phrase: "GST relief applies only to the original parts"}
+  SG-SGCA-SCOPE:
+    jurisdiction: SG
+    topic: export control
+    en: "The Strategic Goods (Control) Act, in force since 1 January 2003, regulates the export, transhipment, transit, intangible transfer and brokering of strategic goods and technology, with a catch-all for weapons-of-mass-destruction end use."
+    zh: "新加坡《战略物资（管制）法》自 2003 年 1 月 1 日起施行，管制战略物资及技术的出口、转运、过境、无形技术转让和中介活动，并设有针对大规模杀伤性武器用途的兜底条款。"
+    status: verified
+    sources: [sg_customs_sgc_overview]
+    check: {method: html, source: sg_customs_sgc_overview, phrase: "Strategic Goods (Control) Act (SGCA) on 1 January 2003"}
+  SG-SGCA-PERMIT:
+    jurisdiction: SG
+    topic: export control
+    en: "An individual permit (prefixed XO or XP) is needed for each export, re-export, transhipment or transit of strategic goods, applied for at least five working days before shipment, with supporting documents such as the origin country's export licence and an end-user statement."
+    zh: "战略物资每次出口、再出口、转运或过境均须申领个别许可证（编号以 XO 或 XP 开头），至少提前五个工作日申请，并附原产国出口许可、最终用户声明等文件。"
+    status: verified
+    sources: [sg_customs_sgc_permits, sg_customs_sgc_individual]
+    check: {method: html, source: sg_customs_sgc_individual, phrase: "at least 5 working days"}
+  SG-SGCA-3B001:
+    jurisdiction: SG
+    topic: export control
+    en: "The Schedule to the Strategic Goods (Control) Order 2026 (S 741/2026, in operation from 1 December 2026) lists category 3B001, equipment for manufacturing semiconductor devices or materials and specially designed components and accessories. The 2025 Order in force until then was not checked line by line."
+    zh: "《2026 年战略物资（管制）令》（S 741/2026，2026 年 12 月 1 日起施行）附表列有 3B001 类：用于制造半导体器件或材料的设备及其专门设计的部件和附件。此前施行的 2025 年版本未逐条核对。"
+    status: verified
+    sources: [sg_sgco_2026, sg_customs_sgcl]
+    check: {method: pdf, source: sg_sgco_2026, phrase: "Equipment for the manufacturing of semiconductor devices or materials"}
+  SG-GST-RATE:
+    jurisdiction: SG
+    topic: tax
+    en: "Singapore GST is 9% (from 1 January 2024)."
+    zh: "新加坡 GST 税率为 9%（自 2024 年 1 月 1 日起）。"
+    status: verified
+    sources: [iras_gst_rates, iras_lvg_etax]
+    check: {method: html, source: iras_gst_rates, phrase: "The current GST rate in Singapore is 9%"}
+  SG-GST-IMPORT-BASE:
+    jurisdiction: SG
+    topic: tax
+    en: "Import GST is charged on the customs value plus all duties, or on the last selling price plus duties when the goods were sold more than once before import and the last buyer declares the payment permit."
+    zh: "进口 GST 按完税价格加全部关税计征；若货物在进口前经多次转售且由最后买方申报，则按最后售价加关税计征。"
+    status: verified
+    sources: [sg_customs_gst]
+    check: {method: html, source: sg_customs_gst, phrase: "if the goods were sold more than once before import"}
+  SG-DUTIABLE:
+    jurisdiction: SG
+    topic: tax
+    en: "Only four categories of goods are dutiable in Singapore: intoxicating liquors, tobacco products, motor vehicles, and petroleum products and biodiesel blends."
+    zh: "新加坡仅对四类货物征收关税或消费税：酒类、烟草制品、机动车，以及石油产品和生物柴油混合物。"
+    status: verified
+    sources: [sg_customs_dutiable]
+    check: {method: html, source: sg_customs_dutiable, phrase: "Petroleum products and biodiesel blends"}
+  SG-LVG-OVR:
+    jurisdiction: SG
+    topic: low-value goods
+    en: "Since 1 January 2023, GST applies to low-value goods (sales value up to S$400, non-dutiable, not GST-exempt, delivered by air or post) supplied to Singapore consumers by vendors, marketplaces or redeliverers registered under the overseas vendor registration regime; registration applies above S$1 million global turnover and S$100,000 of B2C supplies to Singapore."
+    zh: "自 2023 年 1 月 1 日起，经海外供应商注册制度（OVR）注册的卖家、电商平台或转运商向新加坡消费者供应的低价值货物（售价不超过 400 新元、非应税、非免税、经空运或邮寄入境）须征收 GST；全球营业额超过 100 万新元且对新加坡 B2C 供应超过 10 万新元者须注册。"
+    status: verified
+    sources: [iras_lvg_etax, iras_lvg_consumers]
+    check: {method: pdf, source: iras_lvg_etax, phrase: "the registration regime on 1 Jan 2023"}
+  SG-IMPORT-RELIEF:
+    jurisdiction: SG
+    topic: low-value goods
+    en: "Goods imported by air or post with a CIF value of S$400 or less (except liquor and tobacco) continue to receive GST import relief at the border."
+    zh: "经空运或邮寄进口、CIF 价值不超过 400 新元的货物（酒类和烟草除外），在边境继续享受进口 GST 免征。"
+    status: verified
+    sources: [iras_lvg_consumers]
+    check: {method: html, source: iras_lvg_consumers, phrase: "The existing import GST relief remains unchanged"}
+  # ============================ MALAYSIA ============================
+  MY-AP-VEHICLES:
+    jurisdiction: MY
+    topic: permits
+    en: "An Approved Permit from MITI is required for all motor vehicles and motorcycles (including commercial vehicles) imported as CBU or CKD."
+    zh: "以整车（CBU）或全散件（CKD）形式进口的所有机动车和摩托车（含商用车）须取得马来西亚投资贸工部（MITI）签发的核准准证（AP）。"
+    status: verified
+    sources: [my_miti_ap_faq]
+    check: {method: html, source: my_miti_ap_faq, phrase: "Completely Knocked-Down"}
+  MY-AP-STEEL:
+    jurisdiction: MY
+    topic: permits
+    en: "MITI Approved Permits also apply to imports of iron and steel products under HS 7208-7212, 7218, 7221, 7222, 7224, 7225, 7306 and 7614."
+    zh: "进口 HS 7208–7212、7218、7221、7222、7224、7225、7306、7614 项下钢铁产品同样须取得 MITI 核准准证。"
+    status: verified
+    sources: [my_miti_ap_faq]
+    check: {method: html, source: my_miti_ap_faq, phrase: "Import of Iron and Steel Products"}
+  MY-TARIFF-LINES:
+    jurisdiction: MY
+    topic: duty rates
+    en: "Malaysian MFN, SST-column, ACFTA and RCEP rates are those shown by the customs HS Explorer (PDK 2025 schedule) on the access date; parent headings were cross-checked against the 2022 order's hierarchy for the same codes."
+    zh: "马来西亚最惠国税率、销售税栏、ACFTA 与 RCEP 税率取自访问当日马来西亚海关 HS Explorer（PDK 2025 税则）；上级品目结构已与 2022 年税则同编码层级核对。"
+    status: verified
+    sources: [my_jkdm_ezhs, my_pdk_2022]
+    check: {method: ezhs, source: my_jkdm_ezhs, phrase: "PDK 2025 - PERINTAH DUTI KASTAM 2025"}
+  MY-ACFTA-UPDATE:
+    jurisdiction: MY
+    topic: duty rates
+    en: "The HS Explorer showed its ACFTA and RCEP tables as being updated on the access date, and secondary sources report a 2026 amendment of ACFTA concessions (P.U.(A) 15/2026). The amendment's product list was not verified."
+    zh: "访问当日 HS Explorer 显示 ACFTA 与 RCEP 税率表“正在更新”；二手资料称 2026 年有一项 ACFTA 关税减让修订（P.U.(A) 15/2026），其涉及的商品清单未经核实。"
+    status: not_verified
+    sources: [my_jkdm_ezhs]
+    check: {method: manual, source: my_jkdm_ezhs, phrase: ""}
+  MY-ST-IMPORT-BASE:
+    jurisdiction: MY
+    topic: tax
+    en: "Sales tax on imported taxable goods is charged on the customs value plus customs duty plus excise duty (Sales Tax Act 2018, s.9(2))."
+    zh: "进口应税货物的销售税税基为完税价格加关税加消费税（《2018 年销售税法》第 9(2) 条）。"
+    status: verified
+    sources: [my_sales_tax_act]
+    check: {method: pdf, source: my_sales_tax_act, phrase: "the amount of customs duty, if any, paid or to be paid"}
+  MY-ST-RATES-2025:
+    jurisdiction: MY
+    topic: tax
+    en: "From 1 July 2025, sales tax rates are 5% or specific rates as listed in the Sales Tax (Rate of Tax) Order 2025; goods listed in neither that order nor the exemption order are taxed at 10%."
+    zh: "自 2025 年 7 月 1 日起，销售税按《2025 年销售税（税率）令》所列 5% 或从量税率征收；未列入该令及免税令的货物适用 10%。"
+    status: verified
+    sources: [my_mysst_faq_2025]
+    check: {method: html, source: my_mysst_faq_2025, phrase: "the tax rate on the goods is subject to 10%"}
+  MY-ST-SCHEDULE-C:
+    jurisdiction: MY
+    topic: tax
+    en: "Under Schedule C of the Sales Tax (Persons Exempted from Payment of Tax) Order, a registered manufacturer can acquire raw materials, components and packaging used to manufacture taxable goods exempt from sales tax. Eligibility conditions and the approval process were not verified."
+    zh: "根据《销售税（豁免缴税人士）令》附表 C，已注册制造商取得用于生产应税货物的原材料、零部件和包装材料可免征销售税；具体资格条件与审批流程未经核实。"
+    status: verified
+    sources: [my_mysst_faq]
+    check: {method: html, source: my_mysst_faq, phrase: "Registered Manufacturer – exemption on acquisition of raw materials, components, packaging"}
+  MY-VALUATION-CIF:
+    jurisdiction: MY
+    topic: valuation
+    en: "Malaysian customs value adds the cost of transport and insurance to the arrival of the goods in Malaysia (CIF basis), under the Customs (Rules of Valuation) Regulations 1999."
+    zh: "马来西亚完税价格须计入货物运抵马来西亚前的运输及保险费用（CIF 基础），依据《1999 年海关（估价规则）条例》。"
+    status: verified
+    sources: [my_jkdm_valuation]
+    check: {method: html, source: my_jkdm_valuation, phrase: "the costs of transportation and insurance of"}
+  MY-LVG:
+    jurisdiction: MY
+    topic: low-value goods
+    en: "Sales tax of 10% applies to low-value goods sold at a price not exceeding RM500 and brought into Malaysia by land, sea or air (tobacco, liquor and e-cigarette products excluded), imposed from 1 January 2024; sellers register once LVG sales exceed RM500,000 in 12 months."
+    zh: "售价不超过 500 林吉特、经陆运、海运或空运进入马来西亚的低价值货物（烟草、酒类、电子烟类除外）自 2024 年 1 月 1 日起征收 10% 销售税；卖家 12 个月内低价值货物销售额超过 50 万林吉特须注册。"
+    status: verified
+    sources: [my_lvg_guide]
+    check: {method: pdf, source: my_lvg_guide, phrase: "The imposition of sales tax on LVG will be starting from 1 January 2024"}
+  MY-DEMINIMIS:
+    jurisdiction: MY
+    topic: low-value goods
+    en: "Consignments by air courier or post through listed airports with a CIF value not exceeding RM500 are exempt from import duty and sales tax on imports (de minimis); the facility does not apply to goods imported by road or sea."
+    zh: "经指定机场以航空快递或邮政进口、每票 CIF 不超过 500 林吉特的货物免征进口关税和进口销售税（低值豁免）；经陆运或海运进口的货物不适用。"
+    status: verified
+    sources: [my_lvg_guide]
+    check: {method: pdf, source: my_lvg_guide, phrase: "The de minimis does not apply to LVG imported by road or sea"}
+  MY-LVG-NO-DOUBLE:
+    jurisdiction: MY
+    topic: low-value goods
+    en: "LVG already taxed at the point of sale are not charged sales tax on imports if the LVG registration number is in the import declaration."
+    zh: "已在销售环节征税的低价值货物，如在进口申报中填写 LVG 注册号，进口环节不再征收销售税。"
+    status: verified
+    sources: [my_lvg_guide]
+    check: {method: pdf, source: my_lvg_guide, phrase: "will not be charged Sales Tax on Imports"}
+  MY-EV-CKD:
+    jurisdiction: MY
+    topic: incentives
+    en: "Budget 2023 gave locally assembled EVs a full import duty exemption on components and locally assembled CKD EVs a full excise duty and sales tax exemption, both until 31 December 2027 (reaffirmed by MITI in July 2024). Later budget changes and the eligibility conditions were not checked."
+    zh: "2023 年财政预算案规定：本地组装电动车的零部件免征进口关税，本地组装 CKD 电动车免征消费税和销售税，均至 2027 年 12 月 31 日（MITI 于 2024 年 7 月重申）。此后预算案的调整及申请条件未经核实。"
+    status: verified
+    sources: [my_budget2023_touchpoints, my_mida_ev_2024]
+    check: {method: pdf, source: my_budget2023_touchpoints, phrase: "Full import duty exemption on components for locally assembled EV"}
+  MY-CKD-CLASSIFICATION:
+    jurisdiction: MY
+    topic: classification
+    en: "The Malaysian tariff has CKD vehicle lines (e.g. 8703.23.21 00, CKD sedans of 1,500-1,800 cc, MFN 10% in PDK 2025). Whether a set of kit components is a vehicle in CKD form (General Interpretative Rule 2(a)) or separate parts is a classification decision that was not verified for the fictional kit."
+    zh: "马来西亚税则设有 CKD 车辆税目（如 8703.23.21 00，1,500–1,800 cc CKD 轿车，PDK 2025 最惠国税率 10%）。一套散件应按 CKD 整车（归类总规则二(一)）还是按零部件归类，属于归类判定，本虚构案例未经核实。"
+    status: not_verified
+    sources: [my_jkdm_ezhs, my_pdk_2022]
+    check: {method: manual, source: my_pdk_2022, phrase: ""}
+  # ============================ FTA ============================
+  FTA-ACFTA-ORIGIN:
+    jurisdiction: ACFTA
+    topic: rules of origin
+    en: "Under the upgraded ACFTA rules, a good not wholly obtained is originating if its regional value content is at least 40% of FOB and the final process is in a Party, or (for listed chapters) all non-originating materials change tariff heading, unless product-specific rules provide otherwise."
+    zh: "升级版 ACFTA 原产地规则：非完全获得货物，区域价值成分不低于 FOB 价格的 40% 且最后工序在成员方完成，或（对所列章节）所有非原产材料发生品目改变，即视为原产，产品特定规则另有规定的除外。"
+    status: verified
+    sources: [acfta_roo]
+    check: {method: pdf, source: acfta_roo, phrase: "regional value content of not less"}
+  FTA-ACFTA-DIRECT:
+    jurisdiction: ACFTA
+    topic: rules of origin
+    en: "ACFTA preference requires direct consignment; transit through another country is allowed only if justified geographically or by transport needs, the goods are not traded or consumed there and undergo only unloading, reloading or preservation."
+    zh: "享受 ACFTA 优惠须满足直接运输：经第三国过境仅限因地理或运输原因，货物不得在当地进入贸易或消费，且仅可进行装卸或保持良好状态所需的操作。"
+    status: verified
+    sources: [acfta_roo]
+    check: {method: pdf, source: acfta_roo, phrase: "the transit entry is justified for geographical reason"}
+  FTA-ACFTA-FORM-E:
+    jurisdiction: ACFTA
+    topic: proof of origin
+    en: "A Form E is issued before or at shipment (retroactively within 12 months, marked ISSUED RETROACTIVELY) and must be submitted to the importing customs within one year of issue."
+    zh: "Form E 原产地证书应在装运前或装运时签发（12 个月内可补发并注明 ISSUED RETROACTIVELY），并须在签发之日起一年内提交进口方海关。"
+    status: verified
+    sources: [acfta_ocp]
+    check: {method: pdf, source: acfta_ocp, phrase: "within one (1) year from the date of its issuance"}
+  FTA-ACFTA-3PI:
+    jurisdiction: ACFTA
+    topic: third-country trade
+    en: "ACFTA accepts a Form E when the invoice is issued by a company in a third country (Party or non-Party), provided the goods meet the rules of origin: the invoice number goes in Box 10, the exporter and consignee must be located in the Parties and the invoice is attached."
+    zh: "ACFTA 接受第三方（成员方或非成员方）公司开具发票的 Form E，前提是货物符合原产地规则：发票号填入第 10 栏，出口商和收货人须位于成员方境内，并随附该发票。"
+    status: verified
+    sources: [acfta_ocp, my_miti_acfta_qa]
+    check: {method: pdf, source: acfta_ocp, phrase: "the exporter and consignee must be located in the Parties"}
+  FTA-ACFTA-MC:
+    jurisdiction: ACFTA
+    topic: third-country trade
+    en: "An intermediate ACFTA Party may issue a Movement Certificate on the original Form E if the goods stay under customs control, are not further processed and the intermediate importer and exporter are the same."
+    zh: "中转成员方可凭原 Form E 签发流转证明（Movement Certificate），条件是货物处于海关监管之下、未经进一步加工，且中转方的进口商与出口商为同一主体。"
+    status: verified
+    sources: [acfta_ocp]
+    check: {method: pdf, source: acfta_ocp, phrase: "may issue a Movement Certificate"}
+  FTA-RCEP-PSR:
+    jurisdiction: RCEP
+    topic: rules of origin
+    en: "RCEP product-specific rules for headings 87.08 (vehicle parts) and 85.44 (insulated wire, harnesses) are CTH or RVC40."
+    zh: "RCEP 产品特定规则：品目 87.08（汽车零部件）和 85.44（绝缘电线、线束）适用品目改变（CTH）或区域价值成分 40%。"
+    status: verified
+    sources: [rcep_text]
+    check: {method: pdf, source: rcep_text, phrase: "Parts and accessories of the motor vehicles"}
+  FTA-RCEP-POO:
+    jurisdiction: RCEP
+    topic: proof of origin
+    en: "RCEP proofs of origin are a Certificate of Origin, a Declaration of Origin by an approved exporter, or (once implemented, within 10 years for China, Malaysia, Singapore, Indonesia, Thailand, the Philippines and others) a Declaration of Origin by any exporter or producer; each is valid for one year."
+    zh: "RCEP 原产地证明包括：原产地证书、经核准出口商的原产地声明，以及（中国、马来西亚、新加坡、印尼、泰国、菲律宾等须在 10 年内实施的）任何出口商或生产商的原产地声明；有效期均为一年。"
+    status: verified
+    sources: [rcep_text]
+    check: {method: pdf, source: rcep_text, phrase: "remains valid for one year from the date on which it is issued"}
+  FTA-RCEP-3PI:
+    jurisdiction: RCEP
+    topic: third-country trade
+    en: "RCEP Article 3.20: an importing Party shall not deny preference only because the invoice was not issued by the exporter or producer; on the certificate, Box 17 'Third-party invoicing' is ticked and the invoicing company's name and country go in Box 14."
+    zh: "RCEP 第 3.20 条：进口方不得仅因发票非由出口商或生产商开具而拒绝给予优惠；原产地证书第 17 栏勾选“第三方发票”，并在第 14 栏填写开票公司名称及所在国。"
+    status: verified
+    sources: [rcep_text, rcep_co_notes]
+    check: {method: pdf, source: rcep_co_notes, phrase: "the name and country of the company issuing the invoice should be provided in"}
+  FTA-RCEP-DIRECT:
+    jurisdiction: RCEP
+    topic: third-country trade
+    en: "RCEP lets originating goods pass through or be stored in intermediate Parties or non-Parties if they undergo only logistics activities (unloading, reloading, storing, preservation) and remain under customs control."
+    zh: "RCEP 允许原产货物经中间成员方或非成员方过境或仓储，前提是仅进行卸货、重新装载、仓储、保持良好状态等物流操作，且始终处于海关监管之下。"
+    status: verified
+    sources: [rcep_text]
+    check: {method: pdf, source: rcep_text, phrase: "remains under the control of the customs authorities"}
+  FTA-RCEP-B2B:
+    jurisdiction: RCEP
+    topic: third-country trade
+    en: "RCEP allows back-to-back proofs of origin issued in an intermediate Party (Article 3.19), valid no longer than the original."
+    zh: "RCEP 允许中间成员方签发背对背原产地证明（第 3.19 条），其有效期不得超过原证明。"
+    status: verified
+    sources: [rcep_text, rcep_ig]
+    check: {method: pdf, source: rcep_ig, phrase: "back-to-back DO in accordance with Article 3.19"}
+  # ============================ INDONESIA ============================
+  ID-CN-DEMINIMIS:
+    jurisdiction: ID
+    topic: low-value goods
+    en: "Consignments declared on a consignment note with a customs value up to FOB USD 3 per recipient per shipment are free of import duty and income tax but pay VAT (PMK 96/2023 Art. 29(2) as amended by PMK 4/2025)."
+    zh: "以快件单（CN）申报、每位收件人每票完税价格不超过 FOB 3 美元的进境快件，免征进口关税和所得税，但须缴纳增值税（PMK 96/2023 第 29(2) 条，经 PMK 4/2025 修订）。"
+    status: verified
+    sources: [id_pmk96_2023, id_pmk4_2025]
+    check: {method: pdf, source: id_pmk4_2025, phrase: "USD3.00 (tiga United States Dollar) per Penerima"}
+  ID-CN-BAND:
+    jurisdiction: ID
+    topic: low-value goods
+    en: "Between FOB USD 3 and USD 1,500 per recipient per shipment: import duty 7.5%, or 0% for books, 15% for cosmetics, iron/steel articles and watches, 25% for bags (42.02), textiles (chapters 61-63), footwear (chapter 64) and bicycles/e-bikes; anti-dumping and safeguard duties do not apply; VAT is collected; income tax is exempt except 5% for the 15%/25% commodities."
+    zh: "每位收件人每票 FOB 3 美元至 1,500 美元：进口关税 7.5%；书籍 0%；化妆品、钢铁制品、手表 15%；箱包（42.02）、纺织品（第 61–63 章）、鞋类（第 64 章）及自行车/电动自行车 25%；不适用反倾销及保障措施关税；征收增值税；免征所得税，但适用 15%/25% 税率的商品须缴纳 5% 所得税。"
+    status: verified
+    sources: [id_pmk4_2025]
+    check: {method: pdf, source: id_pmk4_2025, phrase: "sebesar 7,5% (tujuh koma lima persen)"}
+  ID-VAT-EFFECTIVE:
+    jurisdiction: ID
+    topic: tax
+    en: "From 1 January 2025, VAT on imports of non-luxury taxable goods is 12% of a base equal to 11/12 of the import value (an effective 11%)."
+    zh: "自 2025 年 1 月 1 日起，非奢侈应税货物进口增值税为 12%，税基为进口价值的 11/12（实际税负 11%）。"
+    status: verified
+    sources: [id_pmk131_2024]
+    check: {method: pdf, source: id_pmk131_2024, phrase: "11/12 (sebelas per dua belas) dari nilai impor"}
+  ID-IMPORT-VALUE:
+    jurisdiction: ID
+    topic: valuation
+    en: "The kit takes Indonesia's VAT import value as customs value (CIF) plus import duty. The statutory definition was not retrieved, so this base is an assumption."
+    zh: "本工具将印尼增值税的“进口价值”取为完税价格（CIF）加进口关税；未取得法定定义原文，属假设。"
+    status: not_verified
+    sources: []
+    check: {method: manual, source: "", phrase: ""}
+  ID-ABOVE-1500:
+    jurisdiction: ID
+    topic: low-value goods
+    en: "Consignments declared on a PIBK pay MFN duty and import taxes under the general rules (PMK 96/2023 Art. 29(5) as amended). That consignments above USD 1,500 must use a PIBK, and the MFN rates for the template products, were not verified."
+    zh: "以 PIBK 申报的快件按一般规定缴纳最惠国关税和进口环节税（PMK 96/2023 第 29(5) 条，经修订）。超过 1,500 美元的快件是否必须走 PIBK，以及模板商品的最惠国税率，均未核实。"
+    status: not_verified
+    sources: [id_pmk4_2025]
+    check: {method: manual, source: id_pmk4_2025, phrase: ""}
+  ID-LICENSING:
+    jurisdiction: ID
+    topic: permits
+    en: "Bulk (non-consignment) imports of textiles, footwear, bags and electronics may need trade-ministry import approvals or technical requirements; these were not verified."
+    zh: "以一般贸易方式批量进口纺织品、鞋类、箱包和电子产品，可能需要贸易部进口许可或技术要求，未经核实。"
+    status: not_verified
+    sources: []
+    check: {method: manual, source: "", phrase: ""}
+  # ============================ THAILAND ============================
+  TH-DUTY-1BAHT:
+    jurisdiction: TH
+    topic: low-value goods
+    en: "From 1 January 2026, Customs Notification 219/2568 limits the duty exemption under category 12 of Part 4 of the Customs Tariff Decree to goods each priced (customs value) at no more than 1 baht, revoking Notification 191/2561."
+    zh: "自 2026 年 1 月 1 日起，泰国海关第 219/2568 号公告将《海关税则法令》第四部分第 12 类的关税豁免限于单件价格（完税价格）不超过 1 泰铢的货物，并废止第 191/2561 号公告。"
+    status: verified
+    sources: [th_customs_219_2568]
+    note: "Read from the rendered Royal Gazette page (the PDF text layer is not machine-readable). The previous THB 1,500 threshold is not restated in this notification."
+    check: {method: image, source: th_customs_219_2568, phrase: ""}
+  TH-VAT:
+    jurisdiction: TH
+    topic: tax
+    en: "Thai import VAT is levied on CIF value plus import duty, excise tax and other taxes and fees; the general rate is currently 7%."
+    zh: "泰国进口增值税税基为 CIF 价值加进口关税、消费税及其他税费；现行一般税率为 7%。"
+    status: verified
+    sources: [th_rd_vat]
+    check: {method: html, source: th_rd_vat, phrase: "Currently, the rate is 7 percent"}
+  TH-VAT-EXTENSION:
+    jurisdiction: TH
+    topic: tax
+    en: "Secondary sources report a royal decree keeping the 7% VAT rate until 30 September 2027; not confirmed on an official page."
+    zh: "二手资料称泰国以皇家法令将 7% 增值税税率延长至 2027 年 9 月 30 日，未在官方页面核实。"
+    status: not_verified
+    sources: []
+    check: {method: manual, source: "", phrase: ""}
+  TH-MFN:
+    jurisdiction: TH
+    topic: duty rates
+    en: "Thai MFN duty rates for the template products were not verified; the kit uses labelled placeholder rates."
+    zh: "模板商品的泰国最惠国关税税率未经核实，本工具使用标注为占位的假设税率。"
+    status: not_verified
+    sources: []
+    check: {method: manual, source: "", phrase: ""}
+  # ============================ PHILIPPINES ============================
+  PH-DEMINIMIS:
+    jurisdiction: PH
+    topic: low-value goods
+    en: "No duties and taxes are collected on goods with an FOB or FCA value of PHP 10,000 or below (CMTA s.423); the Secretary of Finance is to adjust the value every three years using the CPI, and de minimis tobacco and alcohol remain subject to excise. Whether an adjustment has been made was not verified."
+    zh: "FOB 或 FCA 价值不超过 10,000 菲律宾比索的货物不征收关税和税费（《海关现代化与关税法》第 423 条）；财政部长应每三年按 CPI 调整该限额，低值豁免下的烟酒仍须缴纳消费税。是否已作调整未经核实。"
+    status: verified
+    sources: [ph_cmta, ph_dof_deminimis]
+    check: {method: html, source: ph_cmta, phrase: "No duties and taxes shall be collected on goods with an FOB or FCA value"}
+  PH-VAT:
+    jurisdiction: PH
+    topic: tax
+    en: "Philippine VAT on importation is 12% of the customs value plus customs duties, excise taxes and other charges, paid before release."
+    zh: "菲律宾进口增值税为 12%，税基为完税价格加关税、消费税及其他费用，须在放行前缴纳。"
+    status: verified
+    sources: [ph_bir_2550q]
+    check: {method: pdf, source: ph_bir_2550q, phrase: "twelve percent (12%) based on the total value"}
+  PH-CAO:
+    jurisdiction: PH
+    topic: low-value goods
+    en: "The Bureau of Customs' current administrative order on de minimis and low-value importations could not be read (the site refused scripted requests); thresholds other than s.423 were not verified."
+    zh: "菲律宾海关现行关于低值与小额进口的行政令无法读取（官网拒绝脚本访问），第 423 条以外的门槛未经核实。"
+    status: not_verified
+    sources: []
+    check: {method: manual, source: "", phrase: ""}
+  PH-MFN:
+    jurisdiction: PH
+    topic: duty rates
+    en: "Philippine MFN duty rates for the template products were not verified; the kit uses labelled placeholder rates."
+    zh: "模板商品的菲律宾最惠国关税税率未经核实，本工具使用标注为占位的假设税率。"
+    status: not_verified
+    sources: []
+    check: {method: manual, source: "", phrase: ""}
+  # ============================ INCOTERMS ============================
+  INCO-RULES:
+    jurisdiction: ICC
+    topic: incoterms
+    en: "Incoterms 2020 has 11 rules: seven for any mode of transport and four (FAS, FOB, CFR, CIF) for sea and inland waterway transport."
+    zh: "《2020 年国际贸易术语解释通则》共 11 个术语：7 个适用于任何运输方式，4 个（FAS、FOB、CFR、CIF）仅适用于海运和内河运输。"
+    status: verified
+    sources: [trade_gov_incoterms]
+    check: {method: html, source: trade_gov_incoterms, phrase: "there are seven for ANY mode(s) of transport and four for SEA"}
+  INCO-DPU-INSURANCE:
+    jurisdiction: ICC
+    topic: incoterms
+    en: "Under DAP the seller does not unload; under DPU the seller unloads. CIF keeps Institute Cargo Clauses (C) as the default cover, while CIP requires cover compliant with clauses (A). All costs of a rule are listed in articles A9/B9."
+    zh: "DAP 下卖方不负责卸货，DPU 下卖方负责卸货；CIF 默认投保协会货物条款（C），CIP 须按条款（A）投保；各术语的费用均列于 A9/B9 条。"
+    status: verified
+    sources: [icc_incoterms]
+    check: {method: html, source: icc_incoterms, phrase: "under DAP the seller does not unload the goods"}
+  # ============================ SERVICES ============================
+  SVC-CLR-TH:
+    jurisdiction: CN-LA-TH
+    topic: services
+    en: "Cross-border rail freight runs between China, Laos and Thailand on the China-Laos Railway, with containers transferred at Vientiane South / Thanaleng to the metre-gauge line to Thailand. Departure frequency for a given origin was not verified."
+    zh: "中老铁路已开行中国—老挝—泰国跨境铁路货运，集装箱在万象南站/塔纳楞转运至通往泰国的米轨线路；具体始发地的班次频率未经核实。"
+    status: verified
+    sources: [rail_kpl_2026, rail_star_2026]
+    check: {method: manual, source: rail_kpl_2026, phrase: ""}
+  SVC-ASEAN-EXPRESS:
+    jurisdiction: MY-TH-LA-CN
+    topic: services
+    en: "A Malaysia-China block train via Thailand and Laos made its first run in June-July 2024 with two departures a week planned; no current official timetable was found, so the kit does not offer it."
+    zh: "经泰国、老挝的马来西亚—中国班列于 2024 年 6–7 月首发，计划每周两班；未找到现行官方时刻表，因此本工具不将其作为可选方案。"
+    status: not_verified
+    sources: [rail_asean_express_2024]
+    check: {method: manual, source: rail_asean_express_2024, phrase: ""}
+  SVC-ILSTC:
+    jurisdiction: CN
+    topic: services
+    en: "Rail-sea services link Chongqing with Qinzhou port (New International Land-Sea Trade Corridor); state-affiliated media describe them as operating steadily. Frequency is an assumption in the kit."
+    zh: "重庆与钦州港之间开行铁海联运班列（西部陆海新通道），官方背景媒体称其运行稳定；本工具中的班次频率为假设。"
+    status: not_verified
+    sources: [rail_ilstc_2026]
+    note: "Only state-affiliated media found; treated as evidence of a regular domestic pre-carriage service, not verified on an operator timetable."
+    check: {method: manual, source: rail_ilstc_2026, phrase: ""}
+  SVC-SG-MY-ROAD:
+    jurisdiction: SG-MY
+    topic: services
+    en: "Goods imported into Singapore by land are cleared at Woodlands or Tuas Checkpoint; cross-border trucking is an established route, but the kit's departure frequency is an assumption."
+    zh: "经陆路进口新加坡的货物在兀兰或大士关卡清关；跨境陆运是成熟通道，但本工具中的发车频率为假设。"
+    status: verified
+    sources: [sg_customs_clearance_docs]
+    check: {method: html, source: sg_customs_clearance_docs, phrase: "Woodlands or Tuas Checkpoint"}

@@ -1,0 +1,69 @@
+# Duty and tax regime parameters by destination. Every numeric parameter carries a provenance label:
+#   REAL        - taken from an official source (see `statement` -> regulatory_statements.yaml)
+#   ASSUMPTION  - modelling choice or placeholder; `note` says why (all unverified tax rates are here)
+# Monetary thresholds are in the currency named in `unit`; conversion uses fx below.
+fx:
+  # USD per 1 unit of currency is NOT used; all rates below are units of currency per 1 USD.
+  MYR: {value: 4.20, unit: MYR per USD, label: ASSUMPTION, note: "round reference rate for threshold tests; refresh before use"}
+  SGD: {value: 1.30, unit: SGD per USD, label: ASSUMPTION, note: "round reference rate"}
+  THB: {value: 32.5, unit: THB per USD, label: ASSUMPTION, note: "round reference rate"}
+  PHP: {value: 58.0, unit: PHP per USD, label: ASSUMPTION, note: "round reference rate"}
+  IDR: {value: 16300.0, unit: IDR per USD, label: ASSUMPTION, note: "round reference rate (thresholds in Indonesia are set in USD)"}
+  JPY: {value: 150.0, unit: JPY per USD, label: ASSUMPTION, note: "round reference rate (not used in tax tests)"}
+
+SG:
+  gst_rate: {value: 0.09, unit: fraction, label: REAL, statement: SG-GST-RATE}
+  lvg_threshold_sgd: {value: 400.0, unit: SGD, label: REAL, statement: SG-LVG-OVR}
+  import_relief_cif_sgd: {value: 400.0, unit: SGD, label: REAL, statement: SG-IMPORT-RELIEF}
+  tis_max_months: {value: 6, unit: months, label: REAL, statement: SG-TIS-6M}
+  tis_security_share_registered: {value: 0.30, unit: fraction of potential GST, label: REAL, statement: SG-TIS-SECURITY,
+                                  note: "non-dutiable, non-selected goods, GST-registered entity, before TradeFIRST reductions"}
+  tis_security_share_unregistered: {value: 0.50, unit: fraction of potential GST, label: REAL, statement: SG-TIS-SECURITY}
+  ata_max_months: {value: 6, unit: months, label: REAL, statement: SG-ATA-PERIOD}
+  reimport_after_repair_months: {value: 3, unit: months, label: REAL, statement: SG-TEMPEXP-REPAIR}
+
+MY:
+  sales_tax_default_rate: {value: 0.10, unit: fraction, label: REAL, statement: MY-ST-RATES-2025}
+  lvg_rate: {value: 0.10, unit: fraction, label: REAL, statement: MY-LVG}
+  lvg_price_threshold_myr: {value: 500.0, unit: MYR, label: REAL, statement: MY-LVG}
+  lvg_registration_threshold_myr: {value: 500000.0, unit: MYR per 12 months, label: REAL, statement: MY-LVG}
+  deminimis_cif_myr: {value: 500.0, unit: MYR per consignment, label: REAL, statement: MY-DEMINIMIS,
+                      note: "air courier or post through listed airports only"}
+
+ID:
+  deminimis_fob_usd: {value: 3.0, unit: USD per recipient per shipment, label: REAL, statement: ID-CN-DEMINIMIS}
+  band_upper_fob_usd: {value: 1500.0, unit: USD per recipient per shipment, label: REAL, statement: ID-CN-BAND}
+  band_duty_rate: {value: 0.075, unit: fraction, label: REAL, statement: ID-CN-BAND}
+  vat_nominal: {value: 0.12, unit: fraction, label: REAL, statement: ID-VAT-EFFECTIVE}
+  vat_base_fraction: {value: 0.9166666666666666, unit: "11/12 of import value", label: REAL, statement: ID-VAT-EFFECTIVE}
+  pph_specific_rate: {value: 0.05, unit: fraction, label: REAL, statement: ID-CN-BAND,
+                      note: "applies to the 15%/25% commodity groups; the base is taken as the VAT import value (assumption)"}
+  # commodity-specific duty rates in the USD 3 - 1,500 band, by HS chapter / heading prefix
+  band_specific_rates:
+    label: REAL
+    statement: ID-CN-BAND
+    rates:
+      - {prefixes: ["4901", "4902", "4903", "4904"], rate: 0.0, pph: false, group: books}
+      - {prefixes: ["3303", "3304", "3305", "3306", "3307", "73", "9101", "9102"], rate: 0.15, pph: true, group: cosmetics_steel_watches}
+      - {prefixes: ["4202", "61", "62", "63", "64", "871160", "8712"], rate: 0.25, pph: true, group: bags_textiles_footwear_bicycles}
+  mfn_placeholder_rate: {value: 0.10, unit: fraction, label: ASSUMPTION, statement: ID-ABOVE-1500,
+                         note: "placeholder for bulk (non-consignment) imports; Indonesian MFN rates for the template HS codes not verified"}
+
+TH:
+  duty_exemption_customs_value_thb: {value: 1.0, unit: THB per item, label: REAL, statement: TH-DUTY-1BAHT,
+                                     note: "from 1 Jan 2026"}
+  vat_rate: {value: 0.07, unit: fraction, label: REAL, statement: TH-VAT}
+  mfn_placeholder_rates:
+    label: ASSUMPTION
+    statement: TH-MFN
+    note: "placeholders only; Thai MFN rates for these HS codes were not verified"
+    rates: {"6109": 0.30, "8518": 0.10, "4202": 0.20}
+
+PH:
+  deminimis_fob_php: {value: 10000.0, unit: PHP (FOB or FCA), label: REAL, statement: PH-DEMINIMIS}
+  vat_rate: {value: 0.12, unit: fraction, label: REAL, statement: PH-VAT}
+  mfn_placeholder_rates:
+    label: ASSUMPTION
+    statement: PH-MFN
+    note: "placeholders only; Philippine MFN rates for these HS codes were not verified"
+    rates: {"6109": 0.15, "8518": 0.07, "4202": 0.15}

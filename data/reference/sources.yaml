@@ -1,0 +1,331 @@
+# Source register. Every REAL input and every regulatory statement points to one or more ids here.
+# kind: official (government / treaty text / statutory body), intergovernmental, index (public index page),
+#       data (public dataset), secondary (news or private summary; never sufficient alone for a tax rule).
+# accessed: date the page or file was read for this project.
+sources:
+  # ---------------- Singapore ----------------
+  sg_customs_ata_carnet:
+    title: "ATA Carnet (Singapore Customs; page last updated 31 Jul 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/ata-carnet/ata-carnet/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_ata_foreign:
+    title: "Foreign ATA Carnet (Singapore Customs; last updated 31 Jul 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/ata-carnet/foreign-ata-carnet/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_ata_local:
+    title: "Local ATA Carnet (Singapore Customs; last updated 31 Jul 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/ata-carnet/local-ata-carnet/
+    kind: official
+    accessed: 2026-11-15
+  icc_ata:
+    title: "ATA Carnet - directory of national guaranteeing associations (ICC World Chambers Federation)"
+    url: https://iccwbo.org/business-solutions/ata-carnet/
+    kind: intergovernmental
+    accessed: 2026-11-15
+    note: "ICC administers the international guarantee chain; not a government site."
+  sicc_ata:
+    title: "ATA Carnet & TDB/BOFT Carnets (Singapore International Chamber of Commerce)"
+    url: https://sicc.com.sg/trade-documentation/ata-carnet-tdb-boft-carnets/
+    kind: official
+    accessed: 2026-11-15
+    note: "Issuing body's own page (fees, covered items, countries where the system is in force)."
+  sicc_nga_2024:
+    title: "SICC memberCONNECT 2024 no. 508 (SICC as National Guaranteeing and Issuing Association)"
+    url: https://sicc.com.sg/memberCONNECT/2024/508.html
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_tis_overview:
+    title: "Temporary Import/Export Scheme Overview (Singapore Customs; last updated 10 Sep 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/temporary-import-export-scheme-overview/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_tis_import_purposes:
+    title: "Qualifying Goods and Purposes for Import (Singapore Customs; last updated 25 Feb 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/qualifying-goods-and-purposes-for-import/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_tis_export_purposes:
+    title: "Qualifying Goods and Purposes for Export (Singapore Customs; last updated 24 Feb 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/qualifying-goods-and-purposes-for-export/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_tis_additional_import:
+    title: "Additional Requirements for Import under TIS (Singapore Customs; last updated 3 Mar 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/additional-requirements-for-import/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_security_amount:
+    title: "What is the Amount of Security Required (Singapore Customs; last updated 1 Apr 2026)"
+    url: https://www.customs.gov.sg/doing-business/getting-started/security-lodgement/what-is-the-amount-of-security-required/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_reimport:
+    title: "Re-importing of Goods Sent Overseas for Activities (Singapore Customs; last updated 13 May 2026)"
+    url: https://www.customs.gov.sg/doing-business/import-operations/import-procedures/re-importing-of-goods-sent-overseas-for-activities/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_tis_export_procedures:
+    title: "Permit Application Procedures for Export (temporary export) (Singapore Customs; last updated 13 May 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/permit-application-procedures-for-export/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_sgc_overview:
+    title: "Strategic Goods Control Overview (Singapore Customs; last updated 2 Oct 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/trade-controls-and-prohibitions/strategic-goods-control/strategic-goods-control-overview/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_sgc_permits:
+    title: "Permit and Registration Requirements Overview (Singapore Customs; last updated 1 Sep 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/trade-controls-and-prohibitions/strategic-goods-control/permit-and-registration-requirements/permit-and-registration-requirements-overview/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_sgc_individual:
+    title: "Individual Permit: Export, Transhipment and Transit (Singapore Customs; last updated 8 Jun 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/trade-controls-and-prohibitions/strategic-goods-control/permit-and-registration-requirements/individual-permit-export-transhipment-and-transit/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_sgcl:
+    title: "Strategic Goods Control List Overview (Singapore Customs; last updated 6 Oct 2026)"
+    url: https://www.customs.gov.sg/permits-and-licences/trade-controls-and-prohibitions/strategic-goods-control/strategic-goods-control-list/strategic-goods-control-list-overview/
+    kind: official
+    accessed: 2026-11-15
+  sg_sgco_2026:
+    title: "Strategic Goods (Control) Order 2026, S 741/2026 (Government Gazette, published 1 Oct 2026)"
+    url: https://assets.egazette.gov.sg/2026/Legislative%20Supplements/Subsidiary%20Legislation%20Supplement/26sls741.pdf
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_gst:
+    title: "Goods and Services Tax on imports (Singapore Customs; last updated 24 Feb 2026)"
+    url: https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/goods-and-services-tax-gst/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_dutiable:
+    title: "Duties and Dutiable Goods Overview (Singapore Customs; last updated 9 Mar 2026)"
+    url: https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/duties-and-dutiable-goods/duties-and-dutiable-goods-overview/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_flat_rates:
+    title: "Flat Rates for Freight and Insurance (Singapore Customs; last updated 25 Mar 2026)"
+    url: https://www.customs.gov.sg/doing-business/valuation-duties-and-fees/establishing-customs-value/flat-rates-for-freight-and-insurance/
+    kind: official
+    accessed: 2026-11-15
+  sg_customs_clearance_docs:
+    title: "Documents for Clearance of Goods (Singapore Customs) - land imports cleared at Woodlands or Tuas Checkpoint"
+    url: https://www.customs.gov.sg/doing-business/import-operations/import-procedures/documents-for-clearance-of-goods/
+    kind: official
+    accessed: 2026-11-15
+  iras_gst_rates:
+    title: "Current GST rates (IRAS)"
+    url: https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/basics-of-gst/current-gst-rates
+    kind: official
+    accessed: 2026-11-15
+  iras_lvg_consumers:
+    title: "GST on Imported Low-Value Goods (IRAS, consumer page)"
+    url: https://www.iras.gov.sg/taxes/goods-services-tax-(gst)/consumers/gst-on-imported-low-value-goods
+    kind: official
+    accessed: 2026-11-15
+  iras_lvg_etax:
+    title: "IRAS e-Tax Guide: Taxing imported low-value goods by way of the overseas vendor registration regime (5th ed., published 30 Jan 2026)"
+    url: https://www.iras.gov.sg/media/docs/default-source/e-tax/gst-e-tax-guide_taxing-imported-low-value-goods-by-way-of-the-overseas-vendor-registration-regime_(1st-ed).pdf?sfvrsn=b1a36692_6
+    kind: official
+    accessed: 2026-11-15
+  # ---------------- Malaysia ----------------
+  my_miti_ap_faq:
+    title: "Approved Permit (AP) FAQ (Ministry of Investment, Trade and Industry)"
+    url: https://www.miti.gov.my/index.php/pages/view/10621
+    kind: official
+    accessed: 2026-11-15
+  my_jkdm_ezhs:
+    title: "JKDM HS Explorer - PDK 2025 (Perintah Duti Kastam 2025), ACFTA, RCEP and ATIGA schedules (Royal Malaysian Customs Department)"
+    url: https://ezhs.customs.gov.my/
+    kind: official
+    accessed: 2026-11-15
+    note: "Fetched by scripts/fetch_my_tariff.py; extract in data/public/my_tariff_lines.csv. Full ACFTA/RCEP tables showed 'being updated'."
+  my_pdk_2022:
+    title: "Customs Duties Order 2022, P.U.(A) 114/2022 (gazette copy hosted by MITI) - used only to read the parent-heading hierarchy"
+    url: https://www.miti.gov.my/miti/resources/Approve%20Permit/P.U_._(A)_114_-_Perintah_Duti_Kastam_2022_.pdf
+    kind: official
+    accessed: 2026-11-15
+  my_sales_tax_act:
+    title: "Sales Tax Act 2018 (Act 806), copy on the MySST portal (Royal Malaysian Customs Department)"
+    url: https://mysst.customs.gov.my/wp-content/uploads/2025/03/Sales-Tax-Act-2018.pdf
+    kind: official
+    accessed: 2026-11-15
+  my_mysst_faq:
+    title: "FAQ Sales Tax (MySST portal)"
+    url: https://mysst.customs.gov.my/faq-sales-tax/
+    kind: official
+    accessed: 2026-11-15
+  my_mysst_faq_2025:
+    title: "FAQ Transition of Sales Tax Rate Changes 2025 (MySST portal)"
+    url: https://mysst.customs.gov.my/faq-transition-of-sales-tax-rate-changes-2025/
+    kind: official
+    accessed: 2026-11-15
+  my_jkdm_valuation:
+    title: "Valuation - Customs (Rules of Valuation) Regulations 1999 (Royal Malaysian Customs Department page)"
+    url: https://www.customs.gov.my/en/procedure/technical-services
+    kind: official
+    accessed: 2026-11-15
+  my_lvg_guide:
+    title: "Sales Tax 2018 Guide: Sales Tax on Low Value Goods, V2.1 as of 1 Aug 2024 (Royal Malaysian Customs Department)"
+    url: https://mylvg.customs.gov.my/uploads/Guide%20Sales%20Tax%20on%20LVG%20Guide%20as%20of%201%C2%A0August%C2%A02024.pdf
+    kind: official
+    accessed: 2026-11-15
+    note: "The portal's TLS certificate had expired on the access date; file read with certificate checking disabled."
+  my_budget2023_touchpoints:
+    title: "Budget 2023 - Appendix I Touchpoints (Ministry of Finance Malaysia), item 12 tax incentives to support EV adoption"
+    url: https://belanjawan.mof.gov.my/pdf/belanjawan2023/ucapan/touchpoint-budget-en.pdf
+    kind: official
+    accessed: 2026-11-15
+  my_mida_ev_2024:
+    title: "Govt backs move for more locally-assembled EV models - MITI (MIDA news, 18 Jul 2024)"
+    url: https://www.mida.gov.my/mida-news/govt-backs-move-for-more-locally-assembled-ev-models-miti/
+    kind: official
+    accessed: 2026-11-15
+  my_miti_acfta_qa:
+    title: "Questions on ASEAN-China FTA (MITI FTA portal; older Q&A)"
+    url: https://fta.miti.gov.my/index.php/pages/view/22
+    kind: official
+    accessed: 2026-11-15
+  # ---------------- FTA texts ----------------
+  acfta_roo:
+    title: "ACFTA Upgrading Protocol, Annex 1 Rules of Origin (ASEAN Secretariat)"
+    url: https://asean.org/wp-content/uploads/2021/09/02-ANNEX-1-ACFTA-Ugrading-Protocol-ACFTAROO-text-22Nov2015_13.15-f....pdf
+    kind: intergovernmental
+    accessed: 2026-11-15
+  acfta_ocp:
+    title: "ACFTA Revised Operational Certification Procedures, Attachment A (ASEAN Secretariat)"
+    url: https://asean.org/wp-content/uploads/2021/08/02a-ANNEX-1-Attachment-A-Revised-OCP_Final.pdf
+    kind: intergovernmental
+    accessed: 2026-11-15
+  rcep_text:
+    title: "RCEP Agreement full text (ASEAN Secretariat), Chapter 3 and Annex 3A"
+    url: https://asean.org/wp-content/uploads/2024/10/Regional-Comprehensive-Economic-Partnership-RCEP-Agreement-Full-Text.pdf
+    kind: intergovernmental
+    accessed: 2026-11-15
+  rcep_co_notes:
+    title: "RCEP Certificate of Origin format and overleaf notes (RCEP Secretariat)"
+    url: https://rcepsec.org/wp-content/uploads/2026/06/R03-RCEP-CO-Format-and-ON-1-Jan-2023.pdf
+    kind: intergovernmental
+    accessed: 2026-11-15
+  rcep_ig:
+    title: "Implementing Guidelines for the RCEP Rules of Origin, first revision (RCEP Secretariat)"
+    url: https://rcepsec.org/wp-content/uploads/2024/08/Revised-RCEP-Implementing-Guidelines.pdf
+    kind: intergovernmental
+    accessed: 2026-11-15
+  # ---------------- Indonesia ----------------
+  id_pmk96_2023:
+    title: "PMK 96/2023 on customs, excise and tax for imported and exported consignments (JDIH Kemenkeu)"
+    url: https://jdih.kemenkeu.go.id/api/download/4d5d2359-2490-4a4b-a4fe-a49d81a22a64/2023pmkeuangan096.pdf
+    kind: official
+    accessed: 2026-11-15
+  id_pmk4_2025:
+    title: "PMK 4/2025, second amendment of PMK 96/2023 (JDIH Kemenkeu; set 6 Jan 2025, promulgated 3 Feb 2025)"
+    url: https://jdih.kemenkeu.go.id/api/download/b25e56eb-3cdc-4434-ad40-f77a864bb80f/2024pmkeuangan004.pdf
+    kind: official
+    accessed: 2026-11-15
+  id_pmk131_2024:
+    title: "PMK 131/2024 on VAT treatment from 1 Jan 2025 (JDIH Kemenkeu)"
+    url: https://jdih.kemenkeu.go.id/api/download/ad276b82-94bd-4197-b409-af33e2842cd6/2024pmkeuangan131.pdf
+    kind: official
+    accessed: 2026-11-15
+  # ---------------- Thailand ----------------
+  th_customs_219_2568:
+    title: "Customs Department Notification No. 219/2568 (Royal Gazette vol. 142, special section 386 Ng, 11 Dec 2025, p. 44)"
+    url: https://ccc.customs.go.th/data_files/bda1fd37fafedcc1055daafac2e3c48f.pdf
+    kind: official
+    accessed: 2026-11-15
+    note: "Text layer uses a custom font encoding; read from the rendered page image."
+  th_rd_vat:
+    title: "Value Added Tax (VAT) - Revenue Department of Thailand (English page)"
+    url: https://www.rd.go.th/english/6043.html
+    kind: official
+    accessed: 2026-11-15
+  # ---------------- Philippines ----------------
+  ph_cmta:
+    title: "Republic Act No. 10863 (Customs Modernization and Tariff Act), Section 423 - reproduction on LawPhil"
+    url: https://lawphil.net/statutes/repacts/ra2016/ra_10863_2016.html
+    kind: official
+    accessed: 2026-11-15
+    note: "LawPhil is a private legal library reproducing the statute; the Bureau of Customs site returned HTTP 403 to scripted requests."
+  ph_dof_deminimis:
+    title: "BOC bares new rules on small-value tobacco, alcohol imports (Department of Finance news on the CAO implementing CMTA s.423)"
+    url: https://www.dof.gov.ph/boc-bares-new-rules-on-small-value-tobacco-alcohol-imports/
+    kind: official
+    accessed: 2026-11-15
+  ph_bir_2550q:
+    title: "Guidelines and Instructions for BIR Form No. 2550Q, April 2024 (Bureau of Internal Revenue)"
+    url: https://bir-cdn.bir.gov.ph/BIR/pdf/2550Q%20guidelines%20April%202024_final.pdf
+    kind: official
+    accessed: 2026-11-15
+  # ---------------- Incoterms ----------------
+  icc_incoterms:
+    title: "Incoterms 2020 (International Chamber of Commerce)"
+    url: https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/
+    kind: intergovernmental
+    accessed: 2026-11-15
+  trade_gov_incoterms:
+    title: "Know Your Incoterms (U.S. International Trade Administration)"
+    url: https://www.trade.gov/know-your-incoterms
+    kind: official
+    accessed: 2026-11-15
+  # ---------------- Services (rail / road) ----------------
+  rail_kpl_2026:
+    title: "Lao-China Railway Drives Transformation, Strengthens Regional Connectivity (KPL Lao News Agency, Apr 2026)"
+    url: https://kpl.gov.la/detail.aspx?id=97814
+    kind: official
+    accessed: 2026-11-15
+  rail_star_2026:
+    title: "Thailand steps up rail links with Laos and China to boost regional trade (The Star / ANN, 7 Nov 2026)"
+    url: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/07/thailand-steps-up-rail-links-with-laos-and-china-to-boost-regional-trade
+    kind: secondary
+    accessed: 2026-11-15
+  rail_asean_express_2024:
+    title: "Loke launches Asean Express freight train service (Free Malaysia Today, 27 Jun 2024)"
+    url: https://www.freemalaysiatoday.com/category/nation/2024/06/27/loke-launches-asean-express-freight-train-service-pay-per-use-locomotives
+    kind: secondary
+    accessed: 2026-11-15
+  rail_ilstc_2026:
+    title: "Rail-sea routes linking Chongqing with Ningbo and Qinzhou 'operating steadily' (iChongqing / Bridging News, Jan 2026)"
+    url: https://app.ichongqing.info/mixmedia/a/202601/10/WS6961a39be4b05476c268ee7e.html
+    kind: secondary
+    accessed: 2026-11-15
+  # ---------------- Public indices (scale anchors only) ----------------
+  drewry_wci:
+    title: "Drewry World Container Index, assessment of Thursday 12 Nov 2026"
+    url: https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry
+    kind: index
+    accessed: 2026-11-15
+  drewry_iaci:
+    title: "Drewry Intra-Asia Container Index, 12 Nov 2026 (rates exclude origin and destination THC)"
+    url: https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/intra-asia-container-index
+    kind: index
+    accessed: 2026-11-15
+  drewry_air:
+    title: "Drewry Airfreight Price Index, October 2026 (published 30 Oct 2026)"
+    url: https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/airfreight-index
+    kind: index
+    accessed: 2026-11-15
+  freightos_fbx:
+    title: "Freightos Baltic Index (FBX) global container index - public page (value shown on access date, page shows no timestamp)"
+    url: https://www.freightos.com/enterprise/terminal/freightos-baltic-index-global-container-pricing-index/
+    kind: index
+    accessed: 2026-11-15
+  # ---------------- Datasets ----------------
+  wb_lpi20:
+    title: "World Bank Logistics Performance Indicators (LPI 2.0), Data360 bulk file (CC BY 4.0)"
+    url: https://data360files.worldbank.org/data360-data/data/WB_LPI_20/WB_LPI_20.csv
+    kind: data
+    accessed: 2026-11-15
+  ourairports:
+    title: "OurAirports airports.csv (public domain)"
+    url: https://ourairports.com/data/
+    kind: data
+    accessed: 2026-11-15
+  searoute:
+    title: "searoute 1.6.0 (Apache-2.0), network from Eurostat SeaRoute (EUPL-1.2) / ORNL Global Shipping Lane Network"
+    url: https://github.com/genthalili/searoute-py
+    kind: data
+    accessed: 2026-11-15

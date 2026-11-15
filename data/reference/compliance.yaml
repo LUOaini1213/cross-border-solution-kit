@@ -1,0 +1,165 @@
+# Compliance knowledge base: HS-based control flags, FTA rules, temporary-admission regimes and the
+# registry of road/rail services. Every rule cites statements in regulatory_statements.yaml; rules with
+# no verified statement say so in `verified: false` and are reported as "not verified".
+risk_points:  # ASSUMPTION: heuristic weights for the risk score (0-100)
+  info: 0
+  low: 4
+  medium: 10
+  high: 20
+  block: 100
+  variability_per_unit_ratio: 12   # points per unit of (P90/P50 - 1)
+  per_handoff: 2                   # per mode change / hub transfer
+  unverified_service: 15
+
+hs_controls:
+  - id: MY-AP-VEHICLE
+    destination: MY
+    hs_prefixes: ["8703", "8704", "8711"]
+    severity: high
+    verified: true
+    statements: [MY-AP-VEHICLES]
+    en: "Vehicles imported as CBU or CKD need a MITI Approved Permit."
+    zh: "以整车或 CKD 形式进口的车辆须取得 MITI 核准准证（AP）。"
+    mitigation_en: "Confirm AP and CKD import approval before the first sailing; quote no shipment without the AP number."
+    mitigation_zh: "首航前确认 AP 及 CKD 进口批文；无 AP 编号不安排出运。"
+  - id: MY-KIT-CLASSIFICATION
+    destination: MY
+    hs_prefixes: ["8708", "8544", "9401"]
+    requires_lane_flag: kit
+    severity: medium
+    verified: false
+    statements: [MY-CKD-CLASSIFICATION, MY-AP-VEHICLES]
+    en: "Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit."
+    zh: "散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。"
+    mitigation_en: "Obtain a written tariff classification ruling from Malaysian customs for the kit structure; keep kit content lists per container."
+    mitigation_zh: "就散件结构向马来西亚海关申请书面归类裁定；按柜保存散件装箱清单。"
+  - id: MY-AP-STEEL
+    destination: MY
+    hs_prefixes: ["7208", "7209", "7210", "7211", "7212", "7218", "7221", "7222", "7224", "7225", "7306", "7614"]
+    severity: high
+    verified: true
+    statements: [MY-AP-STEEL]
+    en: "Iron and steel products under these headings need a MITI Approved Permit."
+    zh: "上述品目的钢铁产品须取得 MITI 核准准证。"
+    mitigation_en: "Apply for the AP through the ePermit system before shipment."
+    mitigation_zh: "出运前通过 ePermit 系统申请 AP。"
+  - id: SG-STRATEGIC-SCREEN
+    applies_when: sg_export
+    hs_prefixes: ["8486", "9031", "9030", "8543", "8504", "8414"]
+    requires_line_flag: strategic_screening
+    severity: high
+    verified: true
+    statements: [SG-SGCA-SCOPE, SG-SGCA-PERMIT, SG-SGCA-3B001, SG-ATA-XO]
+    en: "Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet."
+    zh: "半导体制造或测试设备及其专门设计的部件在新加坡可能属于战略物资（管制清单 3B 类）。清单内物项每次出口或再出口均须至少提前五个工作日申领 XO/XP 许可证，即使使用 ATA 单证册亦然。"
+    mitigation_en: "Classify each item against the Strategic Goods Control List (the 2026 Order applies from 1 Dec 2026); obtain the OEM's export classification and the origin country's licence; build 5 working days into the return plan."
+    mitigation_zh: "按战略物资管制清单逐项归类（2026 年版自 12 月 1 日起适用）；向原厂取得出口管制分类及原产国许可；回运计划预留 5 个工作日。"
+  - id: ORIGIN-EXPORT-CONTROL
+    applies_when: origin_export_semiconductor
+    hs_prefixes: ["8486", "9031", "9030", "8543", "8504", "8414"]
+    requires_line_flag: strategic_screening
+    severity: medium
+    verified: false
+    statements: []
+    en: "Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed."
+    zh: "原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。"
+    mitigation_en: "Ask the equipment owner's trade-compliance team for the export classification and any licence exception before booking."
+    mitigation_zh: "订舱前由设备所有方贸易合规团队确认出口管制分类及可用的许可例外。"
+  - id: LI-BATTERY-DG
+    hs_prefixes: ["8518", "8507", "8517"]
+    requires_line_flag: contains_lithium_battery
+    modes: [air, air_parcel, sea_air]
+    severity: medium
+    verified: false
+    statements: []
+    en: "Products containing lithium batteries fall under dangerous-goods rules for air transport; the specific requirements were not verified in this project."
+    zh: "含锂电池产品空运须遵守危险品规定；具体要求本项目未核实。"
+    mitigation_en: "Collect the battery test summary and packing instruction from the supplier; confirm the air line-haul accepts the battery type."
+    mitigation_zh: "向供应商收集电池测试摘要及包装说明；确认空运干线接受该类电池。"
+  - id: RADIO-TYPE-APPROVAL
+    hs_prefixes: ["8518", "8517"]
+    requires_line_flag: wireless
+    severity: medium
+    verified: false
+    statements: []
+    en: "Wireless audio devices may need radio type approval or registration in the destination; not verified."
+    zh: "无线音频设备在目的国可能须取得无线电型号核准或注册，未经核实。"
+    mitigation_en: "Check the destination telecom regulator's requirements before listing the product."
+    mitigation_zh: "上架前核实目的国电信监管机构的要求。"
+  - id: ID-BULK-LICENSING
+    destination: ID
+    hs_prefixes: ["61", "62", "63", "64", "4202", "85"]
+    options: [ocean_bulk_local]
+    severity: medium
+    verified: false
+    statements: [ID-LICENSING]
+    en: "Bulk imports of apparel, footwear, bags or electronics into Indonesia may need trade-ministry import approvals; not verified."
+    zh: "以一般贸易方式向印尼批量进口服装、鞋类、箱包或电子产品可能需要贸易部进口许可，未经核实。"
+    mitigation_en: "Use an importer of record that holds the required import identity and approvals; confirm before the first shipment."
+    mitigation_zh: "选用具备相应进口资质与许可的进口商（IOR），首票前确认。"
+
+fta:
+  ACFTA:
+    parties: [CN, BN, KH, ID, LA, MY, MM, PH, SG, TH, VN]
+    proof: "Certificate of Origin Form E"
+    validity_days: 365
+    origin_rule: "RVC >= 40% of FOB (final process in a Party), CTH for listed chapters, or the product-specific rule"
+    third_party_invoicing: "allowed: invoice number in Box 10, invoice attached, exporter and consignee located in Parties"
+    intermediate: "Movement Certificate from the intermediate Party; goods under customs control, no further processing"
+    statements: [FTA-ACFTA-ORIGIN, FTA-ACFTA-DIRECT, FTA-ACFTA-FORM-E, FTA-ACFTA-3PI, FTA-ACFTA-MC]
+  RCEP:
+    parties: [AU, BN, KH, CN, ID, JP, KR, LA, MY, MM, NZ, PH, SG, TH, VN]
+    proof: "Certificate of Origin or Declaration of Origin (approved exporter)"
+    validity_days: 365
+    origin_rule_by_heading: {"8708": "CTH or RVC40", "8544": "CTH or RVC40"}
+    third_party_invoicing: "allowed (Art. 3.20): tick Box 17, invoicing company and country in Box 14"
+    intermediate: "storage in intermediate Parties allowed under customs control (Art. 3.15); back-to-back proof (Art. 3.19)"
+    statements: [FTA-RCEP-PSR, FTA-RCEP-POO, FTA-RCEP-3PI, FTA-RCEP-DIRECT, FTA-RCEP-B2B]
+  worth_it_margin_usd_per_year: {value: 1000, label: ASSUMPTION, note: "net saving needed to justify origin management overhead"}
+
+temporary_admission:
+  ata_sg_import_purposes: [exhibition, professional_equipment, scientific_equipment]
+  ata_sg_excluded_purposes: [commercial_samples, repair, processing, sale, consumables]
+  ata_destinations_from_sicc_list:   # SICC list of countries where the ATA system is in force (restrictions noted)
+    JP: all
+    US: all
+    DE: all
+    MY: all
+    CN: all
+    TH: all
+    PH: all
+    ID: [exhibition, professional_equipment]
+    VN: [exhibition]
+  tis_sg_purposes: [repair, professional_equipment, exhibition, scientific_equipment, demonstration_case_by_case]
+  statements: [SG-ATA-SCOPE, SG-ATA-NO-SAMPLES, SG-ATA-SAME-CONDITION, SG-ATA-PERIOD, SG-ATA-ISSUER,
+               SG-TIS-PURPOSES, SG-TIS-6M, SG-TIS-SECURITY, SG-TIS-PAYMENT, SG-TEMPEXP-REPAIR]
+
+services:
+  - id: rail_clr_thailand
+    mode: rail
+    corridor: "Kunming - Vientiane South (gauge transfer) - Nong Khai - Bangkok ICD"
+    lanes: [CN-TH]
+    status: verified
+    statements: [SVC-CLR-TH]
+    note: "Corridor verified on an official Lao source; departure frequency is an assumption."
+  - id: rail_asean_express
+    mode: rail
+    corridor: "Chongqing - Laos - Thailand - Kuala Lumpur (Kelana Jaya)"
+    lanes: [CN-MY]
+    status: excluded
+    statements: [SVC-ASEAN-EXPRESS]
+    note: "First run 2024; no current official timetable found. Re-enable by setting status: verified once a scheduled departure is confirmed."
+  - id: rail_sea_qinzhou
+    mode: rail_sea
+    corridor: "Chongqing - Qinzhou (rail) then Qinzhou - Port Klang (sea)"
+    lanes: [CN-MY]
+    status: verified
+    statements: [SVC-ILSTC]
+    note: "Domestic rail pre-carriage evidenced by state-affiliated media; sea leg is a normal port-to-port service. Frequency assumed."
+  - id: road_sg_my
+    mode: road
+    corridor: "Singapore (Woodlands/Tuas) - Peninsular Malaysia"
+    lanes: [SG-MY, MY-SG]
+    status: verified
+    statements: [SVC-SG-MY-ROAD]
+    note: "Land clearance points verified; trucking frequency assumed daily."

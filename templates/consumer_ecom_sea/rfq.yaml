@@ -1,0 +1,79 @@
+# RFQ - fictional example. Customer, products, prices, parcel volumes and weights are SYNTHETIC.
+rfq_id: RFQ-ECOM-2026-003
+template: consumer_ecom_sea
+title_en: "Cross-border e-commerce parcels from China and Singapore to Malaysia, Indonesia, Thailand and the Philippines"
+title_zh: "中国及新加坡至马来西亚、印尼、泰国、菲律宾的跨境电商包裹方案"
+customer: "Customer A (fictional)"
+customer_profile_en: "A direct-to-consumer lifestyle brand selling apparel, wireless earphones and bags through its own web shop. It ships from a Shenzhen warehouse and a Singapore regional stock point and wants delivered-duty-paid parcels."
+customer_profile_zh: "一家通过自营网店销售服装、无线耳机和箱包的直营消费品牌，从深圳仓和新加坡区域备货点发货，要求以完税交付（DDP）方式送达消费者。"
+issue_date: 2026-11-15
+quote_validity_days: 30
+currency: USD
+seed: 20261117
+flow_type: b2c_parcel
+incoterm: DDP
+incoterm_named_place: "Consumer's address"
+quoting_party_role: seller
+priorities: {cost: 0.5, time: 0.3, risk: 0.2}
+service:
+  on_time_target_probability: 0.90
+  insurance: false
+  vas: [relabel, parcel_pack]
+  importer_of_record: seller_or_appointed_ior
+  seller_registered_my_lvg: true
+  shipping_charged_per_parcel: 3.5
+basket:
+  - {category: apparel, description_en: "Cotton T-shirt", description_zh: "棉质 T 恤", hs: "6109.10.2000", share: 0.5, retail_usd: 24.0, cost_usd: 7.5, kg: 0.35, cbm: 0.0035}
+  - {category: earphones, description_en: "Wireless earphones", description_zh: "无线耳机", hs: "8518.30.2000", share: 0.3, retail_usd: 39.0, cost_usd: 12.0, kg: 0.30, cbm: 0.0020, wireless: true, contains_lithium_battery: true}
+  - {category: bags, description_en: "Canvas tote bag", description_zh: "帆布托特包", hs: "4202.92.9000", share: 0.2, retail_usd: 29.0, cost_usd: 8.0, kg: 0.55, cbm: 0.0060}
+monthly_profile: [0.85, 0.80, 0.95, 1.00, 0.95, 1.00, 0.95, 0.95, 1.05, 1.05, 1.30, 1.15]
+lanes:
+  - id: C1
+    name_en: "Shenzhen to Klang Valley, Malaysia"
+    name_zh: "深圳至马来西亚巴生谷"
+    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Klang Valley, country: MY, port: MYPKG, airport: KUL}
+    parcels_per_month: 9000
+    modes: [air_parcel, ocean_bulk_local]
+    target_transit_days: 7
+  - id: C2
+    name_en: "Shenzhen to Greater Jakarta, Indonesia"
+    name_zh: "深圳至印尼大雅加达"
+    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Greater Jakarta, country: ID, port: IDTPP, airport: CGK}
+    parcels_per_month: 12000
+    modes: [air_parcel, sea_air, ocean_bulk_local]
+    target_transit_days: 7
+  - id: C3
+    name_en: "Shenzhen to Bangkok, Thailand"
+    name_zh: "深圳至泰国曼谷"
+    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Bangkok, country: TH, port: THLCH, airport: BKK}
+    parcels_per_month: 7000
+    modes: [air_parcel, rail, ocean_bulk_local]
+    target_transit_days: 7
+  - id: C4
+    name_en: "Shenzhen to Metro Manila, Philippines"
+    name_zh: "深圳至菲律宾马尼拉大都会"
+    origin: {city: Shenzhen, country: CN, port: CNYTN, airport: SZX}
+    destination: {city: Metro Manila, country: PH, port: PHMNL, airport: MNL}
+    parcels_per_month: 8000
+    modes: [air_parcel, sea_air, ocean_bulk_local]
+    target_transit_days: 7
+  - id: C5
+    name_en: "Singapore stock point to Klang Valley, Malaysia"
+    name_zh: "新加坡备货点至马来西亚巴生谷"
+    origin: {city: Singapore, country: SG, port: SGSIN, airport: SIN}
+    destination: {city: Klang Valley, country: MY, port: MYPKG, airport: KUL}
+    parcels_per_month: 3000
+    modes: [road, air_parcel]
+    target_transit_days: 5
+    road_km: 360
+  - id: C6
+    name_en: "Singapore stock point to Greater Jakarta, Indonesia"
+    name_zh: "新加坡备货点至印尼大雅加达"
+    origin: {city: Singapore, country: SG, port: SGSIN, airport: SIN}
+    destination: {city: Greater Jakarta, country: ID, port: IDTPP, airport: CGK}
+    parcels_per_month: 2500
+    modes: [air_parcel, ocean_bulk_local]
+    target_transit_days: 5

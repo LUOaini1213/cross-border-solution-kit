@@ -1,0 +1,48 @@
+# Transit-time model inputs. Port/airport dwell and transshipment come from World Bank LPI 2.0 (REAL,
+# data/public/lpi_dwell.csv, year below); everything else is an ASSUMPTION (labelled per item).
+# Distribution shapes (all ASSUMPTION): lognormal through the published median and quartiles for container
+# dwell, lognormal through median and mean for air dwell, gamma(k=2) for transshipment time.
+monte_carlo:
+  draws: {value: 20000, label: ASSUMPTION}
+lpi_year: {value: "2024", label: ASSUMPTION, note: "latest LPI 2.0 year in the extract"}
+truck:
+  km_per_day: {value: 450, label: ASSUMPTION, note: "about 10 driving hours at 45 km/h"}
+  handling_days: {value: [0.3, 0.5, 1.0], kind: triangular, label: ASSUMPTION, note: "loading + gate-in/out"}
+  cross_border_sg_my_days: {value: [0.5, 1.0, 2.0], kind: triangular, label: ASSUMPTION, note: "Woodlands/Tuas clearance incl. queue"}
+sea:
+  speed_knots: {value: 16.0, label: ASSUMPTION}
+  port_call_days_per_1000nm: {value: 0.5, label: ASSUMPTION, note: "allowance for intermediate calls"}
+  sailing_cv: {value: 0.10, label: ASSUMPTION}
+  headway_days: {value: 7.0, label: ASSUMPTION, note: "weekly service; cargo-ready time independent of sailing day"}
+  lcl_consolidation_days: {value: [1.0, 2.5, 5.0], kind: triangular, label: ASSUMPTION}
+  lcl_deconsolidation_days: {value: [1.0, 2.0, 4.0], kind: triangular, label: ASSUMPTION}
+  transshipment_shape_k: {value: 2.0, label: ASSUMPTION}
+air:
+  block_kmh: {value: 750.0, label: ASSUMPTION}
+  route_factor: {value: 1.15, label: ASSUMPTION, note: "flown distance / great circle"}
+  headway_days: {value: 1.0, label: ASSUMPTION, note: "daily departures"}
+  origin_handling_days: {value: [0.5, 1.0, 2.0], kind: triangular, label: ASSUMPTION, note: "acceptance, screening, export clearance"}
+  export_dwell_fallback: {value: [0.3, 0.6, 1.5], kind: triangular, label: ASSUMPTION}
+sea_air:
+  hub_transfer_days: {value: [1.0, 2.0, 4.0], kind: triangular, label: ASSUMPTION, note: "Singapore FTZ transfer sea->air"}
+rail:
+  qinzhou_rail_days: {value: [1.5, 2.0, 3.5], kind: triangular, label: ASSUMPTION, note: "Chongqing-Qinzhou rail-sea leg incl. port transfer"}
+  qinzhou_headway_days: {value: 1.0, label: ASSUMPTION}
+  clr_block_days: {value: [1.5, 2.5, 5.0], kind: triangular, label: ASSUMPTION,
+                   note: "Kunming-Vientiane South-Nong Khai incl. gauge transfer; informed by a reported ~30 h Nong Khai-Vientiane-China run (secondary)"}
+  clr_headway_days: {value: 3.5, label: ASSUMPTION, note: "frequency not verified; twice weekly assumed"}
+  th_rail_border_days: {value: [1.0, 2.0, 5.0], kind: triangular, label: ASSUMPTION, note: "Nong Khai import clearance + rail to Bangkok ICD"}
+customs_hold:
+  base_probability: {value: 0.03, label: ASSUMPTION, note: "inspection / query with complete documents"}
+  extra_probability_per_risk_flag: {value: 0.04, label: ASSUMPTION, note: "per medium/high compliance flag on the lane"}
+  delay_days: {value: [1.0, 3.0, 8.0], kind: triangular, label: ASSUMPTION}
+parcel:
+  last_mile_days:
+    MY: {value: [1.0, 2.0, 4.0], kind: triangular, label: ASSUMPTION}
+    ID: {value: [1.0, 3.0, 6.0], kind: triangular, label: ASSUMPTION}
+    TH: {value: [1.0, 2.0, 4.0], kind: triangular, label: ASSUMPTION}
+    PH: {value: [1.0, 3.0, 7.0], kind: triangular, label: ASSUMPTION}
+  first_mile_days: {value: [0.5, 1.0, 2.0], kind: triangular, label: ASSUMPTION, note: "pickup + origin hub sort"}
+  local_dispatch_days: {value: [0.3, 0.7, 1.5], kind: triangular, label: ASSUMPTION, note: "pick/pack from local stock"}
+temporary:
+  repair_turnaround_days: {value: [10.0, 15.0, 25.0], kind: triangular, label: ASSUMPTION, note: "repair shop time, door to door excluded"}

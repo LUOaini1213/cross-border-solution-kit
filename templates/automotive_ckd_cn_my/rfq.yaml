@@ -1,0 +1,63 @@
+# RFQ - fictional example. Customer, volumes, values, weights and kit content are SYNTHETIC.
+rfq_id: RFQ-AUTO-2026-001
+template: automotive_ckd_cn_my
+title_en: "KD kits China to Malaysia for local vehicle assembly"
+title_zh: "中国至马来西亚汽车散件（KD）入厂物流方案"
+customer: "Customer A (fictional)"
+customer_profile_en: "A vehicle assembler in the Klang Valley, Malaysia, building a compact SUV (internal-combustion) from knock-down kits sourced from two Chinese supplier clusters."
+customer_profile_zh: "位于马来西亚巴生谷的整车组装厂，以来自中国两个供应商集群的散件（KD）组装一款紧凑型燃油 SUV。"
+issue_date: 2026-11-15
+quote_validity_days: 30
+currency: USD
+seed: 20261115
+flow_type: b2b_import
+incoterm: FCA
+incoterm_named_place: "Supplier's warehouse (seller's premises), China"
+quoting_party_role: buyer
+priorities: {cost: 0.5, time: 0.3, risk: 0.2}
+service:
+  on_time_target_probability: 0.90
+  insurance: true
+  vas: [kitting, returnable_racks]
+  importer_of_record: customer
+  fta_preference: auto
+  registered_manufacturer_schedule_c: true
+lanes:
+  - id: A1
+    name_en: "Ningbo body and interior kits to Shah Alam plant"
+    name_zh: "宁波车身及内饰散件至莎阿南工厂"
+    origin: {city: Ningbo, country: CN, port: CNNGB, airport: PVG, pickup_km_port: 40, pickup_km_airport: 220}
+    destination: {city: Shah Alam, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
+    modes: [ocean_fcl, ocean_lcl, air]
+    target_transit_days: 24
+    kit: true
+    unit: kit
+    annual_units: 6000
+    monthly_profile: [0.70, 0.80, 1.00, 1.05, 1.10, 1.10, 1.10, 1.05, 1.05, 1.05, 1.00, 1.00]
+    shipments_per_month: 4
+    unit_gross_kg: 520
+    unit_cbm: 2.6
+    invoicing: {third_party: false, invoicing_country: CN}
+    lines:
+      - {sku: BODY, description_en: "Body panels and closures", description_zh: "车身覆盖件及开闭件", hs: "8708.29.9500", origin: CN, value_per_unit: 2100.0, supplier_rvc_pct: 58}
+      - {sku: SEAT, description_en: "Seat sets", description_zh: "座椅总成", hs: "9401.20.1000", origin: CN, value_per_unit: 650.0, supplier_rvc_pct: 62}
+      - {sku: HARN, description_en: "Wiring harness sets", description_zh: "线束总成", hs: "8544.30.1200", origin: CN, value_per_unit: 380.0, supplier_rvc_pct: 47}
+      - {sku: BRKE, description_en: "Brake modules", description_zh: "制动模块", hs: "8708.30.2900", origin: CN, value_per_unit: 290.0, supplier_rvc_pct: 52}
+  - id: A2
+    name_en: "Chongqing powertrain and chassis parts to Shah Alam plant (invoiced by a Singapore trading entity)"
+    name_zh: "重庆动力总成及底盘件至莎阿南工厂（由新加坡贸易主体开票）"
+    origin: {city: Chongqing, country: CN, port: CNQZH, airport: CKG, pickup_km_port: 30, pickup_km_airport: 35}
+    destination: {city: Shah Alam, country: MY, port: MYPKG, airport: KUL, delivery_km_port: 35, delivery_km_airport: 55}
+    modes: [rail_sea_fcl, air, rail]
+    target_transit_days: 24
+    kit: true
+    unit: kit
+    annual_units: 6000
+    monthly_profile: [0.70, 0.80, 1.00, 1.05, 1.10, 1.10, 1.10, 1.05, 1.05, 1.05, 1.00, 1.00]
+    shipments_per_month: 4
+    unit_gross_kg: 230
+    unit_cbm: 0.75
+    invoicing: {third_party: true, invoicing_country: SG}
+    lines:
+      - {sku: GBOX, description_en: "Gearbox assemblies", description_zh: "变速箱总成", hs: "8708.40.2600", origin: CN, value_per_unit: 1150.0, supplier_rvc_pct: 64}
+      - {sku: SUSP, description_en: "Suspension systems", description_zh: "悬架系统", hs: "8708.80.1600", origin: CN, value_per_unit: 420.0, supplier_rvc_pct: 49}

@@ -1,0 +1,79 @@
+# RFQ - fictional example. Customer, equipment, values, weights and movement counts are SYNTHETIC.
+rfq_id: RFQ-SEMI-2026-002
+template: semiconductor_temp_sg
+title_en: "Temporary moves of semiconductor equipment and spares into and out of Singapore"
+title_zh: "半导体设备及备件进出新加坡的临时性运输方案"
+customer: "Customer A (fictional)"
+customer_profile_en: "A semiconductor equipment service organisation with a regional service hub in Singapore. It moves demonstration tools to exhibitions, sends field engineers' metrology kits to fabs, and runs repair loops for failed modules."
+customer_profile_zh: "一家在新加坡设有区域服务中心的半导体设备服务机构，业务包括：演示机台参展、工程师计量工具包赴晶圆厂现场使用，以及故障模块的维修周转。"
+issue_date: 2026-11-15
+quote_validity_days: 30
+currency: USD
+seed: 20261116
+flow_type: temporary
+incoterm: null
+incoterm_named_place: "not applicable: no sale, the owner's goods move and return"
+quoting_party_role: owner
+priorities: {cost: 0.35, time: 0.35, risk: 0.30}
+service:
+  on_time_target_probability: 0.95
+  insurance: true
+  vas: [semicon_crate, shock_tilt_indicators, cleanroom_bagging]
+  importer_of_record: customer
+  sg_entity_gst_registered: true
+lanes:
+  - id: B1
+    name_en: "Exhibition demonstration tool, Osaka to a Singapore exhibition and back"
+    name_zh: "展会演示机台：大阪—新加坡展会—返回大阪"
+    purpose: exhibition
+    origin: {city: Osaka, country: JP, port: JPOSA, airport: KIX, pickup_km_port: 25, pickup_km_airport: 45}
+    destination: {city: Singapore, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 20, delivery_km_airport: 25}
+    modes: [air, ocean_fcl20]
+    regimes: [ata_carnet, tis]
+    moves_per_year: 1
+    stay_days: 21
+    target_transit_days: 12
+    transit_metric: outbound
+    item: {description_en: "Wafer inspection demonstration module", description_zh: "晶圆检测演示模块", hs: "9031.41", value: 850000.0, gross_kg: 1800, cbm: 9.0, strategic_screening: true}
+  - id: B2
+    name_en: "Field-service metrology kit, San Jose to a Singapore fab for an installation and back"
+    name_zh: "现场服务计量工具包：圣何塞—新加坡晶圆厂安装项目—返回"
+    purpose: professional_equipment
+    origin: {city: San Jose, country: US, port: USOAK, airport: SFO, pickup_km_port: 70, pickup_km_airport: 60}
+    destination: {city: Singapore, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 30, delivery_km_airport: 30}
+    modes: [air, ocean_lcl]
+    regimes: [ata_carnet, tis]
+    moves_per_year: 4
+    stay_days: 42
+    target_transit_days: 7
+    transit_metric: outbound
+    item: {description_en: "Metrology and alignment tool kit", description_zh: "计量与校准工具包", hs: "9031.80", value: 120000.0, gross_kg: 350, cbm: 2.0, strategic_screening: true}
+  - id: B3
+    name_en: "Failed RF generator, Singapore fab to the OEM repair centre in Osaka and back"
+    name_zh: "故障射频电源：新加坡晶圆厂—大阪原厂维修中心—返回"
+    purpose: repair_abroad
+    origin: {city: Singapore, country: SG, port: SGSIN, airport: SIN, pickup_km_port: 30, pickup_km_airport: 30}
+    destination: {city: Osaka, country: JP, port: JPOSA, airport: KIX, delivery_km_port: 30, delivery_km_airport: 50}
+    modes: [air, ocean_lcl]
+    regimes: [ata_carnet, temp_export_repair]
+    moves_per_year: 10
+    stay_days: 0
+    target_transit_days: 32
+    transit_metric: round_trip
+    new_parts_share: 0.12
+    warranty_share: 0.50
+    item: {description_en: "RF power generator module for plasma etch", description_zh: "等离子刻蚀用射频电源模块", hs: "8486.90", value: 65000.0, gross_kg: 120, cbm: 0.6, strategic_screening: true}
+  - id: B4
+    name_en: "Customer spares, Penang to the Singapore repair hub and back"
+    name_zh: "客户备件：槟城—新加坡维修中心—返回"
+    purpose: repair_in_sg
+    origin: {city: Penang, country: MY, port: MYPEN, airport: PEN, pickup_km_port: 15, pickup_km_airport: 20}
+    destination: {city: Singapore, country: SG, port: SGSIN, airport: SIN, delivery_km_port: 25, delivery_km_airport: 25}
+    modes: [road, air]
+    regimes: [ata_carnet, tis]
+    moves_per_year: 24
+    stay_days: 0
+    target_transit_days: 26
+    transit_metric: round_trip
+    item: {description_en: "Dry vacuum pump modules", description_zh: "干式真空泵模块", hs: "8414.10", value: 30000.0, gross_kg: 160, cbm: 0.8, strategic_screening: true}
+    road_km: 720

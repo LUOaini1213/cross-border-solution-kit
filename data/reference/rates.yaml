@@ -1,0 +1,118 @@
+# Freight, handling and service rates. ALL rates in this file are ILLUSTRATIVE round numbers in USD:
+# they are not quotes, not any carrier's or forwarder's tariff, and must be replaced by tendered rates.
+# Their scale is anchored to the public index values in `anchors` (REAL, with date and source).
+anchors:
+  drewry_wci_composite: {value: 4305, unit: USD per 40ft, date: 2026-11-12, label: REAL, source: drewry_wci,
+                         note: "East-West composite; long-haul, used only as an upper reference"}
+  drewry_wci_sha_rtm: {value: 3504, unit: USD per 40ft, date: 2026-11-12, label: REAL, source: drewry_wci, note: "Shanghai-Rotterdam"}
+  drewry_iaci_composite: {value: 1440, unit: USD per 40ft, date: 2026-11-12, label: REAL, source: drewry_iaci,
+                          note: "Intra-Asia composite spot rate, excludes origin/destination THC"}
+  drewry_iaci_sha_lch: {value: 1557, unit: USD per 40ft, date: 2026-11-12, label: REAL, source: drewry_iaci, note: "Shanghai-Laem Chabang"}
+  drewry_air_global: {value: 4.12, unit: USD per kg, date: 2026-10-30, label: REAL, source: drewry_air,
+                      note: "East-West airport-to-airport buy rates, >1,000 kg; intra-Asia rates below are set lower"}
+  fbx_global: {value: 3485.20, unit: USD per 40ft, date: 2026-11-15, label: REAL, source: freightos_fbx,
+               note: "value displayed on the public page on the access date; the page shows no timestamp"}
+
+ocean_fcl_feu:   # port-to-port ocean freight per 40ft (high cube), excluding THC (same basis as the IACI)
+  CNNGB-MYPKG: 1500
+  CNQZH-MYPKG: 1450
+  CNYTN-MYPKG: 1450
+  CNYTN-IDTPP: 1500
+  CNYTN-THLCH: 1550
+  CNYTN-PHMNL: 1350
+  CNYTN-SGSIN: 1300
+  SGSIN-IDTPP: 700
+  JPOSA-SGSIN: 1600
+  SGSIN-JPOSA: 1500
+  USOAK-SGSIN: 2000
+  SGSIN-USOAK: 3000
+teu_factor: {value: 0.60, unit: TEU price as share of FEU price, label: ILLUSTRATIVE}
+container:
+  feu_usable_cbm: {value: 76.0, unit: m3 internal (40ft high cube), label: ASSUMPTION, note: "nominal internal volume"}
+  teu_usable_cbm: {value: 33.0, unit: m3 internal (20ft), label: ASSUMPTION}
+  fill_factor: {value: 0.85, unit: share of internal volume usable for cased cargo, label: ASSUMPTION}
+  feu_payload_kg: {value: 26000, unit: kg, label: ASSUMPTION}
+  teu_payload_kg: {value: 21000, unit: kg, label: ASSUMPTION}
+ocean_lcl:
+  freight_per_wm: {CN-SEA: 42, SG-SEA: 30, JP-SG: 55, US-SG: 95, SG-JP: 55, SG-US: 110}
+  cfs_origin_per_wm: 16
+  cfs_destination_per_wm: 20
+  min_wm: 1.0
+air:  # airport-to-airport, per chargeable kg, all-in (fuel and security included)
+  per_kg:
+    PVG-KUL: 2.60
+    CKG-KUL: 3.10
+    KIX-SIN: 3.20
+    SIN-KIX: 3.00
+    SFO-SIN: 4.60
+    SIN-SFO: 4.80
+    PEN-SIN: 1.60
+    SIN-PEN: 1.60
+    SZX-KUL: 2.40
+    SZX-CGK: 2.70
+    SZX-BKK: 2.20
+    SZX-MNL: 2.30
+    SIN-CGK: 1.90
+    SIN-MNL: 2.40
+    SIN-KUL: 1.50
+    SZX-SIN: 2.30
+  volumetric_kg_per_cbm: {value: 167, unit: kg per m3, label: ASSUMPTION, note: "6,000 cm3/kg divisor, common air cargo convention"}
+  min_chargeable_kg: 45
+  handling_origin_per_kg: 0.12
+  handling_destination_per_kg: 0.15
+truck:   # per vehicle (FEU-capable truck) or per light-truck shipment
+  feu_base: 150
+  feu_per_km: 2.20
+  light_base: 80
+  light_per_km: 0.90
+  air_ride_multiplier: 1.6
+  cross_border_sg_my_ftl: 1250   # Penang <-> Singapore full truck, incl. border handling
+  cross_border_sg_my_per_kg: 0.14  # consolidated parcels Singapore -> Klang Valley
+rail:
+  chongqing_qinzhou_feu: 650     # rail leg of the rail-sea option (pre-carriage to Qinzhou port)
+  kunming_bangkok_feu: 2600      # China-Laos-Thailand rail incl. transload at Vientiane South
+  shenzhen_kunming_truck_feu: 1300
+handling:
+  thc_origin_feu: {CN: 140, JP: 160, US: 220, SG: 110, MY: 120}
+  thc_destination_feu: {MY: 170, SG: 140, ID: 160, TH: 150, PH: 180, JP: 170, US: 300}
+  export_declaration: {CN: 45, JP: 60, US: 75, SG: 40, MY: 45}
+  import_declaration: {MY: 70, SG: 55, ID: 85, TH: 75, PH: 80, JP: 90, US: 120}
+  permit_fee: 10                  # per customs permit (TradeNet or equivalent), incl. agent keying
+  supervision_fee: 150            # customs supervision of sealed-container stuffing / unstuffing
+insurance:
+  rate: 0.0012                    # of insured value
+  insured_value_factor: 1.10      # 110% of CIF, common practice
+  min_per_shipment: 25
+fta:
+  form_e_per_shipment: 40         # certificate fee + preparation
+  rcep_co_per_shipment: 40
+vas:
+  kitting_per_kit: 9.0
+  returnable_rack_per_feu: 60
+  relabel_per_parcel: 0.18
+  parcel_pack_per_parcel: 0.35
+  semicon_crate_per_move: 1200
+  shock_tilt_indicators_per_move: 40
+  cleanroom_bagging_per_move: 150
+parcel:
+  first_mile_per_kg: {CN: 0.25, SG: 0.20}
+  export_clearance_per_parcel: {CN: 0.06, SG: 0.05}
+  destination_clearance_per_parcel: {MY: 0.25, ID: 0.35, TH: 0.30, PH: 0.30}
+  last_mile_per_parcel: {MY: 1.60, ID: 1.40, TH: 1.50, PH: 1.90}
+  sg_hub_transfer_per_kg: 0.30
+local_fulfilment:
+  storage_per_cbm_month: 18
+  pick_pack_per_parcel: 0.60
+  carton_cube_factor: 1.25        # retail cartons + pallets vs. bare parcel volume
+temporary_admission:
+  foreign_carnet_fee: 450         # carnet issued abroad (not SICC); fee level not verified
+  carnet_security_share: 0.40     # share of goods value secured with the issuing association
+  guarantee_fee_pa: 0.015         # bank guarantee / bond cost per year on secured amount
+  guarantee_min_months: 3
+  tis_agent_fee_per_permit: 80
+  temp_import_repair_abroad_fee: 150   # destination-side temporary-import handling for repair (regime not verified)
+economics:
+  carrying_cost_pa: {value: 0.20, unit: share of goods value per year, label: ASSUMPTION,
+                     note: "capital, obsolescence and risk; used for pipeline and safety stock"}
+  safety_stock_days_local: {value: 21, unit: days of demand, label: ASSUMPTION}
+  line_down_cost_per_day: {value: 0, unit: USD, label: ASSUMPTION, note: "not monetised; on-time probability is a constraint instead"}

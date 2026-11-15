@@ -1,0 +1,30 @@
+# Incoterms 2020 cost-payer matrix for the cost elements used by the kit.
+# Sources: ICC Incoterms 2020 page (icc_incoterms) and U.S. ITA "Know Your Incoterms" (trade_gov_incoterms),
+# accessed 2026-11-15. The binding text is ICC Publication 723E (not freely available); this matrix follows
+# the public summaries. Entries marked * depend on the contract of carriage or the named place (see notes).
+statements: [INCO-RULES, INCO-DPU-INSURANCE]
+sea_only: [FAS, FOB, CFR, CIF]
+elements: [export_packing, loading_at_origin, pre_carriage, export_clearance, origin_terminal_handling,
+           main_carriage, insurance, destination_terminal_handling, on_carriage, unloading_at_destination,
+           import_clearance, duties_taxes]
+payer:   # S = seller pays, B = buyer pays
+  EXW: {export_packing: S, loading_at_origin: B, pre_carriage: B, export_clearance: B, origin_terminal_handling: B, main_carriage: B, insurance: B, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  FCA: {export_packing: S, loading_at_origin: S, pre_carriage: B, export_clearance: S, origin_terminal_handling: B, main_carriage: B, insurance: B, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  FAS: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: B, main_carriage: B, insurance: B, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  FOB: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: B, insurance: B, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  CFR: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: S, insurance: B, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  CIF: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: S, insurance: S, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  CPT: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: S, insurance: B, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  CIP: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: S, insurance: S, destination_terminal_handling: B, on_carriage: B, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  DAP: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: S, insurance: S, destination_terminal_handling: S, on_carriage: S, unloading_at_destination: B, import_clearance: B, duties_taxes: B}
+  DPU: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: S, insurance: S, destination_terminal_handling: S, on_carriage: S, unloading_at_destination: S, import_clearance: B, duties_taxes: B}
+  DDP: {export_packing: S, loading_at_origin: S, pre_carriage: S, export_clearance: S, origin_terminal_handling: S, main_carriage: S, insurance: S, destination_terminal_handling: S, on_carriage: S, unloading_at_destination: B, import_clearance: S, duties_taxes: S}
+insurance_obligation:   # only CIF and CIP oblige the seller to insure; elsewhere the risk bearer insures by choice
+  CIF: "seller, minimum Institute Cargo Clauses (C)"
+  CIP: "seller, Institute Cargo Clauses (A) or similar"
+notes:
+  FCA: "Named place = seller's premises (the kit's FCA lanes). If the named place is a terminal, pre-carriage moves to the seller."
+  insurance: "For rules without an insurance obligation the entry shows the party that bears transit risk on the main leg (assumption: that party insures)."
+  destination_terminal_handling: "* Under C rules the buyer pays unless the seller's carriage contract includes it."
+  on_carriage: "D rules: the named place is the consignee's door in the kit; for C rules the named place is the destination terminal."
+  DDP: "The seller acts as importer of record; whether a non-resident seller can do so depends on the destination."
