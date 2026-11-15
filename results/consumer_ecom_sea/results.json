@@ -13512,6 +13512,325 @@
       "statement": null,
       "unit": "",
       "value": 450
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.priorities.cost",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.5
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.priorities.time",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.3
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.priorities.risk",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.2
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.service.on_time_target_probability",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.9
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.service.shipping_charged_per_parcel",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 3.5
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.monthly_profile",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        0.85,
+        0.8,
+        0.95,
+        1.0,
+        0.95,
+        1.0,
+        0.95,
+        0.95,
+        1.05,
+        1.05,
+        1.3,
+        1.15
+      ]
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.apparel.share",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.5
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.apparel.retail_usd",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 24.0
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.apparel.cost_usd",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7.5
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.apparel.kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.35
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.apparel.cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.0035
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.earphones.share",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.3
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.earphones.retail_usd",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 39.0
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.earphones.cost_usd",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 12.0
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.earphones.kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.3
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.earphones.cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.002
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.bags.share",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.2
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.bags.retail_usd",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 29.0
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.bags.cost_usd",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 8.0
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.bags.kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.55
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.basket.bags.cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.006
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C1.parcels_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 9000
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C1.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C2.parcels_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 12000
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C2.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C3.parcels_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7000
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C3.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C4.parcels_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 8000
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C4.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C5.parcels_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 3000
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C5.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 5
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C5.road_km",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 360
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C6.parcels_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2500
+    },
+    {
+      "id": "rfq.consumer_ecom_sea.lanes.C6.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 5
     }
   ],
   "rfq": {

@@ -5582,6 +5582,356 @@
       "statement": null,
       "unit": "",
       "value": 450
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.priorities.cost",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.5
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.priorities.time",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.3
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.priorities.risk",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.2
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.service.on_time_target_probability",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.9
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.origin.pickup_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 40
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.origin.pickup_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 220
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.destination.delivery_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 35
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.destination.delivery_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 55
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 38
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.annual_units",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 6000
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.monthly_profile",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        0.7,
+        0.8,
+        1.0,
+        1.05,
+        1.1,
+        1.1,
+        1.1,
+        1.05,
+        1.05,
+        1.05,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.shipments_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 4
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.unit_gross_kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 520
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.unit_cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2.6
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.BODY.value_per_unit",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2100.0
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.BODY.supplier_rvc_pct",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 58
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.SEAT.value_per_unit",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 650.0
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.SEAT.supplier_rvc_pct",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 62
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.HARN.value_per_unit",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 380.0
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.HARN.supplier_rvc_pct",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 38
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.BRKE.value_per_unit",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 290.0
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A1.lines.BRKE.supplier_rvc_pct",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 52
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.origin.pickup_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.origin.pickup_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 35
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.destination.delivery_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 35
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.destination.delivery_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 55
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 38
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.annual_units",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 6000
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.monthly_profile",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": [
+        0.7,
+        0.8,
+        1.0,
+        1.05,
+        1.1,
+        1.1,
+        1.1,
+        1.05,
+        1.05,
+        1.05,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.shipments_per_month",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 4
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.unit_gross_kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 230
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.unit_cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.75
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.lines.GBOX.value_per_unit",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1150.0
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.lines.GBOX.supplier_rvc_pct",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 64
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.lines.SUSP.value_per_unit",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 420.0
+    },
+    {
+      "id": "rfq.automotive_ckd_cn_my.lanes.A2.lines.SUSP.supplier_rvc_pct",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 49
     }
   ],
   "rfq": {

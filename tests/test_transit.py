@@ -14,7 +14,7 @@ from cbsk.io import ROOT
 
 
 def test_seed_is_independent_of_python_hash_randomisation():
-    code = "from cbsk.transit import stable_seed; print(stable_seed(20261115, 'RFQ-AUTO-2026-001', 'A1', 'ocean_fcl'))"
+    code = "from cbsk.seeds import stable_seed; print(stable_seed(20261115, 'RFQ-AUTO-2026-001', 'A1', 'ocean_fcl'))"
     outs = set()
     for hs in ("1", "2", "random"):
         env = {**os.environ, "PYTHONHASHSEED": hs, "PYTHONPATH": str(ROOT)}

@@ -91,7 +91,7 @@ in a separate pass; see `docs/regulatory_check.md`. Corrections worth knowing:
 ## Data provenance
 
 Every input the models read is labelled (full table: `docs/data_provenance.md`):
-REAL 161, ASSUMPTION 82, ILLUSTRATIVE 95, SYNTHETIC 3
+REAL 161, ASSUMPTION 82, ILLUSTRATIVE 95, SYNTHETIC 120
 (distinct parameter ids across the three templates).
 
 * **REAL**: World Bank LPI 2.0 container and air-cargo dwell times (2024; CC BY 4.0), airport coordinates

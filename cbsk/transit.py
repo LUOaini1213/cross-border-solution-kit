@@ -7,16 +7,14 @@ results file and checked by tests.
 from __future__ import annotations
 
 import math
-import zlib
 
 import numpy as np
+
+from .seeds import stable_seed  # noqa: F401  (re-exported)
 
 Z75 = 0.6744897501960817  # standard normal 75th percentile
 
 
-def stable_seed(base: int, *parts: str) -> int:
-    """Platform-independent seed (Python's hash() is salted per process)."""
-    return (int(base) ^ zlib.crc32("|".join(parts).encode("utf-8"))) & 0xFFFFFFFF
 
 
 def lognormal_from_quartiles(median: float, q1: float, q3: float) -> tuple[float, float]:

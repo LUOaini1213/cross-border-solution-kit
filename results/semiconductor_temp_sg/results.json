@@ -10788,6 +10788,429 @@
       "statement": null,
       "unit": "",
       "value": 450
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.priorities.cost",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.35
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.priorities.time",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.35
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.priorities.risk",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.3
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.service.on_time_target_probability",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.95
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.origin.pickup_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 25
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.origin.pickup_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 45
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.destination.delivery_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 20
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.destination.delivery_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 25
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.moves_per_year",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.stay_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 21
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 12
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.item.value",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 850000.0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.item.gross_kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 1800
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B1.item.cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 9.0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.origin.pickup_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 70
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.origin.pickup_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 60
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.destination.delivery_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.destination.delivery_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.moves_per_year",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 4
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.stay_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 42
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 7
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.item.value",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 120000.0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.item.gross_kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 350
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B2.item.cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 2.0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.origin.pickup_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.origin.pickup_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.destination.delivery_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.destination.delivery_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 50
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.moves_per_year",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 10
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.stay_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 35
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.new_parts_share",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.12
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.warranty_share",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.5
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.item.value",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 65000.0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.item.gross_kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 120
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B3.item.cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.6
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.origin.pickup_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 15
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.origin.pickup_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 20
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.destination.delivery_km_port",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 25
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.destination.delivery_km_airport",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 25
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.moves_per_year",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 24
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.stay_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.target_transit_days",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.item.value",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 30000.0
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.item.gross_kg",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 160
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.item.cbm",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 0.8
+    },
+    {
+      "id": "rfq.semiconductor_temp_sg.lanes.B4.road_km",
+      "label": "SYNTHETIC",
+      "note": "fictional RFQ input",
+      "sources": [],
+      "statement": null,
+      "unit": "",
+      "value": 720
     }
   ],
   "rfq": {

@@ -67,5 +67,18 @@ def build(make_pdf: bool = True, out_root: Path = RESULTS, docs_root: Path = DOC
     return all_results
 
 
+def render_readme(docs_root: Path = DOCS, readme_path: Path = ROOT / "README.md") -> None:
+    """Re-render README.md from the committed results, the statement registry and the mutation report."""
+    ref = Reference()
+    results = {n: json.loads((RESULTS / n / "results.json").read_text(encoding="utf-8")) for n in pipeline.TEMPLATES_ORDER}
+    mut_path = docs_root / "mutation_report.json"
+    mutation = json.loads(mut_path.read_text(encoding="utf-8")) if mut_path.exists() else None
+    values = docs.readme_values(results, ref.statements, mutation)
+    write_text(readme_path, docs.render_template((docs_root / "README.template.md").read_text(encoding="utf-8"), values))
+
+
 if __name__ == "__main__":
-    build(make_pdf="--no-pdf" not in sys.argv)
+    if "--readme-only" in sys.argv:
+        render_readme()
+    else:
+        build(make_pdf="--no-pdf" not in sys.argv)

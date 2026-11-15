@@ -15,6 +15,35 @@ def _jsonable_regimes(regimes: dict) -> dict:
     return {k: dict(v) for k, v in regimes.items()}
 
 
+def _rfq_inputs(rfq: dict) -> list[dict]:
+    """Every numeric RFQ input as a SYNTHETIC provenance record (the customers and their data are fictional)."""
+    out: list[dict] = []
+
+    def rec(path: str, value) -> None:
+        out.append({"id": path, "value": value, "unit": "", "label": "SYNTHETIC", "sources": [], "statement": None,
+                    "note": "fictional RFQ input"})
+
+    def walk(node, path: str) -> None:
+        if isinstance(node, bool) or node is None or isinstance(node, str):
+            return
+        if isinstance(node, (int, float)):
+            rec(path, node)
+        elif isinstance(node, list) and node and all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in node):
+            rec(path, list(node))
+        elif isinstance(node, dict):
+            for k, v in node.items():
+                walk(v, f"{path}.{k}")
+        elif isinstance(node, list):
+            for i, v in enumerate(node):
+                key = (v.get("id") or v.get("sku") or v.get("category") or str(i)) if isinstance(v, dict) else str(i)
+                walk(v, f"{path}.{key}")
+
+    for k in ("priorities", "service", "monthly_profile", "basket", "lanes"):
+        if k in rfq:
+            walk(rfq[k], f"rfq.{rfq['template']}.{k}")
+    return out
+
+
 def run_template(name: str) -> tuple[dict, dict]:
     rfq = schema.load_rfq(TEMPLATES / name / "rfq.yaml")
     ref = Reference()
@@ -116,7 +145,7 @@ def run_template(name: str) -> tuple[dict, dict]:
         "lanes": lanes_out,
         "summary": summary,
         "assumptions": [rb.rates[k] for k in sorted(rb.rates)],
-        "provenance": ref.provenance_records(),
+        "provenance": ref.provenance_records() + _rfq_inputs(rfq),
         "statements_used": statements_used,
         "monte_carlo_draws": draws,
     }
