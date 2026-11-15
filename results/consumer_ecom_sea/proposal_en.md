@@ -53,7 +53,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean bulk + local fulfilment | USD 4.13 | 2.2 | 3.0 | 100.0% | 29 | ★ recommended |
 
 - Recommended: Ocean bulk + local fulfilment at USD 4.13 per parcel landed, P90 3.0 days, 100.0% on time against the 7-day target, risk score 29/100.
-- It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.
 - Air parcel, DDP is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).
 - Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [BULK-IOR] Bulk import needs a local importer of record (own entity or appointed importer) with the destination tax registrations; local stock adds forecast and obsolescence risk.
@@ -67,7 +67,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean bulk + local fulfilment | USD 7.14 | 3.2 | 4.5 | 100.0% | 39 | ★ recommended |
 
 - Recommended: Ocean bulk + local fulfilment at USD 7.14 per parcel landed, P90 4.5 days, 100.0% on time against the 7-day target, risk score 39/100.
-- It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.
 - Alternative on the Pareto front: Air parcel, DDP - 121% more per parcel, P90 12.1 days (+7.5), risk 31; on time 48.8% (below target).
 - Sea-air via Singapore is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).
@@ -82,7 +82,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean bulk + local fulfilment | USD 7.08 | 2.2 | 3.0 | 100.0% | 29 | ★ recommended |
 
 - Recommended: Ocean bulk + local fulfilment at USD 7.08 per parcel landed, P90 3.0 days, 100.0% on time against the 7-day target, risk score 29/100.
-- It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.
 - Air parcel, DDP is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).
 - Cross-border rail is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).
@@ -96,10 +96,10 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean bulk + local fulfilment | USD 8.15 | 3.2 | 4.5 | 100.0% | 29 | ★ recommended |
 
 - Recommended: Ocean bulk + local fulfilment at USD 8.15 per parcel landed, P90 4.5 days, 100.0% on time against the 7-day target, risk score 29/100.
-- It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.
 - Alternative on the Pareto front: Air parcel, DDP - 45% less per parcel, P90 12.3 days (+7.8), risk 36; on time 54.1% (below target).
-- Not offered: sea_air - Singapore hub is off-route: via-hub distance is 4.2x the direct distance (limit 1.6x).
+- Not offered: Sea-air via Singapore - Singapore hub is off-route: via-hub distance is 4.2x the direct distance (limit 1.6x).
 - Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [BULK-IOR] Bulk import needs a local importer of record (own entity or appointed importer) with the destination tax registrations; local stock adds forecast and obsolescence risk.
 
 ### C5 · Singapore stock point to Klang Valley, Malaysia
@@ -109,7 +109,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Cross-border road | USD 6.14 | 4.8 | 6.7 | 61.7% | 28 | ★ recommended |
 | Air parcel, DDP | USD 6.53 | 4.9 | 8.2 | 54.8% | 39 | dominated |
 
-- No option reaches 90.0% on time within 5 days. Recommended for now: Cross-border road (61.7% on time, P90 6.7 days, USD 6.14 per parcel); the target or the lead time needs to be renegotiated.
+- No option reaches 90% on time within 5 days. Recommended for now: Cross-border road (61.7% on time, P90 6.7 days, USD 6.14 per parcel); the target or the lead time needs to be renegotiated.
 - Air parcel, DDP is dominated by Cross-border road (no better on cost, P90 or risk).
 - Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [MY-LVG-REGISTRATION] Malaysian LVG sales of about RM 17,841,600 a year exceed the RM 500,000 registration threshold: the seller must register, charge 10% sales tax at checkout and print the LVG registration number on parcels and waybills.
 
@@ -121,7 +121,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean bulk + local fulfilment | USD 7.53 | 3.2 | 4.5 | 96.9% | 39 | ★ recommended |
 
 - Recommended: Ocean bulk + local fulfilment at USD 7.53 per parcel landed, P90 4.5 days, 96.9% on time against the 5-day target, risk score 39/100.
-- It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 4-day target the same option would be on time 78.5% of the time.
 - Alternative on the Pareto front: Air parcel, DDP - 103% more per parcel, P90 12.0 days (+7.5), risk 31; on time 12.0% (below target).
 - Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [ID-BULK-LICENSING] Bulk imports of apparel, footwear, bags or electronics into Indonesia may need trade-ministry import approvals; not verified. (HS 4202.92.9000, 6109.10.2000, 8518.30.2000) [BULK-IOR] Bulk import needs a local importer of record (own entity or appointed importer) with the destination tax registrations; local stock adds forecast and obsolescence risk.
@@ -416,7 +416,7 @@ The quotation workbook's Monitoring sheet takes monthly actuals and computes the
 ## 8. Assumptions and data provenance
 
 The workbook's Assumptions sheet lists every rate and parameter used by this template, labelled REAL (official or public data), ASSUMPTION (modelling choice or unverified placeholder), ILLUSTRATIVE (example rate) or SYNTHETIC (fictional RFQ data): ASSUMPTION 38, ILLUSTRATIVE 40, REAL 25.
-Port and airport dwell times come from the World Bank LPI 2.0 (2024, CC BY 4.0); rate levels are anchored to the Drewry Intra-Asia Container Index (12 Nov 2026: USD 1,440 per 40ft) and the Drewry Airfreight Price Index (October 2026: USD 4.12/kg). The full source table is in docs/data_provenance.md.
+Port and airport dwell times come from the World Bank LPI 2.0 (2024, CC BY 4.0); rate levels are anchored to the Drewry Intra-Asia Container Index (2026-11-12: USD 1,440 per 40ft) and the Drewry Airfreight Price Index (published 2026-10-30: USD 4.12/kg). The full source table is in docs/data_provenance.md.
 
 ## 9. Regulatory statements relied on
 
@@ -438,7 +438,7 @@ Each statement below was checked against the listed sources on 2026-11-15 (log: 
 | MY-TARIFF-LINES | verified | Malaysian MFN, SST-column, ACFTA and RCEP rates are those shown by the customs HS Explorer (PDK 2025 schedule) on the access date; parent headings were cross-checked against the 2022 order's hierarchy for the same codes. | [my_jkdm_ezhs](https://ezhs.customs.gov.my/), [my_pdk_2022](https://www.miti.gov.my/miti/resources/Approve%20Permit/P.U_._(A)_114_-_Perintah_Duti_Kastam_2022_.pdf) |
 | MY-VALUATION-CIF | verified | Malaysian customs value adds the cost of transport and insurance to the arrival of the goods in Malaysia (CIF basis), under the Customs (Rules of Valuation) Regulations 1999. | [my_jkdm_valuation](https://www.customs.gov.my/en/procedure/technical-services) |
 | PH-CAO | not_verified | The Bureau of Customs' current administrative order on de minimis and low-value importations could not be read (the site refused scripted requests); thresholds other than s.423 were not verified. | — |
-| PH-DEMINIMIS | verified | No duties and taxes are collected on goods with an FOB or FCA value of PHP 10,000 or below (CMTA s.423); the Secretary of Finance is to adjust the value every three years using the CPI, and de minimis tobacco and alcohol remain subject to excise. Whether an adjustment has been made was not verified. | [ph_cmta](https://lawphil.net/statutes/repacts/ra2016/ra_10863_2016.html), [ph_dof_deminimis](https://www.dof.gov.ph/boc-bares-new-rules-on-small-value-tobacco-alcohol-imports/) |
+| PH-DEMINIMIS | verified | No duties and taxes are collected on goods with an FOB or FCA value of PHP 10,000 or below (CMTA s.423); the Secretary of Finance is to adjust the value every three years using the CPI. Whether an adjustment has been made was not verified. | [ph_cmta](https://lawphil.net/statutes/repacts/ra2016/ra_10863_2016.html), [ph_dof_deminimis](https://www.dof.gov.ph/boc-bares-new-rules-on-small-value-tobacco-alcohol-imports/) |
 | PH-MFN | not_verified | Philippine MFN duty rates for the template products were not verified; the kit uses labelled placeholder rates. | — |
 | PH-VAT | verified | Philippine VAT on importation is 12% of the customs value plus customs duties, excise taxes and other charges, paid before release. | [ph_bir_2550q](https://bir-cdn.bir.gov.ph/BIR/pdf/2550Q%20guidelines%20April%202024_final.pdf) |
 | SVC-CLR-TH | verified | Cross-border rail freight runs between China, Laos and Thailand on the China-Laos Railway, with containers transferred at Vientiane South / Thanaleng to the metre-gauge line to Thailand. Departure frequency for a given origin was not verified. | [rail_kpl_2026](https://kpl.gov.la/detail.aspx?id=97814), [rail_star_2026](https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/07/thailand-steps-up-rail-links-with-laos-and-china-to-boost-regional-trade) |

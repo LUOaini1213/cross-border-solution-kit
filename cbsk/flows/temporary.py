@@ -3,6 +3,7 @@ under an ATA Carnet or the Temporary Import Scheme, and repair loops out of / in
 from __future__ import annotations
 
 from .. import compliance, duties, legs as L
+from ..compliance import COUNTRY_EN, COUNTRY_ZH
 from ..calc import C, Calc, add, div, mul, mx
 from ..duties import ISO3
 from .common import Ctx, add_totals, option_label, run_transit
@@ -197,8 +198,8 @@ def build_lane(ctx: Ctx, lane: dict, rfq: dict, lane_flag_list: list[dict], regi
                     ctx.line(calc, "ORIGIN_TEMP_EXPORT", mul(MOVES, ctx.rate("rates.temporary_admission.origin_temp_export_fee",
                                                                             "Origin-country temporary export / goods-returned formalities",
                                                                             "起运国临时出口/退运货物手续")),
-                             f"Temporary export and re-import formalities in {o['country']} (regime not verified)",
-                             f"{o['country']} 临时出口及复进口手续（制度未核实）", None, group="temporary_admission")
+                             f"Temporary export and re-import formalities in {COUNTRY_EN.get(o['country'], o['country'])} (regime not verified)",
+                             f"{COUNTRY_ZH.get(o['country'], o['country'])}临时出口及复进口手续（制度未核实）", None, group="temporary_admission")
             elif rg == "temp_export_repair":
                 permit = ctx.rate("rates.handling.permit_fee", "Customs permit fee", "海关许可证费")
                 agent = ctx.rate("rates.temporary_admission.tis_agent_fee_per_permit", "Declaring-agent fee per TIS permit", "TIS 每份许可证报关代理费")
@@ -242,10 +243,10 @@ def build_lane(ctx: Ctx, lane: dict, rfq: dict, lane_flag_list: list[dict], regi
                                                          "提前两周指定报关代理并提交担保。", ["SG-TIS-SECURITY"])]
             if rg == "tis" and o["country"] != "SG":
                 opt_flags = opt_flags + [compliance.flag("TIS-ORIGIN-SIDE", "medium",
-                                                         f"TIS covers only the Singapore side; the return into {o['country']} needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
-                                                         f"TIS 仅覆盖新加坡一侧；货物返回 {o['country']} 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。",
-                                                         f"Confirm the {o['country']} export and re-import treatment with the owner's broker before the first move.",
-                                                         f"首次运输前与货主报关行确认 {o['country']} 的出口及复进口处理方式。", [], verified=False)]
+                                                         f"TIS covers only the Singapore side; the return into {COUNTRY_EN.get(o['country'], o['country'])} needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+                                                         f"TIS 仅覆盖新加坡一侧；货物返回{COUNTRY_ZH.get(o['country'], o['country'])}须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。",
+                                                         f"Confirm the export and re-import treatment in {COUNTRY_EN.get(o['country'], o['country'])} with the owner's broker before the first move.",
+                                                         f"首次运输前与货主报关行确认{COUNTRY_ZH.get(o['country'], o['country'])}的出口及复进口处理方式。", [], verified=False)]
             if rg == "ata_carnet":
                 opt_flags = opt_flags + [compliance.flag("ATA-GENERAL-LIST", "low",
                                                          "The carnet's general list must match the goods exactly; partial shipments and changes need care at each border.",

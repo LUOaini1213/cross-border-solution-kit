@@ -46,7 +46,7 @@ def lane_flags(ctx: Ctx, lane: dict, rfq: dict, fta_rows: list[dict]) -> list[di
             "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
             "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。",
             "Confirm the Schedule C approval and its validity for each HS line before go-live.",
-            "上线前确认附表 C 批文及其对各税号的有效性。", ["MY-ST-SCHEDULE-C", "MY-ST-IMPORT-BASE"]))
+            "上线前确认附表 C 批文及其对各税号的有效性。", ["MY-ST-SCHEDULE-C", "MY-ST-IMPORT-BASE"], verified=False))
     out.append(compliance.flag(
         "MY-EV-INCENTIVE", "info",
         "The programme is an internal-combustion SUV, so the EV component duty exemption (until 31 Dec 2027) does not apply; an EV variant would need its own eligibility check.",

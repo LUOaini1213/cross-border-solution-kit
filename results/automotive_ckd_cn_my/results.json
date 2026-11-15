@@ -697,7 +697,7 @@
             "MY-ST-SCHEDULE-C",
             "MY-ST-IMPORT-BASE"
           ],
-          "verified": true,
+          "verified": false,
           "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
         },
         {
@@ -1327,7 +1327,7 @@
                 "MY-ST-SCHEDULE-C",
                 "MY-ST-IMPORT-BASE"
               ],
-              "verified": true,
+              "verified": false,
               "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
             },
             {
@@ -2094,7 +2094,7 @@
                 "MY-ST-SCHEDULE-C",
                 "MY-ST-IMPORT-BASE"
               ],
-              "verified": true,
+              "verified": false,
               "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
             },
             {
@@ -2872,7 +2872,7 @@
                 "MY-ST-SCHEDULE-C",
                 "MY-ST-IMPORT-BASE"
               ],
-              "verified": true,
+              "verified": false,
               "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
             },
             {
@@ -3025,7 +3025,7 @@
       "rationale": {
         "en": [
           "Recommended: Ocean FCL (40ft HC) at USD 286 per kit landed, P90 35.2 days, 93.1% on time against the 38-day target, risk score 56/100.",
-          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 30-day target the same option would be on time 78.5% of the time.",
           "Ocean LCL is dominated by Ocean FCL (40ft HC) (no better on cost, P90 or risk).",
           "Alternative on the Pareto front: Air freight - 488% more per kit, P90 7.0 days (-28.2), risk 47; on time 100.0%.",
@@ -3033,7 +3033,7 @@
         ],
         "zh": [
           "推荐方案：海运整箱（40 尺高柜）。每套落地成本 286 美元，P90 时效 35.2 天，38 天内送达概率 93.1%，风险评分 56/100。",
-          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 90% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 30 天，该方案准时率为 78.5%。",
           "海运拼箱在成本、P90 时效和风险上均不优于海运整箱（40 尺高柜），属被占优方案。",
           "帕累托前沿上的备选：空运——每套成本高 488%，P90 7.0 天（少 28.2 天），风险 47；准时率 100.0%。",
@@ -3225,7 +3225,7 @@
           "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
         },
         {
-          "en": "Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
+          "en": "Goods ship China to Malaysia but are invoiced by an entity in Singapore: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
           "id": "THIRD-COUNTRY-INVOICE",
           "mitigation_en": "Align the three documents (supplier invoice, third-party invoice, Form E) before departure; keep the contract chain on file.",
           "mitigation_zh": "离港前核对供应商发票、第三方发票与 Form E 三者一致；留存完整合同链。",
@@ -3238,7 +3238,7 @@
             "MY-VALUATION-CIF"
           ],
           "verified": true,
-          "zh": "货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
+          "zh": "货物由中国直运马来西亚、由新加坡主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
         },
         {
           "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
@@ -3252,7 +3252,7 @@
             "MY-ST-SCHEDULE-C",
             "MY-ST-IMPORT-BASE"
           ],
-          "verified": true,
+          "verified": false,
           "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
         },
         {
@@ -3765,7 +3765,7 @@
               "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
             },
             {
-              "en": "Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
+              "en": "Goods ship China to Malaysia but are invoiced by an entity in Singapore: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
               "id": "THIRD-COUNTRY-INVOICE",
               "mitigation_en": "Align the three documents (supplier invoice, third-party invoice, Form E) before departure; keep the contract chain on file.",
               "mitigation_zh": "离港前核对供应商发票、第三方发票与 Form E 三者一致；留存完整合同链。",
@@ -3778,7 +3778,7 @@
                 "MY-VALUATION-CIF"
               ],
               "verified": true,
-              "zh": "货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
+              "zh": "货物由中国直运马来西亚、由新加坡主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
             },
             {
               "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
@@ -3792,7 +3792,7 @@
                 "MY-ST-SCHEDULE-C",
                 "MY-ST-IMPORT-BASE"
               ],
-              "verified": true,
+              "verified": false,
               "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
             },
             {
@@ -4456,7 +4456,7 @@
               "zh": "申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。"
             },
             {
-              "en": "Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
+              "en": "Goods ship China to Malaysia but are invoiced by an entity in Singapore: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
               "id": "THIRD-COUNTRY-INVOICE",
               "mitigation_en": "Align the three documents (supplier invoice, third-party invoice, Form E) before departure; keep the contract chain on file.",
               "mitigation_zh": "离港前核对供应商发票、第三方发票与 Form E 三者一致；留存完整合同链。",
@@ -4469,7 +4469,7 @@
                 "MY-VALUATION-CIF"
               ],
               "verified": true,
-              "zh": "货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
+              "zh": "货物由中国直运马来西亚、由新加坡主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。"
             },
             {
               "en": "Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty.",
@@ -4483,7 +4483,7 @@
                 "MY-ST-SCHEDULE-C",
                 "MY-ST-IMPORT-BASE"
               ],
-              "verified": true,
+              "verified": false,
               "zh": "进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
             },
             {
@@ -4636,19 +4636,19 @@
       "rationale": {
         "en": [
           "Recommended: Rail-sea via Qinzhou (FCL) at USD 80.84 per kit landed, P90 36.0 days, 92.4% on time against the 38-day target, risk score 62/100.",
-          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 30-day target the same option would be on time 76.8% of the time.",
           "Alternative on the Pareto front: Air freight - 882% more per kit, P90 7.3 days (-28.8), risk 47; on time 100.0%.",
-          "Not offered: rail - No verified scheduled cross-border rail service for this lane: First run 2024; no current official timetable found. Re-enable by setting status: verified once a scheduled departure is confirmed..",
-          "Conditions to manage: [MY-KIT-CLASSIFICATION] Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8708.40.2600, 8708.80.1600) [FTA-ACFTA-FORM-E] ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification. [THIRD-COUNTRY-INVOICE] Goods ship China to Malaysia but are invoiced by an entity in SG: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified). [MY-SCHEDULE-C] Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty."
+          "Not offered: Cross-border rail - No verified scheduled cross-border rail service for this lane: First run 2024; no current official timetable found. Re-enable by setting status: verified once a scheduled departure is confirmed..",
+          "Conditions to manage: [MY-KIT-CLASSIFICATION] Kit components are declared as parts. If the shipped set amounts to an essentially complete vehicle, customs may classify it as a CKD vehicle (8703 CKD lines, MITI AP needed). Not verified for this kit. (HS 8708.40.2600, 8708.80.1600) [FTA-ACFTA-FORM-E] ACFTA preference claimed: each shipment needs a Form E issued before or at shipment, valid one year; origin evidence (RVC >= 40%) must be kept for verification. [THIRD-COUNTRY-INVOICE] Goods ship China to Malaysia but are invoiced by an entity in Singapore: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified). [MY-SCHEDULE-C] Sales tax on imported components is set to nil on the assumption that Customer A holds Schedule C (registered manufacturer) exemption; eligibility conditions were not verified. Without it, 10% sales tax applies on customs value plus duty."
         ],
         "zh": [
           "推荐方案：经钦州铁海联运（整箱）。每套落地成本 80.84 美元，P90 时效 36.0 天，38 天内送达概率 92.4%，风险评分 62/100。",
-          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 90% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 30 天，该方案准时率为 76.8%。",
           "帕累托前沿上的备选：空运——每套成本高 882%，P90 7.3 天（少 28.8 天），风险 47；准时率 100.0%。",
-          "未纳入：rail——该线路无经核实的定期跨境铁路班列，暂不纳入方案。。",
-          "需重点管控：【MY-KIT-CLASSIFICATION】散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8708.40.2600、8708.80.1600） 【FTA-ACFTA-FORM-E】申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。 【THIRD-COUNTRY-INVOICE】货物由中国直运马来西亚、由 SG 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。 【MY-SCHEDULE-C】进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
+          "未纳入：跨境铁路——该线路无经核实的定期跨境铁路班列，暂不纳入方案。。",
+          "需重点管控：【MY-KIT-CLASSIFICATION】散件按零部件申报。若一批货物实质上构成基本完整的车辆，海关可能按 CKD 整车归类（8703 CKD 税目，并须 MITI AP）。本案例未经核实。（HS 8708.40.2600、8708.80.1600） 【FTA-ACFTA-FORM-E】申请 ACFTA 优惠：每票须在装运前或装运时取得 Form E（有效期一年），并留存区域价值成分不低于 40% 的原产地证据以备核查。 【THIRD-COUNTRY-INVOICE】货物由中国直运马来西亚、由新加坡主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。 【MY-SCHEDULE-C】进口零部件销售税按 Customer A 已取得附表 C（注册制造商）豁免计为零；资格条件未经核实。若无此豁免，须按完税价格加关税的 10% 缴纳销售税。"
         ]
       },
       "recommendation": {

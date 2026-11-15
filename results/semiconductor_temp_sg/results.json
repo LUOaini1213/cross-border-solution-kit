@@ -511,7 +511,8 @@
       "sources": [
         "sg_customs_tis_overview",
         "sg_customs_tis_additional_import",
-        "sg_customs_security_amount"
+        "sg_customs_security_amount",
+        "sg_customs_selected_goods"
       ],
       "statement": "SG-TIS-SECURITY",
       "unit": "fraction of potential GST",
@@ -1691,8 +1692,8 @@
               "group": "temporary_admission",
               "in_quote": true,
               "kind": "calc",
-              "label_en": "Temporary export and re-import formalities in JP (regime not verified)",
-              "label_zh": "JP 临时出口及复进口手续（制度未核实）",
+              "label_en": "Temporary export and re-import formalities in Japan (regime not verified)",
+              "label_zh": "日本临时出口及复进口手续（制度未核实）",
               "note": "",
               "payer": "owner",
               "unit": "USD",
@@ -1878,16 +1879,16 @@
               "zh": "TIS 许可证须由新加坡申报人通过 TradeNet 申报，并在进口前提交担保。"
             },
             {
-              "en": "TIS covers only the Singapore side; the return into JP needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+              "en": "TIS covers only the Singapore side; the return into Japan needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
               "id": "TIS-ORIGIN-SIDE",
-              "mitigation_en": "Confirm the JP export and re-import treatment with the owner's broker before the first move.",
-              "mitigation_zh": "首次运输前与货主报关行确认 JP 的出口及复进口处理方式。",
+              "mitigation_en": "Confirm the export and re-import treatment in Japan with the owner's broker before the first move.",
+              "mitigation_zh": "首次运输前与货主报关行确认日本的出口及复进口处理方式。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "TIS 仅覆盖新加坡一侧；货物返回 JP 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+              "zh": "TIS 仅覆盖新加坡一侧；货物返回日本须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
             }
           ],
           "handoffs": 4,
@@ -3090,8 +3091,8 @@
               "group": "temporary_admission",
               "in_quote": true,
               "kind": "calc",
-              "label_en": "Temporary export and re-import formalities in JP (regime not verified)",
-              "label_zh": "JP 临时出口及复进口手续（制度未核实）",
+              "label_en": "Temporary export and re-import formalities in Japan (regime not verified)",
+              "label_zh": "日本临时出口及复进口手续（制度未核实）",
               "note": "",
               "payer": "owner",
               "unit": "USD",
@@ -3280,16 +3281,16 @@
               "zh": "TIS 许可证须由新加坡申报人通过 TradeNet 申报，并在进口前提交担保。"
             },
             {
-              "en": "TIS covers only the Singapore side; the return into JP needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+              "en": "TIS covers only the Singapore side; the return into Japan needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
               "id": "TIS-ORIGIN-SIDE",
-              "mitigation_en": "Confirm the JP export and re-import treatment with the owner's broker before the first move.",
-              "mitigation_zh": "首次运输前与货主报关行确认 JP 的出口及复进口处理方式。",
+              "mitigation_en": "Confirm the export and re-import treatment in Japan with the owner's broker before the first move.",
+              "mitigation_zh": "首次运输前与货主报关行确认日本的出口及复进口处理方式。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "TIS 仅覆盖新加坡一侧；货物返回 JP 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+              "zh": "TIS 仅覆盖新加坡一侧；货物返回日本须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
             }
           ],
           "handoffs": 4,
@@ -3439,21 +3440,21 @@
       "rationale": {
         "en": [
           "Recommended: Air freight + Temporary Import Scheme at USD 20,801 per move landed, P90 4.8 days, 100.0% on time against the 12-day target, risk score 57/100.",
-          "It meets the 95.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 95% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 10-day target the same option would be on time 99.3% of the time.",
           "Alternative on the Pareto front: Air freight + ATA Carnet - 25% more per move, same P90 (4.7 days), risk 47; on time 100.0%.",
           "Ocean FCL (20ft) + ATA Carnet is dominated by Air freight + ATA Carnet (no better on cost, P90 or risk).",
           "Ocean FCL (20ft) + Temporary Import Scheme is dominated by Air freight + ATA Carnet, Air freight + Temporary Import Scheme (no better on cost, P90 or risk).",
-          "Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 9031.41) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 9031.41) [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into JP needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it."
+          "Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 9031.41) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 9031.41) [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into Japan needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it."
         ],
         "zh": [
           "推荐方案：空运 + 临时进口计划（TIS）。每次往返落地成本 20,801 美元，P90 时效 4.8 天，12 天内送达概率 100.0%，风险评分 57/100。",
-          "该方案满足 95.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 95% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 10 天，该方案准时率为 99.3%。",
           "帕累托前沿上的备选：空运 + ATA 单证册——每次往返成本高 25%，P90 相同（4.7 天），风险 47；准时率 100.0%。",
           "海运整箱（20 尺） + ATA 单证册在成本、P90 时效和风险上均不优于空运 + ATA 单证册，属被占优方案。",
           "海运整箱（20 尺） + 临时进口计划（TIS）在成本、P90 时效和风险上均不优于空运 + ATA 单证册、空运 + 临时进口计划（TIS），属被占优方案。",
-          "需重点管控：【SG-STRATEGIC-SCREEN】半导体制造或测试设备及其专门设计的部件在新加坡可能属于战略物资（管制清单 3B 类）。清单内物项每次出口或再出口均须至少提前五个工作日申领 XO/XP 许可证，即使使用 ATA 单证册亦然。（HS 9031.41） 【ORIGIN-EXPORT-CONTROL】原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。（HS 9031.41） 【TIS-ORIGIN-SIDE】TIS 仅覆盖新加坡一侧；货物返回 JP 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+          "需重点管控：【SG-STRATEGIC-SCREEN】半导体制造或测试设备及其专门设计的部件在新加坡可能属于战略物资（管制清单 3B 类）。清单内物项每次出口或再出口均须至少提前五个工作日申领 XO/XP 许可证，即使使用 ATA 单证册亦然。（HS 9031.41） 【ORIGIN-EXPORT-CONTROL】原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。（HS 9031.41） 【TIS-ORIGIN-SIDE】TIS 仅覆盖新加坡一侧；货物返回日本须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
         ]
       },
       "recommendation": {
@@ -4626,8 +4627,8 @@
               "group": "temporary_admission",
               "in_quote": true,
               "kind": "calc",
-              "label_en": "Temporary export and re-import formalities in US (regime not verified)",
-              "label_zh": "US 临时出口及复进口手续（制度未核实）",
+              "label_en": "Temporary export and re-import formalities in the United States (regime not verified)",
+              "label_zh": "美国临时出口及复进口手续（制度未核实）",
               "note": "",
               "payer": "owner",
               "unit": "USD",
@@ -4815,16 +4816,16 @@
               "zh": "TIS 许可证须由新加坡申报人通过 TradeNet 申报，并在进口前提交担保。"
             },
             {
-              "en": "TIS covers only the Singapore side; the return into US needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+              "en": "TIS covers only the Singapore side; the return into the United States needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
               "id": "TIS-ORIGIN-SIDE",
-              "mitigation_en": "Confirm the US export and re-import treatment with the owner's broker before the first move.",
-              "mitigation_zh": "首次运输前与货主报关行确认 US 的出口及复进口处理方式。",
+              "mitigation_en": "Confirm the export and re-import treatment in the United States with the owner's broker before the first move.",
+              "mitigation_zh": "首次运输前与货主报关行确认美国的出口及复进口处理方式。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "TIS 仅覆盖新加坡一侧；货物返回 US 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+              "zh": "TIS 仅覆盖新加坡一侧；货物返回美国须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
             }
           ],
           "handoffs": 4,
@@ -6044,8 +6045,8 @@
               "group": "temporary_admission",
               "in_quote": true,
               "kind": "calc",
-              "label_en": "Temporary export and re-import formalities in US (regime not verified)",
-              "label_zh": "US 临时出口及复进口手续（制度未核实）",
+              "label_en": "Temporary export and re-import formalities in the United States (regime not verified)",
+              "label_zh": "美国临时出口及复进口手续（制度未核实）",
               "note": "",
               "payer": "owner",
               "unit": "USD",
@@ -6234,16 +6235,16 @@
               "zh": "TIS 许可证须由新加坡申报人通过 TradeNet 申报，并在进口前提交担保。"
             },
             {
-              "en": "TIS covers only the Singapore side; the return into US needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+              "en": "TIS covers only the Singapore side; the return into the United States needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
               "id": "TIS-ORIGIN-SIDE",
-              "mitigation_en": "Confirm the US export and re-import treatment with the owner's broker before the first move.",
-              "mitigation_zh": "首次运输前与货主报关行确认 US 的出口及复进口处理方式。",
+              "mitigation_en": "Confirm the export and re-import treatment in the United States with the owner's broker before the first move.",
+              "mitigation_zh": "首次运输前与货主报关行确认美国的出口及复进口处理方式。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "TIS 仅覆盖新加坡一侧；货物返回 US 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+              "zh": "TIS 仅覆盖新加坡一侧；货物返回美国须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
             }
           ],
           "handoffs": 8,
@@ -6408,7 +6409,7 @@
       },
       "rationale": {
         "en": [
-          "No option reaches 95.0% on time within 7 days. Recommended for now: Air freight + ATA Carnet (94.9% on time, P90 5.3 days, USD 7,132 per move); the target or the lead time needs to be renegotiated.",
+          "No option reaches 95% on time within 7 days. Recommended for now: Air freight + ATA Carnet (94.9% on time, P90 5.3 days, USD 7,132 per move); the target or the lead time needs to be renegotiated.",
           "Planning 8 days instead of 7 lifts this option to 96.4% on time.",
           "Air freight + Temporary Import Scheme is dominated by Air freight + ATA Carnet (no better on cost, P90 or risk).",
           "Ocean LCL + ATA Carnet is dominated by Air freight + ATA Carnet, Air freight + Temporary Import Scheme (no better on cost, P90 or risk).",
@@ -6416,7 +6417,7 @@
           "Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 9031.80) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 9031.80)"
         ],
         "zh": [
-          "没有方案能在 7 天内达到 95.0% 的准时率。暂推荐 空运 + ATA 单证册（准时率 94.9%，P90 5.3 天，每次往返 7,132 美元），需与客户重新商定时效目标或备货提前期。",
+          "没有方案能在 7 天内达到 95% 的准时率。暂推荐 空运 + ATA 单证册（准时率 94.9%，P90 5.3 天，每次往返 7,132 美元），需与客户重新商定时效目标或备货提前期。",
           "若将计划时效由 7 天放宽至 8 天，该方案准时率可提升至 96.4%。",
           "空运 + 临时进口计划（TIS）在成本、P90 时效和风险上均不优于空运 + ATA 单证册，属被占优方案。",
           "海运拼箱 + ATA 单证册在成本、P90 时效和风险上均不优于空运 + ATA 单证册、空运 + 临时进口计划（TIS），属被占优方案。",
@@ -6515,7 +6516,7 @@
           "zh": "不采用 ATA 单证册：维修不属于 ATA 单证册用途，且货物须以原状返回。"
         },
         {
-          "en": "Temporary admission for repair at the destination (JP) was not assessed; duty or tax on arrival may apply unless a relief is used.",
+          "en": "Temporary admission for repair at the destination (Japan) was not assessed; duty or tax on arrival may apply unless a relief is used.",
           "id": "DEST-REPAIR-REGIME",
           "mitigation_en": "Ask the repair centre's customs broker for the inward-processing / re-export relief before the first loop.",
           "mitigation_zh": "首次周转前，请维修中心的报关行确认进境加工或复出口减免安排。",
@@ -6524,7 +6525,7 @@
           "severity": "medium",
           "statements": [],
           "verified": false,
-          "zh": "目的地（JP）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
+          "zh": "目的地（日本）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
         }
       ],
       "name_en": "Failed RF generator, Singapore fab to the OEM repair centre in Osaka and back",
@@ -7063,7 +7064,7 @@
               "zh": "不采用 ATA 单证册：维修不属于 ATA 单证册用途，且货物须以原状返回。"
             },
             {
-              "en": "Temporary admission for repair at the destination (JP) was not assessed; duty or tax on arrival may apply unless a relief is used.",
+              "en": "Temporary admission for repair at the destination (Japan) was not assessed; duty or tax on arrival may apply unless a relief is used.",
               "id": "DEST-REPAIR-REGIME",
               "mitigation_en": "Ask the repair centre's customs broker for the inward-processing / re-export relief before the first loop.",
               "mitigation_zh": "首次周转前，请维修中心的报关行确认进境加工或复出口减免安排。",
@@ -7072,7 +7073,7 @@
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "目的地（JP）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
+              "zh": "目的地（日本）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
             }
           ],
           "handoffs": 4,
@@ -7807,7 +7808,7 @@
               "zh": "不采用 ATA 单证册：维修不属于 ATA 单证册用途，且货物须以原状返回。"
             },
             {
-              "en": "Temporary admission for repair at the destination (JP) was not assessed; duty or tax on arrival may apply unless a relief is used.",
+              "en": "Temporary admission for repair at the destination (Japan) was not assessed; duty or tax on arrival may apply unless a relief is used.",
               "id": "DEST-REPAIR-REGIME",
               "mitigation_en": "Ask the repair centre's customs broker for the inward-processing / re-export relief before the first loop.",
               "mitigation_zh": "首次周转前，请维修中心的报关行确认进境加工或复出口减免安排。",
@@ -7816,7 +7817,7 @@
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "目的地（JP）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
+              "zh": "目的地（日本）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
             }
           ],
           "handoffs": 8,
@@ -8089,19 +8090,19 @@
       "rationale": {
         "en": [
           "Recommended: Air freight + temporary export for repair at USD 4,967 per move landed, P90 31.4 days, 96.9% on time against the 35-day target, risk score 44/100.",
-          "It meets the 95.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 95% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 28-day target the same option would be on time 70.9% of the time.",
           "Ocean LCL + temporary export for repair is dominated by Air freight + temporary export for repair (no better on cost, P90 or risk).",
-          "Not offered: ata_carnet - Repair is not an ATA purpose and goods must return in the same condition.",
-          "Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8486.90) [DEST-REPAIR-REGIME] Temporary admission for repair at the destination (JP) was not assessed; duty or tax on arrival may apply unless a relief is used."
+          "Not offered: ATA Carnet - Repair is not an ATA purpose and goods must return in the same condition.",
+          "Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8486.90) [DEST-REPAIR-REGIME] Temporary admission for repair at the destination (Japan) was not assessed; duty or tax on arrival may apply unless a relief is used."
         ],
         "zh": [
           "推荐方案：空运 + 出境维修临时出口。每次往返落地成本 4,967 美元，P90 时效 31.4 天，35 天内送达概率 96.9%，风险评分 44/100。",
-          "该方案满足 95.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 95% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 28 天，该方案准时率为 70.9%。",
           "海运拼箱 + 出境维修临时出口在成本、P90 时效和风险上均不优于空运 + 出境维修临时出口，属被占优方案。",
-          "未纳入：ata_carnet——维修不属于 ATA 单证册用途，且货物须以原状返回。",
-          "需重点管控：【SG-STRATEGIC-SCREEN】半导体制造或测试设备及其专门设计的部件在新加坡可能属于战略物资（管制清单 3B 类）。清单内物项每次出口或再出口均须至少提前五个工作日申领 XO/XP 许可证，即使使用 ATA 单证册亦然。（HS 8486.90） 【DEST-REPAIR-REGIME】目的地（JP）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
+          "未纳入：ATA 单证册——维修不属于 ATA 单证册用途，且货物须以原状返回。",
+          "需重点管控：【SG-STRATEGIC-SCREEN】半导体制造或测试设备及其专门设计的部件在新加坡可能属于战略物资（管制清单 3B 类）。清单内物项每次出口或再出口均须至少提前五个工作日申领 XO/XP 许可证，即使使用 ATA 单证册亦然。（HS 8486.90） 【DEST-REPAIR-REGIME】目的地（日本）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。"
         ]
       },
       "recommendation": {
@@ -8132,7 +8133,7 @@
       },
       "excluded": [
         {
-          "reason_en": "Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them",
+          "reason_en": "Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them",
           "reason_zh": "新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列",
           "regime": "ata_carnet",
           "statements": [
@@ -8147,7 +8148,7 @@
           "ata_carnet": {
             "available": false,
             "origin_member": true,
-            "reason_en": "Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them",
+            "reason_en": "Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them",
             "reason_zh": "新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列",
             "statements": [
               "SG-ATA-SCOPE",
@@ -8199,7 +8200,7 @@
           "zh": "原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。（HS 8414.10）"
         },
         {
-          "en": "ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them.",
+          "en": "ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them.",
           "id": "ATA-NOT-APPLICABLE",
           "mitigation_en": "",
           "mitigation_zh": "",
@@ -8216,16 +8217,16 @@
           "zh": "不采用 ATA 单证册：新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列。"
         },
         {
-          "en": "Re-import into MY after repair (duty/tax relief on return) was not assessed.",
+          "en": "Re-import into Malaysia after repair (duty/tax relief on return) was not assessed.",
           "id": "ORIGIN-REIMPORT-REGIME",
-          "mitigation_en": "Confirm MY's temporary-export-for-repair procedure with the customer's broker.",
-          "mitigation_zh": "与客户报关行确认 MY 的出境维修临时出口手续。",
+          "mitigation_en": "Confirm the temporary-export-for-repair procedure of Malaysia with the customer's broker.",
+          "mitigation_zh": "与客户报关行确认马来西亚的出境维修临时出口手续。",
           "modes": null,
           "options": null,
           "severity": "medium",
           "statements": [],
           "verified": false,
-          "zh": "维修后复进口 MY 的关税/税费减免未作评估。"
+          "zh": "维修后复进口马来西亚的关税/税费减免未作评估。"
         }
       ],
       "name_en": "Customer spares, Penang to the Singapore repair hub and back",
@@ -8447,8 +8448,8 @@
               "group": "temporary_admission",
               "in_quote": true,
               "kind": "calc",
-              "label_en": "Temporary export and re-import formalities in MY (regime not verified)",
-              "label_zh": "MY 临时出口及复进口手续（制度未核实）",
+              "label_en": "Temporary export and re-import formalities in Malaysia (regime not verified)",
+              "label_zh": "马来西亚临时出口及复进口手续（制度未核实）",
               "note": "",
               "payer": "owner",
               "unit": "USD",
@@ -8604,7 +8605,7 @@
               "zh": "原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。（HS 8414.10）"
             },
             {
-              "en": "ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them.",
+              "en": "ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them.",
               "id": "ATA-NOT-APPLICABLE",
               "mitigation_en": "",
               "mitigation_zh": "",
@@ -8621,28 +8622,28 @@
               "zh": "不采用 ATA 单证册：新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列。"
             },
             {
-              "en": "Re-import into MY after repair (duty/tax relief on return) was not assessed.",
+              "en": "Re-import into Malaysia after repair (duty/tax relief on return) was not assessed.",
               "id": "ORIGIN-REIMPORT-REGIME",
-              "mitigation_en": "Confirm MY's temporary-export-for-repair procedure with the customer's broker.",
-              "mitigation_zh": "与客户报关行确认 MY 的出境维修临时出口手续。",
+              "mitigation_en": "Confirm the temporary-export-for-repair procedure of Malaysia with the customer's broker.",
+              "mitigation_zh": "与客户报关行确认马来西亚的出境维修临时出口手续。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "维修后复进口 MY 的关税/税费减免未作评估。"
+              "zh": "维修后复进口马来西亚的关税/税费减免未作评估。"
             },
             {
-              "en": "TIS covers only the Singapore side; the return into MY needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+              "en": "TIS covers only the Singapore side; the return into Malaysia needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
               "id": "TIS-ORIGIN-SIDE",
-              "mitigation_en": "Confirm the MY export and re-import treatment with the owner's broker before the first move.",
-              "mitigation_zh": "首次运输前与货主报关行确认 MY 的出口及复进口处理方式。",
+              "mitigation_en": "Confirm the export and re-import treatment in Malaysia with the owner's broker before the first move.",
+              "mitigation_zh": "首次运输前与货主报关行确认马来西亚的出口及复进口处理方式。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "TIS 仅覆盖新加坡一侧；货物返回 MY 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+              "zh": "TIS 仅覆盖新加坡一侧；货物返回马来西亚须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
             }
           ],
           "handoffs": 2,
@@ -9172,8 +9173,8 @@
               "group": "temporary_admission",
               "in_quote": true,
               "kind": "calc",
-              "label_en": "Temporary export and re-import formalities in MY (regime not verified)",
-              "label_zh": "MY 临时出口及复进口手续（制度未核实）",
+              "label_en": "Temporary export and re-import formalities in Malaysia (regime not verified)",
+              "label_zh": "马来西亚临时出口及复进口手续（制度未核实）",
               "note": "",
               "payer": "owner",
               "unit": "USD",
@@ -9329,7 +9330,7 @@
               "zh": "原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。（HS 8414.10）"
             },
             {
-              "en": "ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them.",
+              "en": "ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them.",
               "id": "ATA-NOT-APPLICABLE",
               "mitigation_en": "",
               "mitigation_zh": "",
@@ -9346,28 +9347,28 @@
               "zh": "不采用 ATA 单证册：新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列。"
             },
             {
-              "en": "Re-import into MY after repair (duty/tax relief on return) was not assessed.",
+              "en": "Re-import into Malaysia after repair (duty/tax relief on return) was not assessed.",
               "id": "ORIGIN-REIMPORT-REGIME",
-              "mitigation_en": "Confirm MY's temporary-export-for-repair procedure with the customer's broker.",
-              "mitigation_zh": "与客户报关行确认 MY 的出境维修临时出口手续。",
+              "mitigation_en": "Confirm the temporary-export-for-repair procedure of Malaysia with the customer's broker.",
+              "mitigation_zh": "与客户报关行确认马来西亚的出境维修临时出口手续。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "维修后复进口 MY 的关税/税费减免未作评估。"
+              "zh": "维修后复进口马来西亚的关税/税费减免未作评估。"
             },
             {
-              "en": "TIS covers only the Singapore side; the return into MY needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
+              "en": "TIS covers only the Singapore side; the return into Malaysia needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.",
               "id": "TIS-ORIGIN-SIDE",
-              "mitigation_en": "Confirm the MY export and re-import treatment with the owner's broker before the first move.",
-              "mitigation_zh": "首次运输前与货主报关行确认 MY 的出口及复进口处理方式。",
+              "mitigation_en": "Confirm the export and re-import treatment in Malaysia with the owner's broker before the first move.",
+              "mitigation_zh": "首次运输前与货主报关行确认马来西亚的出口及复进口处理方式。",
               "modes": null,
               "options": null,
               "severity": "medium",
               "statements": [],
               "verified": false,
-              "zh": "TIS 仅覆盖新加坡一侧；货物返回 MY 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+              "zh": "TIS 仅覆盖新加坡一侧；货物返回马来西亚须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
             }
           ],
           "handoffs": 4,
@@ -9580,19 +9581,19 @@
       "rationale": {
         "en": [
           "Recommended: Cross-border road + Temporary Import Scheme at USD 3,695 per move landed, P90 28.1 days, 96.5% on time against the 30-day target, risk score 59/100.",
-          "It meets the 95.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 95% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 24-day target the same option would be on time 60.5% of the time.",
           "Alternative on the Pareto front: Air freight + Temporary Import Scheme - 1% less per move, P90 29.5 days (+1.4), risk 64; on time 91.8% (below target).",
-          "Not offered: ata_carnet - Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them.",
-          "Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8414.10) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 8414.10) [ORIGIN-REIMPORT-REGIME] Re-import into MY after repair (duty/tax relief on return) was not assessed. [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into MY needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it."
+          "Not offered: ATA Carnet - Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them.",
+          "Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8414.10) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 8414.10) [ORIGIN-REIMPORT-REGIME] Re-import into Malaysia after repair (duty/tax relief on return) was not assessed. [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into Malaysia needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it."
         ],
         "zh": [
           "推荐方案：跨境公路 + 临时进口计划（TIS）。每次往返落地成本 3,695 美元，P90 时效 28.1 天，30 天内送达概率 96.5%，风险评分 59/100。",
-          "该方案满足 95.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 95% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 24 天，该方案准时率为 60.5%。",
           "帕累托前沿上的备选：空运 + 临时进口计划（TIS）——每次往返成本低 1%，P90 29.5 天（多 1.4 天），风险 64；准时率 91.8%（未达目标）。",
-          "未纳入：ata_carnet——新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列。",
-          "需重点管控：【SG-STRATEGIC-SCREEN】半导体制造或测试设备及其专门设计的部件在新加坡可能属于战略物资（管制清单 3B 类）。清单内物项每次出口或再出口均须至少提前五个工作日申领 XO/XP 许可证，即使使用 ATA 单证册亦然。（HS 8414.10） 【ORIGIN-EXPORT-CONTROL】原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。（HS 8414.10） 【ORIGIN-REIMPORT-REGIME】维修后复进口 MY 的关税/税费减免未作评估。 【TIS-ORIGIN-SIDE】TIS 仅覆盖新加坡一侧；货物返回 MY 须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
+          "未纳入：ATA 单证册——新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列。",
+          "需重点管控：【SG-STRATEGIC-SCREEN】半导体制造或测试设备及其专门设计的部件在新加坡可能属于战略物资（管制清单 3B 类）。清单内物项每次出口或再出口均须至少提前五个工作日申领 XO/XP 许可证，即使使用 ATA 单证册亦然。（HS 8414.10） 【ORIGIN-EXPORT-CONTROL】原产国出口管制（如工具类临时出口、维修后回运的许可要求）未作评估。（HS 8414.10） 【ORIGIN-REIMPORT-REGIME】维修后复进口马来西亚的关税/税费减免未作评估。 【TIS-ORIGIN-SIDE】TIS 仅覆盖新加坡一侧；货物返回马来西亚须按该国临时出口或退运货物程序办理（未经核实）。若两国均接受，ATA 单证册可同时覆盖两端。"
         ]
       },
       "recommendation": {
@@ -10573,7 +10574,8 @@
       "sources": [
         "sg_customs_tis_overview",
         "sg_customs_tis_additional_import",
-        "sg_customs_security_amount"
+        "sg_customs_security_amount",
+        "sg_customs_selected_goods"
       ],
       "statement": "SG-TIS-SECURITY",
       "unit": "fraction of potential GST",

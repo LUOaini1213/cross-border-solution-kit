@@ -2,7 +2,13 @@
 numbers so that the text can never disagree with the results."""
 from __future__ import annotations
 
+from .flows.common import MODE_LABELS, REGIME_LABELS
+
 UNIT_ZH = {"kit": "套", "move": "次往返", "parcel": "个包裹", "unit": "件"}
+
+
+def _target(x: float) -> str:
+    return f"{x * 100:g}%"
 
 
 def _pct(x: float) -> str:
@@ -29,13 +35,13 @@ def rationale(lane: dict, options: list[dict], rec: dict, target_p: float, unit:
                   f"{_pct(m['on_time_probability'])} on time against the {T}-day target, risk score {m['risk']:.0f}/100.")
         zh.append(f"推荐方案：{ch['label_zh']}。每{uzh}落地成本 {_usd_zh(m['cost_per_unit'])}，P90 时效 {m['p90']:.1f} 天，"
                   f"{T} 天内送达概率 {_pct(m['on_time_probability'])}，风险评分 {m['risk']:.0f}/100。")
-        en.append(f"It meets the {_pct(target_p)} on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.")
-        zh.append(f"该方案满足 {_pct(target_p)} 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。")
+        en.append(f"It meets the {_target(target_p)} on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.")
+        zh.append(f"该方案满足 {_target(target_p)} 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。")
     else:
-        en.append(f"No option reaches {_pct(target_p)} on time within {T} days. Recommended for now: {ch['label_en']} "
+        en.append(f"No option reaches {_target(target_p)} on time within {T} days. Recommended for now: {ch['label_en']} "
                   f"({_pct(m['on_time_probability'])} on time, P90 {m['p90']:.1f} days, {_usd(m['cost_per_unit'])} per {unit}); "
                   "the target or the lead time needs to be renegotiated.")
-        zh.append(f"没有方案能在 {T} 天内达到 {_pct(target_p)} 的准时率。暂推荐 {ch['label_zh']}（准时率 {_pct(m['on_time_probability'])}，"
+        zh.append(f"没有方案能在 {T} 天内达到 {_target(target_p)} 的准时率。暂推荐 {ch['label_zh']}（准时率 {_pct(m['on_time_probability'])}，"
                   f"P90 {m['p90']:.1f} 天，每{uzh} {_usd_zh(m['cost_per_unit'])}），需与客户重新商定时效目标或备货提前期。")
     curve = {float(k): v for k, v in ch["transit"].get("on_time_at", {}).items()}
     later = sorted(t for t, p in curve.items() if t > T and p >= target_p)
@@ -72,9 +78,9 @@ def rationale(lane: dict, options: list[dict], rec: dict, target_p: float, unit:
             en.append(f"{o['label_en']} is dominated by {', '.join(doms)} (no better on cost, P90 or risk).")
             zh.append(f"{o['label_zh']}在成本、P90 时效和风险上均不优于{'、'.join(doms_zh)}，属被占优方案。")
     for x in lane.get("excluded", []):
-        what = x.get("mode") or x.get("regime")
-        en.append(f"Not offered: {what} - {x['reason_en']}.")
-        zh.append(f"未纳入：{what}——{x['reason_zh']}。")
+        en_l, zh_l = MODE_LABELS.get(x.get("mode"), None) or REGIME_LABELS.get(x.get("regime"), (x.get("regime"), x.get("regime")))
+        en.append(f"Not offered: {en_l} - {x['reason_en']}.")
+        zh.append(f"未纳入：{zh_l}——{x['reason_zh']}。")
     key = [f for f in ch["flags"] if f["severity"] in ("medium", "high", "block")]
     if key:
         en.append("Conditions to manage: " + " ".join(f"[{f['id']}] {f['en']}" for f in key))

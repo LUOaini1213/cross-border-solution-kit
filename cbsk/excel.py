@@ -10,6 +10,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
 from .calc import Calc, RateBook
+from .flows.common import MODE_LABELS, REGIME_LABELS
 from .plan import kpis
 
 HEAD = Font(bold=True)
@@ -177,7 +178,8 @@ def write_workbook(results: dict, calcs: dict[str, Calc], ratebook: RateBook, pa
                          "Y" if o["pareto"] else "", "Y" if o["id"] == lane["recommendation"]["chosen"] else "",
                          ", ".join(o["dominated_by"])])
         for x in lane["excluded"]:
-            opts.append([lane["id"], x.get("mode") or x.get("regime"), "not offered: " + x["reason_en"], x["reason_zh"]])
+            en_l, zh_l = MODE_LABELS.get(x.get("mode"), None) or REGIME_LABELS.get(x.get("regime"), (x.get("regime"),) * 2)
+            opts.append([lane["id"], f"not offered: {en_l}", x["reason_en"], f"未纳入：{zh_l}——{x['reason_zh']}"])
     _widths(opts, {"A": 8, "B": 34, "C": 50, "D": 40, "E": 16, "F": 8, "G": 8, "H": 12, "I": 8, "J": 8, "K": 12, "L": 40})
 
     # ---- Compliance

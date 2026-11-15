@@ -158,6 +158,15 @@ def regulatory_md(statements: dict, sources: dict, log: dict | None) -> str:
           "(`SG-ATA-SCOPE`, `SG-ATA-NO-SAMPLES`).",
           "- **Thailand's low-value rule.** The THB 1,500 duty exemption no longer applies: Customs Notification 219/2568 limits the "
           "exemption to items worth up to 1 baht from 1 January 2026 (`TH-DUTY-1BAHT`).", "",
+          "## Changes made in the second pass", "",
+          "- `SG-TIS-SECURITY`: the security page distinguishes selected and non-selected goods. The selected-goods list "
+          "(Singapore Customs PDF) was read and does not include the template's equipment, so the 30% share for a GST-registered "
+          "entity stands; the list was added as a source.",
+          "- `PH-DEMINIMIS`: a clause on excise for de minimis tobacco and alcohol came from an older Department of Finance release "
+          "about the first implementing order; it was removed because the current order could not be read.",
+          "- `FTA-RCEP-B2B`: the evidence phrase sat across a hyphenated line break in the implementing-guidelines PDF, so the "
+          "automated search missed it; the check now points to the heading of Article 3.19 in the agreement text.",
+          "- Thai Customs Notification 219/2568 was downloaded again (identical SHA-256) and its rendered page re-read.", "",
           "## Statements", "",
           "| ID | Jurisdiction | Status | Statement | Sources | Re-check | Note |", "|---|---|---|---|---|---|---|"]
     entries = (log or {}).get("statements", {})

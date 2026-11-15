@@ -5,6 +5,10 @@ from __future__ import annotations
 from .reference import Reference
 
 SEVERITIES = ("info", "low", "medium", "high", "block")
+COUNTRY_EN = {"SG": "Singapore", "HK": "Hong Kong", "MY": "Malaysia", "CN": "China", "JP": "Japan", "US": "the United States"}
+COUNTRY_ZH = {"SG": "新加坡", "HK": "香港", "MY": "马来西亚", "CN": "中国", "JP": "日本", "US": "美国"}
+PURPOSE_EN = {"repair_in_sg": "repair", "repair_abroad": "repair", "commercial_samples": "commercial samples",
+              "exhibition": "exhibition", "professional_equipment": "professional equipment"}
 
 
 def flag(fid: str, severity: str, en: str, zh: str, mitigation_en: str = "", mitigation_zh: str = "",
@@ -74,8 +78,8 @@ def fta_flags(ref: Reference, fta_rows: list[dict], third_party: bool, invoicing
                         ["FTA-ACFTA-ORIGIN", "FTA-RCEP-PSR"]))
     if third_party:
         out.append(flag("THIRD-COUNTRY-INVOICE", "medium",
-                        f"Goods ship China to Malaysia but are invoiced by an entity in {invoicing_country}: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
-                        f"货物由中国直运马来西亚、由 {invoicing_country} 主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。",
+                        f"Goods ship China to Malaysia but are invoiced by an entity in {COUNTRY_EN.get(invoicing_country, invoicing_country)}: ACFTA Form E must show the third-party invoice number in Box 10 with that invoice attached (exporter and consignee in Parties); under RCEP tick Box 17 and name the invoicing company in Box 14. Customs value follows the sale for export to Malaysia (which sale applies in a chain was not verified).",
+                        f"货物由中国直运马来西亚、由{COUNTRY_ZH.get(invoicing_country, invoicing_country)}主体开票：ACFTA Form E 第 10 栏须填第三方发票号并随附该发票（出口商与收货人须在成员方境内）；RCEP 证书须勾选第 17 栏并在第 14 栏填写开票公司。完税价格以向马来西亚出口的销售为准（多环节销售中适用哪一环节未经核实）。",
                         "Align the three documents (supplier invoice, third-party invoice, Form E) before departure; keep the contract chain on file.",
                         "离港前核对供应商发票、第三方发票与 Form E 三者一致；留存完整合同链。",
                         ["FTA-ACFTA-3PI", "FTA-RCEP-3PI", "MY-VALUATION-CIF"]))
@@ -94,7 +98,7 @@ def temporary_regimes(ref: Reference, purpose: str, origin: str, dest: str) -> d
         out["ata_carnet"] = {
             "available": ok,
             "reason_en": ("Singapore accepts foreign ATA Carnets for this purpose" if ok else
-                          f"Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; '{purpose}' is not one of them"),
+                          f"Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; {PURPOSE_EN.get(purpose, purpose)} is not one of them"),
             "reason_zh": ("新加坡接受外国 ATA 单证册用于该用途" if ok else
                           "新加坡仅接受外国单证册用于展览、专业设备和科学设备，该用途不在其列"),
             "statements": ["SG-ATA-SCOPE", "SG-ATA-SAME-CONDITION", "SG-ATA-PERIOD"],
@@ -133,16 +137,16 @@ def temporary_flags(ref: Reference, lane: dict, regimes: dict) -> list[dict]:
                         statements=regimes["ata_carnet"]["statements"] + ["SG-ATA-NO-SAMPLES"]))
     if purpose == "repair_abroad":
         out.append(flag("DEST-REPAIR-REGIME", "medium",
-                        f"Temporary admission for repair at the destination ({d}) was not assessed; duty or tax on arrival may apply unless a relief is used.",
-                        f"目的地（{d}）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。",
+                        f"Temporary admission for repair at the destination ({COUNTRY_EN.get(d, d)}) was not assessed; duty or tax on arrival may apply unless a relief is used.",
+                        f"目的地（{COUNTRY_ZH.get(d, d)}）对维修类临时进口的处理未作评估；如不适用减免，入境时可能产生关税或税费。",
                         "Ask the repair centre's customs broker for the inward-processing / re-export relief before the first loop.",
                         "首次周转前，请维修中心的报关行确认进境加工或复出口减免安排。", [], verified=False))
     if purpose == "repair_in_sg" and o != "SG":
         out.append(flag("ORIGIN-REIMPORT-REGIME", "medium",
-                        f"Re-import into {o} after repair (duty/tax relief on return) was not assessed.",
-                        f"维修后复进口 {o} 的关税/税费减免未作评估。",
-                        f"Confirm {o}'s temporary-export-for-repair procedure with the customer's broker.",
-                        f"与客户报关行确认 {o} 的出境维修临时出口手续。", [], verified=False))
+                        f"Re-import into {COUNTRY_EN.get(o, o)} after repair (duty/tax relief on return) was not assessed.",
+                        f"维修后复进口{COUNTRY_ZH.get(o, o)}的关税/税费减免未作评估。",
+                        f"Confirm the temporary-export-for-repair procedure of {COUNTRY_EN.get(o, o)} with the customer's broker.",
+                        f"与客户报关行确认{COUNTRY_ZH.get(o, o)}的出境维修临时出口手续。", [], verified=False))
     if purpose in ("exhibition", "professional_equipment"):
         out.append(flag("TA-CONDITION", "low",
                         "Goods must leave Singapore in the same condition within the permitted period (6 months for TIS and ATA); selling or leaving them behind triggers GST.",

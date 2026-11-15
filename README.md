@@ -97,7 +97,8 @@ REAL 161, ASSUMPTION 82, ILLUSTRATIVE 95, SYNTHETIC 3
 * **REAL**: World Bank LPI 2.0 container and air-cargo dwell times (2024; CC BY 4.0), airport coordinates
   (OurAirports, public domain), sea distances computed with `searoute`, Malaysian tariff lines (customs HS
   Explorer), and official regulatory parameters; index anchors (Drewry World Container Index and Intra-Asia
-  Container Index of 12 Nov 2026, Drewry Airfreight Price Index for October 2026, Freightos FBX page value).
+  Container Index of 12 Nov 2026, Drewry Airfreight Price Index for October 2026, Freightos FBX page value; the
+  SCFI public page renders its values by script and was not captured).
 * **ASSUMPTION**: distribution shapes, speeds, handling times, hold probabilities, FX reference rates, risk
   weights, and placeholders for unverified tax rates (Thai and Philippine MFN rates, Indonesian bulk MFN).
 * **ILLUSTRATIVE**: freight, handling, brokerage, VAS and fee rates.

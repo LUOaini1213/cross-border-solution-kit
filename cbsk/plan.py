@@ -87,6 +87,7 @@ def kpis(flow: str, lane: dict, summary: dict, target_p: float) -> list[dict]:
     T = lane["target_transit_days"]
     chosen = next(o for o in lane["options"] if o["id"] == summary["option"])
     units = {"kit": "kit", "move": "move", "parcel": "parcel"}.get(lane["unit"], lane["unit"])
+    units_zh = {"kit": "套", "move": "次往返", "parcel": "个包裹"}.get(lane["unit"], "件")
     divisor = chosen["quantities"].get("units_per_year") or chosen["quantities"].get("moves_per_year") \
         or chosen["quantities"].get("parcels_per_year")
     p90 = round(summary["p90"], 1)
@@ -99,7 +100,7 @@ def kpis(flow: str, lane: dict, summary: dict, target_p: float) -> list[dict]:
              "trigger_zh": "连续两个月低于目标：增加缓冲库存或将部分货量转至下一个帕累托方案"},
             {"en": "Door-to-door P90 (days)", "zh": "门到门 P90 时效（天）", "target": p90, "better": "lower",
              "trigger_en": "P90 above target by 3 days: review port dwell and transshipment", "trigger_zh": "P90 超出目标 3 天：复核港口滞留与中转"},
-            {"en": f"Logistics cost per {units} (USD, quote basis)", "zh": f"每{units}物流成本（美元，报价口径）",
+            {"en": f"Logistics cost per {units} (USD, quote basis)", "zh": f"每{units_zh}物流成本（美元，报价口径）",
              "target": round(summary["annual_quote"] / divisor, 2), "better": "lower",
              "trigger_en": "Above target by 5%: check container fill and surcharges", "trigger_zh": "超出目标 5%：检查装箱率与附加费"},
             {"en": "Import clearance, median days", "zh": "进口清关中位天数", "target": round(clr, 1) if clr else 2.0, "better": "lower",

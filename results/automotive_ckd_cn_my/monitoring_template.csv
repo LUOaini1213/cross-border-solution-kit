@@ -1,13 +1,13 @@
 lane,kpi,kpi_zh,target,better,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec,trigger
 A1,Shipments delivered within 38 days (share),38 天内送达的票数占比,0.9,higher,,,,,,,,,,,,,Two months below target: add buffer stock or move part of the volume to the next Pareto option
 A1,Door-to-door P90 (days),门到门 P90 时效（天）,35.2,lower,,,,,,,,,,,,,P90 above target by 3 days: review port dwell and transshipment
-A1,"Logistics cost per kit (USD, quote basis)",每kit物流成本（美元，报价口径）,121.92,lower,,,,,,,,,,,,,Above target by 5%: check container fill and surcharges
+A1,"Logistics cost per kit (USD, quote basis)",每套物流成本（美元，报价口径）,121.92,lower,,,,,,,,,,,,,Above target by 5%: check container fill and surcharges
 A1,"Import clearance, median days",进口清关中位天数,3.5,lower,,,,,,,,,,,,,Above target: review document quality with the broker
 A1,Form E accepted first time (share),Form E 一次通过率,0.98,higher,,,,,,,,,,,,,Below target: audit supplier origin data
 A1,Damage or shortage incidents per 100 shipments,每百票破损或短少事件数,1.0,lower,,,,,,,,,,,,,Above target: review packing and seals
 A2,Shipments delivered within 38 days (share),38 天内送达的票数占比,0.9,higher,,,,,,,,,,,,,Two months below target: add buffer stock or move part of the volume to the next Pareto option
 A2,Door-to-door P90 (days),门到门 P90 时效（天）,36.0,lower,,,,,,,,,,,,,P90 above target by 3 days: review port dwell and transshipment
-A2,"Logistics cost per kit (USD, quote basis)",每kit物流成本（美元，报价口径）,58.61,lower,,,,,,,,,,,,,Above target by 5%: check container fill and surcharges
+A2,"Logistics cost per kit (USD, quote basis)",每套物流成本（美元，报价口径）,58.61,lower,,,,,,,,,,,,,Above target by 5%: check container fill and surcharges
 A2,"Import clearance, median days",进口清关中位天数,3.5,lower,,,,,,,,,,,,,Above target: review document quality with the broker
 A2,Form E accepted first time (share),Form E 一次通过率,0.98,higher,,,,,,,,,,,,,Below target: audit supplier origin data
 A2,Damage or shortage incidents per 100 shipments,每百票破损或短少事件数,1.0,lower,,,,,,,,,,,,,Above target: review packing and seals

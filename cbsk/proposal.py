@@ -1,6 +1,7 @@
 """Bilingual solution proposal (Markdown) generated from a template's results."""
 from __future__ import annotations
 
+from .io import REFERENCE, load_yaml
 from .plan import ROLES, kpis, plan
 
 SEV_ZH = {"info": "提示", "low": "低", "medium": "中", "high": "高", "block": "阻断"}
@@ -352,17 +353,21 @@ def render(res: dict, lang: str, statements: dict, sources: dict) -> str:
     counts: dict[str, int] = {}
     for a in res["assumptions"]:
         counts[a["label"]] = counts.get(a["label"], 0) + 1
+    anchors = load_yaml(REFERENCE / "rates.yaml")["anchors"]
+    iaci, air = anchors["drewry_iaci_composite"], anchors["drewry_air_global"]
     if zh:
         L.append("报价工作簿“Assumptions”表列出本模板使用的全部费率与参数，按 REAL（官方或公开数据）、ASSUMPTION（建模假设或未核实占位值）、"
                  "ILLUSTRATIVE（示意费率）、SYNTHETIC（虚构询价数据）分类：" + "，".join(f"{k} {v} 项" for k, v in sorted(counts.items())) + "。")
-        L.append("港口与机场滞留时间来自世界银行 LPI 2.0（2024 年数据，CC BY 4.0）；运价量级参照 Drewry 亚洲区域内集装箱指数（2026-11-12：每 40 尺 1,440 美元）及 Drewry 空运价格指数（2026 年 10 月：每公斤 4.12 美元）。完整来源表见 docs/data_provenance.md。")
+        L.append(f"港口与机场滞留时间来自世界银行 LPI 2.0（2024 年数据，CC BY 4.0）；运价量级参照 Drewry 亚洲区域内集装箱指数"
+                 f"（{iaci['date']}：每 40 尺 {iaci['value']:,} 美元）及 Drewry 空运价格指数（{air['date']} 发布：每公斤 {air['value']} 美元）。"
+                 "完整来源表见 docs/data_provenance.md。")
     else:
         L.append("The workbook's Assumptions sheet lists every rate and parameter used by this template, labelled REAL (official or public data), "
                  "ASSUMPTION (modelling choice or unverified placeholder), ILLUSTRATIVE (example rate) or SYNTHETIC (fictional RFQ data): "
                  + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())) + ".")
-        L.append("Port and airport dwell times come from the World Bank LPI 2.0 (2024, CC BY 4.0); rate levels are anchored to the Drewry "
-                 "Intra-Asia Container Index (12 Nov 2026: USD 1,440 per 40ft) and the Drewry Airfreight Price Index (October 2026: "
-                 "USD 4.12/kg). The full source table is in docs/data_provenance.md.")
+        L.append(f"Port and airport dwell times come from the World Bank LPI 2.0 (2024, CC BY 4.0); rate levels are anchored to the Drewry "
+                 f"Intra-Asia Container Index ({iaci['date']}: USD {iaci['value']:,} per 40ft) and the Drewry Airfreight Price Index "
+                 f"(published {air['date']}: USD {air['value']}/kg). The full source table is in docs/data_provenance.md.")
     L.append("")
     # 9 statements
     L.append("## 9. 引用的法规表述" if zh else "## 9. Regulatory statements relied on")

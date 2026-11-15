@@ -50,12 +50,12 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean FCL (20ft) + Temporary Import Scheme | USD 30,139 | 22.6 | 31.4 | 0.1% | 65 | dominated |
 
 - Recommended: Air freight + Temporary Import Scheme at USD 20,801 per move landed, P90 4.8 days, 100.0% on time against the 12-day target, risk score 57/100.
-- It meets the 95.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 95% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 10-day target the same option would be on time 99.3% of the time.
 - Alternative on the Pareto front: Air freight + ATA Carnet - 25% more per move, same P90 (4.7 days), risk 47; on time 100.0%.
 - Ocean FCL (20ft) + ATA Carnet is dominated by Air freight + ATA Carnet (no better on cost, P90 or risk).
 - Ocean FCL (20ft) + Temporary Import Scheme is dominated by Air freight + ATA Carnet, Air freight + Temporary Import Scheme (no better on cost, P90 or risk).
-- Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 9031.41) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 9031.41) [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into JP needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.
+- Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 9031.41) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 9031.41) [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into Japan needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.
 
 ### B2 · Field-service metrology kit, San Jose to a Singapore fab for an installation and back
 
@@ -66,7 +66,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean LCL + ATA Carnet | USD 9,458 | 43.5 | 51.9 | 0.0% | 62 | dominated |
 | Ocean LCL + Temporary Import Scheme | USD 9,511 | 43.6 | 51.9 | 0.0% | 72 | dominated |
 
-- No option reaches 95.0% on time within 7 days. Recommended for now: Air freight + ATA Carnet (94.9% on time, P90 5.3 days, USD 7,132 per move); the target or the lead time needs to be renegotiated.
+- No option reaches 95% on time within 7 days. Recommended for now: Air freight + ATA Carnet (94.9% on time, P90 5.3 days, USD 7,132 per move); the target or the lead time needs to be renegotiated.
 - Planning 8 days instead of 7 lifts this option to 96.4% on time.
 - Air freight + Temporary Import Scheme is dominated by Air freight + ATA Carnet (no better on cost, P90 or risk).
 - Ocean LCL + ATA Carnet is dominated by Air freight + ATA Carnet, Air freight + Temporary Import Scheme (no better on cost, P90 or risk).
@@ -81,11 +81,11 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Ocean LCL + temporary export for repair | USD 6,101 | 75.4 | 91.1 | 0.0% | 62 | dominated |
 
 - Recommended: Air freight + temporary export for repair at USD 4,967 per move landed, P90 31.4 days, 96.9% on time against the 35-day target, risk score 44/100.
-- It meets the 95.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 95% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 28-day target the same option would be on time 70.9% of the time.
 - Ocean LCL + temporary export for repair is dominated by Air freight + temporary export for repair (no better on cost, P90 or risk).
-- Not offered: ata_carnet - Repair is not an ATA purpose and goods must return in the same condition.
-- Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8486.90) [DEST-REPAIR-REGIME] Temporary admission for repair at the destination (JP) was not assessed; duty or tax on arrival may apply unless a relief is used.
+- Not offered: ATA Carnet - Repair is not an ATA purpose and goods must return in the same condition.
+- Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8486.90) [DEST-REPAIR-REGIME] Temporary admission for repair at the destination (Japan) was not assessed; duty or tax on arrival may apply unless a relief is used.
 
 ### B4 · Customer spares, Penang to the Singapore repair hub and back
 
@@ -95,11 +95,11 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Air freight + Temporary Import Scheme | USD 3,654 | 24.0 | 29.5 | 91.8% | 64 | Pareto |
 
 - Recommended: Cross-border road + Temporary Import Scheme at USD 3,695 per move landed, P90 28.1 days, 96.5% on time against the 30-day target, risk score 59/100.
-- It meets the 95.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
+- It meets the 95% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.
 - Sensitivity: with a 24-day target the same option would be on time 60.5% of the time.
 - Alternative on the Pareto front: Air freight + Temporary Import Scheme - 1% less per move, P90 29.5 days (+1.4), risk 64; on time 91.8% (below target).
-- Not offered: ata_carnet - Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them.
-- Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8414.10) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 8414.10) [ORIGIN-REIMPORT-REGIME] Re-import into MY after repair (duty/tax relief on return) was not assessed. [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into MY needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.
+- Not offered: ATA Carnet - Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them.
+- Conditions to manage: [SG-STRATEGIC-SCREEN] Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8414.10) [ORIGIN-EXPORT-CONTROL] Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 8414.10) [ORIGIN-REIMPORT-REGIME] Re-import into Malaysia after repair (duty/tax relief on return) was not assessed. [TIS-ORIGIN-SIDE] TIS covers only the Singapore side; the return into Malaysia needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it.
 
 ## 4. Cost build-up of the recommended options (annual)
 
@@ -127,7 +127,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Transit insurance, both directions | 2,244 | 2,244.00 | owner | yes |
 | TIS security cost (guarantee on the suspended GST) | 87 | 86.65 | owner | yes |
 | TIS inward and outward permits | 180 | 180.00 | owner | yes |
-| Temporary export and re-import formalities in JP (regime not verified) | 150 | 150.00 | owner | yes |
+| Temporary export and re-import formalities in Japan (regime not verified) | 150 | 150.00 | owner | yes |
 | Capital tied up in transit | 3,660 | 3,659.73 | owner | no |
 | **Quotation total** | 17,141 | 17,141.25 |  |  |
 | **Total landed cost** | 20,801 | 20,800.98 |  |  |
@@ -205,7 +205,7 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | Transit insurance, both directions | 1,901 | 79.20 | owner | yes |
 | TIS security cost (guarantee on the suspended GST) | 74 | 3.10 | owner | yes |
 | TIS inward and outward permits | 4,320 | 180.00 | owner | yes |
-| Temporary export and re-import formalities in MY (regime not verified) | 3,600 | 150.00 | owner | yes |
+| Temporary export and re-import formalities in Malaysia (regime not verified) | 3,600 | 150.00 | owner | yes |
 | Capital tied up in transit | 9,186 | 382.76 | owner | no |
 | **Quotation total** | 79,495 | 3,312.30 |  |  |
 | **Total landed cost** | 88,681 | 3,695.06 |  |  |
@@ -229,19 +229,19 @@ Cost is landed cost per unit (quotation + duties and taxes + inventory carrying)
 | B1 | medium | Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 9031.41) | Ask the equipment owner's trade-compliance team for the export classification and any licence exception before booking. | no |
 | B1 | low | Goods must leave Singapore in the same condition within the permitted period (6 months for TIS and ATA); selling or leaving them behind triggers GST. | Track re-export dates; file extensions before expiry. | yes |
 | B1 | low | TIS permits are filed through TradeNet by a Singapore declarant, and security must be lodged before import. | Appoint the declaring agent and lodge the guarantee two weeks before the move. | yes |
-| B1 | medium | TIS covers only the Singapore side; the return into JP needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it. | Confirm the JP export and re-import treatment with the owner's broker before the first move. | no |
+| B1 | medium | TIS covers only the Singapore side; the return into Japan needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it. | Confirm the export and re-import treatment in Japan with the owner's broker before the first move. | no |
 | B2 | high | Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 9031.80) | Classify each item against the Strategic Goods Control List (the 2026 Order applies from 1 Dec 2026); obtain the OEM's export classification and the origin country's licence; build 5 working days into the return plan. | yes |
 | B2 | medium | Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 9031.80) | Ask the equipment owner's trade-compliance team for the export classification and any licence exception before booking. | no |
 | B2 | low | Goods must leave Singapore in the same condition within the permitted period (6 months for TIS and ATA); selling or leaving them behind triggers GST. | Track re-export dates; file extensions before expiry. | yes |
 | B2 | low | The carnet's general list must match the goods exactly; partial shipments and changes need care at each border. | Check serial numbers against the general list before each crossing. | yes |
 | B3 | high | Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8486.90) | Classify each item against the Strategic Goods Control List (the 2026 Order applies from 1 Dec 2026); obtain the OEM's export classification and the origin country's licence; build 5 working days into the return plan. | yes |
 | B3 | info | ATA Carnet excluded: Repair is not an ATA purpose and goods must return in the same condition. | — | yes |
-| B3 | medium | Temporary admission for repair at the destination (JP) was not assessed; duty or tax on arrival may apply unless a relief is used. | Ask the repair centre's customs broker for the inward-processing / re-export relief before the first loop. | no |
+| B3 | medium | Temporary admission for repair at the destination (Japan) was not assessed; duty or tax on arrival may apply unless a relief is used. | Ask the repair centre's customs broker for the inward-processing / re-export relief before the first loop. | no |
 | B4 | high | Semiconductor manufacturing or test equipment and specially designed parts may be strategic goods in Singapore (control list category 3B). Each export or re-export of a listed item needs an XO/XP permit applied for at least five working days ahead, even under an ATA Carnet. (HS 8414.10) | Classify each item against the Strategic Goods Control List (the 2026 Order applies from 1 Dec 2026); obtain the OEM's export classification and the origin country's licence; build 5 working days into the return plan. | yes |
 | B4 | medium | Export controls of the origin country (for example on temporary exports of tools of trade or on returns after repair) were not assessed. (HS 8414.10) | Ask the equipment owner's trade-compliance team for the export classification and any licence exception before booking. | no |
-| B4 | info | ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; 'repair_in_sg' is not one of them. | — | yes |
-| B4 | medium | Re-import into MY after repair (duty/tax relief on return) was not assessed. | Confirm MY's temporary-export-for-repair procedure with the customer's broker. | no |
-| B4 | medium | TIS covers only the Singapore side; the return into MY needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it. | Confirm the MY export and re-import treatment with the owner's broker before the first move. | no |
+| B4 | info | ATA Carnet excluded: Singapore accepts foreign carnets only for exhibitions, professional equipment and scientific equipment; repair is not one of them. | — | yes |
+| B4 | medium | Re-import into Malaysia after repair (duty/tax relief on return) was not assessed. | Confirm the temporary-export-for-repair procedure of Malaysia with the customer's broker. | no |
+| B4 | medium | TIS covers only the Singapore side; the return into Malaysia needs that country's own temporary-export or goods-returned procedure, which was not verified. An ATA Carnet covers both ends where both countries accept it. | Confirm the export and re-import treatment in Malaysia with the owner's broker before the first move. | no |
 
 ## 6. Implementation plan
 
@@ -315,7 +315,7 @@ The quotation workbook's Monitoring sheet takes monthly actuals and computes the
 ## 8. Assumptions and data provenance
 
 The workbook's Assumptions sheet lists every rate and parameter used by this template, labelled REAL (official or public data), ASSUMPTION (modelling choice or unverified placeholder), ILLUSTRATIVE (example rate) or SYNTHETIC (fictional RFQ data): ASSUMPTION 1, ILLUSTRATIVE 48, REAL 2, SYNTHETIC 2.
-Port and airport dwell times come from the World Bank LPI 2.0 (2024, CC BY 4.0); rate levels are anchored to the Drewry Intra-Asia Container Index (12 Nov 2026: USD 1,440 per 40ft) and the Drewry Airfreight Price Index (October 2026: USD 4.12/kg). The full source table is in docs/data_provenance.md.
+Port and airport dwell times come from the World Bank LPI 2.0 (2024, CC BY 4.0); rate levels are anchored to the Drewry Intra-Asia Container Index (2026-11-12: USD 1,440 per 40ft) and the Drewry Airfreight Price Index (published 2026-10-30: USD 4.12/kg). The full source table is in docs/data_provenance.md.
 
 ## 9. Regulatory statements relied on
 
@@ -335,5 +335,5 @@ Each statement below was checked against the listed sources on 2026-11-15 (log: 
 | SG-SGCA-SCOPE | verified | The Strategic Goods (Control) Act, in force since 1 January 2003, regulates the export, transhipment, transit, intangible transfer and brokering of strategic goods and technology, with a catch-all for weapons-of-mass-destruction end use. | [sg_customs_sgc_overview](https://www.customs.gov.sg/permits-and-licences/trade-controls-and-prohibitions/strategic-goods-control/strategic-goods-control-overview/) |
 | SG-TIS-6M | verified | Under the TIS, goods can be temporarily imported for approved purposes for up to 6 months with GST and duty suspended. | [sg_customs_tis_overview](https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/temporary-import-export-scheme-overview/) |
 | SG-TIS-PAYMENT | verified | If TIS goods are sold, disposed of, transferred or not re-exported in time, a Customs In-Payment permit must be taken within 3 working days. | [sg_customs_tis_additional_import](https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/additional-requirements-for-import/) |
-| SG-TIS-SECURITY | verified | TIS users lodge security (banker's guarantee, finance company guarantee or insurance bond). For non-dutiable, non-selected goods it is 30% of the potential GST for a GST-registered entity and 50% otherwise (50%/100% for selected goods); TradeFIRST banding can reduce or waive it. | [sg_customs_tis_overview](https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/temporary-import-export-scheme-overview/), [sg_customs_tis_additional_import](https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/additional-requirements-for-import/), [sg_customs_security_amount](https://www.customs.gov.sg/doing-business/getting-started/security-lodgement/what-is-the-amount-of-security-required/) |
+| SG-TIS-SECURITY | verified | TIS users lodge security (banker's guarantee, finance company guarantee or insurance bond). For non-dutiable, non-selected goods it is 30% of the potential GST for a GST-registered entity and 50% otherwise (50%/100% for selected goods); TradeFIRST banding can reduce or waive it. The selected-goods list (leather handbags, some garments, precious stones and metals, jewellery, watches, art) does not include the template's equipment. | [sg_customs_tis_overview](https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/temporary-import-export-scheme-overview/), [sg_customs_tis_additional_import](https://www.customs.gov.sg/permits-and-licences/import-export-facilitation-schemes/temporary-import-export/additional-requirements-for-import/), [sg_customs_security_amount](https://www.customs.gov.sg/doing-business/getting-started/security-lodgement/what-is-the-amount-of-security-required/), [sg_customs_selected_goods](https://isomer-user-content.by.gov.sg/174/60a829ef-1aa8-4f19-8263-b4cda31e8826/selectedgoods.pdf) |
 

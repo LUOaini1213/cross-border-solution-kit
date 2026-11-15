@@ -1,0 +1,406 @@
+{
+  "run_date": "2026-11-15",
+  "statements": {
+    "FTA-ACFTA-3PI": {
+      "method": "pdf",
+      "source": "acfta_ocp",
+      "phrase": "the exporter and consignee must be located in the Parties",
+      "result": "found"
+    },
+    "FTA-ACFTA-DIRECT": {
+      "method": "pdf",
+      "source": "acfta_roo",
+      "phrase": "the transit entry is justified for geographical reason",
+      "result": "found"
+    },
+    "FTA-ACFTA-FORM-E": {
+      "method": "pdf",
+      "source": "acfta_ocp",
+      "phrase": "within one (1) year from the date of its issuance",
+      "result": "found"
+    },
+    "FTA-ACFTA-MC": {
+      "method": "pdf",
+      "source": "acfta_ocp",
+      "phrase": "may issue a Movement Certificate",
+      "result": "found"
+    },
+    "FTA-ACFTA-ORIGIN": {
+      "method": "pdf",
+      "source": "acfta_roo",
+      "phrase": "regional value content of not less",
+      "result": "found"
+    },
+    "FTA-RCEP-3PI": {
+      "method": "pdf",
+      "source": "rcep_co_notes",
+      "phrase": "the name and country of the company issuing the invoice should be provided in",
+      "result": "found"
+    },
+    "FTA-RCEP-B2B": {
+      "method": "pdf",
+      "source": "rcep_text",
+      "phrase": "Article 3.19: Back-to-Back Proof of Origin",
+      "result": "found"
+    },
+    "FTA-RCEP-DIRECT": {
+      "method": "pdf",
+      "source": "rcep_text",
+      "phrase": "remains under the control of the customs authorities",
+      "result": "found"
+    },
+    "FTA-RCEP-POO": {
+      "method": "pdf",
+      "source": "rcep_text",
+      "phrase": "remains valid for one year from the date on which it is issued",
+      "result": "found"
+    },
+    "FTA-RCEP-PSR": {
+      "method": "pdf",
+      "source": "rcep_text",
+      "phrase": "Parts and accessories of the motor vehicles",
+      "result": "found"
+    },
+    "ID-ABOVE-1500": {
+      "method": "manual",
+      "source": "id_pmk4_2025",
+      "phrase": "",
+      "result": "manual",
+      "note": "PMK 4/2025 Art. 29(5) (PIBK -> MFN) re-read; routing above USD 1,500 not confirmed."
+    },
+    "ID-CN-BAND": {
+      "method": "pdf",
+      "source": "id_pmk4_2025",
+      "phrase": "sebesar 7,5% (tujuh koma lima persen)",
+      "result": "found"
+    },
+    "ID-CN-DEMINIMIS": {
+      "method": "pdf",
+      "source": "id_pmk4_2025",
+      "phrase": "USD3.00 (tiga United States Dollar) per Penerima",
+      "result": "found"
+    },
+    "ID-IMPORT-VALUE": {
+      "method": "manual",
+      "source": "",
+      "phrase": "",
+      "result": "manual",
+      "note": "Statutory definition of import value not retrieved; kept as an assumption."
+    },
+    "ID-LICENSING": {
+      "method": "manual",
+      "source": "",
+      "phrase": "",
+      "result": "manual",
+      "note": "Not researched on an official source; kept as a caveat."
+    },
+    "ID-VAT-EFFECTIVE": {
+      "method": "pdf",
+      "source": "id_pmk131_2024",
+      "phrase": "11/12 (sebelas per dua belas) dari nilai impor",
+      "result": "found"
+    },
+    "INCO-DPU-INSURANCE": {
+      "method": "html",
+      "source": "icc_incoterms",
+      "phrase": "under DAP the seller does not unload the goods",
+      "result": "found"
+    },
+    "INCO-RULES": {
+      "method": "html",
+      "source": "trade_gov_incoterms",
+      "phrase": "there are seven for ANY mode(s) of transport and four for SEA",
+      "result": "found"
+    },
+    "MY-ACFTA-UPDATE": {
+      "method": "manual",
+      "source": "my_jkdm_ezhs",
+      "phrase": "",
+      "result": "manual",
+      "note": "ezHS ACFTA/RCEP tables still show 'being updated'; amendment product list not found on an official page."
+    },
+    "MY-AP-STEEL": {
+      "method": "html",
+      "source": "my_miti_ap_faq",
+      "phrase": "Import of Iron and Steel Products",
+      "result": "found"
+    },
+    "MY-AP-VEHICLES": {
+      "method": "html",
+      "source": "my_miti_ap_faq",
+      "phrase": "Completely Knocked-Down",
+      "result": "found"
+    },
+    "MY-CKD-CLASSIFICATION": {
+      "method": "manual",
+      "source": "my_pdk_2022",
+      "phrase": "",
+      "result": "manual",
+      "note": "Classification of the fictional kit is not something a source can confirm; CKD tariff lines re-read in ezHS and the 2022 order."
+    },
+    "MY-DEMINIMIS": {
+      "method": "pdf",
+      "source": "my_lvg_guide",
+      "phrase": "The de minimis does not apply to LVG imported by road or sea",
+      "result": "found"
+    },
+    "MY-EV-CKD": {
+      "method": "pdf",
+      "source": "my_budget2023_touchpoints",
+      "phrase": "Full import duty exemption on components for locally assembled EV",
+      "result": "found"
+    },
+    "MY-LVG": {
+      "method": "pdf",
+      "source": "my_lvg_guide",
+      "phrase": "The imposition of sales tax on LVG will be starting from 1 January 2024",
+      "result": "found"
+    },
+    "MY-LVG-NO-DOUBLE": {
+      "method": "pdf",
+      "source": "my_lvg_guide",
+      "phrase": "will not be charged Sales Tax on Imports",
+      "result": "found"
+    },
+    "MY-ST-IMPORT-BASE": {
+      "method": "pdf",
+      "source": "my_sales_tax_act",
+      "phrase": "the amount of customs duty, if any, paid or to be paid",
+      "result": "found"
+    },
+    "MY-ST-RATES-2025": {
+      "method": "html",
+      "source": "my_mysst_faq_2025",
+      "phrase": "the tax rate on the goods is subject to 10%",
+      "result": "found"
+    },
+    "MY-ST-SCHEDULE-C": {
+      "method": "html",
+      "source": "my_mysst_faq",
+      "phrase": "Registered Manufacturer – exemption on acquisition of raw materials, components, packaging",
+      "result": "found"
+    },
+    "MY-TARIFF-LINES": {
+      "method": "ezhs",
+      "source": "my_jkdm_ezhs",
+      "phrase": "PDK 2025 - PERINTAH DUTI KASTAM 2025",
+      "result": "found"
+    },
+    "MY-VALUATION-CIF": {
+      "method": "html",
+      "source": "my_jkdm_valuation",
+      "phrase": "the costs of transportation and insurance of",
+      "result": "found"
+    },
+    "PH-CAO": {
+      "method": "manual",
+      "source": "",
+      "phrase": "",
+      "result": "manual",
+      "note": "customs.gov.ph refused scripted requests (HTTP 403)."
+    },
+    "PH-DEMINIMIS": {
+      "method": "html",
+      "source": "ph_cmta",
+      "phrase": "No duties and taxes shall be collected on goods with an FOB or FCA value",
+      "result": "found"
+    },
+    "PH-MFN": {
+      "method": "manual",
+      "source": "",
+      "phrase": "",
+      "result": "manual",
+      "note": "Philippine tariff lines not retrieved; placeholders stay labelled."
+    },
+    "PH-VAT": {
+      "method": "pdf",
+      "source": "ph_bir_2550q",
+      "phrase": "twelve percent (12%) based on the total value",
+      "result": "found"
+    },
+    "SG-ATA-CONSUMABLES": {
+      "method": "html",
+      "source": "sg_customs_ata_carnet",
+      "phrase": "ATA Carnets cannot be used for consumables",
+      "result": "found"
+    },
+    "SG-ATA-ISSUER": {
+      "method": "html",
+      "source": "sg_customs_ata_local",
+      "phrase": "Singapore International Chamber of Commerce (SICC)",
+      "result": "found"
+    },
+    "SG-ATA-NO-SAMPLES": {
+      "method": "html",
+      "source": "sicc_ata",
+      "phrase": "Commercial samples and advertising film",
+      "result": "found"
+    },
+    "SG-ATA-PERIOD": {
+      "method": "html",
+      "source": "sg_customs_ata_foreign",
+      "phrase": "six months from the date of import",
+      "result": "found"
+    },
+    "SG-ATA-SAME-CONDITION": {
+      "method": "html",
+      "source": "sg_customs_ata_foreign",
+      "phrase": "Re-export the goods in the same condition",
+      "result": "found"
+    },
+    "SG-ATA-SCOPE": {
+      "method": "html",
+      "source": "sg_customs_ata_foreign",
+      "phrase": "scientific equipment used for testing, experiments or demonstrations",
+      "result": "found"
+    },
+    "SG-ATA-SICC-FEES": {
+      "method": "html",
+      "source": "sicc_ata",
+      "phrase": "These fees are subject to GST at the prevailing rate",
+      "result": "found"
+    },
+    "SG-ATA-XO": {
+      "method": "html",
+      "source": "sg_customs_ata_local",
+      "phrase": "Strategic goods require a Strategic Goods (Control) permit",
+      "result": "found"
+    },
+    "SG-DUTIABLE": {
+      "method": "html",
+      "source": "sg_customs_dutiable",
+      "phrase": "Petroleum products and biodiesel blends",
+      "result": "found"
+    },
+    "SG-GST-IMPORT-BASE": {
+      "method": "html",
+      "source": "sg_customs_gst",
+      "phrase": "if the goods were sold more than once before import",
+      "result": "found"
+    },
+    "SG-GST-RATE": {
+      "method": "html",
+      "source": "iras_gst_rates",
+      "phrase": "The current GST rate in Singapore is 9%",
+      "result": "found"
+    },
+    "SG-IMPORT-RELIEF": {
+      "method": "html",
+      "source": "iras_lvg_consumers",
+      "phrase": "The existing import GST relief remains unchanged",
+      "result": "found"
+    },
+    "SG-LVG-OVR": {
+      "method": "pdf",
+      "source": "iras_lvg_etax",
+      "phrase": "the registration regime on 1 Jan 2023",
+      "result": "found"
+    },
+    "SG-SGCA-3B001": {
+      "method": "pdf",
+      "source": "sg_sgco_2026",
+      "phrase": "Equipment for the manufacturing of semiconductor devices or materials",
+      "result": "found"
+    },
+    "SG-SGCA-PERMIT": {
+      "method": "html",
+      "source": "sg_customs_sgc_individual",
+      "phrase": "at least 5 working days",
+      "result": "found"
+    },
+    "SG-SGCA-SCOPE": {
+      "method": "html",
+      "source": "sg_customs_sgc_overview",
+      "phrase": "Strategic Goods (Control) Act (SGCA) on 1 January 2003",
+      "result": "found"
+    },
+    "SG-TEMPEXP-REPAIR": {
+      "method": "html",
+      "source": "sg_customs_reimport",
+      "phrase": "GST relief applies only to the original parts",
+      "result": "found"
+    },
+    "SG-TIS-6M": {
+      "method": "html",
+      "source": "sg_customs_tis_overview",
+      "phrase": "for up to 6 months, with GST and duty suspended",
+      "result": "found"
+    },
+    "SG-TIS-PAYMENT": {
+      "method": "html",
+      "source": "sg_customs_tis_additional_import",
+      "phrase": "within 3 working days of the sale, disposal, transfer or end of the temporary import period",
+      "result": "found"
+    },
+    "SG-TIS-PURPOSES": {
+      "method": "html",
+      "source": "sg_customs_tis_import_purposes",
+      "phrase": "For repair, modification, or treatment purposes",
+      "result": "found"
+    },
+    "SG-TIS-SECURITY": {
+      "method": "html",
+      "source": "sg_customs_security_amount",
+      "phrase": "of potential GST",
+      "result": "found"
+    },
+    "SVC-ASEAN-EXPRESS": {
+      "method": "manual",
+      "source": "rail_asean_express_2024",
+      "phrase": "",
+      "result": "manual",
+      "note": "No official timetable found; first run reported June-July 2024 by news media only."
+    },
+    "SVC-CLR-TH": {
+      "method": "manual",
+      "source": "rail_kpl_2026",
+      "phrase": "",
+      "result": "manual",
+      "note": "KPL page re-read: Vientiane South transshipment links the China-Laos Railway with Thailand's network; frequency not stated."
+    },
+    "SVC-ILSTC": {
+      "method": "manual",
+      "source": "rail_ilstc_2026",
+      "phrase": "",
+      "result": "manual",
+      "note": "Only state-affiliated media; no operator timetable."
+    },
+    "SVC-SG-MY-ROAD": {
+      "method": "html",
+      "source": "sg_customs_clearance_docs",
+      "phrase": "Woodlands or Tuas Checkpoint",
+      "result": "found"
+    },
+    "TH-DUTY-1BAHT": {
+      "method": "image",
+      "source": "th_customs_219_2568",
+      "phrase": "",
+      "result": "manual",
+      "note": "Re-rendered the Royal Gazette page image and re-read items 1-4 (revokes 191/2561; exemption for goods each priced <= 1 baht; price = customs value; in force 1 Jan 2026)."
+    },
+    "TH-MFN": {
+      "method": "manual",
+      "source": "",
+      "phrase": "",
+      "result": "manual",
+      "note": "Thai tariff lines not retrieved; placeholders stay labelled."
+    },
+    "TH-VAT": {
+      "method": "html",
+      "source": "th_rd_vat",
+      "phrase": "Currently, the rate is 7 percent",
+      "result": "found"
+    },
+    "TH-VAT-EXTENSION": {
+      "method": "manual",
+      "source": "",
+      "phrase": "",
+      "result": "manual",
+      "note": "Only secondary sources found; the Revenue Department page still states 'Currently, the rate is 7 percent'."
+    }
+  },
+  "found": 51,
+  "manual": 13,
+  "not_found": 0,
+  "errors": 0
+}

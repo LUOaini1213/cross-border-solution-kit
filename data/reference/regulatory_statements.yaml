@@ -92,10 +92,10 @@ statements:
   SG-TIS-SECURITY:
     jurisdiction: SG
     topic: temporary admission
-    en: "TIS users lodge security (banker's guarantee, finance company guarantee or insurance bond). For non-dutiable, non-selected goods it is 30% of the potential GST for a GST-registered entity and 50% otherwise (50%/100% for selected goods); TradeFIRST banding can reduce or waive it."
-    zh: "使用 TIS 须提交担保（银行保函、财务公司保函或保险保证）。非应税、非特定货物的担保额：已注册 GST 的企业为潜在 GST 的 30%，未注册为 50%（特定货物为 50%/100%）；TradeFIRST 评级可降低或豁免担保。"
+    en: "TIS users lodge security (banker's guarantee, finance company guarantee or insurance bond). For non-dutiable, non-selected goods it is 30% of the potential GST for a GST-registered entity and 50% otherwise (50%/100% for selected goods); TradeFIRST banding can reduce or waive it. The selected-goods list (leather handbags, some garments, precious stones and metals, jewellery, watches, art) does not include the template's equipment."
+    zh: "使用 TIS 须提交担保（银行保函、财务公司保函或保险保证）。非应税、非特定货物的担保额：已注册 GST 的企业为潜在 GST 的 30%，未注册为 50%（特定货物为 50%/100%）；TradeFIRST 评级可降低或豁免担保。特定货物清单（皮革手袋、部分服装、宝石及贵金属、首饰、手表、艺术品）不含本模板所涉设备。"
     status: verified
-    sources: [sg_customs_tis_overview, sg_customs_tis_additional_import, sg_customs_security_amount]
+    sources: [sg_customs_tis_overview, sg_customs_tis_additional_import, sg_customs_security_amount, sg_customs_selected_goods]
     check: {method: html, source: sg_customs_security_amount, phrase: "of potential GST"}
   SG-TIS-PAYMENT:
     jurisdiction: SG
@@ -362,7 +362,7 @@ statements:
     zh: "RCEP 允许中间成员方签发背对背原产地证明（第 3.19 条），其有效期不得超过原证明。"
     status: verified
     sources: [rcep_text, rcep_ig]
-    check: {method: pdf, source: rcep_ig, phrase: "back-to-back DO in accordance with Article 3.19"}
+    check: {method: pdf, source: rcep_text, phrase: "Article 3.19: Back-to-Back Proof of Origin"}
   # ============================ INDONESIA ============================
   ID-CN-DEMINIMIS:
     jurisdiction: ID
@@ -450,8 +450,8 @@ statements:
   PH-DEMINIMIS:
     jurisdiction: PH
     topic: low-value goods
-    en: "No duties and taxes are collected on goods with an FOB or FCA value of PHP 10,000 or below (CMTA s.423); the Secretary of Finance is to adjust the value every three years using the CPI, and de minimis tobacco and alcohol remain subject to excise. Whether an adjustment has been made was not verified."
-    zh: "FOB 或 FCA 价值不超过 10,000 菲律宾比索的货物不征收关税和税费（《海关现代化与关税法》第 423 条）；财政部长应每三年按 CPI 调整该限额，低值豁免下的烟酒仍须缴纳消费税。是否已作调整未经核实。"
+    en: "No duties and taxes are collected on goods with an FOB or FCA value of PHP 10,000 or below (CMTA s.423); the Secretary of Finance is to adjust the value every three years using the CPI. Whether an adjustment has been made was not verified."
+    zh: "FOB 或 FCA 价值不超过 10,000 菲律宾比索的货物不征收关税和税费（《海关现代化与关税法》第 423 条）；财政部长应每三年按 CPI 调整该限额。是否已作调整未经核实。"
     status: verified
     sources: [ph_cmta, ph_dof_deminimis]
     check: {method: html, source: ph_cmta, phrase: "No duties and taxes shall be collected on goods with an FOB or FCA value"}

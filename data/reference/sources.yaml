@@ -61,6 +61,11 @@ sources:
     url: https://www.customs.gov.sg/doing-business/getting-started/security-lodgement/what-is-the-amount-of-security-required/
     kind: official
     accessed: 2026-11-15
+  sg_customs_selected_goods:
+    title: "Selected goods list for security computation (Singapore Customs PDF linked from the security page)"
+    url: https://isomer-user-content.by.gov.sg/174/60a829ef-1aa8-4f19-8263-b4cda31e8826/selectedgoods.pdf
+    kind: official
+    accessed: 2026-11-15
   sg_customs_reimport:
     title: "Re-importing of Goods Sent Overseas for Activities (Singapore Customs; last updated 13 May 2026)"
     url: https://www.customs.gov.sg/doing-business/import-operations/import-procedures/re-importing-of-goods-sent-overseas-for-activities/

@@ -3006,14 +3006,14 @@
       "rationale": {
         "en": [
           "Recommended: Ocean bulk + local fulfilment at USD 4.13 per parcel landed, P90 3.0 days, 100.0% on time against the 7-day target, risk score 29/100.",
-          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.",
           "Air parcel, DDP is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).",
           "Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [BULK-IOR] Bulk import needs a local importer of record (own entity or appointed importer) with the destination tax registrations; local stock adds forecast and obsolescence risk."
         ],
         "zh": [
           "推荐方案：海运备货 + 本地履约。每个包裹落地成本 4.13 美元，P90 时效 3.0 天，7 天内送达概率 100.0%，风险评分 29/100。",
-          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 90% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 6 天，该方案准时率为 100.0%。",
           "空运小包（完税交付）在成本、P90 时效和风险上均不优于海运备货 + 本地履约，属被占优方案。",
           "需重点管控：【RADIO-TYPE-APPROVAL】无线音频设备在目的国可能须取得无线电型号核准或注册，未经核实。（HS 8518.30.2000） 【BULK-IOR】批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
@@ -5306,7 +5306,7 @@
       "rationale": {
         "en": [
           "Recommended: Ocean bulk + local fulfilment at USD 7.14 per parcel landed, P90 4.5 days, 100.0% on time against the 7-day target, risk score 39/100.",
-          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.",
           "Alternative on the Pareto front: Air parcel, DDP - 121% more per parcel, P90 12.1 days (+7.5), risk 31; on time 48.8% (below target).",
           "Sea-air via Singapore is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).",
@@ -5314,7 +5314,7 @@
         ],
         "zh": [
           "推荐方案：海运备货 + 本地履约。每个包裹落地成本 7.14 美元，P90 时效 4.5 天，7 天内送达概率 100.0%，风险评分 39/100。",
-          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 90% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 6 天，该方案准时率为 100.0%。",
           "帕累托前沿上的备选：空运小包（完税交付）——每个包裹成本高 121%，P90 12.1 天（多 7.5 天），风险 31；准时率 48.8%（未达目标）。",
           "经新加坡海空联运在成本、P90 时效和风险上均不优于海运备货 + 本地履约，属被占优方案。",
@@ -7469,7 +7469,7 @@
       "rationale": {
         "en": [
           "Recommended: Ocean bulk + local fulfilment at USD 7.08 per parcel landed, P90 3.0 days, 100.0% on time against the 7-day target, risk score 29/100.",
-          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.",
           "Air parcel, DDP is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).",
           "Cross-border rail is dominated by Ocean bulk + local fulfilment (no better on cost, P90 or risk).",
@@ -7477,7 +7477,7 @@
         ],
         "zh": [
           "推荐方案：海运备货 + 本地履约。每个包裹落地成本 7.08 美元，P90 时效 3.0 天，7 天内送达概率 100.0%，风险评分 29/100。",
-          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 90% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 6 天，该方案准时率为 100.0%。",
           "空运小包（完税交付）在成本、P90 时效和风险上均不优于海运备货 + 本地履约，属被占优方案。",
           "跨境铁路在成本、P90 时效和风险上均不优于海运备货 + 本地履约，属被占优方案。",
@@ -8939,18 +8939,18 @@
       "rationale": {
         "en": [
           "Recommended: Ocean bulk + local fulfilment at USD 8.15 per parcel landed, P90 4.5 days, 100.0% on time against the 7-day target, risk score 29/100.",
-          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 6-day target the same option would be on time 100.0% of the time.",
           "Alternative on the Pareto front: Air parcel, DDP - 45% less per parcel, P90 12.3 days (+7.8), risk 36; on time 54.1% (below target).",
-          "Not offered: sea_air - Singapore hub is off-route: via-hub distance is 4.2x the direct distance (limit 1.6x).",
+          "Not offered: Sea-air via Singapore - Singapore hub is off-route: via-hub distance is 4.2x the direct distance (limit 1.6x).",
           "Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [BULK-IOR] Bulk import needs a local importer of record (own entity or appointed importer) with the destination tax registrations; local stock adds forecast and obsolescence risk."
         ],
         "zh": [
           "推荐方案：海运备货 + 本地履约。每个包裹落地成本 8.15 美元，P90 时效 4.5 天，7 天内送达概率 100.0%，风险评分 29/100。",
-          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 90% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 6 天，该方案准时率为 100.0%。",
           "帕累托前沿上的备选：空运小包（完税交付）——每个包裹成本低 45%，P90 12.3 天（多 7.8 天），风险 36；准时率 54.1%（未达目标）。",
-          "未纳入：sea_air——新加坡中转绕行过远：经中转距离为直达的 4.2 倍（上限 1.6 倍）。",
+          "未纳入：经新加坡海空联运——新加坡中转绕行过远：经中转距离为直达的 4.2 倍（上限 1.6 倍）。",
           "需重点管控：【RADIO-TYPE-APPROVAL】无线音频设备在目的国可能须取得无线电型号核准或注册，未经核实。（HS 8518.30.2000） 【BULK-IOR】批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
         ]
       },
@@ -10367,12 +10367,12 @@
       },
       "rationale": {
         "en": [
-          "No option reaches 90.0% on time within 5 days. Recommended for now: Cross-border road (61.7% on time, P90 6.7 days, USD 6.14 per parcel); the target or the lead time needs to be renegotiated.",
+          "No option reaches 90% on time within 5 days. Recommended for now: Cross-border road (61.7% on time, P90 6.7 days, USD 6.14 per parcel); the target or the lead time needs to be renegotiated.",
           "Air parcel, DDP is dominated by Cross-border road (no better on cost, P90 or risk).",
           "Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [MY-LVG-REGISTRATION] Malaysian LVG sales of about RM 17,841,600 a year exceed the RM 500,000 registration threshold: the seller must register, charge 10% sales tax at checkout and print the LVG registration number on parcels and waybills."
         ],
         "zh": [
-          "没有方案能在 5 天内达到 90.0% 的准时率。暂推荐 跨境公路（准时率 61.7%，P90 6.7 天，每个包裹 6.14 美元），需与客户重新商定时效目标或备货提前期。",
+          "没有方案能在 5 天内达到 90% 的准时率。暂推荐 跨境公路（准时率 61.7%，P90 6.7 天，每个包裹 6.14 美元），需与客户重新商定时效目标或备货提前期。",
           "空运小包（完税交付）在成本、P90 时效和风险上均不优于跨境公路，属被占优方案。",
           "需重点管控：【RADIO-TYPE-APPROVAL】无线音频设备在目的国可能须取得无线电型号核准或注册，未经核实。（HS 8518.30.2000） 【MY-LVG-REGISTRATION】马来西亚低价值货物年销售额约 17,841,600 林吉特，超过 500,000 林吉特注册门槛：卖家须注册、在结账时收取 10% 销售税，并在包裹和运单上标注 LVG 注册号。"
         ]
@@ -11879,14 +11879,14 @@
       "rationale": {
         "en": [
           "Recommended: Ocean bulk + local fulfilment at USD 7.53 per parcel landed, P90 4.5 days, 96.9% on time against the 5-day target, risk score 39/100.",
-          "It meets the 90.0% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
+          "It meets the 90% on-time requirement and has the best weighted score of cost, P90 time and risk among the options that do.",
           "Sensitivity: with a 4-day target the same option would be on time 78.5% of the time.",
           "Alternative on the Pareto front: Air parcel, DDP - 103% more per parcel, P90 12.0 days (+7.5), risk 31; on time 12.0% (below target).",
           "Conditions to manage: [RADIO-TYPE-APPROVAL] Wireless audio devices may need radio type approval or registration in the destination; not verified. (HS 8518.30.2000) [ID-BULK-LICENSING] Bulk imports of apparel, footwear, bags or electronics into Indonesia may need trade-ministry import approvals; not verified. (HS 4202.92.9000, 6109.10.2000, 8518.30.2000) [BULK-IOR] Bulk import needs a local importer of record (own entity or appointed importer) with the destination tax registrations; local stock adds forecast and obsolescence risk."
         ],
         "zh": [
           "推荐方案：海运备货 + 本地履约。每个包裹落地成本 7.53 美元，P90 时效 4.5 天，5 天内送达概率 96.9%，风险评分 39/100。",
-          "该方案满足 90.0% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
+          "该方案满足 90% 准时率要求，并在满足要求的方案中成本、P90 时效与风险的加权得分最优。",
           "敏感性：若时效目标收紧至 4 天，该方案准时率为 78.5%。",
           "帕累托前沿上的备选：空运小包（完税交付）——每个包裹成本高 103%，P90 12.0 天（多 7.5 天），风险 31；准时率 12.0%（未达目标）。",
           "需重点管控：【RADIO-TYPE-APPROVAL】无线音频设备在目的国可能须取得无线电型号核准或注册，未经核实。（HS 8518.30.2000） 【ID-BULK-LICENSING】以一般贸易方式向印尼批量进口服装、鞋类、箱包或电子产品可能需要贸易部进口许可，未经核实。（HS 4202.92.9000、6109.10.2000、8518.30.2000） 【BULK-IOR】批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
