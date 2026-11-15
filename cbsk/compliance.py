@@ -8,8 +8,10 @@ SEVERITIES = ("info", "low", "medium", "high", "block")
 
 
 def flag(fid: str, severity: str, en: str, zh: str, mitigation_en: str = "", mitigation_zh: str = "",
-         statements: list[str] | None = None, verified: bool = True, modes: list[str] | None = None,
+         statements: list[str] | None = None, verified: bool | None = None, modes: list[str] | None = None,
          options: list[str] | None = None) -> dict:
+    """A finding. `verified` is decided later from the cited statements (see finalize_flags) unless the caller
+    already knows the rule is unverified; flags without statements are operational (verified = None)."""
     if severity not in SEVERITIES:
         raise ValueError(severity)
     return {"id": fid, "severity": severity, "en": en, "zh": zh, "mitigation_en": mitigation_en,
@@ -199,6 +201,15 @@ def hold_flag_count(ref: Reference, flags: list[dict]) -> int:
     """Number of medium/high flags that make a customs hold more likely (drives the transit model)."""
     relevant = set(ref.get("compliance.hold_relevant_flags"))
     return sum(1 for f in flags if f["id"] in relevant and f["severity"] in ("medium", "high"))
+
+
+def finalize_flags(ref: Reference, flags: list[dict]) -> None:
+    """Set `verified`: True only if every cited statement is verified/corrected; None for operational flags."""
+    for f in flags:
+        if not f["statements"]:
+            f["verified"] = None if f["verified"] is None else False
+        elif f["verified"] is not False:
+            f["verified"] = statement_status(ref, f["statements"])
 
 
 def flags_for_option(flags: list[dict], mode: str, option_kind: str) -> list[dict]:

@@ -2920,7 +2920,7 @@
               "options": null,
               "severity": "medium",
               "statements": [],
-              "verified": true,
+              "verified": null,
               "zh": "批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
             }
           ],
@@ -5220,7 +5220,7 @@
               "options": null,
               "severity": "medium",
               "statements": [],
-              "verified": true,
+              "verified": null,
               "zh": "批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
             }
           ],
@@ -7383,7 +7383,7 @@
               "options": null,
               "severity": "medium",
               "statements": [],
-              "verified": true,
+              "verified": null,
               "zh": "批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
             }
           ],
@@ -7564,7 +7564,7 @@
             "PH-DEMINIMIS",
             "PH-CAO"
           ],
-          "verified": true,
+          "verified": false,
           "zh": "菲律宾对 FOB/FCA 不超过 10,000 比索的包裹免征关税和税费（CMTA 第 423 条）；该门槛是否已按 CPI 调整未经核实。"
         }
       ],
@@ -8141,7 +8141,7 @@
                 "PH-DEMINIMIS",
                 "PH-CAO"
               ],
-              "verified": true,
+              "verified": false,
               "zh": "菲律宾对 FOB/FCA 不超过 10,000 比索的包裹免征关税和税费（CMTA 第 423 条）；该门槛是否已按 CPI 调整未经核实。"
             }
           ],
@@ -8853,7 +8853,7 @@
               "options": null,
               "severity": "medium",
               "statements": [],
-              "verified": true,
+              "verified": null,
               "zh": "批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
             }
           ],
@@ -11793,7 +11793,7 @@
               "options": null,
               "severity": "medium",
               "statements": [],
-              "verified": true,
+              "verified": null,
               "zh": "批量进口须有当地进口登记人（自设主体或指定进口商）及相应税务登记；本地备货另增预测与滞销风险。"
             }
           ],

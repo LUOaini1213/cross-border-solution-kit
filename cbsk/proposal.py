@@ -47,6 +47,12 @@ def _table(header: list[str], rows: list[list]) -> str:
     return "\n".join(out)
 
 
+def _ver(v, zh: bool) -> str:
+    if v is None:
+        return "—"
+    return ("是" if v else "否") if zh else ("yes" if v else "no")
+
+
 def _chosen(lane: dict) -> dict:
     return next(o for o in lane["options"] if o["id"] == lane["recommendation"]["chosen"])
 
@@ -299,7 +305,7 @@ def render(res: dict, lang: str, statements: dict, sources: dict) -> str:
     seen = set()
     for f in res["template_flags"]:
         rows.append(["—", SEV_ZH[f["severity"]] if zh else f["severity"], f["zh"] if zh else f["en"], f["mitigation_zh"] if zh else f["mitigation_en"],
-                     ("是" if f["verified"] else "否") if zh else ("yes" if f["verified"] else "no")])
+                     _ver(f["verified"], zh)])
     for ln in res["lanes"]:
         flags = list(ln["lane_flags"]) + [f for o in ln["options"] if o["id"] == ln["recommendation"]["chosen"] for f in o["flags"]]
         for f in flags:
@@ -309,7 +315,7 @@ def render(res: dict, lang: str, statements: dict, sources: dict) -> str:
             seen.add(key)
             rows.append([ln["id"], SEV_ZH[f["severity"]] if zh else f["severity"], f["zh"] if zh else f["en"],
                          (f["mitigation_zh"] if zh else f["mitigation_en"]) or "—",
-                         ("是" if f["verified"] else "否") if zh else ("yes" if f["verified"] else "no")])
+                         _ver(f["verified"], zh)])
     L.append(_table(["线路", "等级", "发现", "应对措施", "已核实"] if zh else ["Lane", "Severity", "Finding", "Mitigation", "Verified"], rows))
     L.append("")
     # 6 implementation plan

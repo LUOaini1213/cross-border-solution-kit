@@ -2120,7 +2120,7 @@
               "options": null,
               "severity": "low",
               "statements": [],
-              "verified": true,
+              "verified": null,
               "zh": "拼箱每票增加两次集拼站作业，散件破损及短少风险上升。"
             }
           ],

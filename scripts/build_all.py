@@ -42,11 +42,12 @@ def build(make_pdf: bool = True, out_root: Path = RESULTS, docs_root: Path = DOC
         out = out_root / name
         write_json(out / "results.json", res)
         excel.write_workbook(res, side["calcs"], side["ratebook"], out / "quotation.xlsx")
-        md_en = proposal.render(res, "en", ref.statements, ref.sources)
-        md_zh = proposal.render(res, "zh", ref.statements, ref.sources)
+        saved = json.loads((out / "results.json").read_text(encoding="utf-8"))   # render from the rounded, committed numbers
+        md_en = proposal.render(saved, "en", ref.statements, ref.sources)
+        md_zh = proposal.render(saved, "zh", ref.statements, ref.sources)
         write_text(out / "proposal_en.md", md_en)
         write_text(out / "proposal_zh.md", md_zh)
-        write_text(out / "monitoring_template.csv", monitoring_csv(res))
+        write_text(out / "monitoring_template.csv", monitoring_csv(saved))
         if make_pdf:
             print(name, pdf.build_pdf(md_en, md_zh, res["rfq"]["title_en"], out / "proposal.pdf"), flush=True)
         all_results[name] = json.loads((out / "results.json").read_text(encoding="utf-8"))

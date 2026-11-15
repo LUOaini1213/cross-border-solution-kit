@@ -25,6 +25,7 @@ def run_template(name: str) -> tuple[dict, dict]:
     all_modes = sorted({m for ln in rfq["lanes"] for m in ln["modes"]})
     template_flags = [compliance.flag(f["id"], f["severity"], f["en"], f["zh"], statements=f.get("statements", []))
                       for f in incoterms.check(ref, rfq["incoterm"], rfq["quoting_party_role"], all_modes)]
+    compliance.finalize_flags(ref, template_flags)
     target_p = float(rfq["service"]["on_time_target_probability"])
     lvg_sales_myr = None
     if flow == "b2c_parcel":
@@ -52,6 +53,9 @@ def run_template(name: str) -> tuple[dict, dict]:
             res = parcel.build_lane(ctx, lane, rfq, lf)
             unit = "parcel"
         options = res["options"]
+        compliance.finalize_flags(ref, lf)
+        for opt in options:
+            compliance.finalize_flags(ref, opt["flags"])
         if not options:
             raise RuntimeError(f"lane {lane['id']}: no feasible option generated")
         for opt in options:

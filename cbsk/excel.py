@@ -186,20 +186,20 @@ def write_workbook(results: dict, calcs: dict[str, Calc], ratebook: RateBook, pa
         c.font = HEAD
         c.fill = FILL
     for f in results["template_flags"]:
-        comp.append(["all", "template", f["id"], f["severity"], "Y" if f["verified"] else "N", f["en"], f["zh"],
+        comp.append(["all", "template", f["id"], f["severity"], {True: "Y", False: "N", None: "-"}[f["verified"]], f["en"], f["zh"],
                      f["mitigation_en"], f["mitigation_zh"], ", ".join(f["statements"])])
     for lane in results["lanes"]:
         seen = set()
         for f in lane["lane_flags"]:
             seen.add(f["id"])
             scope = ", ".join(f["modes"]) if f.get("modes") else "lane"
-            comp.append([lane["id"], scope, f["id"], f["severity"], "Y" if f["verified"] else "N", f["en"], f["zh"],
+            comp.append([lane["id"], scope, f["id"], f["severity"], {True: "Y", False: "N", None: "-"}[f["verified"]], f["en"], f["zh"],
                          f["mitigation_en"], f["mitigation_zh"], ", ".join(f["statements"])])
         for o in lane["options"]:
             for f in o["flags"]:
                 if f["id"] in seen:
                     continue
-                comp.append([lane["id"], o["id"], f["id"], f["severity"], "Y" if f["verified"] else "N", f["en"], f["zh"],
+                comp.append([lane["id"], o["id"], f["id"], f["severity"], {True: "Y", False: "N", None: "-"}[f["verified"]], f["en"], f["zh"],
                              f["mitigation_en"], f["mitigation_zh"], ", ".join(f["statements"])])
     for col in "FGHI":
         for c in comp[col]:
