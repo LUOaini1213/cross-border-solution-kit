@@ -1,0 +1,9 @@
+{
+  "accessed": "2026-11-15",
+  "airports_licence": "public domain (OurAirports)",
+  "airports_raw_sha256": "aa5d3ebadde95f8bf4d9b574f0cf85c2285fbe2ba40fb3f9d82681070cf7d05d",
+  "airports_source": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+  "earth_radius_km": 6371.0088,
+  "sea_restrictions": "Northwest Passage excluded",
+  "sea_tool": "searoute 1.6.0 (Apache-2.0); network: Eurostat SeaRoute (EUPL-1.2) / ORNL"
+}

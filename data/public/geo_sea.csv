@@ -1,0 +1,14 @@
+origin,destination,origin_name,destination_name,sea_nm
+CNNGB,MYPKG,Ningbo,Port Kelang,2379.2
+CNQZH,MYPKG,Qinzhou,Port Kelang,1622.6
+JPOSA,SGSIN,Osaka,Singapore,2779.1
+SGSIN,JPOSA,Singapore,Osaka,2779.1
+USOAK,SGSIN,Oakland,Singapore,7442.3
+SGSIN,USOAK,Singapore,Oakland,7442.3
+CNYTN,MYPKG,Yantian,Port Kelang,1739.6
+CNYTN,IDTPP,Yantian,Tanjung Priok,1814.3
+CNYTN,THLCH,Yantian,Laem Chabang,1459.9
+CNYTN,PHMNL,Yantian,Manila,681.1
+CNYTN,SGSIN,Yantian,Singapore,1460.0
+SGSIN,IDTPP,Singapore,Tanjung Priok,513.6
+SGSIN,MYPKG,Singapore,Port Kelang,285.4

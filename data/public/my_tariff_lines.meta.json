@@ -1,0 +1,42 @@
+{
+  "accessed": "2026-11-15",
+  "note": "ACFTA and RCEP full tables displayed 'being updated' on the access date; search results used. The ezHS row text omits some parent headings; parent text was cross-checked against the Customs Duties Order 2022 (P.U.(A) 114/2022) hierarchy for the same codes.",
+  "publisher": "Royal Malaysian Customs Department (JKDM)",
+  "response_sha256": {
+    "ACFTA_4202": "39d64014a1ed5f6fbb6458ca0be7e625fea5587e8a9f9e2601c5d437e39d9011",
+    "ACFTA_6109": "a64cf7172070376f8e5a37c2048564664a8cbe0178e32678590e655d7d2b7889",
+    "ACFTA_8518": "4676dc771fc03d3dd845eaf839b56420ab53bd054e09edd41d88bceb7bd64bda",
+    "ACFTA_8544": "d9402a10e84969a132a85a5e77f2cc7f4a539a6c29cffc2e168bdc5f3e5771f1",
+    "ACFTA_8703": "bcc8dc41bb79793c4eb84e46c5bb3120923930d88f1f61b508e71ac0a6052098",
+    "ACFTA_8708": "f0e41e69e55ba152aadf0191ff4c50ff1480a1aa538d82f642f9cfab25696268",
+    "ACFTA_9401": "d71820e24aa384a9c032f012555919d66a4d2ef8bd13c2840624d68e1a451f8a",
+    "AHTN_4202": "7cd7a11308f6c904c83fca5c4ce9592467a54c2de0ffcca2c3d42293000b0278",
+    "AHTN_6109": "6bb11ae7f6bc5a88db53c26e38f258ce6bd08a97b004b8e1eb69313c443c0c8a",
+    "AHTN_8518": "14e409d83b5dac02f1f727a39b935a3c93032cc6ae431f1d25b25e203319e7fb",
+    "AHTN_8544": "c9bff22295d7fb636a13a16dec8268a230ecb54bbea476b90f832dcd0a66b7f4",
+    "AHTN_8703": "0e0d782d534508d4b56c3dccbe8a07cf308060dace3b7ea9bd13ada6cdf5af0e",
+    "AHTN_8708": "d9d06834df1d0e1e597d09ed901afa66ba7db31b2d16b1dd98fab0eb9ee1b596",
+    "AHTN_9401": "90729ff9d0d1576f42b86f9789055162724bacd17a7d4e4284cea9829da4f777",
+    "PDK_4202": "0dd18f1c12c0fc930ff7c957163363a1c22c960b5b7864786dceaf62d12b7f70",
+    "PDK_6109": "3928876aa59881792745e3be155fc577f19f56414c80176bfe77e185d4e51056",
+    "PDK_8518": "e952e3ce3fcc31bc95f678348c11c79b56149a6fbde7457524e91108ce13fae7",
+    "PDK_8544": "98c7e381e6cf15d11425d90f3e672a8a90abe2972a105374f96a2fb668df0bfc",
+    "PDK_8703": "3fc4b84ef9afdb137801fbf2a3c1b3d412c2b72c431aa1ca5a55230ac76a955c",
+    "PDK_8708": "1d888f0a7c354dfdc134591083bc782eaf012ac623a0d821c1db373ac33a1fd8",
+    "PDK_9401": "bc6a554f911b37daa82af1bb47ce76eaac428b700c0330bcd01ac014326f0ad9",
+    "RCEP_4202": "2fd09d5bae431c5f3f1e09991672a9b4fe200de2de129ef408d23f89eb042394",
+    "RCEP_6109": "76b4760ccd1bd974bee64de188ed51ccac3d57c3d71882adae0767acdf99c9df",
+    "RCEP_8518": "38095182e400835fcceec74b08f6b6d5cff709c698f06a6e721a43e28e2e74dc",
+    "RCEP_8544": "532c24b6ffaa386d68e7cd6aaa2fe7e897d0a407a2e406d68ad43e6d505f7dcc",
+    "RCEP_8703": "eac81d88c3241b5940a1e1d353d25a78bb612716300c27b79d21c7919138ffef",
+    "RCEP_8708": "e6e66eaf880d78ba6e41d4e25e4335de72e32f1c605bb55b96979620f88ec06f",
+    "RCEP_9401": "03c8dce57cf49457ae6c8daf4e13d603a14bfbfcb067b11a4da9cda66b33daa4"
+  },
+  "schedules": {
+    "ACFTA": "ASEAN-China FTA (current rate)",
+    "AHTN": "PDK (ATIGA) 2022",
+    "PDK": "PDK 2025 - PERINTAH DUTI KASTAM 2025",
+    "RCEP": "RCEP (current rate)"
+  },
+  "source": "https://ezhs.customs.gov.my/ (JKDM HS Explorer, search endpoint public-find-hs-data)"
+}

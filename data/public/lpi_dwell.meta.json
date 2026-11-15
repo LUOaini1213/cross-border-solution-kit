@@ -1,0 +1,37 @@
+{
+  "accessed": "2026-11-15",
+  "economies_requested": [
+    "CHN",
+    "DEU",
+    "IDN",
+    "JPN",
+    "KHM",
+    "LAO",
+    "MMR",
+    "MYS",
+    "PHL",
+    "SGP",
+    "THA",
+    "USA",
+    "VNM"
+  ],
+  "economies_with_data": [
+    "CHN",
+    "DEU",
+    "IDN",
+    "JPN",
+    "KHM",
+    "MMR",
+    "MYS",
+    "PHL",
+    "SGP",
+    "THA",
+    "USA",
+    "VNM"
+  ],
+  "licence": "CC BY 4.0",
+  "note": "metric M is the mean although the file labels it Median; values unchanged",
+  "publisher": "The World Bank, Logistics Performance Indicators (LPI 2.0)",
+  "raw_sha256": "49bc89aaf67e002a7e1510a073246aebcc0c246a67469d8052af4be64851e49a",
+  "source": "https://data360files.worldbank.org/data360-data/data/WB_LPI_20/WB_LPI_20.csv"
+}

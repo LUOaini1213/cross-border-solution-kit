@@ -1,0 +1,17 @@
+origin,destination,origin_name,destination_name,great_circle_km
+PVG,KUL,Shanghai Pudong International Airport,Kuala Lumpur International Airport,3796.7
+CKG,KUL,Chongqing Jiangbei International Airport,Kuala Lumpur International Airport,3043.6
+KIX,SIN,Kansai International Airport,Singapore Changi Airport,4902.2
+SIN,KIX,Singapore Changi Airport,Kansai International Airport,4902.2
+SFO,SIN,San Francisco International Airport,Singapore Changi Airport,13581.5
+SIN,SFO,Singapore Changi Airport,San Francisco International Airport,13581.5
+PEN,SIN,Penang International Airport,Singapore Changi Airport,602.3
+SIN,PEN,Singapore Changi Airport,Penang International Airport,602.3
+SZX,KUL,Shenzhen Bao'an International Airport,Kuala Lumpur International Airport,2567.9
+SZX,CGK,Shenzhen Bao'an International Airport,Soekarno-Hatta International Airport,3291.7
+SZX,BKK,Shenzhen Bao'an International Airport,Suvarnabhumi Airport,1699.8
+SZX,MNL,Shenzhen Bao'an International Airport,Ninoy Aquino International Airport,1181.0
+SIN,CGK,Singapore Changi Airport,Soekarno-Hatta International Airport,882.2
+SIN,MNL,Singapore Changi Airport,Ninoy Aquino International Airport,2374.9
+SIN,KUL,Singapore Changi Airport,Kuala Lumpur International Airport,297.5
+SZX,SIN,Shenzhen Bao'an International Airport,Singapore Changi Airport,2593.7
