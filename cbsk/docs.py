@@ -149,11 +149,11 @@ def regulatory_md(statements: dict, sources: dict, log: dict | None) -> str:
         L.append(f"Re-check run: {log.get('run_date', '?')}; phrases found {log.get('found', 0)}, manual {log.get('manual', 0)}, "
                  f"not found {log.get('not_found', 0)}, fetch errors {log.get('errors', 0)}.")
         L.append("")
-    L += ["## Corrections to the project brief", "",
-          "- **ATA Carnet issuer in Singapore.** The brief named the Singapore Business Federation. Singapore Customs (page updated "
+    L += ["## Corrections to the initial plan", "",
+          "- **ATA Carnet issuer in Singapore.** The initial plan named the Singapore Business Federation as the issuer. Singapore Customs (page updated "
           "31 Jul 2026), the ICC directory of national guaranteeing associations and SICC itself name the **Singapore International "
           "Chamber of Commerce (SICC)**; no carnet role for SBF was found (statement `SG-ATA-ISSUER`).",
-          "- **ATA purposes accepted by Singapore.** The brief listed commercial samples among ATA uses. For imports into Singapore, "
+          "- **ATA purposes accepted by Singapore.** The initial plan listed commercial samples among ATA uses. For imports into Singapore, "
           "Singapore Customs lists only exhibitions/fairs, professional equipment and scientific equipment for tests or demonstrations "
           "(`SG-ATA-SCOPE`, `SG-ATA-NO-SAMPLES`).",
           "- **Thailand's low-value rule.** The THB 1,500 duty exemption no longer applies: Customs Notification 219/2568 limits the "

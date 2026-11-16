@@ -79,7 +79,7 @@ P90 and on-time probability come from {{automotive_ckd_cn_my.draws}} seeded Mont
 ## Regulatory check
 
 {{reg.total}} regulatory or tax statements are kept in `data/reference/regulatory_statements.yaml`:
-{{reg.verified}} verified on official sources, {{reg.corrected}} corrected (the brief assumed otherwise), and
+{{reg.verified}} verified on official sources, {{reg.corrected}} corrected (the initial plan assumed otherwise), and
 {{reg.not_verified}} not verified (handled as labelled placeholders or caveats). Every statement was re-checked
 in a separate pass; see `docs/regulatory_check.md`. Corrections worth knowing:
 

@@ -1,7 +1,7 @@
 # Regulatory and tax statements used by the kit. Each one names its source(s) and a short phrase that
 # scripts/check_regulatory_sources.py looks for (whitespace- and case-normalised) in the fetched text.
 # status: verified      - confirmed on the official source on the access date
-#         corrected     - the project brief assumed something different; the official source says otherwise
+#         corrected     - the initial project plan assumed something different; the official source says otherwise
 #         not_verified  - could not be confirmed on an official source; the kit uses a labelled placeholder
 # method: html | pdf (phrase search), ezhs (re-run scripts/fetch_my_tariff.py and compare),
 #         image (text layer unreadable; checked by reading the rendered page), manual (secondary or blocked).
@@ -22,7 +22,7 @@ statements:
     zh: "新加坡海关接受外国 ATA 单证册的用途中不包括商业样品；SICC 签发、用于出境的单证册可覆盖商业样品，但以目的国是否接受为准。"
     status: corrected
     sources: [sg_customs_ata_foreign, sicc_ata]
-    note: "The project brief listed commercial samples among ATA purposes in general; for imports into Singapore the official list has three purposes and no commercial samples."
+    note: "The initial plan listed commercial samples among ATA purposes in general; for imports into Singapore the official list has three purposes and no commercial samples."
     check: {method: html, source: sicc_ata, phrase: "Commercial samples and advertising film"}
   SG-ATA-SAME-CONDITION:
     jurisdiction: SG
@@ -55,7 +55,7 @@ statements:
     zh: "在新加坡，本地 ATA 单证册由新加坡国际商会（SICC）签发，SICC 是新加坡的 ATA 担保与签发机构。"
     status: corrected
     sources: [sg_customs_ata_local, icc_ata, sicc_nga_2024]
-    note: "The project brief named the Singapore Business Federation as the issuer. Singapore Customs (page updated 31 Jul 2026), the ICC directory and SICC itself name SICC; no carnet role for SBF was found."
+    note: "The initial plan named the Singapore Business Federation as the issuer. Singapore Customs (page updated 31 Jul 2026), the ICC directory and SICC itself name SICC; no carnet role for SBF was found."
     check: {method: html, source: sg_customs_ata_local, phrase: "Singapore International Chamber of Commerce (SICC)"}
   SG-ATA-SICC-FEES:
     jurisdiction: SG

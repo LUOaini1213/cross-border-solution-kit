@@ -3,6 +3,8 @@ a post-go-live monitoring sheet."""
 from __future__ import annotations
 
 import datetime as dt
+import re
+import zipfile
 from pathlib import Path
 
 from openpyxl import Workbook
@@ -230,4 +232,24 @@ def write_workbook(results: dict, calcs: dict[str, Calc], ratebook: RateBook, pa
     wb.properties.modified = dt.datetime(2026, 11, 15)
     path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
+    _normalise_xlsx(path)
     return dict(fw.cell)
+
+
+FIXED_TIME = (2026, 11, 15, 0, 0, 0)
+
+
+def _normalise_xlsx(path: Path) -> None:
+    """Make the saved workbook byte-reproducible: fixed zip entry times and a fixed 'modified' stamp
+    (openpyxl writes the current time into both), so a rebuild does not dirty the repository."""
+    with zipfile.ZipFile(path) as zin:
+        items = [(info.filename, zin.read(info.filename)) for info in zin.infolist()]
+    stamp = "%04d-%02d-%02dT%02d:%02d:%02dZ" % FIXED_TIME
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zout:
+        for name, data in items:
+            if name == "docProps/core.xml":
+                data = re.sub(rb"(<dcterms:(?:modified|created)[^>]*>)[^<]*(</dcterms:)", lambda m: m.group(1) + stamp.encode() + m.group(2), data)
+            info = zipfile.ZipInfo(name, date_time=FIXED_TIME)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o600 << 16
+            zout.writestr(info, data)

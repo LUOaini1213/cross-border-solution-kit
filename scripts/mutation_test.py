@@ -107,7 +107,34 @@ def first_failure(output: str) -> str:
     return m.group(2) if m else output.strip().splitlines()[-1] if output.strip() else "?"
 
 
+def write_markdown(report: dict) -> None:
+    rows, killed, n_tests = report["mutants"], report["killed"], report["tests_collected"]
+    lines = ["# Mutation report", "",
+             f"Run {report['run_date']}: **{killed}/{len(rows)} mutants killed** ({report['killed_by_unit_tests']} by the unit tests, "
+             f"{report['killed_by_golden_only']} only by the golden regression test, {report['survived']} survived). "
+             f"{n_tests} tests collected.", "",
+             "Each mutant changes one snippet of core logic in a copy of the repository; the unit tests run first "
+             "(`pytest -m \"not golden\" -x`), and the golden comparison with the committed results only if they all pass.", "",
+             "The last column is the first test that failed, in file order. Where it names a test that looks unrelated "
+             "(`test_singapore_carnet_scope_in_template` for the Indonesian VAT base and the Malaysian LVG base), the failure is the "
+             "pipeline's own cross-check: `flows/parcel.py` compares the workbook formulas' tax total with `duties.parcel_taxes` and "
+             "refuses to build when they disagree, which fails the shared pipeline fixture before the hand-worked tests "
+             "(`test_indonesia_consignment_band_by_hand`, `test_air_parcel_chargeable_weight_and_freight_by_hand`) are reached. "
+             "Both hand-worked tests were run separately against these two mutants (with the cross-check disabled for the second) "
+             "and fail as well.", "",
+             "| # | File | Mutation | Killed by | First failing test |", "|---|---|---|---|---|"]
+    for i, r in enumerate(rows, 1):
+        lines.append(f"| {i} | `{r['file']}` | {r['mutation']} | {r['killed_by']} | `{r['first_failure']}` |")
+    survivors = [r for r in rows if not r["killed"]]
+    lines += ["", "## Survivors", ""]
+    lines += [f"- {r['mutation']} (`{r['file']}`)" for r in survivors] or ["None."]
+    (ROOT / "docs" / "mutation_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+
+
 def main() -> int:
+    if "--render-only" in sys.argv:      # rebuild the Markdown from docs/mutation_report.json
+        write_markdown(json.loads((ROOT / "docs" / "mutation_report.json").read_text(encoding="utf-8")))
+        return 0
     rmtree(WORK)
     WORK.mkdir()
     for item in COPY:
@@ -155,19 +182,7 @@ def main() -> int:
               "survived": len(rows) - killed, "tests_collected": n_tests, "mutants": rows}
     docs = ROOT / "docs"
     (docs / "mutation_report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
-    lines = ["# Mutation report", "",
-             f"Run {report['run_date']}: **{killed}/{len(rows)} mutants killed** ({report['killed_by_unit_tests']} by the unit tests, "
-             f"{report['killed_by_golden_only']} only by the golden regression test, {report['survived']} survived). "
-             f"{n_tests} tests collected.", "",
-             "Each mutant changes one snippet of core logic in a copy of the repository; the unit tests run first "
-             "(`pytest -m \"not golden\" -x`), and the golden comparison with the committed results only if they all pass.", "",
-             "| # | File | Mutation | Killed by | First failing test |", "|---|---|---|---|---|"]
-    for i, r in enumerate(rows, 1):
-        lines.append(f"| {i} | `{r['file']}` | {r['mutation']} | {r['killed_by']} | `{r['first_failure']}` |")
-    survivors = [r for r in rows if not r["killed"]]
-    lines += ["", "## Survivors", ""]
-    lines += [f"- {r['mutation']} (`{r['file']}`)" for r in survivors] or ["None."]
-    (docs / "mutation_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+    write_markdown(report)
     # README numbers include the mutation score: re-render it so the repository stays consistent
     subprocess.run([py, str(ROOT / "scripts" / "build_all.py"), "--readme-only"], cwd=ROOT, check=True)
     print(f"{killed}/{len(rows)} killed")

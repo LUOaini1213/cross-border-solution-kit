@@ -1,0 +1,267 @@
+{
+  "run_date": "2026-11-15",
+  "total": 32,
+  "killed": 32,
+  "killed_by_unit_tests": 32,
+  "killed_by_golden_only": 0,
+  "survived": 0,
+  "tests_collected": 102,
+  "mutants": [
+    {
+      "file": "cbsk/flows/common.py",
+      "mutation": "container count rounds down instead of up",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_fcl_container_count_by_hand",
+      "seconds": 44.8
+    },
+    {
+      "file": "cbsk/flows/b2b.py",
+      "mutation": "LCL freight tonnes use min instead of max(W, M)",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_lcl_and_air_quantities_by_hand",
+      "seconds": 33.4
+    },
+    {
+      "file": "cbsk/flows/b2b.py",
+      "mutation": "air chargeable weight ignores volumetric weight",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_air_volumetric_weight_governs_light_bulky_kits",
+      "seconds": 36.9
+    },
+    {
+      "file": "cbsk/flows/b2b.py",
+      "mutation": "insured value excludes freight to the border (not CIF)",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_fcl_lines_by_hand",
+      "seconds": 36.0
+    },
+    {
+      "file": "cbsk/flows/b2b.py",
+      "mutation": "customs value on FOB instead of CIF",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_fcl_lines_by_hand",
+      "seconds": 28.3
+    },
+    {
+      "file": "cbsk/flows/b2b.py",
+      "mutation": "sales tax base omits import duty",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_sales_tax_without_schedule_c_by_hand",
+      "seconds": 28.0
+    },
+    {
+      "file": "cbsk/flows/b2b.py",
+      "mutation": "Schedule C exemption ignored",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_fcl_lines_by_hand",
+      "seconds": 26.2
+    },
+    {
+      "file": "cbsk/flows/b2b.py",
+      "mutation": "chosen FTA rate not applied (always MFN)",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_fcl_lines_by_hand",
+      "seconds": 28.1
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "my_import_line: sales tax base omits duty",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_my_import_line_cif_and_sales_tax_base",
+      "seconds": 12.7
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "Malaysian LVG limit made exclusive (RM500 itself no longer LVG)",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_malaysia_lvg_price_boundary",
+      "seconds": 15.2
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "Malaysian de minimis wrongly applied to road imports",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_malaysia_road_parcel_pays_duty_but_not_import_sales_tax",
+      "seconds": 35.6
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "Indonesian USD 3 de minimis made exclusive",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_indonesia_usd3_boundary",
+      "seconds": 32.7
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "Indonesian 5% income tax on listed consignments dropped",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_indonesia_consignment_band_by_hand",
+      "seconds": 26.6
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "Indonesian VAT base omits duty",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_compliance_schema.py::test_singapore_carnet_scope_in_template",
+      "seconds": 12.1
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "Thailand keeps the pre-2026 THB 1,500 exemption",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_thailand_every_parcel_dutiable_since_2026",
+      "seconds": 18.9
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "Philippine de minimis tested on CIF instead of FOB",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_philippines_deminimis_on_fob",
+      "seconds": 17.8
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "TIS security shares swapped",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_singapore_tis_security_and_repair_gst",
+      "seconds": 19.4
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "tariff choice picks the highest rate",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_fcl_lines_by_hand",
+      "seconds": 10.2
+    },
+    {
+      "file": "cbsk/duties.py",
+      "mutation": "RCEP origin granted without RVC40 or CTH evidence",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_duties.py::test_origin_not_met_leaves_mfn_only",
+      "seconds": 15.1
+    },
+    {
+      "file": "data/reference/incoterms_2020.yaml",
+      "mutation": "FCA export clearance put on the buyer",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_a1_fcl_lines_by_hand",
+      "seconds": 11.4
+    },
+    {
+      "file": "cbsk/pareto.py",
+      "mutation": "Pareto dominance without the strict-improvement condition",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_incoterms_pareto.py::test_dominance_and_front",
+      "seconds": 25.7
+    },
+    {
+      "file": "cbsk/pareto.py",
+      "mutation": "recommendation ignores the on-time target",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_incoterms_pareto.py::test_recommend_respects_target_and_blocks",
+      "seconds": 28.6
+    },
+    {
+      "file": "cbsk/seeds.py",
+      "mutation": "seed from Python's salted hash() (not reproducible)",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_transit.py::test_seed_is_independent_of_python_hash_randomisation",
+      "seconds": 31.3
+    },
+    {
+      "file": "cbsk/transit.py",
+      "mutation": "lognormal fit to quartiles without the normal-quantile scaling",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_transit.py::test_lognormal_quartile_fit_reproduces_quartiles",
+      "seconds": 33.6
+    },
+    {
+      "file": "cbsk/transit.py",
+      "mutation": "arrival on the target day counted as late",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_transit.py::test_on_time_counts_arrival_on_the_target_day",
+      "seconds": 33.5
+    },
+    {
+      "file": "cbsk/legs.py",
+      "mutation": "every shipment transshipped regardless of LPI data",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_transit.py::test_transshipment_probability_from_lpi",
+      "seconds": 33.1
+    },
+    {
+      "file": "cbsk/compliance.py",
+      "mutation": "ATA Carnet accepted for repair",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_compliance_schema.py::test_ata_and_tis_into_singapore[repair_in_sg-MY-SG-False-True]",
+      "seconds": 9.3
+    },
+    {
+      "file": "cbsk/compliance.py",
+      "mutation": "every medium flag raises the hold probability",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_hold_flag_count_uses_only_hold_relevant_flags",
+      "seconds": 11.2
+    },
+    {
+      "file": "cbsk/compliance.py",
+      "mutation": "risk score ignores transit spread",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_compliance_schema.py::test_risk_score_by_hand",
+      "seconds": 10.8
+    },
+    {
+      "file": "cbsk/excel.py",
+      "mutation": "workbook writes products as sums",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_excel.py::test_formula_totals_equal_python_totals[automotive_ckd_cn_my]",
+      "seconds": 19.3
+    },
+    {
+      "file": "cbsk/flows/temporary.py",
+      "mutation": "GST charged on warranty repairs",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_costing.py::test_repair_loop_gst_on_new_parts_by_hand",
+      "seconds": 13.5
+    },
+    {
+      "file": "cbsk/flows/parcel.py",
+      "mutation": "LVG sales tax on price plus shipping instead of the sale price",
+      "killed": true,
+      "killed_by": "unit",
+      "first_failure": "tests/test_compliance_schema.py::test_singapore_carnet_scope_in_template",
+      "seconds": 12.1
+    }
+  ]
+}

@@ -79,7 +79,7 @@ P90 and on-time probability come from 20,000 seeded Monte Carlo draws per option
 ## Regulatory check
 
 64 regulatory or tax statements are kept in `data/reference/regulatory_statements.yaml`:
-51 verified on official sources, 2 corrected (the brief assumed otherwise), and
+51 verified on official sources, 2 corrected (the initial plan assumed otherwise), and
 11 not verified (handled as labelled placeholders or caveats). Every statement was re-checked
 in a separate pass; see `docs/regulatory_check.md`. Corrections worth knowing:
 
@@ -151,12 +151,12 @@ the PDF and says so. Network fetch scripts are separate and only refresh `data/p
 
 ## Tests and mutation testing
 
-`pytest` (not run tests at the last mutation run) covers hand-worked cost arithmetic, duty and tax
+`pytest` (102 tests at the last mutation run) covers hand-worked cost arithmetic, duty and tax
 calculations (including threshold boundaries), the Incoterms payer matrix, Pareto correctness, Monte Carlo
 determinism and moments, schema validation, compliance rules, workbook formulas vs Python totals, provenance
 completeness, line endings, README rendering, and a golden test that re-runs the pipeline and compares with the
-committed results. `scripts/mutation_test.py` applies deliberate bugs to the core logic: **not run/not run
-mutants killed** (not run by the unit tests alone, before the golden comparison); details in
+committed results. `scripts/mutation_test.py` applies deliberate bugs to the core logic: **32/32
+mutants killed** (32 by the unit tests alone, before the golden comparison); details in
 `docs/mutation_report.md`.
 
 ## Limitations
