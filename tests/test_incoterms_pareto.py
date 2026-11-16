@@ -102,3 +102,10 @@ def test_template_recommendations_are_on_the_front_or_justified(runs):
             for o in lane["options"]:
                 assert o["pareto"] == (o["id"] in rec["front"])
                 assert o["pareto"] == (not o["dominated_by"])
+
+
+def test_recommend_counts_on_time_equal_to_target_as_feasible():
+    opts = [_opt("exact", 1.0, 10, 10, 0.9), _opt("safe", 3.0, 8, 10, 0.99)]
+    rec = pareto.recommend(opts, {"cost": 1.0, "time": 0.0, "risk": 0.0}, 0.9)
+    assert rec["status"] == "meets_target"
+    assert set(rec["feasible"]) == {"exact", "safe"} and rec["chosen"] == "exact"

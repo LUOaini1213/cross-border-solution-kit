@@ -113,3 +113,18 @@ def test_singapore_tis_security_and_repair_gst(ref):
     assert duties.sg_tis_security(ref, 850000.0, False) == pytest.approx(0.50 * 0.09 * 850000)
     assert duties.sg_repair_reimport_gst(ref, 65000.0, 0.12, 0.5) == pytest.approx(351.0)
     assert duties.sg_repair_reimport_gst(ref, 65000.0, 0.12, 1.0) == 0.0
+
+
+def test_acfta_rvc_exactly_40_qualifies(ref):
+    """The general rule is 'not less than 40%': 40.0 qualifies, 39.9 does not."""
+    at = {o["scheme"]: o for o in duties.fta_options_my(ref, "8708.29.9500", "CN", 40.0, None)}
+    below = {o["scheme"]: o for o in duties.fta_options_my(ref, "8708.29.9500", "CN", 39.9, None)}
+    assert at["ACFTA"]["available"] and at["RCEP"]["available"]
+    assert not below["ACFTA"]["available"] and not below["RCEP"]["available"]
+
+
+def test_indonesia_usd1500_upper_boundary(ref):
+    """A consignment of exactly USD 1,500 FOB is still in the flat-rate band."""
+    t = duties.parcel_taxes(ref, "ID", "air_courier", "8518.30.2000", 1500.0, 20.0)
+    assert t.duty == pytest.approx(0.075 * 1520.0)
+    assert t.consumption_tax == pytest.approx(0.11 * (1520.0 + 0.075 * 1520.0))
