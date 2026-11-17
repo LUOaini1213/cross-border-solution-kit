@@ -34,7 +34,7 @@ def readme_values(results: dict[str, dict], statements: dict, mutation: dict | N
             v[f"{k}.option"] = s["label_en"]
             v[f"{k}.cost"] = f"{s['cost_per_unit']:,.2f}" if s["cost_per_unit"] < 100 else f"{s['cost_per_unit']:,.0f}"
             v[f"{k}.p90"] = f"{s['p90']:.1f}"
-            v[f"{k}.ontime"] = f"{s['on_time_probability'] * 100:.0f}%"
+            v[f"{k}.ontime"] = f"{s['on_time_probability'] * 100:.1f}%"
             v[f"{k}.risk"] = f"{s['risk']:.0f}"
             v[f"{k}.status"] = "meets target" if s["status"] == "meets_target" else "below target"
         v[f"{name}.quote_total"] = f"{sum(s['annual_quote'] for s in res['summary']):,.0f}"

@@ -35,18 +35,18 @@ P90 and on-time probability come from 20,000 seeded Monte Carlo draws per option
 
 | Lane | Recommended | Landed cost / unit (USD) | P90 days | On time vs target | Risk | Status |
 |---|---|---|---|---|---|---|
-| A1 Ningbo → Shah Alam, kits | Ocean FCL (40ft HC) | 286 / kit | 35.2 | 93% (38 d) | 56 | meets target |
-| A2 Chongqing → Shah Alam, powertrain | Rail-sea via Qinzhou (FCL) | 80.84 / kit | 36.0 | 92% (38 d) | 62 | meets target |
-| B1 Osaka ⇄ Singapore exhibition tool | Air freight + Temporary Import Scheme | 20,801 / move | 4.8 | 100% (12 d) | 57 | meets target |
-| B2 San Jose ⇄ Singapore metrology kit | Air freight + ATA Carnet | 7,132 / move | 5.3 | 95% (7 d) | 47 | below target |
-| B3 Singapore ⇄ Osaka repair loop | Air freight + temporary export for repair | 4,967 / move | 31.4 | 97% (35 d) | 44 | meets target |
-| B4 Penang ⇄ Singapore repair loop | Cross-border road + Temporary Import Scheme | 3,695 / move | 28.1 | 97% (30 d) | 59 | meets target |
-| C1 Shenzhen → Malaysia | Ocean bulk + local fulfilment | 4.13 / parcel | 3.0 | 100% (7 d) | 29 | meets target |
-| C2 Shenzhen → Indonesia | Ocean bulk + local fulfilment | 7.14 / parcel | 4.5 | 100% (7 d) | 39 | meets target |
-| C3 Shenzhen → Thailand | Ocean bulk + local fulfilment | 7.08 / parcel | 3.0 | 100% (7 d) | 29 | meets target |
-| C4 Shenzhen → Philippines | Ocean bulk + local fulfilment | 8.15 / parcel | 4.5 | 100% (7 d) | 29 | meets target |
-| C5 Singapore → Malaysia | Cross-border road | 6.14 / parcel | 6.7 | 62% (5 d) | 28 | below target |
-| C6 Singapore → Indonesia | Ocean bulk + local fulfilment | 7.53 / parcel | 4.5 | 97% (5 d) | 39 | meets target |
+| A1 Ningbo → Shah Alam, kits | Ocean FCL (40ft HC) | 286 / kit | 35.2 | 93.1% (38 d) | 56 | meets target |
+| A2 Chongqing → Shah Alam, powertrain | Rail-sea via Qinzhou (FCL) | 80.84 / kit | 36.0 | 92.4% (38 d) | 62 | meets target |
+| B1 Osaka ⇄ Singapore exhibition tool | Air freight + Temporary Import Scheme | 20,801 / move | 4.8 | 100.0% (12 d) | 57 | meets target |
+| B2 San Jose ⇄ Singapore metrology kit | Air freight + ATA Carnet | 7,132 / move | 5.3 | 94.9% (7 d) | 47 | below target |
+| B3 Singapore ⇄ Osaka repair loop | Air freight + temporary export for repair | 4,967 / move | 31.4 | 96.9% (35 d) | 44 | meets target |
+| B4 Penang ⇄ Singapore repair loop | Cross-border road + Temporary Import Scheme | 3,695 / move | 28.1 | 96.5% (30 d) | 59 | meets target |
+| C1 Shenzhen → Malaysia | Ocean bulk + local fulfilment | 4.13 / parcel | 3.0 | 100.0% (7 d) | 29 | meets target |
+| C2 Shenzhen → Indonesia | Ocean bulk + local fulfilment | 7.14 / parcel | 4.5 | 100.0% (7 d) | 39 | meets target |
+| C3 Shenzhen → Thailand | Ocean bulk + local fulfilment | 7.08 / parcel | 3.0 | 100.0% (7 d) | 29 | meets target |
+| C4 Shenzhen → Philippines | Ocean bulk + local fulfilment | 8.15 / parcel | 4.5 | 100.0% (7 d) | 29 | meets target |
+| C5 Singapore → Malaysia | Cross-border road | 6.14 / parcel | 6.7 | 61.7% (5 d) | 28 | below target |
+| C6 Singapore → Indonesia | Ocean bulk + local fulfilment | 7.53 / parcel | 4.5 | 96.9% (5 d) | 39 | meets target |
 
 "Below target" is reported, not hidden: B2 misses 95%-within-7-days because of the customs-hold tail
 (strategic-goods screening); the proposal shows that an 8-day plan meets it. C5 misses 90%-within-5-days.
